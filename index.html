@@ -21,8 +21,9 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@mau_amt">
 <link rel="stylesheet" href="style.css">
+<script>if ("IntersectionObserver" in window) document.documentElement.classList.add("js");</script>
 </head>
-<body>
+<body data-scene="base">
 <a class="skip" href="#main">Skip to content</a>
 <header class="nav">
   <div class="wrap nav-in">
@@ -35,88 +36,176 @@
   </div>
 </header>
 
+<nav class="rail" aria-label="Projects">
+  <a href="#adhd" data-for="adhd"><span>adhd-status</span></a>
+  <a href="#forger" data-for="forger"><span>skill-forger-e2e</span></a>
+  <a href="#bbv2" data-for="bbv2"><span>Boredom Blaster v2</span></a>
+  <a href="#bbv1" data-for="bbv1"><span>Boredom Blaster v1</span></a>
+  <a href="#data" data-for="data"><span>Earlier data work</span></a>
+</nav>
+
 <main id="main">
-  <section id="top" class="hero wrap">
-    <p class="eyebrow">Vermont, USA</p>
-    <h1>Small, sharp tools<br>for AI agents.</h1>
-    <p class="lede">I build agent skills for Claude Code and fast browser games. Everything is free, open source, signed and measured.</p>
-    <p class="cta">
-      <a class="btn" href="#work">See the work</a>
-      <a class="link" href="https://github.com/maumoya">GitHub <span aria-hidden="true">›</span></a>
-    </p>
+  <section id="top" class="scene hero" data-scene="base">
+    <div class="wrap">
+      <p class="eyebrow fx" style="--i:0">Vermont, USA</p>
+      <h1 class="fx" style="--i:1">Small, sharp tools<br>for AI agents.</h1>
+      <p class="lede fx" style="--i:2">I build agent skills for Claude Code and fast browser games. Everything is free, open source, signed and measured.</p>
+      <p class="cta fx" style="--i:3">
+        <a class="btn" href="#work">See the work</a>
+        <a class="link" href="https://github.com/maumoya">GitHub <span aria-hidden="true">›</span></a>
+      </p>
+    </div>
+    <a class="cue" href="#work" aria-label="Scroll to work"><span aria-hidden="true"></span></a>
   </section>
 
-  <section id="work" class="wrap" aria-labelledby="work-h">
-    <h2 id="work-h">Work</h2>
+  <div id="work">
+    <h2 class="sr-only">Work</h2>
 
-    <h3 class="group">Agent skills</h3>
-    <div class="grid">
-      <article class="card reveal">
-        <h4>adhd-status</h4>
-        <p>Say STATUS, get one tiny table and one clickable next step.</p>
-        <p class="stat"><strong>0.96</strong> eval score <span>vs 0.50 without it</span></p>
-        <p class="stat"><strong>35%</strong> less spend <span>per STATUS</span></p>
-        <p class="links"><a href="https://github.com/maumoya/adhd-status">Repo <span aria-hidden="true">›</span></a><a href="https://github.com/maumoya/adhd-status/releases">Releases <span aria-hidden="true">›</span></a></p>
-      </article>
-      <article class="card reveal">
-        <h4>skill-forger-e2e</h4>
-        <p>Ship an agent skill end to end: scaffold, lint, evals, signed releases and launch.</p>
-        <p class="stat"><strong>0–100</strong> readiness score <span>also a GitHub Action</span></p>
-        <p class="links"><a href="https://github.com/maumoya/skill-forger-e2e">Repo <span aria-hidden="true">›</span></a><a href="https://github.com/maumoya/skill-forger-e2e/releases">Releases <span aria-hidden="true">›</span></a></p>
-      </article>
-    </div>
+    <section id="adhd" class="scene project" data-scene="adhd" aria-labelledby="adhd-h">
+      <div class="wrap split">
+        <div class="copy">
+          <p class="eyebrow fx">Agent skill · Claude Code</p>
+          <h3 id="adhd-h" class="fx">adhd-status</h3>
+          <p class="tag fx">Say STATUS. Get one next step.</p>
+          <p class="fx">One tiny table and one clickable next step, with nothing forgotten.</p>
+          <dl class="stats fx">
+            <div><dt>Eval score</dt><dd>0.96 <small>vs 0.50 without it</small></dd></div>
+            <div><dt>Spend per STATUS</dt><dd>−35%</dd></div>
+          </dl>
+          <p class="links fx"><a class="btn" href="https://github.com/maumoya/adhd-status">View repo</a><a href="https://github.com/maumoya/adhd-status/releases">Releases <span aria-hidden="true">›</span></a></p>
+        </div>
+        <figure class="media fx-media">
+          <div class="demo status-demo" role="img" aria-label="Animated status table: run migration is your turn, rate limit was forgotten, signup form goes from tests running to done, README typo is done.">
+            <div class="sd-head"><span>Task</span><span>Status</span></div>
+            <div class="sd-row r1 hi"><span>Run migration</span><span><i class="dot amber"></i>you, ~1 min</span></div>
+            <div class="sd-row r2"><span>Rate limit</span><span><i class="dot red"></i>forgotten</span></div>
+            <div class="sd-row r3"><span>Signup form</span><span class="swap"><b><i class="dot blue"></i>tests running</b><b><i class="dot green"></i>done</b></span></div>
+            <div class="sd-row r4"><span>README typo</span><span><i class="dot green"></i>done</span></div>
+            <div class="sd-next">▶ npm run migrate</div>
+          </div>
+        </figure>
+      </div>
+    </section>
 
-    <h3 class="group">Browser games</h3>
-    <div class="grid">
-      <article class="card reveal">
-        <h4>Boredom Blaster v2</h4>
-        <p>Fast neon space shooter with bosses, power-ups, gamepad support and anti-cheat global scores.</p>
-        <p class="stat"><strong>0</strong> engines <span>plain JavaScript and canvas, no login</span></p>
-        <p class="links"><a href="https://maumoya.github.io/boredom-blaster-v2/">Play <span aria-hidden="true">›</span></a><a href="https://github.com/maumoya/boredom-blaster-v2">Repo <span aria-hidden="true">›</span></a></p>
-      </article>
-      <article class="card reveal">
-        <h4>Boredom Blaster v1</h4>
-        <p>The original retro space shooter in a single HTML file.</p>
-        <p class="stat"><strong>13.6 KB</strong> whole game <span>one file</span></p>
-        <p class="links"><a href="https://maumoya.github.io/boredom-blaster-play/">Play <span aria-hidden="true">›</span></a><a href="https://github.com/maumoya/boredom-blaster-play">Repo <span aria-hidden="true">›</span></a></p>
-      </article>
-    </div>
+    <section id="forger" class="scene project" data-scene="forger" aria-labelledby="forger-h">
+      <div class="wrap split rev">
+        <div class="copy">
+          <p class="eyebrow fx">Agent skill · GitHub Action</p>
+          <h3 id="forger-h" class="fx">skill-forger-e2e</h3>
+          <p class="tag fx">Write the skill. Ship it right.</p>
+          <p class="fx">Scaffold, lint, evals, signed releases and launch: an agent skill end to end.</p>
+          <dl class="stats fx">
+            <div><dt>Readiness score</dt><dd>0–100 <small>also a GitHub Action</small></dd></div>
+          </dl>
+          <p class="links fx"><a class="btn" href="https://github.com/maumoya/skill-forger-e2e">View repo</a><a href="https://github.com/maumoya/skill-forger-e2e/releases">Releases <span aria-hidden="true">›</span></a></p>
+        </div>
+        <figure class="media fx-media">
+          <div class="demo term-demo" role="img" aria-label="Animated terminal: the readiness check passes lint, install, trigger and badges, and scores 100 out of 100.">
+            <div class="td-bar"><i></i><i></i><i></i></div>
+            <p class="t0">$ readiness.sh . me/my-skill</p>
+            <p class="t1">✓ lint PASS · plugin JSON ok</p>
+            <p class="t2">✓ installs from GitHub</p>
+            <p class="t3">✓ trigger loads the skill</p>
+            <p class="t4">✓ hero image + trust badges</p>
+            <p class="t5 score">SCORE 100/100</p>
+          </div>
+        </figure>
+      </div>
+    </section>
 
-    <h3 class="group">Earlier data work</h3>
-    <div class="grid">
-      <article class="card reveal">
-        <h4>House rental price prediction</h4>
-        <p>A regression model that estimates rental prices from listing features.</p>
-        <p class="links"><a href="https://github.com/maumoya/House-Rental-Pricing-Prediction">Repo <span aria-hidden="true">›</span></a></p>
-      </article>
-      <article class="card reveal">
-        <h4>DataCamp solutions</h4>
-        <p>Worked solutions from data science and analysis courses.</p>
-        <p class="links"><a href="https://github.com/maumoya/datacamp_solutions">Repo <span aria-hidden="true">›</span></a></p>
-      </article>
+    <section id="bbv2" class="scene project" data-scene="bbv2" aria-labelledby="bbv2-h">
+      <div class="wrap split">
+        <div class="copy">
+          <p class="eyebrow fx">Browser game</p>
+          <h3 id="bbv2-h" class="fx">Boredom Blaster v2</h3>
+          <p class="tag fx">Neon. Fast. Bosses.</p>
+          <p class="fx">A space shooter with power-ups, gamepad support and anti-cheat global scores. Plain JavaScript and canvas, no engine, no login.</p>
+          <dl class="stats fx">
+            <div><dt>Game engines</dt><dd>0</dd></div>
+            <div><dt>Login needed</dt><dd>None</dd></div>
+          </dl>
+          <p class="links fx"><a class="btn" href="https://maumoya.github.io/boredom-blaster-v2/">Play now</a><a href="https://github.com/maumoya/boredom-blaster-v2">Repo <span aria-hidden="true">›</span></a></p>
+        </div>
+        <figure class="media fx-media">
+          <div class="screen">
+            <video muted loop playsinline preload="none" width="480" height="560" poster="media/blaster-v2.jpg" aria-label="Boredom Blaster v2 gameplay">
+              <source src="media/blaster-v2.webm" type="video/webm">
+              <source src="media/blaster-v2.mp4" type="video/mp4">
+            </video>
+            <button class="vbtn" type="button" aria-label="Play video" aria-pressed="false"></button>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <section id="bbv1" class="scene project" data-scene="bbv1" aria-labelledby="bbv1-h">
+      <div class="wrap split rev">
+        <div class="copy">
+          <p class="eyebrow fx">Browser game · the original</p>
+          <h3 id="bbv1-h" class="fx">Boredom Blaster v1</h3>
+          <p class="tag fx">A whole game in one file.</p>
+          <p class="fx">The retro space shooter that started it, for short breaks on Mac or phone.</p>
+          <dl class="stats fx">
+            <div><dt>Whole game</dt><dd>13.6 KB <small>one HTML file</small></dd></div>
+          </dl>
+          <p class="links fx"><a class="btn" href="https://maumoya.github.io/boredom-blaster-play/">Play now</a><a href="https://github.com/maumoya/boredom-blaster-play">Repo <span aria-hidden="true">›</span></a></p>
+        </div>
+        <figure class="media fx-media">
+          <div class="screen">
+            <video muted loop playsinline preload="none" width="480" height="710" poster="media/blaster-v1.jpg" aria-label="Boredom Blaster v1 gameplay">
+              <source src="media/blaster-v1.webm" type="video/webm">
+              <source src="media/blaster-v1.mp4" type="video/mp4">
+            </video>
+            <button class="vbtn" type="button" aria-label="Play video" aria-pressed="false"></button>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <section id="data" class="scene" data-scene="base" aria-labelledby="data-h">
+      <div class="wrap">
+        <p class="eyebrow fx">Before agents</p>
+        <h3 id="data-h" class="fx">Earlier data work</h3>
+        <div class="grid">
+          <a class="card fx" href="https://github.com/maumoya/House-Rental-Pricing-Prediction">
+            <h4>House rental price prediction</h4>
+            <p>A regression model that estimates rental prices from listing features.</p>
+            <span class="more">Repo <span aria-hidden="true">›</span></span>
+          </a>
+          <a class="card fx" href="https://github.com/maumoya/datacamp_solutions">
+            <h4>DataCamp solutions</h4>
+            <p>Worked solutions from data science and analysis courses.</p>
+            <span class="more">Repo <span aria-hidden="true">›</span></span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section id="about" class="scene" data-scene="base" aria-labelledby="about-h">
+    <div class="wrap narrow">
+      <h2 id="about-h" class="fx">About</h2>
+      <p class="big fx">I make tools that do one thing well, then prove it with numbers.</p>
+      <p class="fx">Every release is signed and verified. Every repo runs OpenSSF Scorecard. Evals come before claims, and everything ships under the MIT licence. I'm open to collaborations on AI agents, developer tools and startups.</p>
     </div>
   </section>
 
-  <section id="about" class="wrap narrow" aria-labelledby="about-h">
-    <h2 id="about-h">About</h2>
-    <p class="big">I make tools that do one thing well, then prove it with numbers.</p>
-    <p>Every release is signed and verified. Every repo runs OpenSSF Scorecard. Evals come before claims, and everything ships under the MIT licence. I'm open to collaborations on AI agents, developer tools and startups.</p>
-  </section>
-
-  <section id="contact" class="wrap narrow" aria-labelledby="contact-h">
-    <h2 id="contact-h">Contact</h2>
-    <ul class="contact">
-      <li><a href="https://www.linkedin.com/in/mba-mmoyat/">LinkedIn <span>mba-mmoyat</span></a></li>
-      <li><a href="https://x.com/mau_amt">X <span>@mau_amt</span></a></li>
-      <li><a href="https://www.youtube.com/@maumoya85">YouTube <span>@maumoya85</span></a></li>
-      <li><a href="https://github.com/maumoya">GitHub <span>maumoya</span></a></li>
-    </ul>
+  <section id="contact" class="scene" data-scene="base" aria-labelledby="contact-h">
+    <div class="wrap narrow">
+      <h2 id="contact-h" class="fx">Contact</h2>
+      <ul class="contact fx">
+        <li><a href="https://www.linkedin.com/in/mba-mmoyat/">LinkedIn <span>mba-mmoyat</span></a></li>
+        <li><a href="https://x.com/mau_amt">X <span>@mau_amt</span></a></li>
+        <li><a href="https://www.youtube.com/@maumoya85">YouTube <span>@maumoya85</span></a></li>
+        <li><a href="https://github.com/maumoya">GitHub <span>maumoya</span></a></li>
+      </ul>
+    </div>
   </section>
 </main>
 
 <footer class="wrap foot">
   <p>© 2026 Mauricio Moya · No tracking, no cookies.</p>
 </footer>
-<script src="reveal.js" defer></script>
+<script src="app.js" defer></script>
 </body>
 </html>
