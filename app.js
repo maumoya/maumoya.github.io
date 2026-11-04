@@ -46,6 +46,7 @@
   document.querySelectorAll('.screen').forEach(function (box) {
     var v = box.querySelector('video');
     var btn = box.querySelector('.vbtn');
+    if (!v || !btn) return; // image-only screens (e.g. animated SVG) have no controls
     var userPaused = reduced;
     function sync() {
       var playing = !v.paused;
