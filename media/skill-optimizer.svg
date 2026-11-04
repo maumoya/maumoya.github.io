@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="560" viewBox="0 0 800 560" role="img" aria-label="19 percent of a 494 GB Mac mini disk freed: free space went from 6 percent to 25 percent, every delete approved by the user">
+<rect width="800" height="560" fill="#0f1a12"/>
+<text x="48" y="78" fill="#d9f99d" font-family="ui-monospace,Menlo,monospace" font-size="22">$ measure.sh after</text>
+<text x="48" y="140" fill="#ecfdf5" font-family="-apple-system,Helvetica,Arial,sans-serif" font-size="26" font-weight="600">Free space, 494 GB Mac mini</text>
+<text x="48" y="215" fill="#a7c4a0" font-family="-apple-system,Helvetica,Arial,sans-serif" font-size="20">Before</text>
+<rect x="160" y="192" width="560" height="34" rx="6" fill="#1f3324"/>
+<rect x="160" y="192" width="34" height="34" rx="6" fill="#f87171"/>
+<text x="207" y="216" fill="#fecaca" font-family="-apple-system,Helvetica,Arial,sans-serif" font-size="20">6% free (29 GiB)</text>
+<text x="48" y="295" fill="#a7c4a0" font-family="-apple-system,Helvetica,Arial,sans-serif" font-size="20">After</text>
+<rect x="160" y="272" width="560" height="34" rx="6" fill="#1f3324"/>
+<rect x="160" y="272" width="140" height="34" rx="6" fill="#a3e635"/>
+<text x="313" y="296" fill="#d9f99d" font-family="-apple-system,Helvetica,Arial,sans-serif" font-size="20">25% free (115 GiB)</text>
+<text x="48" y="400" fill="#a3e635" font-family="-apple-system,Helvetica,Arial,sans-serif" font-size="64" font-weight="700">19% of the disk freed</text>
+<text x="48" y="450" fill="#a7c4a0" font-family="-apple-system,Helvetica,Arial,sans-serif" font-size="20">caches, unused models, old simulators, unused apps, Trash</text>
+<text x="48" y="490" fill="#a7c4a0" font-family="-apple-system,Helvetica,Arial,sans-serif" font-size="20">100% of deletes approved by you. The agent deleted nothing on its own.</text>
+</svg>
