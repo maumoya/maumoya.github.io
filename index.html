@@ -37,7 +37,7 @@
 <!-- /seo -->
 <link rel="canonical" href="https://maumoya.github.io/">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="style.css?v=5bdf4080">
+<link rel="stylesheet" href="style.css?v=4d94986f">
 <script>(function(d){if("IntersectionObserver" in window)d.classList.add("js");try{var t=localStorage.getItem("mm-theme"),l=localStorage.getItem("mm-lang");if(t&&t!=="clean")d.dataset.theme=t;if(l&&l!=="en"){d.classList.add("i18n-wait");if(l==="ar"||l==="he")d.dir="rtl";}}catch(e){}})(document.documentElement);</script>
 </head>
 <body data-scene="base">
@@ -46,8 +46,8 @@
   <div class="wrap nav-in">
     <a class="brand" href="#top">Mauricio Moya</a>
     <nav aria-label="Pages">
-      <a href="development/">Development</a>
       <a href="finance/">Finance</a>
+      <a href="development/">Technology</a>
       <a href="compliance/">Compliance</a>
       <a href="education/">Education</a>
       <a href="#hire">Hire</a>
@@ -67,18 +67,40 @@
 </nav>
 
 <main id="main">
-  <section id="top" class="scene hero keynote" data-scene="base">
-    <div class="kn-glow" aria-hidden="true"></div>
+  <section id="top" class="scene hero keynote handson" data-scene="base">
     <div class="wrap">
       <p class="eyebrow fx" style="--i:0">Four disciplines. One professional.</p>
-      <h1 class="fx kn-title" style="--i:1">Finance. Technology.<br>Compliance. Education.</h1>
-      <p class="lede fx" style="--i:2">Twenty years turning numbers, systems and rules into results, and teaching teams to keep them running.</p>
-      <ul class="kn-pills fx" style="--i:3">
-        <li><a href="finance/"><b>90 → 30</b> <span>days to cash</span></a></li>
-        <li><a href="development/"><b>16h → 3h</b> <span>monthly work automated</span></a></li>
-        <li><a href="compliance/"><b>100%</b> <span>audits passed</span></a></li>
-        <li><a href="education/"><b>UPC · Hult</b> <span>university teaching</span></a></li>
-      </ul>
+      <h1 class="fx" style="--i:1">Delivering solutions,<br>Driving <span class="gold">profits.</span></h1>
+      <figure class="ho-art fx" style="--i:2" aria-hidden="true" translate="no">
+        <svg viewBox="0 0 1280 720" role="presentation" focusable="false">
+          <defs>
+            <linearGradient id="ho-bg" x1="0" y1="0" x2="1" y2="1"><stop class="ho-s1" offset="0"/><stop class="ho-s2" offset="1"/></linearGradient>
+            <linearGradient id="ho-screen" x1="0" y1="0" x2="1" y2="1"><stop class="ho-s2" offset="0"/><stop class="ho-s3" offset="1"/></linearGradient>
+            <linearGradient id="ho-type" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff"/><stop class="ho-s4" offset="1"/></linearGradient>
+            <linearGradient id="ho-metal" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e9e9ec"/><stop offset="1" stop-color="#8d8d94"/></linearGradient>
+          </defs>
+          <rect width="1280" height="720" fill="url(#ho-bg)"/>
+          <g class="ho-waves">
+            <path d="M0 210C230 70 470 330 740 190S1130 40 1280 120V0H0Z" opacity=".14"/>
+            <path d="M0 560C280 400 520 720 900 540S1200 330 1280 320V720H0Z" opacity=".2"/>
+            <path d="M-40 470C260 300 520 620 860 420S1210 230 1320 260" fill="none" stroke-width="3" opacity=".35"/>
+            <path d="M-40 360C300 180 560 520 900 300S1220 140 1320 170" fill="none" stroke-width="2" opacity=".25"/>
+          </g>
+          <ellipse cx="660" cy="652" rx="430" ry="26" fill="#000" opacity=".35"/>
+          <path d="M392 150H928L992 606H328Z" fill="#0d0d10"/>
+          <path d="M408 166H912L972 590H348Z" fill="url(#ho-screen)"/>
+          <g class="ho-waves">
+            <path d="M348 470C470 400 600 520 760 440S930 380 972 400L972 590H348Z" opacity=".35"/>
+            <path d="M378 380C500 300 640 430 790 340S930 280 950 290" fill="none" stroke-width="2" opacity=".5"/>
+          </g>
+          <path d="M276 606H1044L1086 640H234Z" fill="url(#ho-metal)"/>
+          <path d="M234 640H1086V650Q1086 656 1078 656H242Q234 656 234 650Z" fill="#6e6e75"/>
+          <path d="M600 606H720L714 616H606Z" fill="#5b5b62"/>
+          <text class="ho-label" x="128" y="282" font-family="system-ui,-apple-system,sans-serif" font-size="34" font-weight="700" letter-spacing="1">mauOS 85 <tspan font-weight="600" letter-spacing="4">MAURICIO MOYA</tspan></text>
+          <text x="640" y="470" text-anchor="middle" textLength="1080" lengthAdjust="spacingAndGlyphs" font-family="system-ui,-apple-system,sans-serif" font-size="210" font-weight="800" fill="url(#ho-type)" opacity=".93">HANDS ON</text>
+        </svg>
+      </figure>
+      <p class="lede ho-lede fx" style="--i:3">Automation, dashboards and AI agents that cut cost, remove manual work and keep you audit-ready. Twenty years of experience in finance, operations and technology.</p>
       <p class="cta fx" style="--i:4">
         <a class="btn" href="#hire">Work with me</a>
         <a class="link" href="#areas">What I do <span aria-hidden="true">›</span></a>
@@ -448,7 +470,7 @@
   <p>© 2026 Mauricio Moya · Open source under MIT · No tracking, no cookies.</p>
 </footer>
 <script src="options.js?v=ff69e9b7" defer></script>
-<script src="search.js?v=cbbdb72d" defer></script>
+<script src="search.js?v=8dbfa4df" defer></script>
 <script src="app.js?v=233cf222" defer></script>
 </body>
 </html>

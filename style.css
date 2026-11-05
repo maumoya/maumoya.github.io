@@ -188,6 +188,26 @@ h3 { font-size: clamp(36px, 5.5vw, 64px); letter-spacing: -0.03em; line-height: 
 #proof[class*=" a-"] .pillar .num { color: var(--a); }
 .pillars.six { grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); }
 
+/* Hands-on hero: an original laptop scene; colors follow the theme. */
+.handson h1 { color: var(--fg, inherit); }
+.handson .gold { background: linear-gradient(180deg, #f9e3a3 0%, #e0b24f 45%, #a8781f 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.ho-art { width: 100%; max-width: 1040px; margin: 28px auto 0; border-radius: 22px; overflow: hidden; box-shadow: 0 24px 60px rgba(0,0,0,.35); }
+.ho-art svg { display: block; width: 100%; height: auto; }
+.ho-lede { max-width: 1040px; margin-left: auto; margin-right: auto; }
+.ho-art { --s1: #1c1a17; --s2: #6b6258; --s3: #2b2723; --s4: #cfc4b5; --w: #e6dccd; --lb: #e0b24f; }
+.ho-s1 { stop-color: var(--s1); } .ho-s2 { stop-color: var(--s2); } .ho-s3 { stop-color: var(--s3); } .ho-s4 { stop-color: var(--s4); }
+.ho-waves path { fill: var(--w); stroke: var(--w); }
+.ho-waves path[fill="none"] { fill: none; }
+.ho-label { fill: var(--lb); }
+[data-theme="material"] .ho-art { --s1: #140c2e; --s2: #5b3fd1; --s3: #241650; --s4: #c9bcff; --w: #b9a8ff; --lb: #ffd36e; }
+[data-theme="hud"] .ho-art { --s1: #03101c; --s2: #0b4f6c; --s3: #062437; --s4: #9fe6ff; --w: #5fd3ff; --lb: #5fd3ff; }
+[data-theme="soft"] .ho-art { --s1: #3a2230; --s2: #c98a9b; --s3: #5a3445; --s4: #ffe3d6; --w: #ffd9c7; --lb: #fff1e6; }
+[data-theme="night"] .ho-art { --s1: #05070f; --s2: #1d2a52; --s3: #0b1230; --s4: #b7c4ef; --w: #7f95d6; --lb: #e0b24f; }
+[data-theme="terminal"] .ho-art { --s1: #000a02; --s2: #0a3d17; --s3: #021a08; --s4: #8dffb0; --w: #39ff7a; --lb: #39ff7a; }
+[data-theme="arcade"] .ho-art { --s1: #1a0626; --s2: #a0157a; --s3: #3a0b4a; --s4: #ffd7a0; --w: #ffb347; --lb: #ffb347; }
+[data-theme="holo"] .ho-art { --s1: #020812; --s2: #0d2a4a; --s3: #051a30; --s4: #ffe2a0; --w: #62d6ff; --lb: #f2b84b; }
+[data-theme="grid"] .ho-art { --s1: #000000; --s2: #032a36; --s3: #00141c; --s4: #b8faff; --w: #6ff3ff; --lb: #6ff3ff; }
+
 /* Earlier work */
 .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 20px; margin-top: 32px; }
 .card { display: flex; flex-direction: column; background: var(--card); color: var(--fg); border-radius: 20px; padding: 32px; transition: transform .4s var(--ease), box-shadow .4s; }

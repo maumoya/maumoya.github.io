@@ -98,7 +98,7 @@
     {"p": "finance/", "a": "proof", "t": "Operating cost", "b": ["×2 years", "Gestiona365: vendor, contract and team changes while the client portfolio doubled."]},
     {"p": "finance/", "a": "proof", "t": "Annual savings", "b": ["JLL, MSD account: a 1.5M-sol facilities budget, best-performing country in the region."]},
     {"p": "finance/", "a": "contact", "t": "Let's talk", "b": ["Tell me where cash or forecasts surprise you. I'll tell you what I'd measure first and what I'd automate."]},
-    {"p": "", "a": "top", "t": "Finance. Technology.{0}Compliance. Education.", "b": ["Four disciplines. One professional.", "Twenty years turning numbers, systems and rules into results, and teaching teams to keep them running."]},
+    {"p": "", "a": "top", "t": "Delivering solutions,{0}Driving {1}", "b": ["Four disciplines. One professional.", "profits.", "Automation, dashboards and AI agents that cut cost, remove manual work and keep you audit-ready. Twenty years of experience in finance, operations and technology."]},
     {"p": "", "a": "areas", "t": "Four ways I move the numbers", "b": []},
     {"p": "", "a": "areas", "t": "Software that removes the busywork", "b": ["Development", "16h → 3h {0}", "a monthly task, automated", "SaaS, process automation, data lakes and dashboards built to your process."]},
     {"p": "", "a": "areas", "t": "Cash you can see and count on", "b": ["Finance", "90 → 30 days {0}", "to get reimbursed", "Budgeting, forecasting, cash flow and funding strategy, run on clean data."]},
