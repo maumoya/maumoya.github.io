@@ -185,14 +185,20 @@
     holo: { root: 7, wave: 'sine', cut: 2200, blip: ['sine', 783.99, 1046.5, .1] },
     grid: { root: 9, wave: 'triangle', cut: 2000, blip: ['square', 880, 880, .04] }
   };
+  // Music styles the visitor can pick; 'auto' follows the theme, 'clicks' keeps only the blips.
+  var MUSIC = [{ id: 'auto', name: 'Auto' }, { id: 'calm', name: 'Calm' }, { id: 'bright', name: 'Bright' },
+    { id: 'deep', name: 'Deep' }, { id: 'clicks', name: 'Clicks' }];
+  var MUSIC_PROFILE = { calm: 'soft', bright: 'arcade', deep: 'night' };
   var BEAT = 60 / 64, CHORD_BEATS = 8;
   var CHORDS = [[0, 4, 7], [-5, -1, 2], [-3, 0, 4], [-7, -3, 0]];   // I, V, vi, IV
   var PENTA = [0, 2, 4, 7, 9, 12, 14, 16, 19, 21];                     // major pentatonic, 2 octaves
   var sound = (function () {
     // 'mm-vol' replaces the old 'mm-volume' key so every visitor starts again at 15%.
     var ctx, master, pad, on = load('mm-sound', 'on') !== 'off', vol = +load('mm-vol', '15');
-    var profile = PROFILES.clean;
+    var profile = PROFILES.clean, themeId = 'clean', music = load('mm-music', 'auto');
+    if (!MUSIC.some(function (m) { return m.id === music; })) music = 'auto';
     if (!(vol >= 0 && vol <= 100)) vol = 15;
+    function pick() { profile = PROFILES[MUSIC_PROFILE[music] || themeId] || PROFILES.clean; }
     function level() { return on ? Math.pow(vol / 100, 2) * 0.8 : 0; }
     function start() {
       if (!on) return;
@@ -257,8 +263,10 @@
       while (pad.next < ctx.currentTime + 1) {
         var beat = pad.beat % CHORD_BEATS;
         var chord = CHORDS[Math.floor(pad.beat / CHORD_BEATS) % CHORDS.length];
-        if (beat === 0) playChord(pad.next, chord);
-        if (beat % 2 === 0 || Math.random() < .25) playMelody(pad.next, beat, chord);
+        if (music !== 'clicks') {
+          if (beat === 0) playChord(pad.next, chord);
+          if (beat % 2 === 0 || Math.random() < .25) playMelody(pad.next, beat, chord);
+        }
         pad.beat++; pad.next += BEAT;
       }
     }
@@ -288,11 +296,12 @@
       if (document.hidden) ctx.suspend(); else if (on) ctx.resume();
     });
     return {
-      get on() { return on; }, get vol() { return vol; },
+      get on() { return on; }, get vol() { return vol; }, get music() { return music; },
       start: start,
       blip: function () { var b = profile.blip; note(b[0], b[1], b[2], b[3], .12); },
-      // A new theme changes key and timbre from the next note on; the music never restarts.
-      theme: function (id) { profile = PROFILES[id] || PROFILES.clean; },
+      // A new theme or music style changes key and timbre from the next note on; the music never restarts.
+      theme: function (id) { themeId = id; pick(); },
+      setMusic: function (id) { music = id; save('mm-music', id); pick(); },
       set: function (o, v) {
         on = o; vol = v;
         save('mm-sound', on ? 'on' : 'off'); save('mm-vol', String(vol));
@@ -310,9 +319,10 @@
   function radios(name, items, label) {
     return '<fieldset class="set-group"><legend data-t="' + label + '" data-t-text="1">' + t(label) + '</legend><div class="set-' + name + '">' +
       items.map(function (it) {
-        return '<label class="set-opt"><input type="radio" name="mm-' + name + '" value="' + it.id + '">' + (name === 'theme'
-            ? '<span class="sw" aria-hidden="true" style="--a:' + it.sw[0] + ';--b:' + it.sw[1] + '"></span><span data-t="' + it.name + '" data-t-text="1">' + t(it.name) + '</span>'
-            : flag(it.flag) + '<span lang="' + it.tag + '">' + it.name + '</span>') + '</label>';
+        var swatch = name === 'theme' ? '<span class="sw" aria-hidden="true" style="--a:' + it.sw[0] + ';--b:' + it.sw[1] + '"></span>' : '';
+        return '<label class="set-opt"><input type="radio" name="mm-' + name + '" value="' + it.id + '">' + (name === 'lang'
+            ? flag(it.flag) + '<span lang="' + it.tag + '">' + it.name + '</span>'
+            : swatch + '<span data-t="' + it.name + '" data-t-text="1">' + t(it.name) + '</span>') + '</label>';
       }).join('') + '</div></fieldset>';
   }
   function sync() {
@@ -320,6 +330,7 @@
     var th = root.dataset.theme || 'clean', lg = LANGS.filter(function (x) { return x.tag === root.lang; })[0];
     panel.querySelectorAll('input[name="mm-theme"]').forEach(function (r) { r.checked = r.value === th; });
     panel.querySelectorAll('input[name="mm-lang"]').forEach(function (r) { r.checked = r.value === (lg ? lg.id : 'en'); });
+    panel.querySelectorAll('input[name="mm-music"]').forEach(function (r) { r.checked = r.value === sound.music; r.disabled = !sound.on; });
     var sb = panel.querySelector('.set-sound button'), sv = panel.querySelector('.set-sound input');
     sb.setAttribute('aria-pressed', String(sound.on));
     sv.value = sound.vol; sv.disabled = !sound.on;
@@ -346,7 +357,7 @@
     '<path class="w" d="M16 9.5a3.5 3.5 0 0 1 0 5M18.5 7a7 7 0 0 1 0 10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>' +
     '<path class="x" d="M16.5 9.5l5 5m0-5l-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>' +
     '<input type="range" min="0" max="100" step="5" data-t="Volume"><span class="set-vol" aria-hidden="true"></span></div></fieldset>' +
-    radios('theme', THEMES, 'Theme') + radios('lang', LANGS, 'Language').replace('<div class="set-lang">', '<input type="search" class="set-find" data-t="Find a language" placeholder="' + t('Find a language') + '" aria-label="' + t('Find a language') + '" autocomplete="off" spellcheck="false"><div class="set-lang">');
+    radios('music', MUSIC, 'Music') + radios('theme', THEMES, 'Theme') + radios('lang', LANGS, 'Language').replace('<div class="set-lang">', '<input type="search" class="set-find" data-t="Find a language" placeholder="' + t('Find a language') + '" aria-label="' + t('Find a language') + '" autocomplete="off" spellcheck="false"><div class="set-lang">');
 
   var navIn = document.querySelector('.nav-in');
   (navIn || document.body).appendChild(btn);
@@ -390,6 +401,7 @@
     var r = e.target;
     if (r.name === 'mm-theme') setTheme(r.value, true);
     else if (r.name === 'mm-lang') setLang(r.value, true);
+    else if (r.name === 'mm-music') { sound.setMusic(r.value); sync(); }
     sound.blip();
   });
   var sBtn = panel.querySelector('.set-sound button'), sVol = panel.querySelector('.set-sound input');
