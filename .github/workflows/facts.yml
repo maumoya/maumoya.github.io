@@ -1,0 +1,29 @@
+# The numbers on the site come from the skill repos' launch/facts.json.
+# Fails when a marker drifts or a copied fact no longer matches its source repo; runs weekly too, so a new release is caught.
+name: Facts
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    - cron: "23 13 * * 1"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  facts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Markers show launch/facts.json
+        run: python3 -I tools/sync.py check . --no-outward
+      - name: style.css and app.js stamps match their content
+        run: python3 -I tools/stamp.py check
+      - name: search.js index matches the pages
+        run: python3 -I tools/search.py check
+      - name: Every page string has a translation
+        run: python3 -I tools/i18n.py check
+      - name: Copied facts match their source repos
+        run: python3 -I tools/upstream.py .

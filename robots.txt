@@ -1,0 +1,5 @@
+# Every crawler and AI search engine is welcome.
+User-agent: *
+Allow: /
+
+Sitemap: https://maumoya.github.io/sitemap.xml
