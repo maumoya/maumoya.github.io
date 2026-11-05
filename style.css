@@ -31,6 +31,7 @@
 [data-scene="ghost"]  { --s-bg: #0b1f33; --s-fg: #f2f8ff; --s-muted: #b8d4ee; --s-accent: #3fa9f5; --s-btn: #3fa9f5; --s-btn-fg: #04223a; --s-line: #1f4266; }
 [data-scene="trivia"] { --s-bg: #0b1424; --s-fg: #f3f7ff; --s-muted: #c9d3ea; --s-accent: #ffc93c; --s-btn: #ffc93c; --s-btn-fg: #1b2340; --s-line: #24345c; }
 [data-scene="optim"]  { --s-bg: #0f1a12; --s-fg: #f2fff4; --s-muted: #b6d3b0; --s-accent: #a3e635; --s-btn: #a3e635; --s-btn-fg: #1a2e05; --s-line: #24402a; }
+[data-scene="ppd"]    { --s-bg: #1f0d1a; --s-fg: #fff5fb; --s-muted: #e8bfd6; --s-accent: #f472b6; --s-btn: #f472b6; --s-btn-fg: #3b0a24; --s-line: #4a2340; }
 [data-scene="bbv2"]   { --s-bg: #04161f; --s-fg: #f0fbff; --s-muted: #a7d3df; --s-accent: #22d3ee; --s-btn: #22d3ee; --s-btn-fg: #042f3a; --s-line: #12394a; }
 [data-scene="bbv1"]   { --s-bg: #0b0a24; --s-fg: #f8f7ff; --s-muted: #c9c6f0; --s-accent: #fde047; --s-btn: #fde047; --s-btn-fg: #1a1500; --s-line: #2a2860; }
 /* Area pages */
