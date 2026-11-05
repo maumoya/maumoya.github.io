@@ -35,6 +35,18 @@ def png_uri(path: Path) -> str:
     return "data:image/png;base64," + base64.b64encode(path.read_bytes()).decode()
 
 
+def is_raster(r: dict) -> bool:
+    return r["file"].endswith(".png")
+
+
+def mark(r: dict, work: Path | None) -> str:
+    """The mark as shown: inline SVG, or the owner's crop (linked on the site, embedded in the poll)."""
+    if not is_raster(r):
+        return inline_svg(r["id"], OPTIONS / r["file"])
+    src = png_uri(work / f"{r['id']}-128.png") if work else f"../{r['file']}"
+    return f"<img src='{src}' alt='{escape(r['name'])}' loading='lazy' style='width:100%;height:100%;object-fit:contain'>"
+
+
 FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">'
          '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900'
          '&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">')
@@ -73,6 +85,12 @@ tr:last-child td{border-bottom:0}
 .bar{display:inline-block;height:6px;background:var(--bar);border-radius:3px;vertical-align:middle;margin-left:8px}
 .top td{background:color-mix(in srgb,var(--gold-hi) 9%,transparent)}
 .cut td{border-bottom:2px solid var(--gold)}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-block:12px}
+.chip{font:500 13px var(--body);padding:6px 12px;border-radius:16px;border:1px solid var(--line);
+background:var(--panel);color:var(--ink);cursor:pointer}
+.chip[aria-pressed="true"]{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold) inset}
+.src{font:500 10px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.src.owner{color:var(--gold)}
 """
 
 
@@ -89,9 +107,11 @@ def ranking_page(data: dict, work: Path) -> str:
         cls = "top" if r["rank"] <= TOP_N else ""
         cls += " cut" if r["rank"] == TOP_N else ""
         px = png_uri(work / f"{r['id']}-16.png")
+        src = "owner" if is_raster(r) else "designed"
         cells = [f"<td class='num'>{r['rank']}</td>",
-                 f"<td class='l'><span class='mk'>{inline_svg(r['id'], OPTIONS / r['file'])}</span></td>",
-                 f"<td class='l'><b>{r['id']}</b> {escape(r['name'])}</td>",
+                 f"<td class='l'><span class='mk'>{mark(r, None)}</span></td>",
+                 f"<td class='l'><b>{r['id']}</b> {escape(r['name'])}<br><small class='src {src}'>"
+                 f"{'your sheet' if src == 'owner' else 'designed'}</small></td>",
                  f"<td><img class='px16' src='{px}' alt=''><img class='px16x' src='{px}' alt='{r['id']} at 16 px, enlarged'></td>"]
         detail = {"fid16": f"r={m['r16']:.3f}", "contrast": f"{m['contrast_ratio']}:1",
                   "mono": f"{m['hue_families']} hue", "simple": f"cx {m['complexity']}", "circle": r["shape"]}
@@ -101,7 +121,9 @@ def ranking_page(data: dict, work: Path) -> str:
         cells += [f"<td class='num'>{r['measured']}</td>", f"<td class='num'>{r['judged']}</td>",
                   f"<td class='num'>{r['panel']}</td>",
                   f"<td class='num'><b>{r['total']}</b><span class='bar' style='width:{r['total'] * .6:.0f}px'></span></td>"]
-        body.append(f"<tr class='{cls.strip()}'>" + "".join(cells) + "</tr>")
+        body.append(f"<tr class='{cls.strip()}' data-src='{src}'>" + "".join(cells) + "</tr>")
+    n_owner = sum(1 for r in rows if is_raster(r))
+    owner_top = [r for r in rows if is_raster(r)][:5]
     weights = "".join(f"<tr><td class='l'>{LABEL[k]}</td><td class='l'>{src}</td><td class='num'>{w}</td></tr>"
                       for src, d in (("measured", mw), ("rubric", jw)) for k, w in d.items())
     return f"""<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -109,17 +131,40 @@ def ranking_page(data: dict, work: Path) -> str:
 <meta name="claude:viewport-fit-sides" content="cover">
 {FONTS}<style>{BASE_CSS}</style>
 <div class="band"><div class="wrap">
-<div class="eyebrow">Mauricio Moya · brand identity · round 3</div>
+<div class="eyebrow">Mauricio Moya · brand identity · all options</div>
 <h1>All {len(rows)} logo options, scored</h1>
-<p class="lede">One algorithm scores every option out of 100: 35 points measured from real renders,
-60 points from a designer rubric tuned to the brand personality, and 5 points reserved for audience opinion.
-The top {TOP_N} go to the live poll.</p>
+<p class="lede">{len(rows) - n_owner} designed options plus all {n_owner} logos from your own reference sheets,
+scored by one algorithm out of 100: 35 points measured from real renders, 60 points from a designer rubric
+tuned to the brand personality, and 5 points reserved for audience opinion. The top {TOP_N} go to the live poll.</p>
 </div></div>
 <div class="wrap">
 <h2>Ranking and analysis</h2>
 <p>Gold rows are the top {TOP_N}. Measured columns show points earned, with the raw reading under them.
 The 16 px column is the actual favicon-size render, shown at true size and enlarged.</p>
-<div class="scroll"><table><thead>{head}</thead><tbody>{''.join(body)}</tbody></table></div>
+<p><b>Best of your sheets:</b> {', '.join(f"#{r['rank']} {r['id']} {escape(r['name'])} ({r['total']})" for r in owner_top)}.</p>
+<div class="filters" role="group" aria-label="Show">
+<button class="chip" aria-pressed="true" data-f="all">All {len(rows)}</button>
+<button class="chip" aria-pressed="false" data-f="owner">Your sheets {n_owner}</button>
+<button class="chip" aria-pressed="false" data-f="designed">Designed {len(rows) - n_owner}</button></div>
+<div class="scroll"><table><thead>{head}</thead><tbody id="rows">{''.join(body)}</tbody></table></div>
+<script>
+document.querySelector('.filters').addEventListener('click', e => {{
+  const b = e.target.closest('.chip'); if (!b) return;
+  document.querySelectorAll('.chip').forEach(c => c.setAttribute('aria-pressed', c === b ? 'true' : 'false'));
+  document.querySelectorAll('#rows tr').forEach(tr => {{ tr.hidden = b.dataset.f !== 'all' && tr.dataset.src !== b.dataset.f; }});
+}});
+</script>
+
+<h2>How your sheets were measured</h2>
+<p>Your {n_owner} logos came as photos of logo sheets, not vector files, so each was cropped from its sheet
+(U01 to U{n_owner:02d}, left to right, top to bottom; a laptop advert in the same upload held no logo and was skipped).
+Each crop gets the same tests as the vector marks, with three adjustments so the photo is not judged instead of the design:
+a 5 px median filter removes paper and foil grain, the crop is trimmed to the ink with a 6 % margin,
+and the background colour is not counted as a brand colour. Simplicity uses edge density at 128 px,
+scaled so the vector marks' median edge density equals their median complexity.
+Lockups (U55 to U64) are scored with their words, as sent. U05 and U06 are the same design from two sheets.
+Most fine-line designs lose all 15 points of 16 px fidelity: their hairlines vanish at favicon size.
+That is a real finding for an app icon or favicon, not a photo artefact; a bolder stroke would recover most of it.</p>
 
 <h2>The algorithm</h2>
 <p><b>Total = measured (35) + rubric (60) + panel (5).</b> Every rubric score s from 1 to 10 counts as
@@ -149,11 +194,11 @@ live poll replaces it with real votes.</p>
 """
 
 
-def poll_page(data: dict) -> str:
+def poll_page(data: dict, work: Path | None = None) -> str:
     top = [r for r in data["results"] if r["rank"] <= TOP_N]
     cards = "".join(
         f"<button class='card' id='c-{r['id']}' data-id='{r['id']}' aria-pressed='false'>"
-        f"<span class='mk'>{inline_svg(r['id'], OPTIONS / r['file'])}</span>"
+        f"<span class='mk'>{mark(r, work)}</span>"
         f"<span class='nm'><b>{r['id']}</b> {escape(r['name'])}</span>"
         f"<span class='sc num'>score {r['total']}</span><span class='pick' aria-hidden='true'></span></button>"
         for r in top)
@@ -273,7 +318,7 @@ def main(work: Path, poll_out: str | None) -> None:
     (HERE / "index.html").write_text(ranking_page(data, work))
     print("wrote ranking/index.html")
     if poll_out:
-        Path(poll_out).write_text(poll_page(data))
+        Path(poll_out).write_text(poll_page(data, work))
         print("wrote", poll_out)
 
 

@@ -10,8 +10,10 @@ Measured (from real renders in headless Chrome, plus the SVG source):
               128 px render. Fine detail that dies at favicon size lowers r.
   contrast 5  WCAG ratio between the 2nd and 98th luminance percentile of the mark's centre.
   mono     5  one-colour readiness: how many hue families the mark needs (gold = 1).
-  simple   5  fewer SVG elements and path commands = easier to reproduce.
-  circle   5  owner's rule "circles work better": circle 1, shield .5, squircle .3, wordmark 0.
+  simple   5  fewer SVG elements and path commands = easier to reproduce. Raster logos (the
+              owner's PNG sheets) have no SVG source: their complexity is edge density at
+              128 px, scaled so the SVG marks' median edge density maps to their median complexity.
+  circle   5  owner's rule "circles work better": circle 1, shield .5, squircle .3, free/wordmark 0.
 Rubric (judgment, 1-10 in candidates.json): lux 12, str 10, pro 10, per 10, mean 5, dis 7, time 6.
 Panel (MiroFish persona swarm, opinion not evidence): Borda points from its top-10.
 """
@@ -23,7 +25,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-from PIL import Image
+from PIL import Image, ImageChops, ImageFilter
 
 HERE = Path(__file__).resolve().parent
 OPTIONS = HERE.parent
@@ -34,7 +36,9 @@ BIG, SMALL = 128, 16
 MEASURED_W = {"fid16": 15, "contrast": 5, "mono": 5, "simple": 5, "circle": 5}
 JUDGE_W = {"lux": 12, "str": 10, "pro": 10, "per": 10, "mean": 5, "dis": 7, "time": 6}
 PANEL_W = 5
-SHAPE = {"circle": 1.0, "shield": 0.5, "squircle": 0.3, "wordmark": 0.0}
+SHAPE = {"circle": 1.0, "shield": 0.5, "squircle": 0.3, "wordmark": 0.0, "free": 0.0}
+EDGE_CUT = 40  # luminance step (0-255) that counts as an edge pixel
+INK_CUT = 40   # colour distance from the ground (0-255) that counts as ink
 
 
 def clamp(x: float) -> float:
@@ -58,6 +62,36 @@ def render(svg_path: Path, work: Path) -> tuple[Image.Image, Image.Image]:
     return img.crop((0, 0, BIG, BIG)), img.crop((BIG + 8, 0, BIG + 8 + SMALL, SMALL))
 
 
+def render_raster(png_path: Path) -> tuple[Image.Image, Image.Image]:
+    """Fair raster render: paper grain removed, framed tight like the SVG marks, ground-padded square.
+
+    A median filter removes photo texture (paper, foil grain) that is not part of the design;
+    the crop is then trimmed to the ink with a 6 % margin so a small mark in a big photo is not
+    penalised for its framing.
+    """
+    img = Image.open(png_path).convert("RGB")
+    if min(img.size) >= 96:
+        img = img.filter(ImageFilter.MedianFilter(5))
+    w, h = img.size
+    border = [img.getpixel((x, y)) for x in range(0, w, max(1, w // 20)) for y in (0, h - 1)]
+    ground = tuple(sorted(c[i] for c in border)[len(border) // 2] for i in range(3))
+    ink = Image.eval(ImageChops.difference(img, Image.new("RGB", img.size, ground)).convert("L"),
+                     lambda v: 255 if v > INK_CUT else 0).getbbox()
+    if ink:
+        pad = round(.06 * max(ink[2] - ink[0], ink[3] - ink[1]))
+        img = img.crop((max(0, ink[0] - pad), max(0, ink[1] - pad), min(w, ink[2] + pad), min(h, ink[3] + pad)))
+        w, h = img.size
+    side = max(w, h)
+    square = Image.new("RGB", (side, side), ground)
+    square.paste(img, ((side - w) // 2, (side - h) // 2))
+    return square.resize((BIG, BIG), Image.LANCZOS), square.resize((SMALL, SMALL), Image.BOX)
+
+
+def edge_density(big: Image.Image) -> float:
+    edges = big.convert("L").filter(ImageFilter.FIND_EDGES)
+    return sum(1 for p in edges.getdata() if p > EDGE_CUT) / (BIG * BIG)
+
+
 def pearson(a: list[float], b: list[float]) -> float:
     n = len(a)
     ma, mb = sum(a) / n, sum(b) / n
@@ -72,7 +106,14 @@ def rel_lum(v: float) -> float:
     return c / 12.92 if c <= .03928 else ((c + .055) / 1.055) ** 2.4
 
 
-def measure(big: Image.Image, small: Image.Image, svg_text: str, shape: str) -> dict:
+def svg_complexity(svg_text: str) -> float:
+    elements = len(re.findall(r"<(path|circle|rect|ellipse|text|line|polygon)\b", svg_text))
+    commands = len(re.findall(r"[MLHVCSQTAZ]", " ".join(re.findall(r' d="([^"]+)"', svg_text))))
+    glyphs = sum(len(t) for t in re.findall(r">([^<>]+)</(?:text|textPath)>", svg_text))
+    return elements + commands / 2 + glyphs
+
+
+def measure(big: Image.Image, small: Image.Image, complexity: float, shape: str) -> dict:
     lum_big = list(big.convert("L").getdata())
     up = small.resize((BIG, BIG), Image.BICUBIC).convert("L")
     r = pearson(lum_big, list(up.getdata()))
@@ -84,18 +125,16 @@ def measure(big: Image.Image, small: Image.Image, svg_text: str, shape: str) -> 
     lo, hi = lums[len(lums) // 50], lums[-len(lums) // 50]
     ratio = (hi + .05) / (lo + .05)
 
+    # Hue families of the ink only: the ground a sheet was photographed on is not a brand colour.
+    edge = [big.getpixel((x, y)) for x in range(0, BIG, 8) for y in (0, BIG - 1)]
+    ground = tuple(sorted(c[i] for c in edge)[len(edge) // 2] for i in range(3))
     hues = {}
-    for h, s, v in big.convert("HSV").getdata():
-        if s > 90 and v > 60:
+    for (h, s, v), rgb in zip(big.convert("HSV").getdata(), big.getdata()):
+        if s > 90 and v > 60 and max(abs(a - b) for a, b in zip(rgb, ground)) > INK_CUT:
             hues[h // 21] = hues.get(h // 21, 0) + 1   # 12 hue families
     total = sum(hues.values()) or 1
     families = sum(1 for n in hues.values() if n / total > .03)
     families = families - 1 if families >= 2 and _adjacent_gold(hues, total) else families
-
-    elements = len(re.findall(r"<(path|circle|rect|ellipse|text|line|polygon)\b", svg_text))
-    commands = len(re.findall(r"[MLHVCSQTAZ]", " ".join(re.findall(r' d="([^"]+)"', svg_text))))
-    glyphs = sum(len(t) for t in re.findall(r">([^<>]+)</(?:text|textPath)>", svg_text))
-    complexity = elements + commands / 2 + glyphs
 
     return {
         "r16": round(r, 4), "contrast_ratio": round(ratio, 2), "hue_families": families,
@@ -121,13 +160,25 @@ def borda(panel: list[str], cid: str) -> float:
 def main(work: Path, panel_file: str | None) -> None:
     data = json.loads((HERE / "candidates.json").read_text())
     panel = json.loads(Path(panel_file).read_text())["top"] if panel_file else []
-    rows = []
+    renders = {}
     for c in data["candidates"]:
         path = OPTIONS / c["file"]
-        big, small = render(path, work)
+        big, small = render_raster(path) if path.suffix == ".png" else render(path, work)
         small.save(work / f"{c['id']}-16.png")
         big.save(work / f"{c['id']}-128.png")
-        m = measure(big, small, path.read_text(), c["shape"])
+        cx = None if path.suffix == ".png" else svg_complexity(path.read_text())
+        renders[c["id"]] = (big, small, cx, edge_density(big))
+
+    # Calibrate raster complexity on the SVG marks: median complexity / median edge density.
+    svg = [v for v in renders.values() if v[2] is not None]
+    scale = (sorted(v[2] for v in svg)[len(svg) // 2] / max(1e-6, sorted(v[3] for v in svg)[len(svg) // 2]))
+    print(f"raster complexity scale = {scale:.1f} per unit edge density")
+
+    rows = []
+    for c in data["candidates"]:
+        big, small, cx, ed = renders[c["id"]]
+        m = measure(big, small, cx if cx is not None else ed * scale, c["shape"])
+        m["complexity_source"] = "svg" if cx is not None else "edges"
         measured = sum(m[k] * w for k, w in MEASURED_W.items())
         judged = sum((c["judge"][k] - 1) / 9 * w for k, w in JUDGE_W.items())
         pan = borda(panel, c["id"]) * PANEL_W
