@@ -37,7 +37,7 @@
 <!-- /seo -->
 <link rel="canonical" href="https://maumoya.github.io/">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="style.css?v=4d94986f">
+<link rel="stylesheet" href="style.css?v=9d4fa2ca">
 <script>(function(d){if("IntersectionObserver" in window)d.classList.add("js");try{var t=localStorage.getItem("mm-theme"),l=localStorage.getItem("mm-lang");if(t&&t!=="clean")d.dataset.theme=t;if(l&&l!=="en"){d.classList.add("i18n-wait");if(l==="ar"||l==="he")d.dir="rtl";}}catch(e){}})(document.documentElement);</script>
 </head>
 <body data-scene="base">
@@ -72,32 +72,50 @@
       <p class="eyebrow fx" style="--i:0">Four disciplines. One professional.</p>
       <h1 class="fx" style="--i:1">Delivering solutions,<br>Driving <span class="gold">profits.</span></h1>
       <figure class="ho-art fx" style="--i:2" aria-hidden="true" translate="no">
-        <svg viewBox="0 0 1280 720" role="presentation" focusable="false">
+        <svg viewBox="0 0 2000 600" role="presentation" focusable="false">
           <defs>
-            <linearGradient id="ho-bg" x1="0" y1="0" x2="1" y2="1"><stop class="ho-s1" offset="0"/><stop class="ho-s2" offset="1"/></linearGradient>
-            <linearGradient id="ho-screen" x1="0" y1="0" x2="1" y2="1"><stop class="ho-s2" offset="0"/><stop class="ho-s3" offset="1"/></linearGradient>
-            <linearGradient id="ho-type" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff"/><stop class="ho-s4" offset="1"/></linearGradient>
-            <linearGradient id="ho-metal" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e9e9ec"/><stop offset="1" stop-color="#8d8d94"/></linearGradient>
+            <radialGradient id="ho-bg" cx=".55" cy=".45" r=".75"><stop class="ho-s3" offset="0"/><stop class="ho-s1" offset="1"/></radialGradient>
+            <linearGradient id="ho-sky" x1="0" y1="0" x2="0" y2="1"><stop class="ho-s2" offset="0"/><stop offset=".7" stop-color="#d9c48e"/><stop offset="1" stop-color="#f4e2b4"/></linearGradient>
+            <linearGradient id="ho-type" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset=".55" stop-color="#e6e7ea"/><stop offset="1" stop-color="#a9acb3"/></linearGradient>
+            <linearGradient id="ho-base" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f1f2f5"/><stop offset=".35" stop-color="#b9bcc4"/><stop offset="1" stop-color="#6f727b"/></linearGradient>
+            <linearGradient id="ho-lid" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e9eaee"/><stop offset="1" stop-color="#7d8089"/></linearGradient>
+            <filter id="ho-blur" x="-20%" y="-60%" width="140%" height="220%"><feGaussianBlur stdDeviation="14"/></filter>
+            <filter id="ho-mist" x="-20%" y="-50%" width="140%" height="200%"><feGaussianBlur stdDeviation="8"/></filter>
+            <clipPath id="ho-clip"><path d="M668 488L987 104L1270 324L1205 440Z"/></clipPath>
           </defs>
-          <rect width="1280" height="720" fill="url(#ho-bg)"/>
-          <g class="ho-waves">
-            <path d="M0 210C230 70 470 330 740 190S1130 40 1280 120V0H0Z" opacity=".14"/>
-            <path d="M0 560C280 400 520 720 900 540S1200 330 1280 320V720H0Z" opacity=".2"/>
-            <path d="M-40 470C260 300 520 620 860 420S1210 230 1320 260" fill="none" stroke-width="3" opacity=".35"/>
-            <path d="M-40 360C300 180 560 520 900 300S1220 140 1320 170" fill="none" stroke-width="2" opacity=".25"/>
+          <rect width="2000" height="600" fill="url(#ho-bg)"/>
+          <g class="ho-waves" fill="none">
+            <path d="M1180 230C1450 150 1700 110 1980 -10" stroke-width="40" opacity=".35" filter="url(#ho-blur)"/>
+            <path d="M1180 230C1450 150 1700 110 1980 -10" stroke-width="4" opacity=".95"/>
+            <path d="M1240 270C1520 210 1760 200 2010 110" stroke-width="2" opacity=".5"/>
+            <path d="M-20 470C200 400 420 360 640 380" stroke-width="34" opacity=".35" filter="url(#ho-blur)"/>
+            <path d="M-20 470C200 400 420 360 640 380" stroke-width="3" opacity=".9"/>
+            <path d="M-20 300C220 240 430 250 620 300" stroke-width="2" opacity=".35"/>
+            <path d="M1540 520C1700 470 1860 380 2010 300" stroke-width="2" opacity=".4"/>
           </g>
-          <ellipse cx="660" cy="652" rx="430" ry="26" fill="#000" opacity=".35"/>
-          <path d="M392 150H928L992 606H328Z" fill="#0d0d10"/>
-          <path d="M408 166H912L972 590H348Z" fill="url(#ho-screen)"/>
-          <g class="ho-waves">
-            <path d="M348 470C470 400 600 520 760 440S930 380 972 400L972 590H348Z" opacity=".35"/>
-            <path d="M378 380C500 300 640 430 790 340S930 280 950 290" fill="none" stroke-width="2" opacity=".5"/>
+          <ellipse cx="1060" cy="535" rx="560" ry="16" fill="#fff4d8" opacity=".22" filter="url(#ho-blur)"/>
+          <ellipse cx="1060" cy="540" rx="480" ry="10" fill="#000" opacity=".6"/>
+          <path d="M632 505L985 78L1298 322L1222 450Z" fill="url(#ho-lid)" stroke="url(#ho-lid)" stroke-width="10" stroke-linejoin="round"/>
+          <path d="M650 498L986 92L1284 323L1214 446Z" fill="#0a0b0d" stroke="#0a0b0d" stroke-width="6" stroke-linejoin="round"/>
+          <g clip-path="url(#ho-clip)">
+            <rect x="660" y="100" width="620" height="400" fill="url(#ho-sky)"/>
+            <circle cx="1045" cy="392" r="34" fill="#fff6dc"/>
+            <circle cx="1045" cy="392" r="80" fill="#fff6dc" opacity=".25" filter="url(#ho-mist)"/>
+            <g stroke="#2f3d3f" fill="none">
+              <path d="M1128 445V318M1150 445V318M1126 340H1152M1126 372H1152" stroke-width="7"/>
+              <path d="M930 425Q1040 410 1128 320Q1190 400 1290 410" stroke-width="2.5"/>
+              <path d="M920 418L1290 410" stroke-width="5"/>
+            </g>
+            <path d="M660 495C760 440 860 380 970 372S1110 410 1210 450V500H660Z" class="ho-hill"/>
+            <g fill="#ffffff" opacity=".75" filter="url(#ho-mist)">
+              <ellipse cx="860" cy="455" rx="140" ry="22"/><ellipse cx="1060" cy="440" rx="130" ry="18"/>
+            </g>
           </g>
-          <path d="M276 606H1044L1086 640H234Z" fill="url(#ho-metal)"/>
-          <path d="M234 640H1086V650Q1086 656 1078 656H242Q234 656 234 650Z" fill="#6e6e75"/>
-          <path d="M600 606H720L714 616H606Z" fill="#5b5b62"/>
-          <text class="ho-label" x="128" y="282" font-family="system-ui,-apple-system,sans-serif" font-size="34" font-weight="700" letter-spacing="1">mauOS 85 <tspan font-weight="600" letter-spacing="4">MAURICIO MOYA</tspan></text>
-          <text x="640" y="470" text-anchor="middle" textLength="1080" lengthAdjust="spacingAndGlyphs" font-family="system-ui,-apple-system,sans-serif" font-size="210" font-weight="800" fill="url(#ho-type)" opacity=".93">HANDS ON</text>
+          <path d="M630 506L1456 430Q1514 428 1520 456L1522 505Q1520 528 1490 529L656 531Q628 530 628 514Z" fill="url(#ho-base)"/>
+          <path d="M640 506L1456 434Q1500 432 1510 448" fill="none" stroke="#ffffff" stroke-width="2" opacity=".8"/>
+          <g fill="#25272c"><rect x="652" y="508" width="26" height="6" rx="3"/><rect x="688" y="508" width="16" height="6" rx="3"/><rect x="712" y="508" width="16" height="6" rx="3"/><circle cx="740" cy="511" r="4"/></g>
+          <text class="ho-label" x="320" y="176" font-family="system-ui,-apple-system,sans-serif" font-size="44" font-weight="700">mauOS 85 <tspan fill="#ffffff" font-weight="600" dx="10">MAURICIO MOYA</tspan></text>
+          <text x="345" y="382" textLength="1345" lengthAdjust="spacingAndGlyphs" font-family="system-ui,-apple-system,sans-serif" font-size="244" font-weight="800" fill="url(#ho-type)" opacity=".86">HANDS ON</text>
         </svg>
       </figure>
       <p class="lede ho-lede fx" style="--i:3">Automation, dashboards and AI agents that cut cost, remove manual work and keep you audit-ready. Twenty years of experience in finance, operations and technology.</p>
