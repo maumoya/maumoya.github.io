@@ -109,7 +109,7 @@ def ranking_page(data: dict, work: Path) -> str:
         px = png_uri(work / f"{r['id']}-16.png")
         src = "owner" if is_raster(r) else "designed"
         cells = [f"<td class='num'>{r['rank']}</td>",
-                 f"<td class='l'><span class='mk'>{mark(r, None)}</span></td>",
+                 f"<td class='l'><span class='mk'>{mark(r, work)}</span></td>",
                  f"<td class='l'><b>{r['id']}</b> {escape(r['name'])}<br><small class='src {src}'>"
                  f"{'your sheet' if src == 'owner' else 'designed'}</small></td>",
                  f"<td><img class='px16' src='{px}' alt=''><img class='px16x' src='{px}' alt='{r['id']} at 16 px, enlarged'></td>"]
