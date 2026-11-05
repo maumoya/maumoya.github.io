@@ -157,7 +157,7 @@ def ranking_page(data: dict, work: Path) -> str:
 <h1>All {len(rows)} logo options, scored</h1>
 <p class="lede">{len(rows) - n_owner} designed options plus all {n_owner} logos from your own reference sheets,
 scored by one algorithm out of 100: 35 points measured from real renders, 60 points from a designer rubric
-tuned to the brand personality, and 5 points reserved for audience opinion. The top {TOP_N} go to the live poll.</p>
+tuned to the brand personality, and 5 points reserved for audience opinion. All {len(rows)} are in the live poll, shown in random order.</p>
 <p><a class="vote" href="{POLL_URL}">Vote in the live poll &rarr;</a></p>
 </div></div>
 <div class="wrap">
@@ -219,12 +219,12 @@ live poll replaces it with real votes.</p>
 
 
 def poll_page(data: dict, work: Path | None = None) -> str:
-    top = [r for r in data["results"] if r["rank"] <= TOP_N]
+    top = data["results"]  # every option is on the ballot
     cards = "".join(
         f"<button class='card' id='c-{r['id']}' data-id='{r['id']}' aria-pressed='false'>"
         f"<span class='mk'>{mark(r, work)}</span>"
         f"<span class='nm'><b>{r['id']}</b> {escape(r['name'])}</span>"
-        f"<span class='sc num'>score {r['total']}</span><span class='pick' aria-hidden='true'></span></button>"
+        f"<span class='pick' aria-hidden='true'></span></button>"
         for r in top)
     meta = json.dumps({r["id"]: {"name": r["name"], "score": r["total"], "rank": r["rank"]} for r in top})
     return f"""<title>Moya Mark Poll</title>
@@ -260,20 +260,26 @@ background:var(--gold);color:var(--paper);cursor:pointer}}
 <div class="band"><div class="wrap">
 <div class="eyebrow">Mauricio Moya · logo vote</div>
 <h1>Pick the mark</h1>
-<p class="lede">Twenty finalists for a personal brand in finance, technology, compliance and education.
-Choose your top three in order: first pick gets 3 points, second 2, third 1. You can change your vote any time.</p>
+<p class="lede">All {len(top)} logo options for a personal brand in finance, technology, compliance and education.
+Choose your top three in order: first pick gets 3 points, second 2, third 1.
+The order is shuffled on every visit, so no mark wins by appearing first, and scores stay hidden. You can change your vote any time.</p>
 </div></div>
 <div class="wrap"><div class="cols">
-<section><h2>Finalists</h2>
+<section><h2>All options</h2>
 <div class="actions"><button class="btn" id="submit" disabled>Save my top 3</button>
 <button class="btn ghost" id="clear">Clear picks</button><span class="note" id="status">Loading votes…</span></div>
 <div class="grid" id="grid">{cards}</div></section>
 <section><h2>Live results</h2><p class="note" id="voters">No votes yet. Be the first: pick three marks and save.</p>
 <p class="legend">Arrows compare the vote rank with the algorithm rank: <span class="mv up">&#9650; voters like it more</span>, <span class="mv dn">&#9660; less</span>. Rows flash when they move.</p>
-<div id="tally"></div></section>
+<div id="tally"></div>
+<button class="btn ghost" id="more" hidden>Show all {len(top)}</button></section>
 </div></div>
 <script>
 const META = {meta};
+(() => {{ const g = document.getElementById('grid'), cs = [...g.children];
+  for (let i = cs.length - 1; i > 0; i--) {{ const j = Math.floor(Math.random() * (i + 1)); [cs[i], cs[j]] = [cs[j], cs[i]]; }}
+  g.replaceChildren(...cs); }})();
+const SHOW = 20; let showAll = false;
 const picks = [];
 let db = null, me = null, votes = [];
 const $ = s => document.querySelector(s);
@@ -311,9 +317,12 @@ function tally() {{
     const fill = document.createElement('span'); fill.className = 'fill'; fill.style.width = (100 * p / max) + '%';
     fill.style.display = 'block'; track.append(fill);
     const n = document.createElement('span'); n.className = 'num'; n.style.textAlign = 'right'; n.textContent = p + ' pts';
+    row.hidden = !showAll && i >= SHOW;
     name.append(track); row.append(no, mv, name, n); box.append(row);
   }});
   lastPos = pos;
+  $('#more').hidden = ranked.length <= SHOW;
+  $('#more').textContent = showAll ? 'Show top ' + SHOW : 'Show all ' + ranked.length;
 }}
 document.getElementById('grid').addEventListener('click', e => {{
   const c = e.target.closest('.card'); if (!c) return;
@@ -321,6 +330,7 @@ document.getElementById('grid').addEventListener('click', e => {{
   if (i >= 0) picks.splice(i, 1); else if (picks.length < 3) picks.push(id);
   paint();
 }});
+$('#more').addEventListener('click', () => {{ showAll = !showAll; tally(); }});
 $('#clear').addEventListener('click', () => {{ picks.length = 0; paint(); }});
 $('#submit').addEventListener('click', async () => {{
   $('#submit').disabled = true; $('#status').textContent = 'Saving…';
