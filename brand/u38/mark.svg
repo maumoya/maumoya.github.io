@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="16 69 186 114">
+<!-- U38 Twin-Ring MOYA, hand-traced from brand/logo-options/user/u38.png.
+     Colour comes from the page: currentColor, or the logo-ring-l, logo-ring-r and logo-text
+     custom properties set per theme in the Brand mark block of style.css.
+     Pages draw it with an svg (viewBox 0 0 186 114) holding a use of brand/u38/mark.svg#moya. -->
+<symbol id="moya" viewBox="16 69 186 114">
+  <path fill="none" stroke-width="11" style="stroke:var(--logo-ring-l,currentColor)" d="M102.8 165.7A49.7 49.7 0 1 1 114.2 153.9"/>
+  <path fill="none" stroke-width="11" style="stroke:var(--logo-ring-r,currentColor)" d="M115.2 86.3A49.7 49.7 0 1 1 103.8 98.1"/>
+  <path style="fill:var(--logo-text,currentColor)" d="M47 103h10l19 30-4 6zM40 152l7-49h10l-7 49zM85 103h10l-22 36-4-6zM126 103h9l15 22h-10zM156 103h11l-17 22h-9zM140 120h10v30h-10zM165 108h5l23 42h-11l-4-9h-25l1-9h7zM168.5 118l-2.5 10h7z"/>
+</symbol>
+<use href="#moya" x="16" y="69" width="186" height="114" color="#f2b84b"/>
+</svg>

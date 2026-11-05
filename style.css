@@ -609,3 +609,24 @@ h3 { font-size: clamp(36px, 5.5vw, 64px); letter-spacing: -0.03em; line-height: 
 .set-music .set-opt { justify-content: center; text-align: center; }
 .set-music .set-opt:has(input:checked)::after, .set-panel .set-lang .set-opt:has(input:checked)::after { content: none; }
 .set-music .set-opt:has(input:disabled) { opacity: .45; cursor: default; }
+
+/* Brand mark: logo U38 "Twin-Ring MOYA" (brand/u38/mark.svg). To swap the logo, change that file and this block.
+   --logo colours the mark; --logo-ring-l / --logo-ring-r / --logo-text override single parts; --logo-glow adds a neon halo. */
+.brand { display: inline-flex; align-items: center; gap: 8px; }
+.brand-mark { flex: none; display: block; height: 26px; width: auto; aspect-ratio: 186 / 114; color: var(--logo); filter: var(--logo-glow, none); }
+:root { --logo: #f2b84b; }
+[data-theme="variety"] { --logo: #202124; --logo-ring-l: #2563eb; --logo-ring-r: #ef4444; }
+[data-theme="traditional"] { --logo: #0058b8; }
+[data-theme="soft"] { --logo: #8a5a2b; }
+[data-theme="night"] { --logo: #ffd60a; }
+[data-theme="news"] { --logo: #121212; }
+[data-theme="luxury"] { --logo: #c8a96a; }
+[data-theme="holo"] { --logo: #f2b84b; --logo-glow: drop-shadow(0 0 4px rgba(242, 184, 75, .6)); }
+[data-theme="fluent"] { --logo: #0f6cbd; }
+[data-theme="material"] { --logo: #3d5afe; }
+[data-theme="vision"] { --logo: #b072ff; --logo-glow: drop-shadow(0 0 5px rgba(176, 114, 255, .75)); }
+[data-theme="grid"] { --logo: #6ff3ff; --logo-glow: drop-shadow(0 0 5px rgba(111, 243, 255, .8)); }
+[data-theme="hud"] { --logo: #45d6ff; --logo-glow: drop-shadow(0 0 4px rgba(69, 214, 255, .7)); }
+[data-theme="terminal"] { --logo: #33ff66; --logo-glow: drop-shadow(0 0 4px rgba(51, 255, 102, .7)); }
+[data-theme="arcade"] { --logo: #ffe500; --logo-text: #ff3df0; }
+@media (max-width: 600px) { .brand-mark { height: 22px; } }
