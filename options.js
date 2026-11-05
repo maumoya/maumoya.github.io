@@ -16,7 +16,9 @@
     { id: 'soft', name: 'Soft', sw: ['#f3ecdf', '#8a6a3b'] },
     { id: 'night', name: 'Night', sw: ['#000000', '#ffd60a'] },
     { id: 'terminal', name: 'Terminal', sw: ['#000000', '#33ff66'] },
-    { id: 'arcade', name: 'Arcade', sw: ['#16002e', '#ff3df0'] }
+    { id: 'arcade', name: 'Arcade', sw: ['#16002e', '#ff3df0'] },
+    { id: 'holo', name: 'Holo', sw: ['#020812', '#f2b84b'] },
+    { id: 'grid', name: 'Grid', sw: ['#000000', '#6ff3ff'] }
   ];
   // Ethnologue 2026 top five by total speakers, then French, Portuguese, German, Italian and Japanese.
   var LANGS = [
@@ -30,6 +32,7 @@
     { id: 'de', tag: 'de', name: 'Deutsch', flag: 'de' },
     { id: 'it', tag: 'it', name: 'Italiano', flag: 'it' },
     { id: 'ja', tag: 'ja', name: '日本語', flag: 'jp' },
+    { id: 'he', tag: 'he', name: 'עברית', flag: 'il', rtl: true, en: 'Hebrew' },
     // Fan Neo-Sindarin (ISO 639-3 sjn), built from public dictionaries; approximate by nature.
     { id: 'sjn', tag: 'sjn', name: 'Edhellen (Elvish)', flag: 'elf' }
   ];
@@ -58,6 +61,8 @@
     de: '<rect width="30" height="20" fill="#ffce00"/><rect width="30" height="6.67" fill="#000"/><rect y="6.67" width="30" height="6.67" fill="#dd0000"/>',
     it: '<rect width="30" height="20" fill="#fff"/><rect width="10" height="20" fill="#009246"/><rect x="20" width="10" height="20" fill="#ce2b37"/>',
     jp: '<rect width="30" height="20" fill="#fff"/><circle cx="15" cy="10" r="6" fill="#bc002d"/>',
+    il: '<rect width="30" height="20" fill="#fff"/><rect y="2" width="30" height="2.4" fill="#0038b8"/><rect y="15.6" width="30" height="2.4" fill="#0038b8"/>' +
+      '<path d="M15 5.6l3.8 6.6h-7.6zM15 14.4l-3.8-6.6h7.6z" fill="none" stroke="#0038b8" stroke-width=".9"/>',
     elf:'<rect width="30" height="20" fill="#1d3b2a"/><path d="M8 15C10 6 18 4 23 4c0 6-4 13-14 11z" fill="#c9e4b4"/><path d="M8 15 19 7" stroke="#1d3b2a" stroke-width=".9"/>'
   };
   function flag(id) {
@@ -131,6 +136,7 @@
     document.querySelectorAll('[data-t]').forEach(function (el) {
       if (el.dataset.tText) el.textContent = t(el.dataset.t);
       else el.setAttribute('aria-label', t(el.dataset.t));
+      if (el.tagName === 'INPUT') el.placeholder = t(el.dataset.t);
     });
     document.dispatchEvent(new CustomEvent('mm:lang', { detail: lang }));
   }
@@ -160,19 +166,23 @@
   }
 
   // ---------- Sound ----------
-  // Calm by design: soft sine/triangle pads on major chords, a slow "breathing" swell (6 per minute)
-  // and a 10 Hz alpha-wave binaural beat (left and right ears 10 Hz apart; best with headphones).
+  // Calm by design, after the studies on restorative sound: steady nature-like noise (soft rain,
+  // stream, wind) lowers stress more than tones do, and steady pink/brown noise has no beat or
+  // pulse to follow. No binaural beats, no swells, no wobble: the level never moves on its own.
+  // `color`: 'pink' or 'brown' noise; `cut`: low-pass in Hz (lower = darker, like distant rain).
   var PROFILES = {
-    clean: { pad: 'sine', notes: [196, 246.94, 293.66], cut: 700, blip: ['sine', 659.25, 783.99, .12] },
-    material: { pad: 'sine', notes: [174.61, 220, 261.63], cut: 800, blip: ['sine', 587.33, 698.46, .12] },
-    hud: { pad: 'triangle', notes: [110, 164.81, 220], cut: 420, beat: 8, blip: ['sine', 880, 987.77, .1] },
-    soft: { pad: 'sine', notes: [174.61, 220, 261.63, 329.63], cut: 600, blip: ['sine', 523.25, 659.25, .14] },
-    night: { pad: 'sine', notes: [130.81, 196, 246.94], cut: 500, beat: 7, blip: ['sine', 440, 493.88, .14] },
-    terminal: { pad: 'sine', notes: [110, 164.81], cut: 360, blip: ['sine', 1046.5, 1046.5, .05] },
-    arcade: { arp: [523.25, 659.25, 783.99, 659.25], blip: ['triangle', 659.25, 987.77, .1] }
+    clean: { color: 'pink', cut: 2600, blip: ['sine', 659.25, 783.99, .12] },
+    material: { color: 'pink', cut: 3000, blip: ['sine', 587.33, 698.46, .12] },
+    hud: { color: 'brown', cut: 900, blip: ['sine', 880, 987.77, .1] },
+    soft: { color: 'pink', cut: 1800, blip: ['sine', 523.25, 659.25, .14] },
+    night: { color: 'brown', cut: 600, blip: ['sine', 440, 493.88, .14] },
+    terminal: { color: 'brown', cut: 750, blip: ['sine', 1046.5, 1046.5, .05] },
+    arcade: { color: 'pink', cut: 2200, blip: ['triangle', 659.25, 987.77, .1] },
+    holo: { color: 'brown', cut: 1100, blip: ['sine', 783.99, 1046.5, .1] },
+    grid: { color: 'brown', cut: 800, blip: ['square', 880, 880, .04] }
   };
   var sound = (function () {
-    var ctx, master, pad, arpTimer, on = load('mm-sound', 'on') !== 'off', vol = +load('mm-volume', '15');
+    var ctx, master, pad, on = load('mm-sound', 'on') !== 'off', vol = +load('mm-volume', '15');
     var profile = PROFILES.clean;
     if (!(vol >= 0 && vol <= 100)) vol = 15;
     function level() { return on ? Math.pow(vol / 100, 2) * 0.8 : 0; }
@@ -190,45 +200,43 @@
       if (ctx.state === 'suspended' && !document.hidden) ctx.resume();
     }
     function stopPad() {
-      clearInterval(arpTimer); arpTimer = null;
       if (!pad) return;
       var p = pad, now = ctx.currentTime;
       p.gain.gain.cancelScheduledValues(now);
       p.gain.gain.setValueAtTime(p.gain.gain.value, now);
       p.gain.gain.linearRampToValueAtTime(0, now + 2);
-      setTimeout(function () { p.osc.forEach(function (o) { o.stop(); }); p.gain.disconnect(); }, 2100);
+      setTimeout(function () { p.src.stop(); p.gain.disconnect(); }, 2100);
       pad = null;
+    }
+    // 8 s of stereo noise, looped. Pink: Paul Kellet's filter; brown: integrated white noise.
+    function noise(color) {
+      var n = ctx.sampleRate * 8, buf = ctx.createBuffer(2, n, ctx.sampleRate);
+      for (var c = 0; c < 2; c++) {
+        var d = buf.getChannelData(c), b0 = 0, b1 = 0, b2 = 0, b3 = 0, b4 = 0, b5 = 0, b6 = 0, last = 0;
+        for (var i = 0; i < n; i++) {
+          var w = Math.random() * 2 - 1;
+          if (color === 'brown') { last = (last + .02 * w) / 1.02; d[i] = last * 3.5; }
+          else {
+            b0 = .99886 * b0 + w * .0555179; b1 = .99332 * b1 + w * .0750759; b2 = .969 * b2 + w * .153852;
+            b3 = .8665 * b3 + w * .3104856; b4 = .55 * b4 + w * .5329522; b5 = -.7616 * b5 - w * .016898;
+            d[i] = (b0 + b1 + b2 + b3 + b4 + b5 + b6 + w * .5362) * .11; b6 = w * .115926;
+          }
+        }
+        // Fade the loop seam so it never clicks.
+        for (var j = 0; j < 2048; j++) { var k = j / 2048; d[j] *= k; d[n - 1 - j] *= k; }
+      }
+      return buf;
     }
     function startPad() {
       if (!ctx) return;
       stopPad();
-      if (profile.arp) {
-        var i = 0;
-        arpTimer = setInterval(function () {
-          if (ctx.state !== 'running') return;
-          note('sine', profile.arp[i++ % profile.arp.length], null, .9, .035);
-        }, 700);
-        return;
-      }
-      var g = ctx.createGain(), f = ctx.createBiquadFilter(), now = ctx.currentTime, osc = [];
-      var beat = profile.beat || 10, pan = ctx.createStereoPanner ? function (v) { var p = ctx.createStereoPanner(); p.pan.value = v; p.connect(f); return p; } : function () { return f; };
-      var left = pan(-1), right = pan(1);
-      f.type = 'lowpass'; f.frequency.value = profile.cut; f.Q.value = .3;
+      var src = ctx.createBufferSource(), f = ctx.createBiquadFilter(), g = ctx.createGain(), now = ctx.currentTime;
+      src.buffer = noise(profile.color); src.loop = true;
+      f.type = 'lowpass'; f.frequency.value = profile.cut; f.Q.value = .2;
       g.gain.setValueAtTime(0, now);
-      g.gain.linearRampToValueAtTime(.1 / profile.notes.length, now + 6);
-      f.connect(g); g.connect(master);
-      profile.notes.forEach(function (fr) {
-        [[left, fr], [right, fr + beat]].forEach(function (s) {
-          var o = ctx.createOscillator();
-          o.type = profile.pad; o.frequency.value = s[1];
-          o.connect(s[0]); o.start(); osc.push(o);
-        });
-      });
-      // Breathing swell: about 6 breaths a minute.
-      var l = ctx.createOscillator(), lg = ctx.createGain();
-      l.frequency.value = .1; lg.gain.value = .35 * (.1 / profile.notes.length);
-      l.connect(lg); lg.connect(g.gain); l.start(); osc.push(l);
-      pad = { gain: g, osc: osc };
+      g.gain.linearRampToValueAtTime(profile.color === 'brown' ? .22 : .16, now + 4);
+      src.connect(f); f.connect(g); g.connect(master); src.start();
+      pad = { gain: g, src: src };
     }
     function note(type, f1, f2, len, peak) {
       if (!ctx || ctx.state !== 'running') return;
@@ -287,8 +295,8 @@
   btn.type = 'button'; btn.className = 'set-btn';
   btn.dataset.t = 'Settings';
   btn.setAttribute('aria-expanded', 'false'); btn.setAttribute('aria-controls', 'mm-settings');
-  btn.innerHTML = '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false" fill="none" stroke="currentColor">' +
-    '<circle cx="12" cy="12" r="8.6" stroke-width="2.6" stroke-dasharray="3.38 3.38"/><circle cx="12" cy="12" r="6.6" stroke-width="1.3"/><circle cx="12" cy="12" r="2.6" stroke-width="1.3"/></svg>';
+  btn.innerHTML = '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">' +
+    '<path d="M4 6.5h16M4 12h16M4 17.5h16"/></svg>';
 
   panel = document.createElement('div');
   panel.id = 'mm-settings'; panel.className = 'set-panel';
@@ -302,7 +310,7 @@
     '<path class="w" d="M16 9.5a3.5 3.5 0 0 1 0 5M18.5 7a7 7 0 0 1 0 10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>' +
     '<path class="x" d="M16.5 9.5l5 5m0-5l-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>' +
     '<input type="range" min="0" max="100" step="5" data-t="Volume"><span class="set-vol" aria-hidden="true"></span></div></fieldset>' +
-    radios('theme', THEMES, 'Theme') + radios('lang', LANGS, 'Language');
+    radios('theme', THEMES, 'Theme') + radios('lang', LANGS, 'Language').replace('<div class="set-lang">', '<input type="search" class="set-find" data-t="Find a language" placeholder="' + t('Find a language') + '" aria-label="' + t('Find a language') + '" autocomplete="off" spellcheck="false"><div class="set-lang">');
 
   var navIn = document.querySelector('.nav-in');
   (navIn || document.body).appendChild(btn);
@@ -322,6 +330,25 @@
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !panel.hidden) close(true); });
   document.addEventListener('pointerdown', function (e) { if (!panel.hidden && !panel.contains(e.target) && !btn.contains(e.target)) close(); });
   panel.addEventListener('focusout', function (e) { if (e.relatedTarget && !panel.contains(e.relatedTarget) && e.relatedTarget !== btn) close(); });
+
+  // Language finder: matches native name, English name or code, ignoring accents and case.
+  var find = panel.querySelector('.set-find');
+  function fold(x) { return (x || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase(); }
+  var EN = { en: 'English', zh: 'Chinese Mandarin', hi: 'Hindi', es: 'Spanish Castellano', ar: 'Arabic', fr: 'French',
+    pt: 'Portuguese Brazil', de: 'German', it: 'Italian', ja: 'Japanese Nihongo', he: 'Hebrew Ivrit', sjn: 'Elvish Sindarin Tolkien' };
+  find.addEventListener('input', function () {
+    var q = fold(find.value.trim());
+    panel.querySelectorAll('input[name="mm-lang"]').forEach(function (r) {
+      var L = LANGS.filter(function (x) { return x.id === r.value; })[0];
+      r.closest('label').hidden = !!q && fold(L.name + ' ' + EN[L.id] + ' ' + L.id + ' ' + L.tag).indexOf(q) < 0;
+    });
+  });
+  find.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter') return;
+    e.preventDefault();
+    var first = [].filter.call(panel.querySelectorAll('input[name="mm-lang"]'), function (r) { return !r.closest('label').hidden; })[0];
+    if (first) { first.checked = true; setLang(first.value, true); sound.blip(); }
+  });
 
   panel.addEventListener('change', function (e) {
     var r = e.target;
@@ -344,7 +371,18 @@
   }, true);
 
   setTheme(load('mm-theme', 'clean'), false);
-  setLang(load('mm-lang', 'en'), false);
-  if (load('mm-lang', 'en') === 'en') render();
+  // No saved choice: use the visitor's browser language when the site has it.
+  function guess() {
+    var want = (navigator.languages || [navigator.language || 'en']);
+    for (var i = 0; i < want.length; i++) {
+      var w = String(want[i]).toLowerCase(), base = w.split('-')[0];
+      if (base === 'iw') base = 'he';
+      if (LANGS.some(function (x) { return x.id === base; })) return base;
+    }
+    return 'en';
+  }
+  var startLang = load('mm-lang', '') || guess();
+  setLang(startLang, false);
+  if (startLang === 'en') render();
   sync();
 })();
