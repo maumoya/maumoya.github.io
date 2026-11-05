@@ -17,7 +17,7 @@ import re
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-LANGS = ("zh", "hi", "es", "ar", "fr", "pt", "de", "it", "ja", "sjn")
+LANGS = ("zh", "hi", "es", "ar", "fr", "pt", "de", "it", "ja", "he", "sjn")
 ATTRS = ("aria-label", "alt", "title", "placeholder")
 SKIP = {"script", "style", "svg", "noscript", "template", "source", "head"}
 VOID = {"area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta", "source", "track", "wbr"}
