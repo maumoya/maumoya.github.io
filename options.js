@@ -9,16 +9,19 @@
   function load(k, d) { try { var v = localStorage.getItem(k); return v === null ? d : v; } catch (e) { return d; } }
   function save(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
 
+  // Theme ids stay short (they are saved in localStorage); names say what each one looks like.
   var THEMES = [
-    { id: 'clean', name: 'Clean', sw: ['#f5f5f7', '#0071e3'] },
+    { id: 'clean', name: 'Minimal', sw: ['#f5f5f7', '#0071e3'] },
+    { id: 'vision', name: 'VISION AI', sw: ['#07040f', '#8b5cf6'] },
     { id: 'material', name: 'Material', sw: ['#eef1fb', '#3d5afe'] },
-    { id: 'hud', name: 'HUD', sw: ['#04101c', '#45d6ff'] },
-    { id: 'soft', name: 'Soft', sw: ['#f3ecdf', '#8a6a3b'] },
-    { id: 'night', name: 'Night', sw: ['#000000', '#ffd60a'] },
-    { id: 'terminal', name: 'Terminal', sw: ['#000000', '#33ff66'] },
-    { id: 'arcade', name: 'Arcade', sw: ['#16002e', '#ff3df0'] },
-    { id: 'holo', name: 'Holo', sw: ['#020812', '#f2b84b'] },
-    { id: 'grid', name: 'Grid', sw: ['#000000', '#6ff3ff'] }
+    { id: 'fluent', name: 'Fluent', sw: ['#f3f6fa', '#0f6cbd'] },
+    { id: 'hud', name: 'Sci-Fi HUD', sw: ['#04101c', '#45d6ff'] },
+    { id: 'soft', name: 'Warm Paper', sw: ['#f3ecdf', '#8a6a3b'] },
+    { id: 'night', name: 'High Contrast', sw: ['#000000', '#ffd60a'] },
+    { id: 'terminal', name: 'Hacker Terminal', sw: ['#000000', '#33ff66'] },
+    { id: 'arcade', name: 'Retro Arcade', sw: ['#16002e', '#ff3df0'] },
+    { id: 'holo', name: 'Gold Hologram', sw: ['#020812', '#f2b84b'] },
+    { id: 'grid', name: 'Neon Grid', sw: ['#000000', '#6ff3ff'] }
   ];
   // Ethnologue 2026 top five by total speakers, then French, Portuguese, German, Italian and Japanese.
   var LANGS = [
@@ -168,29 +171,47 @@
   // ---------- Sound ----------
   // Generative background music, written from what music-emotion research agrees on:
   // - major mode reads as happy and hopeful, minor as sad (Hevner 1935; Gagnon & Peretz 2003);
-  // - slow tempo (~60-70 BPM) lowers heart and breathing rate (Bernardi et al. 2006), so 64 BPM;
-  // - consonant intervals feel pleasant (Bidelman & Krishnan 2009): major pentatonic melody
-  //   has no semitone clashes, over the familiar, uplifting I-V-vi-IV progression;
-  // - soft attacks, warm low-passed timbres and a long reverb, no sudden changes; a melody that
-  //   tends to rise at the start of each phrase gives the "lift" of optimism.
-  // `root`: key in semitones from C4; `wave`: melody timbre; `cut`: brightness in Hz.
+  // - consonant intervals feel pleasant (Bidelman & Krishnan 2009): the melody stays on the major
+  //   pentatonic scale, which has no semitone clashes;
+  // - soft attacks, low-passed timbres and a reverb; a melody that rises at each phrase start
+  //   gives the "lift" of optimism.
+  // Every theme has its own original song style: tempo, chords, arpeggio, drums and timbre.
+  // The default (Minimal) is an uplifting folk-pop anthem: a mid-tempo stomp-and-clap pulse,
+  // plucked arpeggios and a rising melody over I-V-vi-IV. All patterns are written here, none copied.
+  // `root`: key in semitones from C4; `cut`: brightness in Hz; patterns are 8 eighth notes per bar
+  // (arp: chord-tone index or -1 for a rest; kick/clap/hat: 1 = hit); `bars`: bars per chord.
+  var I = [0, 4, 7], V = [-5, -1, 2], VI = [-3, 0, 4], IV = [-7, -3, 0], II7 = [2, 5, 9, 12],
+    V7 = [-5, -1, 2, 5], I7 = [0, 4, 7, 11], VI7 = [-3, 0, 4, 7], III = [-8, -5, -1];
+  var POP = [I, V, VI, IV], EPIC = [VI, IV, I, V];
   var PROFILES = {
-    clean: { root: 0, wave: 'triangle', cut: 2400, blip: ['sine', 659.25, 783.99, .12] },
-    material: { root: 2, wave: 'triangle', cut: 2600, blip: ['sine', 587.33, 698.46, .12] },
-    hud: { root: 7, wave: 'sine', cut: 2000, blip: ['sine', 880, 987.77, .1] },
-    soft: { root: 5, wave: 'sine', cut: 1800, blip: ['sine', 523.25, 659.25, .14] },
-    night: { root: -3, wave: 'sine', cut: 1400, blip: ['sine', 440, 493.88, .14] },
-    terminal: { root: -2, wave: 'sine', cut: 1600, blip: ['sine', 1046.5, 1046.5, .05] },
-    arcade: { root: 4, wave: 'triangle', cut: 2800, blip: ['triangle', 659.25, 987.77, .1] },
-    holo: { root: 7, wave: 'sine', cut: 2200, blip: ['sine', 783.99, 1046.5, .1] },
-    grid: { root: 9, wave: 'triangle', cut: 2000, blip: ['square', 880, 880, .04] }
+    clean: { style: 'Uplifting folk-pop', root: 0, bpm: 84, prog: POP, padWave: 'sine', pad: .035, arpWave: 'triangle', arp: [0, 1, 2, 3, 4, 3, 2, 1], arpOct: 0,
+      kick: [1, 0, 0, 0, 1, 0, 1, 0], clap: [0, 0, 1, 0, 0, 0, 1, 0], hat: [0, 1, 0, 1, 0, 1, 0, 1], bass: [1, 0, 0, 1, 1, 0, 0, 0], wave: 'triangle', mel: .7, cut: 2600, blip: ['sine', 659.25, 783.99, .12] },
+    vision: { style: 'Future pulse', root: 2, bpm: 96, prog: EPIC, padWave: 'sawtooth', pad: .02, arpWave: 'sawtooth', arp: [0, 1, 2, 3, 4, 3, 2, 1], arpOct: 12,
+      kick: [1, 0, 0, 0, 1, 0, 0, 0], clap: [0, 0, 1, 0, 0, 0, 1, 0], hat: [0, 1, 0, 1, 0, 1, 0, 1], bass: [1, 1, 1, 1, 1, 1, 1, 1], wave: 'sine', mel: .5, cut: 1900, blip: ['sine', 880, 1318.5, .1] },
+    material: { style: 'Bright pop', root: 2, bpm: 104, prog: [I, VI, IV, V], padWave: 'triangle', pad: .03, arpWave: 'square', arp: [0, -1, 2, -1, 1, -1, 2, 3], arpOct: 0,
+      kick: [1, 0, 1, 0, 1, 0, 1, 0], clap: [0, 0, 1, 0, 0, 0, 1, 0], hat: [0, 1, 0, 1, 0, 1, 0, 1], bass: [1, 0, 1, 0, 1, 0, 1, 0], wave: 'triangle', mel: .6, cut: 2400, blip: ['sine', 587.33, 698.46, .12] },
+    fluent: { style: 'Airy chill', root: 5, bpm: 72, prog: [I7, IV, VI7, V], padWave: 'sine', pad: .05, arpWave: 'sine', arp: [0, -1, 2, -1, 3, -1, 1, -1], arpOct: 12,
+      kick: [1, 0, 0, 0, 0, 0, 0, 0], clap: [0, 0, 0, 0, 0, 0, 0, 0], hat: [0, 0, 1, 0, 0, 0, 1, 1], bass: [1, 0, 0, 0, 0, 0, 0, 0], wave: 'sine', mel: .45, cut: 2200, blip: ['sine', 698.46, 880, .12] },
+    hud: { style: 'Sci-fi drive', root: 7, bpm: 100, prog: [VI, III, IV, V], padWave: 'sawtooth', pad: .018, arpWave: 'square', arp: [0, 2, 1, 2, 0, 2, 1, 2], arpOct: 12,
+      kick: [1, 0, 0, 0, 1, 0, 0, 0], clap: [0, 0, 0, 0, 0, 0, 0, 0], hat: [1, 1, 1, 1, 1, 1, 1, 1], bass: [1, 1, 1, 1, 1, 1, 1, 1], wave: 'sine', mel: .35, cut: 1700, blip: ['sine', 880, 987.77, .1] },
+    soft: { style: 'Lo-fi', root: 5, bpm: 70, prog: [II7, V7, I7, VI7], padWave: 'triangle', pad: .03, arpWave: 'triangle', arp: [0, -1, -1, 2, -1, 1, -1, -1], arpOct: 0,
+      kick: [1, 0, 0, 0, 0, 1, 0, 0], clap: [0, 0, 1, 0, 0, 0, 1, 0], hat: [1, 0, 1, 0, 1, 0, 1, 1], bass: [1, 0, 0, 0, 0, 1, 0, 0], wave: 'sine', mel: .5, cut: 1300, blip: ['sine', 523.25, 659.25, .14] },
+    night: { style: 'Ambient', root: -3, bpm: 60, bars: 2, prog: [I, IV, VI, IV], padWave: 'sine', pad: .055, arpWave: 'sine', arp: [-1, -1, -1, -1, 2, -1, -1, -1], arpOct: 12,
+      kick: [0, 0, 0, 0, 0, 0, 0, 0], clap: [0, 0, 0, 0, 0, 0, 0, 0], hat: [0, 0, 0, 0, 0, 0, 0, 0], bass: [1, 0, 0, 0, 0, 0, 0, 0], wave: 'sine', mel: .3, cut: 1400, blip: ['sine', 440, 493.88, .14] },
+    terminal: { style: 'Minimal 8-bit', root: -2, bpm: 112, prog: [VI, IV, I, V], padWave: 'square', pad: .006, arpWave: 'square', arp: [0, 1, 2, 1, 0, 1, 2, 1], arpOct: 0,
+      kick: [1, 0, 0, 0, 1, 0, 0, 0], clap: [0, 0, 0, 0, 0, 0, 0, 0], hat: [0, 0, 1, 0, 0, 0, 1, 0], bass: [1, 0, 0, 0, 1, 0, 0, 0], wave: 'square', mel: .25, cut: 1600, blip: ['square', 1046.5, 1046.5, .05] },
+    arcade: { style: 'Chiptune', root: 4, bpm: 136, prog: POP, padWave: 'square', pad: .01, arpWave: 'square', arp: [0, 1, 2, 3, 2, 1, 0, 1], arpOct: 12,
+      kick: [1, 0, 1, 0, 1, 0, 1, 0], clap: [0, 0, 1, 0, 0, 0, 1, 0], hat: [0, 1, 0, 1, 0, 1, 0, 1], bass: [1, 1, 0, 1, 1, 1, 0, 1], wave: 'square', mel: .7, cut: 3000, blip: ['triangle', 659.25, 987.77, .1] },
+    holo: { style: 'Cinematic', root: 7, bpm: 66, bars: 2, prog: EPIC, padWave: 'sawtooth', pad: .022, arpWave: 'sine', arp: [0, 1, 2, 3, 4, 3, 2, 1], arpOct: 0,
+      kick: [1, 0, 0, 0, 0, 0, 0, 0], clap: [0, 0, 0, 0, 0, 0, 0, 0], hat: [0, 0, 0, 0, 0, 0, 0, 0], bass: [1, 0, 0, 0, 0, 0, 0, 0], wave: 'sine', mel: .5, cut: 1800, blip: ['sine', 783.99, 1046.5, .1] },
+    grid: { style: 'Synthwave', root: 9, bpm: 100, prog: EPIC, padWave: 'sawtooth', pad: .02, arpWave: 'sawtooth', arp: [0, 1, 2, 1, 3, 1, 2, 1], arpOct: 12,
+      kick: [1, 0, 0, 0, 1, 0, 0, 0], clap: [0, 0, 1, 0, 0, 0, 1, 0], hat: [0, 1, 0, 1, 0, 1, 0, 1], bass: [1, 1, 1, 1, 1, 1, 1, 1], wave: 'triangle', mel: .45, cut: 2000, blip: ['square', 880, 880, .04] }
   };
-  // Music styles the visitor can pick; 'auto' follows the theme, 'clicks' keeps only the blips.
+  // Music styles the visitor can pick; 'auto' plays the theme's own song, 'clicks' keeps only the blips.
   var MUSIC = [{ id: 'auto', name: 'Auto' }, { id: 'calm', name: 'Calm' }, { id: 'bright', name: 'Bright' },
     { id: 'deep', name: 'Deep' }, { id: 'clicks', name: 'Clicks' }];
-  var MUSIC_PROFILE = { calm: 'soft', bright: 'arcade', deep: 'night' };
-  var BEAT = 60 / 64, CHORD_BEATS = 8;
-  var CHORDS = [[0, 4, 7], [-5, -1, 2], [-3, 0, 4], [-7, -3, 0]];   // I, V, vi, IV
+  var MUSIC_PROFILE = { calm: 'fluent', bright: 'material', deep: 'night' };
+  var STEPS = 8;                                                       // eighth notes per bar
   var PENTA = [0, 2, 4, 7, 9, 12, 14, 16, 19, 21];                     // major pentatonic, 2 octaves
   var sound = (function () {
     // 'mm-vol' replaces the old 'mm-volume' key so every visitor starts again at 15%.
@@ -235,13 +256,28 @@
       o.connect(f); f.connect(g); g.connect(pad.bus);
       o.start(at); o.stop(at + attack + hold + release + .1);
     }
-    function playChord(at, chord) {
+    function step() { return 60 / profile.bpm / 2; }
+    function tone(chord, k) { return chord[k % chord.length] + 12 * Math.floor(k / chord.length); }
+    function playChord(at, chord, len) {
+      var a = Math.min(1.5, len / 4);
       for (var i = 0; i < chord.length; i++)
-        voice('sine', hz(profile.root + chord[i] - 12), at, 2, CHORD_BEATS * BEAT - 1, 2.5, .05);
-      voice('sine', hz(profile.root + chord[0] - 24), at, 2, CHORD_BEATS * BEAT - 1, 2.5, .06);
+        voice(profile.padWave, hz(profile.root + chord[i] - 12), at, a, len - a, 1.8, profile.pad);
     }
-    // Sparse melody: a gentle random walk on the pentatonic scale, rising at each phrase start
-    // and resting on a chord tone when the chord changes.
+    // Drums from shaped noise and a pitch-dropping sine; they go to the dry bus, not the reverb.
+    function noiseHit(at, type, freq, len, peak) {
+      var n = ctx.createBufferSource(), f = ctx.createBiquadFilter(), g = ctx.createGain();
+      n.buffer = pad.noise; f.type = type; f.frequency.value = freq;
+      g.gain.setValueAtTime(peak, at); g.gain.exponentialRampToValueAtTime(.0001, at + len);
+      n.connect(f); f.connect(g); g.connect(pad.dry); n.start(at, Math.random() * .5); n.stop(at + len + .05);
+    }
+    function kick(at) {
+      var o = ctx.createOscillator(), g = ctx.createGain();
+      o.frequency.setValueAtTime(130, at); o.frequency.exponentialRampToValueAtTime(42, at + .14);
+      g.gain.setValueAtTime(.16, at); g.gain.exponentialRampToValueAtTime(.0001, at + .32);
+      o.connect(g); g.connect(pad.dry); o.start(at); o.stop(at + .35);
+    }
+    // Melody: a gentle random walk on the pentatonic scale, rising at each phrase start
+    // and landing on a chord tone when the chord changes.
     function playMelody(at, beat, chord) {
       if (beat === 0) {
         pad.step = 0;
@@ -250,34 +286,41 @@
           if (at12 >= 0) pad.step = at12;
         }
       } else {
-        if (Math.random() < .45) return;
+        if (Math.random() > profile.mel) return;
         var move = [-1, 1, 1, 2, -2][Math.floor(Math.random() * 5)];
         if (beat < 4 && move < 0) move = -move;
         pad.step = Math.max(0, Math.min(PENTA.length - 1, pad.step + move));
       }
-      voice(profile.wave, hz(profile.root + PENTA[pad.step]), at, .03, .1, 2.4, .045);
+      voice(profile.wave, hz(profile.root + 12 + PENTA[pad.step]), at, .02, step() * 1.5, 1.2, .03);
     }
-    // Look-ahead scheduler: every 250 ms, book the notes due in the next second.
+    // Look-ahead scheduler: every 250 ms, book the eighth notes due in the next second.
     function tick() {
       if (!pad || ctx.state !== 'running') return;
       while (pad.next < ctx.currentTime + 1) {
-        var beat = pad.beat % CHORD_BEATS;
-        var chord = CHORDS[Math.floor(pad.beat / CHORD_BEATS) % CHORDS.length];
+        var p = profile, bars = p.bars || 1, s8 = pad.beat % STEPS, at = pad.next;
+        var bar = Math.floor(pad.beat / STEPS), chord = p.prog[Math.floor(bar / bars) % p.prog.length];
         if (music !== 'clicks') {
-          if (beat === 0) playChord(pad.next, chord);
-          if (beat % 2 === 0 || Math.random() < .25) playMelody(pad.next, beat, chord);
+          if (s8 === 0 && bar % bars === 0) playChord(at, chord, STEPS * bars * step());
+          var k = p.arp[s8];
+          if (k >= 0) voice(p.arpWave, hz(p.root + p.arpOct + tone(chord, k)), at, .005, .03, .45, .022);
+          if (p.bass[s8]) voice('triangle', hz(p.root + chord[0] - 24), at, .01, step() * .8, .25, .07);
+          if (p.kick[s8]) kick(at);
+          if (p.clap[s8]) noiseHit(at, 'bandpass', 1500, .18, .09);
+          if (p.hat[s8]) noiseHit(at, 'highpass', 7500, .05, .025);
+          if (s8 % 2 === 0) playMelody(at, s8, chord);
         }
-        pad.beat++; pad.next += BEAT;
+        pad.beat++; pad.next += step();
       }
     }
     function startPad() {
       if (!ctx || pad) return;
-      var bus = ctx.createGain(), rev = hall(), wet = ctx.createGain(), now = ctx.currentTime;
-      bus.gain.setValueAtTime(0, now);
-      bus.gain.linearRampToValueAtTime(1, now + 4);
-      wet.gain.value = .5;
-      bus.connect(master); bus.connect(rev); rev.connect(wet); wet.connect(master);
-      pad = { bus: bus, next: now + .2, beat: 0, step: 0 };
+      var bus = ctx.createGain(), dry = ctx.createGain(), rev = hall(), wet = ctx.createGain(), now = ctx.currentTime;
+      var noise = ctx.createBuffer(1, ctx.sampleRate, ctx.sampleRate), nd = noise.getChannelData(0);
+      for (var i = 0; i < nd.length; i++) nd[i] = Math.random() * 2 - 1;
+      [bus, dry].forEach(function (g) { g.gain.setValueAtTime(0, now); g.gain.linearRampToValueAtTime(1, now + 4); });
+      wet.gain.value = .4;
+      bus.connect(master); bus.connect(rev); rev.connect(wet); wet.connect(master); dry.connect(master);
+      pad = { bus: bus, dry: dry, noise: noise, next: now + .2, beat: 0, step: 0 };
       setInterval(tick, 250);
       tick();
     }
