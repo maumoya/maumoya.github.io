@@ -119,7 +119,7 @@
     {"p": "", "a": "building", "t": "ZeroC0DX", "b": ["Developer tool · In progress", "A code reviewer that must prove each finding by running the tests."]},
     {"p": "", "a": "building", "t": "Plaza", "b": ["Game · In progress", "A strategy game where you build a fictional crime dynasty through real history."]},
     {"p": "", "a": "building", "t": "HubCO", "b": ["Marketplace · In progress", "A marketplace connecting homes with vetted service pros. 2nd place, Premio Inspira 2021."]},
-    {"p": "", "a": "building", "t": "GrantPRO", "b": ["Grants · In progress", "Finds grants that fit, drafts the application and keeps the award compliant to the last report."]},
+    {"p": "", "a": "building", "t": "GrantPRO", "b": ["Grants · In progress", "The modular, auditable grants-finance business OS for grant-funded nonprofits: audit-ready timesheets, grant coding and eligibility checks."]},
     {"p": "", "a": "building", "t": "VisionHFQX", "b": ["Trading · In progress", "High-frequency quantitative trading research: signals, backtests and risk limits run by a supervised agent team."]},
     {"p": "", "a": "building", "t": "Need a plug-in built on top of a tool that already works?", "b": ["Consulting", "Creative plug-in development: I find the gap in the software your team already uses (CRM, ERP, support desk, portal) and add the missing feature as a small, tested, private-by-design extension. Proof of craft: {0}."]},
     {"p": "", "a": "hire", "t": "Ways to work together", "b": []},
