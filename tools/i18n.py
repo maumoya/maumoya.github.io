@@ -17,7 +17,7 @@ import re
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-LANGS = ("zh", "hi", "es", "ar", "fr", "pt", "de", "it", "ja", "he", "sjn")
+LANGS = ("zh", "hi", "es", "ar", "fr", "pt", "de", "it", "ja", "he", "sjn", "ru", "eo", "qu")
 ATTRS = ("aria-label", "alt", "title", "placeholder")
 SKIP = {"script", "style", "svg", "noscript", "template", "source", "head"}
 VOID = {"area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta", "source", "track", "wbr"}
@@ -115,7 +115,9 @@ def walk(el, keys):
 
 
 def pages():
-    return [p for p in sorted(ROOT.glob("**/index.html")) if ".claude" not in p.relative_to(ROOT).parts]
+    # brand/ holds internal logo review pages, not site pages, so they are not translated
+    skip = {".claude", "brand"}
+    return [p for p in sorted(ROOT.glob("**/index.html")) if not skip & set(p.relative_to(ROOT).parts)]
 
 
 def all_keys():
