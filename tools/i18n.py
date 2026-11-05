@@ -115,7 +115,9 @@ def walk(el, keys):
 
 
 def pages():
-    return [p for p in sorted(ROOT.glob("**/index.html")) if ".claude" not in p.relative_to(ROOT).parts]
+    # brand/ holds internal logo review pages, not site pages, so they are not translated
+    skip = {".claude", "brand"}
+    return [p for p in sorted(ROOT.glob("**/index.html")) if not skip & set(p.relative_to(ROOT).parts)]
 
 
 def all_keys():
