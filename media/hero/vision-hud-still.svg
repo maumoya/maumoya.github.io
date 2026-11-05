@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" fill="none">
+<circle cx="500" cy="500" r="480" stroke="#b072ff" stroke-opacity=".3"/>
+<g><circle cx="500" cy="500" r="450" stroke="#b072ff" stroke-opacity=".55" stroke-width="16" stroke-dasharray="2 13"/></g>
+<g><circle cx="500" cy="500" r="410" stroke="#ff6bd6" stroke-opacity=".7" stroke-width="6" stroke-dasharray="180 140 60 400 90 1706" stroke-linecap="round"/></g>
+<g><circle cx="500" cy="500" r="372" stroke="#b072ff" stroke-opacity=".6" stroke-width="2" stroke-dasharray="40 14"/></g>
+<circle cx="500" cy="500" r="340" stroke="#b072ff" stroke-opacity=".35"/>
+<g><circle cx="500" cy="500" r="318" stroke="#b072ff" stroke-opacity=".5" stroke-width="10" stroke-dasharray="300 700 200 798"/></g>
+<g stroke="#b072ff" stroke-opacity=".7" stroke-width="2"><path d="M500 0v40M500 960v40M0 500h40M960 500h40"/></g>
+<g stroke="#ff6bd6" stroke-opacity=".6"><path d="M120 210l60 0 30 30M880 790l-60 0-30-30"/></g>
+</svg>
