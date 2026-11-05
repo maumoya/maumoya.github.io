@@ -229,6 +229,17 @@ h3 { font-size: clamp(36px, 5.5vw, 64px); letter-spacing: -0.03em; line-height: 
   [data-theme="arcade"] #top.v3 { --v3-h-phone: 18.3vw; }
   [data-theme="fluent"] #top.v3 { --v3-h-phone: 18.1vw; }
 }
+/* Desktop: the whole hero fits the first screen; the photo crops from the bottom, below the laptop. */
+@media (min-width: 701px) {
+  #top.v3 { display: flex; flex-direction: column; min-height: 0; max-height: calc(100svh - 44px); }
+  #top.v3 .v3-top { flex-shrink: 0; padding-top: clamp(12px, 1.6vw, 28px); }
+  #top.v3 .v3-pic { flex: 0 1 auto; min-height: 0; margin-top: clamp(2px, .5vw, 8px); }
+  #top.v3 .v3-pic::before { background-position: center top; }
+  #top.v3 .v3-title { top: 2.33vw; }
+  #top.v3 > :not(.v3-top):not(.v3-pic) { flex-shrink: 0; }
+  /* The menu bar spans exactly as wide as HANDS ON (width set by options.js). */
+  .nav .nav-in { max-width: calc(var(--hands-w, 1036px) + 44px); }
+}
 .v3-title { position: absolute; left: 50%; top: 7%; transform: translateX(-50%); width: max-content; text-align: left; }
 .v3-label { margin: 0 0 0 .07em; font-size: clamp(9px, 1.6vw, 26px); font-weight: 700; letter-spacing: .02em; color: #fff; }
 .v3-label b { color: var(--v3-mark); font-weight: 700; margin-right: .35em; text-shadow: 0 0 12px color-mix(in srgb, var(--v3-mark) 55%, transparent); }
@@ -488,9 +499,15 @@ h3 { font-size: clamp(36px, 5.5vw, 64px); letter-spacing: -0.03em; line-height: 
 .set-panel .set-icon { width: 28px; height: 28px; }
 .set-panel .set-opt { gap: 7px; padding: 4px 7px; border-radius: 7px; }
 .set-panel .set-theme, .set-panel .set-lang { gap: 2px; }
-.set-panel .set-lang { max-height: 150px; overflow: auto; overscroll-behavior: contain; }
-.set-panel .set-find { padding: 5px 8px; font-size: 13px; }
-.set-music { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+.set-panel .set-find { padding: 5px 8px; font-size: inherit; }
+.set-music { display: grid; grid-template-columns: repeat(5, 1fr); gap: 2px; }
+/* Same font and size as the theme's menu bar; wide enough that every section shows without scrolling. */
+.nav .set-panel { width: min(408px, calc(100vw - 32px)); max-height: calc(100svh - 60px); font-family: inherit; font-size: inherit; letter-spacing: inherit; line-height: 1.35; }
+.nav .set-panel .set-group legend { font-size: .92em; }
+.set-panel .set-theme, .set-panel .set-lang { grid-template-columns: repeat(3, 1fr); }
+.set-soon { flex-basis: 100%; margin-top: -2px; font-size: .82em; color: var(--muted); }
+.set-lang .set-opt:has(.set-soon) { flex-wrap: wrap; row-gap: 0; }
+@media (max-width: 600px) { .set-panel .set-theme, .set-panel .set-lang { grid-template-columns: 1fr 1fr; } .set-music { grid-template-columns: repeat(3, 1fr); } }
 .set-music .set-opt { justify-content: center; text-align: center; }
 .set-music .set-opt:has(input:checked)::after, .set-panel .set-lang .set-opt:has(input:checked)::after { content: none; }
 .set-music .set-opt:has(input:disabled) { opacity: .45; cursor: default; }

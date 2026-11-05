@@ -23,22 +23,138 @@
     { id: 'holo', name: 'Gold Hologram', sw: ['#020812', '#f2b84b'] },
     { id: 'grid', name: 'Neon Grid', sw: ['#000000', '#6ff3ff'] }
   ];
-  // Ethnologue 2026 top five by total speakers, then French, Portuguese, German, Italian and Japanese.
+  // Shown without searching, in the owner's order. Every other language appears through the search box.
   var LANGS = [
-    { id: 'en', tag: 'en', name: 'English', flag: 'us' },
-    { id: 'zh', tag: 'zh-Hans', name: '中文', flag: 'cn' },
-    { id: 'hi', tag: 'hi', name: 'हिन्दी', flag: 'in' },
-    { id: 'es', tag: 'es', name: 'Español', flag: 'es' },
-    { id: 'ar', tag: 'ar', name: 'العربية', flag: 'sa', rtl: true },
-    { id: 'fr', tag: 'fr', name: 'Français', flag: 'fr' },
-    { id: 'pt', tag: 'pt-BR', name: 'Português', flag: 'br' },
-    { id: 'de', tag: 'de', name: 'Deutsch', flag: 'de' },
-    { id: 'it', tag: 'it', name: 'Italiano', flag: 'it' },
-    { id: 'ja', tag: 'ja', name: '日本語', flag: 'jp' },
-    { id: 'he', tag: 'he', name: 'עברית', flag: 'il', rtl: true, en: 'Hebrew' },
+    { id: 'en', tag: 'en', name: 'English', flag: 'us', en: 'English', pin: 1 },
+    { id: 'es', tag: 'es', name: 'Español', flag: 'es', en: 'Spanish Castellano', pin: 1 },
+    { id: 'qu', tag: 'qu', name: 'Runasimi', flag: 'pe', en: 'Quechua Kichwa', pin: 1 },
+    { id: 'ru', tag: 'ru', name: 'Русский', flag: 'ru', en: 'Russian', pin: 1 },
+    { id: 'pt', tag: 'pt-BR', name: 'Português', flag: 'br', en: 'Portuguese Brazil', pin: 1 },
+    { id: 'fr', tag: 'fr', name: 'Français', flag: 'fr', en: 'French', pin: 1 },
+    { id: 'de', tag: 'de', name: 'Deutsch', flag: 'de', en: 'German', pin: 1 },
+    { id: 'it', tag: 'it', name: 'Italiano', flag: 'it', en: 'Italian', pin: 1 },
+    { id: 'ja', tag: 'ja', name: '日本語', flag: 'jp', en: 'Japanese Nihongo', pin: 1 },
+    { id: 'ar', tag: 'ar', name: 'العربية', flag: 'sa', rtl: true, en: 'Arabic', pin: 1 },
+    { id: 'he', tag: 'he', name: 'עברית', flag: 'il', rtl: true, en: 'Hebrew Ivrit', pin: 1 },
     // Fan Neo-Sindarin (ISO 639-3 sjn), built from public dictionaries; approximate by nature.
-    { id: 'sjn', tag: 'sjn', name: 'Edhellen (Elvish)', flag: 'elf' }
-  ];
+    { id: 'sjn', tag: 'sjn', name: 'Edhellen (Elvish)', flag: 'elf', en: 'Elvish Sindarin Tolkien', pin: 1 },
+    { id: 'eo', tag: 'eo', name: 'Esperanto', flag: 'eo', en: 'Esperanto', pin: 1 }
+  ].concat([
+    // The rest of the world's top 100 by speakers (Ethnologue), plus Greek, Latin and Aramaic.
+    // id|tag|native name|English name|r = right to left
+    'zh|zh-Hans|中文|Chinese Mandarin',
+    'hi|hi|हिन्दी|Hindi',
+    'bn|bn|বাংলা|Bengali Bangla',
+    'ur|ur|اردو|Urdu|r',
+    'id|id|Bahasa Indonesia|Indonesian',
+    'pcm|pcm|Naijá|Nigerian Pidgin',
+    'mr|mr|मराठी|Marathi',
+    'te|te|తెలుగు|Telugu',
+    'tr|tr|Türkçe|Turkish',
+    'ta|ta|தமிழ்|Tamil',
+    'yue|yue|粵語|Cantonese Yue',
+    'vi|vi|Tiếng Việt|Vietnamese',
+    'wuu|wuu|吴语|Wu Shanghainese',
+    'tl|tl|Tagalog|Tagalog Filipino',
+    'ko|ko|한국어|Korean',
+    'fa|fa|فارسی|Persian Farsi|r',
+    'ha|ha|Hausa|Hausa',
+    'sw|sw|Kiswahili|Swahili',
+    'jv|jv|Basa Jawa|Javanese',
+    'pa|pa|ਪੰਜਾਬੀ|Punjabi',
+    'gu|gu|ગુજરાતી|Gujarati',
+    'th|th|ไทย|Thai',
+    'kn|kn|ಕನ್ನಡ|Kannada',
+    'am|am|አማርኛ|Amharic',
+    'bho|bho|भोजपुरी|Bhojpuri',
+    'nan|nan|閩南語|Min Nan Hokkien Taiwanese',
+    'yo|yo|Yorùbá|Yoruba',
+    'or|or|ଓଡ଼ିଆ|Odia Oriya',
+    'ml|ml|മലയാളം|Malayalam',
+    'su|su|Basa Sunda|Sundanese',
+    'my|my|မြန်မာ|Burmese Myanmar',
+    'pl|pl|Polski|Polish',
+    'uk|uk|Українська|Ukrainian',
+    'ig|ig|Igbo|Igbo',
+    'uz|uz|Oʻzbekcha|Uzbek',
+    'sd|sd|سنڌي|Sindhi|r',
+    'ro|ro|Română|Romanian',
+    'nl|nl|Nederlands|Dutch Flemish',
+    'om|om|Afaan Oromoo|Oromo',
+    'ps|ps|پښتو|Pashto|r',
+    'mai|mai|मैथिली|Maithili',
+    'ms|ms|Bahasa Melayu|Malay',
+    'az|az|Azərbaycanca|Azerbaijani',
+    'ku|ku|Kurdî|Kurdish',
+    'ne|ne|नेपाली|Nepali',
+    'si|si|සිංහල|Sinhala',
+    'hak|hak|客家話|Hakka',
+    'ff|ff|Fulfulde|Fula Fulani',
+    'ceb|ceb|Cebuano|Cebuano Bisaya',
+    'km|km|ខ្មែរ|Khmer Cambodian',
+    'zu|zu|isiZulu|Zulu',
+    'cs|cs|Čeština|Czech',
+    'el|el|Ελληνικά|Greek',
+    'hu|hu|Magyar|Hungarian',
+    'sv|sv|Svenska|Swedish',
+    'kk|kk|Қазақша|Kazakh',
+    'xh|xh|isiXhosa|Xhosa',
+    'rw|rw|Kinyarwanda|Kinyarwanda',
+    'so|so|Soomaali|Somali',
+    'ht|ht|Kreyòl ayisyen|Haitian Creole',
+    'as|as|অসমীয়া|Assamese',
+    'mg|mg|Malagasy|Malagasy',
+    'af|af|Afrikaans|Afrikaans',
+    'be|be|Беларуская|Belarusian',
+    'bg|bg|Български|Bulgarian',
+    'sr|sr|Српски|Serbian',
+    'hr|hr|Hrvatski|Croatian',
+    'sk|sk|Slovenčina|Slovak',
+    'da|da|Dansk|Danish',
+    'fi|fi|Suomi|Finnish',
+    'nb|nb|Norsk|Norwegian',
+    'ak|ak|Akan|Akan Twi',
+    'ti|ti|ትግርኛ|Tigrinya',
+    'ny|ny|Chichewa|Chichewa Nyanja',
+    'sn|sn|chiShona|Shona',
+    'st|st|Sesotho|Sesotho',
+    'tn|tn|Setswana|Tswana',
+    'ln|ln|Lingála|Lingala',
+    'lo|lo|ລາວ|Lao',
+    'ka|ka|ქართული|Georgian',
+    'hy|hy|Հայերեն|Armenian',
+    'ky|ky|Кыргызча|Kyrgyz',
+    'tg|tg|Тоҷикӣ|Tajik',
+    'tk|tk|Türkmençe|Turkmen',
+    'mn|mn|Монгол|Mongolian',
+    'ug|ug|ئۇيغۇرچە|Uyghur|r',
+    'bo|bo|བོད་སྐད|Tibetan',
+    'lt|lt|Lietuvių|Lithuanian',
+    'lv|lv|Latviešu|Latvian',
+    'et|et|Eesti|Estonian',
+    'sl|sl|Slovenščina|Slovenian',
+    'sq|sq|Shqip|Albanian',
+    'mk|mk|Македонски|Macedonian',
+    'bs|bs|Bosanski|Bosnian',
+    'ca|ca|Català|Catalan',
+    'gl|gl|Galego|Galician',
+    'eu|eu|Euskara|Basque',
+    'cy|cy|Cymraeg|Welsh',
+    'ga|ga|Gaeilge|Irish Gaelic',
+    'gn|gn|Avañeʼẽ|Guarani',
+    'ay|ay|Aymar aru|Aymara',
+    'mt|mt|Malti|Maltese',
+    'is|is|Íslenska|Icelandic',
+    'yi|yi|ייִדיש|Yiddish|r',
+    'la|la|Latina|Latin',
+    'arc|arc|ܐܪܡܝܐ|Aramaic Syriac|r'
+  ].map(function (row) {
+    var c = row.split('|');
+    return { id: c[0], tag: c[1], name: c[2], en: c[3], rtl: !!c[4], flag: { zh: 'cn', hi: 'in' }[c[0]] || 'globe' };
+  }));
+  // Languages with a file in i18n/. The others render in English for now.
+  var READY = ['en', 'es', 'qu', 'ru', 'pt', 'fr', 'de', 'it', 'ja', 'ar', 'he', 'sjn', 'eo', 'zh', 'hi'];
+  function ready(id) { return READY.indexOf(id) >= 0; }
 
   // ---------- Flags: simple original drawings, 30x20 ----------
   function star(cx, cy, r, rot) {
@@ -66,17 +182,21 @@
     jp: '<rect width="30" height="20" fill="#fff"/><circle cx="15" cy="10" r="6" fill="#bc002d"/>',
     il: '<rect width="30" height="20" fill="#fff"/><rect y="2" width="30" height="2.4" fill="#0038b8"/><rect y="15.6" width="30" height="2.4" fill="#0038b8"/>' +
       '<path d="M15 5.6l3.8 6.6h-7.6zM15 14.4l-3.8-6.6h7.6z" fill="none" stroke="#0038b8" stroke-width=".9"/>',
+    pe: '<rect width="30" height="20" fill="#fff"/><rect width="10" height="20" fill="#d91023"/><rect x="20" width="10" height="20" fill="#d91023"/>',
+    ru: '<rect width="30" height="20" fill="#fff"/><rect y="6.67" width="30" height="6.67" fill="#0039a6"/><rect y="13.33" width="30" height="6.67" fill="#d52b1e"/>',
+    eo: '<rect width="30" height="20" fill="#009900"/><rect width="10" height="10" fill="#fff"/>' + star(5, 5, 3.6).replace('#ffde00', '#009900'),
+    globe: '<rect width="30" height="20" rx="2" fill="#5b6b7f"/><g fill="none" stroke="#fff" stroke-width=".9"><circle cx="15" cy="10" r="7"/><ellipse cx="15" cy="10" rx="3" ry="7"/><path d="M8 10h14M9.2 6.5h11.6M9.2 13.5h11.6"/></g>',
     elf:'<rect width="30" height="20" fill="#1d3b2a"/><path d="M8 15C10 6 18 4 23 4c0 6-4 13-14 11z" fill="#c9e4b4"/><path d="M8 15 19 7" stroke="#1d3b2a" stroke-width=".9"/>'
   };
   function flag(id) {
-    return '<svg class="flag" viewBox="0 0 30 20" width="21" height="14" aria-hidden="true" focusable="false">' + FLAGS[id] + '</svg>';
+    return '<svg class="flag" viewBox="0 0 30 20" width="21" height="14" aria-hidden="true" focusable="false">' + (FLAGS[id] || FLAGS.globe) + '</svg>';
   }
 
   // ---------- Translation ----------
   var LETTER = /\p{L}/u, PLACE = /\{(\d+)\}/g;
   var ATTRS = ['aria-label', 'alt', 'title', 'placeholder'];
   var SKIP = { SCRIPT: 1, STYLE: 1, SVG: 1, NOSCRIPT: 1, TEMPLATE: 1, SOURCE: 1, svg: 1 };
-  var units = null, attrs = null, origTitle = document.title, dict = {}, lang = 'en';
+  var units = null, attrs = null, origTitle = document.title, dict = {}, lang = 'en', chosen = 'en';
   function norm(s) { return s.replace(/\s+/g, ' ').trim(); }
   function hasLetter(k) { return LETTER.test(k.replace(PLACE, '')); }
 
@@ -153,8 +273,10 @@
       root.classList.remove('i18n-wait');
       sync();
     }
+    chosen = L.id;
     if (fromUser) save('mm-lang', L.id);
-    if (L.id === 'en') return apply(null);
+    // No translation yet: the page stays in English, the choice stays checked.
+    if (L.id === 'en' || !ready(L.id)) return apply(null);
     fetch(new URL('i18n/' + L.id + '.json', base)).then(function (r) { return r.ok ? r.json() : null; })
       .then(apply, function () { apply(null); });
   }
@@ -363,16 +485,22 @@
     return '<fieldset class="set-group"><legend data-t="' + label + '" data-t-text="1">' + t(label) + '</legend><div class="set-' + name + '">' +
       items.map(function (it) {
         var swatch = name === 'theme' ? '<span class="sw" aria-hidden="true" style="--a:' + it.sw[0] + ';--b:' + it.sw[1] + '"></span>' : '';
-        return '<label class="set-opt"><input type="radio" name="mm-' + name + '" value="' + it.id + '">' + (name === 'lang'
-            ? flag(it.flag) + '<span lang="' + it.tag + '">' + it.name + '</span>'
+        return '<label class="set-opt"' + (name === 'lang' && !it.pin ? ' hidden' : '') + '><input type="radio" name="mm-' + name + '" value="' + it.id + '">' + (name === 'lang'
+            ? flag(it.flag) + '<span lang="' + it.tag + '"' + (it.rtl ? ' dir="rtl"' : '') + '>' + it.name + '</span>' +
+              (ready(it.id) ? '' : '<small class="set-soon" data-t="English for now" data-t-text="1">' + t('English for now') + '</small>')
             : swatch + '<span data-t="' + it.name + '" data-t-text="1">' + t(it.name) + '</span>') + '</label>';
       }).join('') + '</div></fieldset>';
   }
   function sync() {
     if (!panel) return;
-    var th = root.dataset.theme || 'clean', lg = LANGS.filter(function (x) { return x.tag === root.lang; })[0];
+    var th = root.dataset.theme || 'clean';
     panel.querySelectorAll('input[name="mm-theme"]').forEach(function (r) { r.checked = r.value === th; });
-    panel.querySelectorAll('input[name="mm-lang"]').forEach(function (r) { r.checked = r.value === (lg ? lg.id : 'en'); });
+    var q = panel.querySelector('.set-find').value;
+    panel.querySelectorAll('input[name="mm-lang"]').forEach(function (r) {
+      r.checked = r.value === chosen;
+      // A searched-for choice stays in view next to the pinned ones.
+      if (!q && r.checked) r.closest('label').hidden = false;
+    });
     panel.querySelectorAll('input[name="mm-music"]').forEach(function (r) { r.checked = r.value === sound.music; r.disabled = !sound.on; });
     var sb = panel.querySelector('.set-sound button'), sv = panel.querySelector('.set-sound input');
     sb.setAttribute('aria-pressed', String(sound.on));
@@ -421,16 +549,14 @@
   document.addEventListener('pointerdown', function (e) { if (!panel.hidden && !panel.contains(e.target) && !btn.contains(e.target)) close(); });
   panel.addEventListener('focusout', function (e) { if (e.relatedTarget && !panel.contains(e.relatedTarget) && e.relatedTarget !== btn) close(); });
 
-  // Language finder: matches native name, English name or code, ignoring accents and case.
+  // Language finder: empty shows the pinned list; typing searches every language. Matches native name, English name or code, ignoring accents and case.
   var find = panel.querySelector('.set-find');
   function fold(x) { return (x || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase(); }
-  var EN = { en: 'English', zh: 'Chinese Mandarin', hi: 'Hindi', es: 'Spanish Castellano', ar: 'Arabic', fr: 'French',
-    pt: 'Portuguese Brazil', de: 'German', it: 'Italian', ja: 'Japanese Nihongo', he: 'Hebrew Ivrit', sjn: 'Elvish Sindarin Tolkien' };
   find.addEventListener('input', function () {
     var q = fold(find.value.trim());
     panel.querySelectorAll('input[name="mm-lang"]').forEach(function (r) {
       var L = LANGS.filter(function (x) { return x.id === r.value; })[0];
-      r.closest('label').hidden = !!q && fold(L.name + ' ' + EN[L.id] + ' ' + L.id + ' ' + L.tag).indexOf(q) < 0;
+      r.closest('label').hidden = q ? fold(L.name + ' ' + L.en + ' ' + L.id + ' ' + L.tag).indexOf(q) < 0 : !L.pin;
     });
   });
   find.addEventListener('keydown', function (e) {
@@ -462,13 +588,18 @@
   }, true);
 
   setTheme(load('mm-theme', 'clean'), false);
+  // The menu bar matches the HANDS ON headline width (CSS reads --hands-w on desktop).
+  var hands = document.querySelector('.v3-hands');
+  if (hands && window.ResizeObserver) new ResizeObserver(function () {
+    root.style.setProperty('--hands-w', Math.round(hands.getBoundingClientRect().width) + 'px');
+  }).observe(hands);
   // No saved choice: use the visitor's browser language when the site has it.
   function guess() {
     var want = (navigator.languages || [navigator.language || 'en']);
     for (var i = 0; i < want.length; i++) {
       var w = String(want[i]).toLowerCase(), base = w.split('-')[0];
       if (base === 'iw') base = 'he';
-      if (LANGS.some(function (x) { return x.id === base; })) return base;
+      if (ready(base)) return base;
     }
     return 'en';
   }
