@@ -440,5 +440,10 @@
   "requests to other hosts": "दूसरे होस्ट को अनुरोध",
   "Christian Trivia v2 gameplay: the child walks to a glowing light, answers what God made on day 1, gets a timeline card and walks through the open gate into day 2.": "Christian Trivia v2 गेमप्ले: बच्चा एक चमकती रोशनी तक चलता है, बताता है कि पहले दिन परमेश्वर ने क्या बनाया, एक टाइमलाइन कार्ड पाता है और खुले फाटक से दूसरे दिन में जाता है।",
   "GrantPRO card: a timesheet line is coded to a grant, passes an eligibility check and is locked into the audit trail.": "GrantPRO कार्ड: टाइमशीट की एक पंक्ति को अनुदान से जोड़ा जाता है, वह पात्रता जाँच पास करती है और ऑडिट ट्रेल में लॉक हो जाती है।",
-  "View repo {0}": "रिपॉज़िटरी {0} देखें"
+  "View repo {0}": "रिपॉज़िटरी {0} देखें",
+  "Talent · In progress": "प्रतिभा · प्रगति पर",
+  "A career league: talent keeps one verified player card and employers compete to draft them, comp up front. Talent never pays.": "एक करियर लीग: प्रतिभा के पास एक सत्यापित प्लेयर कार्ड होता है और नियोक्ता वेतन पहले बताकर उसे ड्राफ्ट करने की होड़ करते हैं। प्रतिभा कभी भुगतान नहीं करती।",
+  "DRAFTED demo tour: a talent player card, the employer draft board, an offer accepted with contact unlocked, and a scam pitch blocked.": "DRAFTED डेमो: प्रतिभा का प्लेयर कार्ड, नियोक्ता का ड्राफ्ट बोर्ड, स्वीकार किया गया ऑफ़र जिससे संपर्क खुलता है, और रोका गया धोखा।",
+  "Ask about DRAFTED by message on LinkedIn": "LinkedIn पर संदेश भेजकर DRAFTED के बारे में पूछें",
+  "DRAFTED": "DRAFTED"
 }

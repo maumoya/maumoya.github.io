@@ -440,5 +440,10 @@
   "requests to other hosts": "petoj al aliaj serviloj",
   "Christian Trivia v2 gameplay: the child walks to a glowing light, answers what God made on day 1, gets a timeline card and walks through the open gate into day 2.": "Ludado de Christian Trivia v2: la infano iras al brila lumo, respondas, kion Dio faris en la unua tago, ricevas tempolinian karton kaj trapasas la malfermitan pordegon al la dua tago.",
   "GrantPRO card: a timesheet line is coded to a grant, passes an eligibility check and is locked into the audit trail.": "Karto de GrantPRO: linio de horfolio estas asignita al subvencio, trapasas kontrolon de rajteco kaj estas ŝlosita en la revizia spuro.",
-  "View repo {0}": "Vidi deponejon {0}"
+  "View repo {0}": "Vidi deponejon {0}",
+  "Talent · In progress": "Talentoj · Prilaborata",
+  "A career league: talent keeps one verified player card and employers compete to draft them, comp up front. Talent never pays.": "Kariera ligo: talento havas unu kontrolitan ludantan karton, kaj dungantoj konkuras por elekti ĝin, kun salajro antaŭe. Talentoj neniam pagas.",
+  "DRAFTED demo tour: a talent player card, the employer draft board, an offer accepted with contact unlocked, and a scam pitch blocked.": "Gvidata vizito de DRAFTED: ludanta karto de talento, la elekta tabulo de dunganto, akceptita oferto kiu malŝlosas kontakton, kaj blokita fraŭdo.",
+  "Ask about DRAFTED by message on LinkedIn": "Demandu pri DRAFTED per mesaĝo en LinkedIn",
+  "DRAFTED": "DRAFTED"
 }

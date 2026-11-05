@@ -440,5 +440,10 @@
   "requests to other hosts": "iest na annonath erin",
   "Christian Trivia v2 gameplay: the child walks to a glowing light, answers what God made on day 1, gets a timeline card and walks through the open gate into day 2.": "Telias Christian Trivia v2: i hên pada na galad, dant man Eru gar ned i aur minui, nest card i lû, a pada trî i ennyn edrannen na i aur tadui.",
   "GrantPRO card: a timesheet line is coded to a grant, passes an eligibility check and is locked into the audit trail.": "Garth GrantPRO: tîw en-lam-lú teithant na-roval, govaeda i-thand a nestennin mi-dîn i-thîr.",
-  "View repo {0}": "Tiro i-vond {0}"
+  "View repo {0}": "Tiro i-vond {0}",
+  "Talent · In progress": "Maeg · Gwanna",
+  "A career league: talent keeps one verified player card and employers compete to draft them, comp up front. Talent never pays.": "Ennor-sant: i vaeg hebi min cardh tíriel, ar i herdir maethar an gelir hon, ah i dhannas penna. I vaeg ú-dhanna ben.",
+  "DRAFTED demo tour: a talent player card, the employer draft board, an offer accepted with contact unlocked, and a scam pitch blocked.": "Tíriad DRAFTED: cardh maeg, palath i herdir, anann bannas ar i dín ui edra, ar gwaith-gael pedin.",
+  "Ask about DRAFTED by message on LinkedIn": "Maetho DRAFTED na beth ned LinkedIn",
+  "DRAFTED": "DRAFTED"
 }
