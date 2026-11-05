@@ -305,5 +305,12 @@
  "Terminal": "Terminal",
  "Arcade": "Arcade",
  "Settings": "Pannad",
- "Pause video": "Daro i vínem"
+ "Pause video": "Daro i vínem",
+ "Search": "Tiro",
+ "Search skills, projects or keywords": "Tiro skills, certh egor peth",
+ "Closest match": "Govad ammaer",
+ "No matches. Try another word.": "Ú-hirnen. Tiro peth arall.",
+ "Results: {0}": "Hiriel: {0}",
+ "Home": "Bar",
+ "↑ ↓ to choose · Enter to open · Esc to close": "↑ ↓ cilo · Enter edro · Esc hollo"
 }
