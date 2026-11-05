@@ -191,14 +191,14 @@ h3 { font-size: clamp(36px, 5.5vw, 64px); letter-spacing: -0.03em; line-height: 
 /* Hands-on hero: an original laptop scene; colors follow the theme. */
 .handson h1 { color: var(--fg, inherit); }
 .handson .gold { background: linear-gradient(180deg, #f9e3a3 0%, #e0b24f 45%, #a8781f 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
-.ho-art { width: 100%; max-width: 1040px; margin: 28px auto 0; border-radius: 22px; overflow: hidden; box-shadow: 0 24px 60px rgba(0,0,0,.35); }
+.ho-art { width: 100%; max-width: 1200px; margin: 28px auto 0; border-radius: 18px; overflow: hidden; box-shadow: 0 24px 60px rgba(0,0,0,.35); }
 .ho-art svg { display: block; width: 100%; height: auto; }
-.ho-lede { max-width: 1040px; margin-left: auto; margin-right: auto; }
+.ho-lede { max-width: 1200px; margin-left: auto; margin-right: auto; border-top: 4px solid currentColor; padding-top: 22px; }
 .ho-art { --s1: #1c1a17; --s2: #6b6258; --s3: #2b2723; --s4: #cfc4b5; --w: #e6dccd; --lb: #e0b24f; }
 .ho-s1 { stop-color: var(--s1); } .ho-s2 { stop-color: var(--s2); } .ho-s3 { stop-color: var(--s3); } .ho-s4 { stop-color: var(--s4); }
-.ho-waves path { fill: var(--w); stroke: var(--w); }
-.ho-waves path[fill="none"] { fill: none; }
+.ho-waves path { stroke: var(--w); }
 .ho-label { fill: var(--lb); }
+.ho-hill { fill: var(--s1); opacity: .9; }
 [data-theme="material"] .ho-art { --s1: #140c2e; --s2: #5b3fd1; --s3: #241650; --s4: #c9bcff; --w: #b9a8ff; --lb: #ffd36e; }
 [data-theme="hud"] .ho-art { --s1: #03101c; --s2: #0b4f6c; --s3: #062437; --s4: #9fe6ff; --w: #5fd3ff; --lb: #5fd3ff; }
 [data-theme="soft"] .ho-art { --s1: #3a2230; --s2: #c98a9b; --s3: #5a3445; --s4: #ffe3d6; --w: #ffd9c7; --lb: #fff1e6; }
