@@ -27,7 +27,9 @@
     { id: 'ar', tag: 'ar', name: 'العربية', flag: 'sa', rtl: true },
     { id: 'fr', tag: 'fr', name: 'Français', flag: 'fr' },
     { id: 'pt', tag: 'pt-BR', name: 'Português', flag: 'br' },
-    { id: 'de', tag: 'de', name: 'Deutsch', flag: 'de' }
+    { id: 'de', tag: 'de', name: 'Deutsch', flag: 'de' },
+    // Fan Neo-Sindarin (ISO 639-3 sjn), built from public dictionaries; approximate by nature.
+    { id: 'sjn', tag: 'sjn', name: 'Edhellen (Elvish)', flag: 'elf' }
   ];
 
   // ---------- Flags: simple original drawings, 30x20 ----------
@@ -51,7 +53,8 @@
     sa: '<rect width="30" height="20" fill="#006c35"/><path d="M7 8.2h16M8 12.6h13l1.6-1" stroke="#fff" stroke-width="1.1" fill="none" stroke-linecap="round"/>',
     fr: '<rect width="30" height="20" fill="#fff"/><rect width="10" height="20" fill="#002395"/><rect x="20" width="10" height="20" fill="#ed2939"/>',
     br: '<rect width="30" height="20" fill="#009c3b"/><path d="M15 2.5 27 10 15 17.5 3 10z" fill="#ffdf00"/><circle cx="15" cy="10" r="4.2" fill="#002776"/>',
-    de: '<rect width="30" height="20" fill="#ffce00"/><rect width="30" height="6.67" fill="#000"/><rect y="6.67" width="30" height="6.67" fill="#dd0000"/>'
+    de: '<rect width="30" height="20" fill="#ffce00"/><rect width="30" height="6.67" fill="#000"/><rect y="6.67" width="30" height="6.67" fill="#dd0000"/>',
+    elf: '<rect width="30" height="20" fill="#1d3b2a"/><path d="M8 15C10 6 18 4 23 4c0 6-4 13-14 11z" fill="#c9e4b4"/><path d="M8 15 19 7" stroke="#1d3b2a" stroke-width=".9"/>'
   };
   function flag(id) {
     return '<svg class="flag" viewBox="0 0 30 20" width="21" height="14" aria-hidden="true" focusable="false">' + FLAGS[id] + '</svg>';
