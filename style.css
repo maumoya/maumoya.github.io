@@ -189,21 +189,31 @@ h3 { font-size: clamp(36px, 5.5vw, 64px); letter-spacing: -0.03em; line-height: 
 #proof[class*=" a-"] .pillar .num { color: var(--a); }
 .pillars.six { grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); }
 
-/* The original cinematic artwork includes its lettering. Keep its full composition
-   at every width; a viewport-height cover crop would cut off HANDS ON on phones. */
+/* Restored artwork with separate vector lettering. Keep the full composition on
+   phones and cap the raster at its native width on large displays. */
 .hero.handson {
   min-height: 0;
   display: block;
   padding: 0;
-  background: #031015;
+  background: #031015 radial-gradient(ellipse at 50% 35%, #0c302f, #031015 70%);
   color: #fff;
   border-bottom: 16px solid #fff;
   --s-accent: #b8f2db;
 }
 .handson .ho-art {
+  position: relative;
   width: 100%;
-  aspect-ratio: 470 / 136;
-  background: #031015 url("media/mauos-85-hands-on.png") center / contain no-repeat;
+  max-width: 2172px;
+  aspect-ratio: 3 / 1;
+  margin-inline: auto;
+  direction: ltr;
+}
+.handson .ho-backdrop { display: block; width: 100%; height: auto; }
+.handson .ho-lettering { position: absolute; inset: 0; width: 100%; height: 100%; }
+/* Beyond the source width, blend into an infinitely scalable gradient instead
+   of stretching a finite bitmap across a 4K or 8K television. */
+@media (min-width: 2173px) {
+  .handson .ho-backdrop { mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent); }
 }
 .handson .ho-actions { padding-block: 24px; }
 .handson .cta { margin: 0; }
