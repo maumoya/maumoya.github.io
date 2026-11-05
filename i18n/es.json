@@ -440,5 +440,10 @@
   "requests to other hosts": "peticiones a otros servidores",
   "Christian Trivia v2 gameplay: the child walks to a glowing light, answers what God made on day 1, gets a timeline card and walks through the open gate into day 2.": "Partida de Christian Trivia v2: el niño camina hacia una luz brillante, responde qué hizo Dios el día 1, recibe una tarjeta de la línea del tiempo y cruza la puerta abierta hacia el día 2.",
   "GrantPRO card: a timesheet line is coded to a grant, passes an eligibility check and is locked into the audit trail.": "Tarjeta de GrantPRO: una línea de hoja de horas se asigna a una subvención, pasa un control de elegibilidad y queda fijada en el registro de auditoría.",
-  "View repo {0}": "Ver repositorio {0}"
+  "View repo {0}": "Ver repositorio {0}",
+  "Talent · In progress": "Talento · En desarrollo",
+  "A career league: talent keeps one verified player card and employers compete to draft them, comp up front. Talent never pays.": "Una liga de carreras: el talento tiene una tarjeta de jugador verificada y las empresas compiten por ficharlo, con el sueldo por delante. El talento nunca paga.",
+  "DRAFTED demo tour: a talent player card, the employer draft board, an offer accepted with contact unlocked, and a scam pitch blocked.": "Recorrido de DRAFTED: la tarjeta de un talento, el tablero de fichajes de la empresa, una oferta aceptada que desbloquea el contacto y una estafa bloqueada.",
+  "Ask about DRAFTED by message on LinkedIn": "Consulta por DRAFTED escribiéndome por LinkedIn",
+  "DRAFTED": "DRAFTED"
 }

@@ -440,5 +440,10 @@
   "requests to other hosts": "huk servidorkunaman mañakuykuna",
   "Christian Trivia v2 gameplay: the child walks to a glowing light, answers what God made on day 1, gets a timeline card and walks through the open gate into day 2.": "Christian Trivia v2 pukllay: wawa k'anchaq k'anchayman purin, ñawpaq p'unchawpi Dios ima ruwasqanta kutichin, huk pacha seqe tarjetata chaskin, kichasqa punkuta pasaspa iskay kaq p'unchawman haykun.",
   "GrantPRO card: a timesheet line is coded to a grant, passes an eligibility check and is locked into the audit trail.": "GrantPRO tarjeta: huk ruwana p'unchaw siq'i subvencionman churasqa, allin kasqanta qhawasqa, hinaspa auditoria qillqapi wichqasqa.",
-  "View repo {0}": "{0} repositoriota qhawariy"
+  "View repo {0}": "{0} repositoriota qhawariy",
+  "Talent · In progress": "Yachayniyuq · Ruwakuchkan",
+  "A career league: talent keeps one verified player card and employers compete to draft them, comp up front. Talent never pays.": "Llamkaypa liganmi: yachayniyuqqa huk chiqapchasqa pukllaq tarjetayuqmi, llamkachiqkunataq paykunata akllanankupaq atipanakunku, pagota ñawpaqta rikuchispa. Yachayniyuqqa manam hayk'appas pagankuchu.",
+  "DRAFTED demo tour: a talent player card, the employer draft board, an offer accepted with contact unlocked, and a scam pitch blocked.": "DRAFTED rikuchiy: yachayniyuqpa tarjetan, llamkachiqpa akllana tablan, chaskisqa ofertataq contactota kicharin, q'otiytaq hark'asqa.",
+  "Ask about DRAFTED by message on LinkedIn": "LinkedIn nisqapi willakuywan DRAFTED nisqamanta tapuy",
+  "DRAFTED": "DRAFTED"
 }

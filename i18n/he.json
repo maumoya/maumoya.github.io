@@ -437,5 +437,10 @@
   "requests to other hosts": "בקשות לשרתים אחרים",
   "Christian Trivia v2 gameplay: the child walks to a glowing light, answers what God made on day 1, gets a timeline card and walks through the open gate into day 2.": "משחק ב-Christian Trivia v2: הילד הולך אל אור זוהר, עונה מה ברא אלוהים ביום הראשון, מקבל כרטיס לציר הזמן ועובר בשער הפתוח אל היום השני.",
   "GrantPRO card: a timesheet line is coded to a grant, passes an eligibility check and is locked into the audit trail.": "כרטיס GrantPRO: שורה בגיליון השעות משויכת למענק, עוברת בדיקת זכאות וננעלת בתיעוד הביקורת.",
-  "View repo {0}": "הצגת המאגר {0}"
+  "View repo {0}": "הצגת המאגר {0}",
+  "Talent · In progress": "כישרונות · בפיתוח",
+  "A career league: talent keeps one verified player card and employers compete to draft them, comp up front. Talent never pays.": "ליגת קריירה: לכישרון יש כרטיס שחקן מאומת, ומעסיקים מתחרים לגייס אותו עם שכר גלוי מראש. כישרונות אף פעם לא משלמים.",
+  "DRAFTED demo tour: a talent player card, the employer draft board, an offer accepted with contact unlocked, and a scam pitch blocked.": "סיור ב-DRAFTED: כרטיס שחקן של כישרון, לוח הדראפט של המעסיק, הצעה שהתקבלה ופתחה פרטי קשר, וניסיון הונאה שנחסם.",
+  "Ask about DRAFTED by message on LinkedIn": "לשאול על DRAFTED בהודעה ב-LinkedIn",
+  "DRAFTED": "DRAFTED"
 }

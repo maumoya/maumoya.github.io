@@ -440,5 +440,10 @@
   "requests to other hosts": "件の他ホストへの通信",
   "Christian Trivia v2 gameplay: the child walks to a glowing light, answers what God made on day 1, gets a timeline card and walks through the open gate into day 2.": "Christian Trivia v2 のプレイ画面：子どもが光る場所まで歩き、1日目に神さまが造ったものに答え、年表カードをもらい、開いた門を通って2日目へ進みます。",
   "GrantPRO card: a timesheet line is coded to a grant, passes an eligibility check and is locked into the audit trail.": "GrantPRO カード: 勤務表の1行が助成金に割り当てられ、適格性チェックを通過し、監査証跡に固定されます。",
-  "View repo {0}": "リポジトリ {0} を見る"
+  "View repo {0}": "リポジトリ {0} を見る",
+  "Talent · In progress": "人材 · 開発中",
+  "A career league: talent keeps one verified player card and employers compete to draft them, comp up front. Talent never pays.": "キャリアリーグ：人材は検証済みのプレイヤーカードを持ち、企業は報酬を先に示してドラフトを競います。人材は一切支払いません。",
+  "DRAFTED demo tour: a talent player card, the employer draft board, an offer accepted with contact unlocked, and a scam pitch blocked.": "DRAFTED デモ：人材のプレイヤーカード、企業のドラフトボード、承諾で連絡先が開くオファー、ブロックされた詐欺。",
+  "Ask about DRAFTED by message on LinkedIn": "LinkedIn のメッセージで DRAFTED について問い合わせる",
+  "DRAFTED": "DRAFTED"
 }

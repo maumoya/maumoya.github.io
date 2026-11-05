@@ -440,5 +440,10 @@
   "requests to other hosts": "запросов к другим серверам",
   "Christian Trivia v2 gameplay: the child walks to a glowing light, answers what God made on day 1, gets a timeline card and walks through the open gate into day 2.": "Игровой процесс Christian Trivia v2: ребёнок идёт к сияющему свету, отвечает, что Бог создал в первый день, получает карточку для ленты времени и проходит через открытые ворота во второй день.",
   "GrantPRO card: a timesheet line is coded to a grant, passes an eligibility check and is locked into the audit trail.": "Карточка GrantPRO: строка табеля относится к гранту, проходит проверку соответствия и фиксируется в журнале аудита.",
-  "View repo {0}": "Открыть репозиторий {0}"
+  "View repo {0}": "Открыть репозиторий {0}",
+  "Talent · In progress": "Таланты · В разработке",
+  "A career league: talent keeps one verified player card and employers compete to draft them, comp up front. Talent never pays.": "Карьерная лига: у таланта одна проверенная карточка игрока, а работодатели соревнуются за него и сразу называют оплату. Таланты никогда не платят.",
+  "DRAFTED demo tour: a talent player card, the employer draft board, an offer accepted with contact unlocked, and a scam pitch blocked.": "Демо DRAFTED: карточка таланта, доска драфта работодателя, принятое предложение с открытым контактом и заблокированное мошенничество.",
+  "Ask about DRAFTED by message on LinkedIn": "Спросить о DRAFTED сообщением в LinkedIn",
+  "DRAFTED": "DRAFTED"
 }
