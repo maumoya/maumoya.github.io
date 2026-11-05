@@ -236,6 +236,18 @@ h3 { font-size: clamp(36px, 5.5vw, 64px); letter-spacing: -0.03em; line-height: 
   #top.v3 .v3-pic { flex: 0 1 auto; min-height: 0; margin-top: clamp(2px, .5vw, 8px); }
   #top.v3 .v3-pic::before { background-position: center top; }
   #top.v3 .v3-title { top: 2.33vw; }
+  /* Smaller header and HANDS ON so more of the laptop shows. */
+  #top.v3 h1 { font-size: clamp(30px, 3.7vw, 60px); }
+  [data-theme="terminal"] #top.v3 h1, [data-theme="arcade"] #top.v3 h1 { font-size: clamp(24px, 2.9vw, 46px); }
+  [data-theme="hud"] #top.v3 h1, [data-theme="grid"] #top.v3 h1 { font-size: clamp(26px, 3.3vw, 52px); }
+  #top.v3 .v3-top .cta { margin-top: clamp(10px, 1.2vw, 20px); }
+  #top.v3 .v3-hands { font-size: 11vw; }
+  /* Subtitle under the white line, one line as wide as HANDS ON. */
+  #top.v3 p.v3-lede { white-space: nowrap; font-size: min(1.02vw, 19px); }
+  #top.v3 .cue { display: none; }
+}
+#top.v3 .v3-lede { flex-shrink: 0; max-width: none; margin: 0 auto; padding: clamp(10px, 1vw, 16px) 16px; text-align: center; font-size: clamp(14px, 4vw, 16px); line-height: 1.38; color: var(--v3-muted); }
+@media (min-width: 701px) {
   #top.v3 > :not(.v3-top):not(.v3-pic) { flex-shrink: 0; }
   /* The menu bar spans exactly as wide as HANDS ON (width set by options.js). */
   .nav .nav-in { max-width: calc(var(--hands-w, 1036px) + 44px); }
