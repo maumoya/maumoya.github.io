@@ -423,5 +423,22 @@
   "News": "新闻",
   "Hologram": "全息",
   "Vision": "视界",
-  "Grids": "网格"
+  "Grids": "网格",
+  "Finds grants that fit, drafts the application and keeps the award compliant to the last report.": "找到合适的资助项目，起草申请书，并让资金合规直到最后一份报告。",
+  "Boredom Blaster": "Boredom Blaster",
+  "Christian Trivia v2": "Christian Trivia v2",
+  "Christian Trivia v1": "Christian Trivia v1",
+  "Boredom Blaster versions": "Boredom Blaster 各版本",
+  "Previous version": "上一个版本",
+  "Next version": "下一个版本",
+  "Bible adventure for kids": "儿童圣经冒险",
+  "Christian Trivia versions": "Christian Trivia 各版本",
+  "Browser game · the adventure": "浏览器游戏 · 冒险版",
+  "Walk through Creation.": "走过创世的七天。",
+  "The full adventure after the one-day MVP. Kids 5 to 10 walk through the seven days of Creation, find what God made and answer to open the next day. English and Spanish with read-aloud, two players, works offline.": "在一天做成的 MVP 之后推出的完整冒险。5 到 10 岁的孩子走过创世的七天，找到上帝所造的万物，答对问题就能打开下一天。支持英语和西班牙语朗读，可双人游玩，离线也能玩。",
+  "automated tests passing": "项自动化测试通过",
+  "requests to other hosts": "次对其他主机的请求",
+  "Christian Trivia v2 gameplay: the child walks to a glowing light, answers what God made on day 1, gets a timeline card and walks through the open gate into day 2.": "Christian Trivia v2 游戏画面：孩子走向一处发光的地方，回答第一天上帝造了什么，获得一张时间线卡片，然后穿过打开的大门进入第二天。",
+  "GrantPRO card: a timesheet line is coded to a grant, passes an eligibility check and is locked into the audit trail.": "GrantPRO 卡片:一条工时记录被归入某项资助,通过资格检查,并被锁定在审计记录中。",
+  "View repo {0}": "查看仓库 {0}"
 }

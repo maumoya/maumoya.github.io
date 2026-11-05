@@ -423,5 +423,22 @@
   "News": "Pith",
   "Hologram": "Malt",
   "Vision": "Cened",
-  "Grids": "Rem"
+  "Grids": "Rem",
+  "Finds grants that fit, drafts the application and keeps the award compliant to the last report.": "Hîr i annann, teitha i chaun a beria i ammen na-mbeth meth.",
+  "Boredom Blaster": "Boredom Blaster",
+  "Christian Trivia v2": "Christian Trivia v2",
+  "Christian Trivia v1": "Christian Trivia v1",
+  "Boredom Blaster versions": "Edraith Boredom Blaster",
+  "Previous version": "Edrath no",
+  "Next version": "Edrath ab",
+  "Bible adventure for kids": "Lend Bible an hîn",
+  "Christian Trivia versions": "Edraith Christian Trivia",
+  "Browser game · the adventure": "Telias browser · i lend",
+  "Walk through Creation.": "Pado trî i Cared.",
+  "The full adventure after the one-day MVP. Kids 5 to 10 walk through the seven days of Creation, find what God made and answer to open the next day. English and Spanish with read-aloud, two players, works offline.": "I lend iaur ab i MVP o er aur. Hîn o 5 na 10 idhrinn padar trî i odo aur i Cared, hirar i aen Eru gar, a dannar an edro i aur ab. Ned English a Español ah lam teithannen, an tad tylith, ú-chenia aes.",
+  "automated tests passing": "tastad erchared tharn",
+  "requests to other hosts": "iest na annonath erin",
+  "Christian Trivia v2 gameplay: the child walks to a glowing light, answers what God made on day 1, gets a timeline card and walks through the open gate into day 2.": "Telias Christian Trivia v2: i hên pada na galad, dant man Eru gar ned i aur minui, nest card i lû, a pada trî i ennyn edrannen na i aur tadui.",
+  "GrantPRO card: a timesheet line is coded to a grant, passes an eligibility check and is locked into the audit trail.": "Garth GrantPRO: tîw en-lam-lú teithant na-roval, govaeda i-thand a nestennin mi-dîn i-thîr.",
+  "View repo {0}": "Tiro i-vond {0}"
 }

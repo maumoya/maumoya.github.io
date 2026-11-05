@@ -423,5 +423,22 @@
   "News": "समाचार",
   "Hologram": "होलोग्राम",
   "Vision": "विज़न",
-  "Grids": "ग्रिड"
+  "Grids": "ग्रिड",
+  "Finds grants that fit, drafts the application and keeps the award compliant to the last report.": "सही अनुदान ढूँढता है, आवेदन तैयार करता है और आख़िरी रिपोर्ट तक अनुदान को नियमों के अनुरूप रखता है।",
+  "Boredom Blaster": "Boredom Blaster",
+  "Christian Trivia v2": "Christian Trivia v2",
+  "Christian Trivia v1": "Christian Trivia v1",
+  "Boredom Blaster versions": "Boredom Blaster के संस्करण",
+  "Previous version": "पिछला संस्करण",
+  "Next version": "अगला संस्करण",
+  "Bible adventure for kids": "बच्चों के लिए बाइबल रोमांच",
+  "Christian Trivia versions": "Christian Trivia के संस्करण",
+  "Browser game · the adventure": "ब्राउज़र गेम · रोमांच",
+  "Walk through Creation.": "सृष्टि के सात दिनों में घूमिए।",
+  "The full adventure after the one-day MVP. Kids 5 to 10 walk through the seven days of Creation, find what God made and answer to open the next day. English and Spanish with read-aloud, two players, works offline.": "एक दिन के MVP के बाद का पूरा रोमांच। 5 से 10 साल के बच्चे सृष्टि के सात दिनों में घूमते हैं, परमेश्वर की बनाई चीज़ें खोजते हैं और सही जवाब देकर अगला दिन खोलते हैं। अंग्रेज़ी और स्पेनिश में पढ़कर सुनाने की सुविधा, दो खिलाड़ी, बिना इंटरनेट भी चलता है।",
+  "automated tests passing": "स्वचालित टेस्ट पास",
+  "requests to other hosts": "दूसरे होस्ट को अनुरोध",
+  "Christian Trivia v2 gameplay: the child walks to a glowing light, answers what God made on day 1, gets a timeline card and walks through the open gate into day 2.": "Christian Trivia v2 गेमप्ले: बच्चा एक चमकती रोशनी तक चलता है, बताता है कि पहले दिन परमेश्वर ने क्या बनाया, एक टाइमलाइन कार्ड पाता है और खुले फाटक से दूसरे दिन में जाता है।",
+  "GrantPRO card: a timesheet line is coded to a grant, passes an eligibility check and is locked into the audit trail.": "GrantPRO कार्ड: टाइमशीट की एक पंक्ति को अनुदान से जोड़ा जाता है, वह पात्रता जाँच पास करती है और ऑडिट ट्रेल में लॉक हो जाती है।",
+  "View repo {0}": "रिपॉज़िटरी {0} देखें"
 }

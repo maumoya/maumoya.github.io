@@ -423,5 +423,22 @@
   "News": "ニュース",
   "Hologram": "ホログラム",
   "Vision": "ビジョン",
-  "Grids": "グリッド"
+  "Grids": "グリッド",
+  "Finds grants that fit, drafts the application and keeps the award compliant to the last report.": "最適な助成金を探し、申請書を作成し、最後の報告まで受給条件を守ります。",
+  "Boredom Blaster": "Boredom Blaster",
+  "Christian Trivia v2": "Christian Trivia v2",
+  "Christian Trivia v1": "Christian Trivia v1",
+  "Boredom Blaster versions": "Boredom Blaster のバージョン",
+  "Previous version": "前のバージョン",
+  "Next version": "次のバージョン",
+  "Bible adventure for kids": "子ども向け聖書アドベンチャー",
+  "Christian Trivia versions": "Christian Trivia のバージョン",
+  "Browser game · the adventure": "ブラウザゲーム · アドベンチャー",
+  "Walk through Creation.": "天地創造の中を歩こう。",
+  "The full adventure after the one-day MVP. Kids 5 to 10 walk through the seven days of Creation, find what God made and answer to open the next day. English and Spanish with read-aloud, two players, works offline.": "1日で作ったMVPに続く本格アドベンチャー。5〜10歳の子どもが天地創造の7日間を歩き、神さまが造ったものを見つけ、答えると次の日への門が開きます。英語とスペイン語の読み上げ付き、2人プレイ対応、オフラインでも遊べます。",
+  "automated tests passing": "件の自動テストに合格",
+  "requests to other hosts": "件の他ホストへの通信",
+  "Christian Trivia v2 gameplay: the child walks to a glowing light, answers what God made on day 1, gets a timeline card and walks through the open gate into day 2.": "Christian Trivia v2 のプレイ画面：子どもが光る場所まで歩き、1日目に神さまが造ったものに答え、年表カードをもらい、開いた門を通って2日目へ進みます。",
+  "GrantPRO card: a timesheet line is coded to a grant, passes an eligibility check and is locked into the audit trail.": "GrantPRO カード: 勤務表の1行が助成金に割り当てられ、適格性チェックを通過し、監査証跡に固定されます。",
+  "View repo {0}": "リポジトリ {0} を見る"
 }

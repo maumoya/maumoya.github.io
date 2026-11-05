@@ -71,4 +71,50 @@
       });
     }, { threshold: 0.35 }).observe(v);
   });
+
+  // Game families: one carousel per game (newest version first). Tabs, arrows, swipe and the
+  // arrow keys switch versions; the page palette follows the version on screen.
+  document.querySelectorAll('.fam').forEach(function (sec) {
+    var track = sec.querySelector('.fam-track');
+    var slides = [].slice.call(sec.querySelectorAll('.fam-slide'));
+    var tabs = [].slice.call(sec.querySelectorAll('.fam-tab'));
+    var cur = -1, timer;
+    function mark(i) {
+      if (i === cur) return;
+      cur = i;
+      tabs.forEach(function (t, j) { if (j === i) t.setAttribute('aria-current', 'true'); else t.removeAttribute('aria-current'); });
+      slides.forEach(function (s, j) { s.inert = j !== i; });
+      sec.dataset.scene = slides[i].dataset.scene;
+      var r = sec.getBoundingClientRect(), mid = window.innerHeight / 2;
+      if (r.top < mid && r.bottom > mid) document.body.dataset.scene = sec.dataset.scene;
+    }
+    function offset(i) { return slides[i].offsetLeft - slides[0].offsetLeft; }
+    function go(i, instant) {
+      i = (i + slides.length) % slides.length;
+      track.scrollTo({ left: offset(i), behavior: instant || reduced ? 'instant' : 'smooth' });
+      mark(i);
+    }
+    tabs.forEach(function (t, j) { t.addEventListener('click', function () { go(j); }); });
+    sec.querySelectorAll('.fam-arrow').forEach(function (b) {
+      b.addEventListener('click', function () { go(cur + Number(b.dataset.dir)); });
+    });
+    track.addEventListener('keydown', function (e) {
+      if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+      e.preventDefault();
+      var step = e.key === 'ArrowRight' ? 1 : -1;
+      go(cur + (root.dir === 'rtl' ? -step : step));
+    });
+    track.addEventListener('scroll', function () {
+      clearTimeout(timer);
+      timer = setTimeout(function () { mark(Math.round(Math.abs(track.scrollLeft) / track.clientWidth)); }, 90);
+    });
+    function fromHash() {
+      var id = location.hash.slice(1);
+      slides.forEach(function (s, j) { if (s.id === id) { go(j, true); sec.scrollIntoView({ behavior: 'instant' }); } });
+    }
+    window.addEventListener('hashchange', fromHash);
+    mark(0);
+    fromHash();
+    window.addEventListener('load', fromHash);
+  });
 })();

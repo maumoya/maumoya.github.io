@@ -423,5 +423,22 @@
   "News": "Новости",
   "Hologram": "Голограмма",
   "Vision": "Видение",
-  "Grids": "Сетка"
+  "Grids": "Сетка",
+  "Finds grants that fit, drafts the application and keeps the award compliant to the last report.": "Находит подходящие гранты, составляет заявку и поддерживает соответствие требованиям гранта до последнего отчёта.",
+  "Boredom Blaster": "Boredom Blaster",
+  "Christian Trivia v2": "Christian Trivia v2",
+  "Christian Trivia v1": "Christian Trivia v1",
+  "Boredom Blaster versions": "Версии Boredom Blaster",
+  "Previous version": "Предыдущая версия",
+  "Next version": "Следующая версия",
+  "Bible adventure for kids": "Библейское приключение для детей",
+  "Christian Trivia versions": "Версии Christian Trivia",
+  "Browser game · the adventure": "Браузерная игра · приключение",
+  "Walk through Creation.": "Пройди через Сотворение мира.",
+  "The full adventure after the one-day MVP. Kids 5 to 10 walk through the seven days of Creation, find what God made and answer to open the next day. English and Spanish with read-aloud, two players, works offline.": "Полноценное приключение после MVP, сделанного за один день. Дети от 5 до 10 лет проходят семь дней Творения, находят то, что создал Бог, и отвечают, чтобы открыть следующий день. Английский и испанский с озвучкой, игра вдвоём, работает без интернета.",
+  "automated tests passing": "автотестов пройдено",
+  "requests to other hosts": "запросов к другим серверам",
+  "Christian Trivia v2 gameplay: the child walks to a glowing light, answers what God made on day 1, gets a timeline card and walks through the open gate into day 2.": "Игровой процесс Christian Trivia v2: ребёнок идёт к сияющему свету, отвечает, что Бог создал в первый день, получает карточку для ленты времени и проходит через открытые ворота во второй день.",
+  "GrantPRO card: a timesheet line is coded to a grant, passes an eligibility check and is locked into the audit trail.": "Карточка GrantPRO: строка табеля относится к гранту, проходит проверку соответствия и фиксируется в журнале аудита.",
+  "View repo {0}": "Открыть репозиторий {0}"
 }

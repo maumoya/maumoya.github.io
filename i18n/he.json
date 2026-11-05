@@ -420,5 +420,22 @@
   "News": "חדשות",
   "Hologram": "הולוגרמה",
   "Vision": "חזון",
-  "Grids": "רשת"
+  "Grids": "רשת",
+  "Finds grants that fit, drafts the application and keeps the award compliant to the last report.": "מוצא את המענקים המתאימים, מנסח את הבקשה ושומר על עמידה בתנאי המענק עד הדוח האחרון.",
+  "Boredom Blaster": "Boredom Blaster",
+  "Christian Trivia v2": "Christian Trivia v2",
+  "Christian Trivia v1": "Christian Trivia v1",
+  "Boredom Blaster versions": "גרסאות Boredom Blaster",
+  "Previous version": "הגרסה הקודמת",
+  "Next version": "הגרסה הבאה",
+  "Bible adventure for kids": "הרפתקה תנ״כית לילדים",
+  "Christian Trivia versions": "גרסאות Christian Trivia",
+  "Browser game · the adventure": "משחק דפדפן · ההרפתקה",
+  "Walk through Creation.": "לטייל בבריאת העולם.",
+  "The full adventure after the one-day MVP. Kids 5 to 10 walk through the seven days of Creation, find what God made and answer to open the next day. English and Spanish with read-aloud, two players, works offline.": "ההרפתקה המלאה אחרי ה-MVP שנבנה ביום אחד. ילדים בני 5 עד 10 מטיילים בשבעת ימי הבריאה, מוצאים את מה שאלוהים ברא ועונים כדי לפתוח את היום הבא. באנגלית ובספרדית עם הקראה בקול, לשני שחקנים, ועובד גם בלי חיבור.",
+  "automated tests passing": "בדיקות אוטומטיות שעברו",
+  "requests to other hosts": "בקשות לשרתים אחרים",
+  "Christian Trivia v2 gameplay: the child walks to a glowing light, answers what God made on day 1, gets a timeline card and walks through the open gate into day 2.": "משחק ב-Christian Trivia v2: הילד הולך אל אור זוהר, עונה מה ברא אלוהים ביום הראשון, מקבל כרטיס לציר הזמן ועובר בשער הפתוח אל היום השני.",
+  "GrantPRO card: a timesheet line is coded to a grant, passes an eligibility check and is locked into the audit trail.": "כרטיס GrantPRO: שורה בגיליון השעות משויכת למענק, עוברת בדיקת זכאות וננעלת בתיעוד הביקורת.",
+  "View repo {0}": "הצגת המאגר {0}"
 }

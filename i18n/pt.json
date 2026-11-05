@@ -423,5 +423,22 @@
   "News": "Notícias",
   "Hologram": "Holograma",
   "Vision": "Visão",
-  "Grids": "Grade"
+  "Grids": "Grade",
+  "Finds grants that fit, drafts the application and keeps the award compliant to the last report.": "Encontra os editais certos, redige a proposta e mantém o recurso em conformidade até o último relatório.",
+  "Boredom Blaster": "Boredom Blaster",
+  "Christian Trivia v2": "Christian Trivia v2",
+  "Christian Trivia v1": "Christian Trivia v1",
+  "Boredom Blaster versions": "Versões de Boredom Blaster",
+  "Previous version": "Versão anterior",
+  "Next version": "Próxima versão",
+  "Bible adventure for kids": "Aventura bíblica para crianças",
+  "Christian Trivia versions": "Versões de Christian Trivia",
+  "Browser game · the adventure": "Jogo de navegador · a aventura",
+  "Walk through Creation.": "Caminhe pela Criação.",
+  "The full adventure after the one-day MVP. Kids 5 to 10 walk through the seven days of Creation, find what God made and answer to open the next day. English and Spanish with read-aloud, two players, works offline.": "A aventura completa depois do MVP feito em um dia. Crianças de 5 a 10 anos caminham pelos sete dias da Criação, encontram o que Deus fez e respondem para abrir o dia seguinte. Em inglês e espanhol com leitura em voz alta, para dois jogadores e funciona offline.",
+  "automated tests passing": "testes automáticos aprovados",
+  "requests to other hosts": "requisições a outros servidores",
+  "Christian Trivia v2 gameplay: the child walks to a glowing light, answers what God made on day 1, gets a timeline card and walks through the open gate into day 2.": "Jogo de Christian Trivia v2: a criança anda até uma luz brilhante, responde o que Deus fez no dia 1, ganha uma carta da linha do tempo e atravessa o portão aberto para o dia 2.",
+  "GrantPRO card: a timesheet line is coded to a grant, passes an eligibility check and is locked into the audit trail.": "Cartão do GrantPRO: uma linha da folha de horas é atribuída a uma subvenção, passa numa verificação de elegibilidade e fica bloqueada na trilha de auditoria.",
+  "View repo {0}": "Ver repositório {0}"
 }
