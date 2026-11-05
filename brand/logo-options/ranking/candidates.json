@@ -1,0 +1,33 @@
+{
+  "_about": "All 28 logo options. 'judge' scores (1-10) are a designer rubric, judgment not measurement: lux=luxury, str=letter strength, pro=professionalism, per=personality fit (Ruler + Sage + a touch of Creator), mean=meaning for the four areas, dis=distinctiveness, time=timelessness.",
+  "candidates": [
+    {"id": "A1", "name": "Four Strokes", "file": "a-four-strokes-mark.svg", "shape": "squircle", "judge": {"lux": 3, "str": 6, "pro": 5, "per": 5, "mean": 8, "dis": 5, "time": 4}},
+    {"id": "A2", "name": "Twin", "file": "b-twin-mark.svg", "shape": "squircle", "judge": {"lux": 2, "str": 6, "pro": 4, "per": 4, "mean": 6, "dis": 5, "time": 4}},
+    {"id": "A3", "name": "Quad", "file": "c-quad-mark.svg", "shape": "squircle", "judge": {"lux": 2, "str": 7, "pro": 5, "per": 4, "mean": 7, "dis": 4, "time": 4}},
+    {"id": "A4", "name": "Folio", "file": "d-folio-mark.svg", "shape": "squircle", "judge": {"lux": 3, "str": 7, "pro": 6, "per": 6, "mean": 6, "dis": 6, "time": 6}},
+    {"id": "A5", "name": "Seal", "file": "e-seal-mark.svg", "shape": "shield", "judge": {"lux": 4, "str": 7, "pro": 7, "per": 7, "mean": 6, "dis": 5, "time": 6}},
+    {"id": "A6", "name": "Gradient Wordmark", "file": "f-wordmark.svg", "shape": "wordmark", "judge": {"lux": 4, "str": 4, "pro": 6, "per": 5, "mean": 5, "dis": 4, "time": 4}},
+    {"id": "N1", "name": "Crest", "file": "luxe/n1-crest-mark.svg", "shape": "circle", "judge": {"lux": 8, "str": 8, "pro": 9, "per": 9, "mean": 7, "dis": 6, "time": 9}},
+    {"id": "N2", "name": "Signet", "file": "luxe/n2-signet-mark.svg", "shape": "circle", "judge": {"lux": 7, "str": 7, "pro": 8, "per": 8, "mean": 6, "dis": 8, "time": 8}},
+    {"id": "N3", "name": "Quadrant", "file": "luxe/n3-quadrant-mark.svg", "shape": "circle", "judge": {"lux": 8, "str": 5, "pro": 8, "per": 8, "mean": 8, "dis": 6, "time": 8}},
+    {"id": "N4", "name": "Twin Ring", "file": "luxe/n4-twin-ring-mark.svg", "shape": "circle", "judge": {"lux": 6, "str": 8, "pro": 7, "per": 7, "mean": 6, "dis": 6, "time": 7}},
+    {"id": "N5", "name": "Pillar", "file": "luxe/n5-pillar-mark.svg", "shape": "circle", "judge": {"lux": 7, "str": 7, "pro": 8, "per": 9, "mean": 7, "dis": 7, "time": 8}},
+    {"id": "N6", "name": "MOYA Wordmark", "file": "luxe/n6-wordmark.svg", "shape": "wordmark", "judge": {"lux": 9, "str": 9, "pro": 8, "per": 8, "mean": 6, "dis": 8, "time": 8}},
+    {"id": "N7", "name": "Coin", "file": "luxe/n7-coin-mark.svg", "shape": "circle", "judge": {"lux": 8, "str": 6, "pro": 9, "per": 9, "mean": 9, "dis": 5, "time": 9}},
+    {"id": "N8", "name": "Deco", "file": "round3/n8-deco-mark.svg", "shape": "circle", "judge": {"lux": 9, "str": 7, "pro": 8, "per": 8, "mean": 5, "dis": 7, "time": 8}},
+    {"id": "N9", "name": "MY Ring", "file": "round3/n9-my-ring-mark.svg", "shape": "circle", "judge": {"lux": 7, "str": 8, "pro": 7, "per": 7, "mean": 5, "dis": 8, "time": 7}},
+    {"id": "N10", "name": "Engraved", "file": "round3/n10-engraved-mark.svg", "shape": "circle", "judge": {"lux": 8, "str": 6, "pro": 8, "per": 8, "mean": 5, "dis": 6, "time": 8}},
+    {"id": "N11", "name": "Laurel", "file": "round3/n11-laurel-mark.svg", "shape": "circle", "judge": {"lux": 8, "str": 7, "pro": 8, "per": 9, "mean": 6, "dis": 5, "time": 8}},
+    {"id": "N12", "name": "Keystone", "file": "round3/n12-keystone-mark.svg", "shape": "circle", "judge": {"lux": 7, "str": 7, "pro": 8, "per": 9, "mean": 6, "dis": 7, "time": 8}},
+    {"id": "N13", "name": "Compass", "file": "round3/n13-compass-mark.svg", "shape": "circle", "judge": {"lux": 8, "str": 8, "pro": 8, "per": 8, "mean": 8, "dis": 7, "time": 8}},
+    {"id": "N14", "name": "Shield Seal", "file": "round3/n14-shield-mark.svg", "shape": "circle", "judge": {"lux": 6, "str": 7, "pro": 8, "per": 8, "mean": 6, "dis": 4, "time": 7}},
+    {"id": "N15", "name": "Facet", "file": "round3/n15-facet-mark.svg", "shape": "circle", "judge": {"lux": 8, "str": 8, "pro": 7, "per": 7, "mean": 4, "dis": 8, "time": 7}},
+    {"id": "N16", "name": "Rays", "file": "round3/n16-rays-mark.svg", "shape": "circle", "judge": {"lux": 6, "str": 8, "pro": 7, "per": 7, "mean": 7, "dis": 5, "time": 6}},
+    {"id": "N17", "name": "MM Diamond", "file": "round3/n17-mm-diamond-mark.svg", "shape": "circle", "judge": {"lux": 6, "str": 7, "pro": 7, "per": 6, "mean": 5, "dis": 7, "time": 6}},
+    {"id": "N18", "name": "Didone", "file": "round3/n18-didone-mark.svg", "shape": "circle", "judge": {"lux": 9, "str": 7, "pro": 8, "per": 8, "mean": 5, "dis": 7, "time": 9}},
+    {"id": "N19", "name": "MOYA Ring", "file": "round3/n19-moya-ring-mark.svg", "shape": "circle", "judge": {"lux": 8, "str": 7, "pro": 8, "per": 8, "mean": 6, "dis": 7, "time": 8}},
+    {"id": "N20", "name": "Gold Coin", "file": "round3/n20-reverse-mark.svg", "shape": "circle", "judge": {"lux": 8, "str": 10, "pro": 8, "per": 8, "mean": 5, "dis": 7, "time": 9}},
+    {"id": "N21", "name": "Ledger", "file": "round3/n21-ledger-mark.svg", "shape": "circle", "judge": {"lux": 6, "str": 8, "pro": 8, "per": 8, "mean": 6, "dis": 5, "time": 7}},
+    {"id": "N22", "name": "Circuit", "file": "round3/n22-circuit-mark.svg", "shape": "circle", "judge": {"lux": 5, "str": 7, "pro": 6, "per": 6, "mean": 6, "dis": 6, "time": 5}}
+  ]
+}

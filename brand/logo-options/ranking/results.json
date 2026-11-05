@@ -1,0 +1,892 @@
+{
+ "weights": {
+  "measured": {
+   "fid16": 15,
+   "contrast": 5,
+   "mono": 5,
+   "simple": 5,
+   "circle": 5
+  },
+  "judge": {
+   "lux": 12,
+   "str": 10,
+   "pro": 10,
+   "per": 10,
+   "mean": 5,
+   "dis": 7,
+   "time": 6
+  },
+  "panel": 5
+ },
+ "panel_top": [],
+ "results": [
+  {
+   "id": "N20",
+   "name": "Gold Coin",
+   "file": "round3/n20-reverse-mark.svg",
+   "shape": "circle",
+   "judge": {
+    "lux": 8,
+    "str": 10,
+    "pro": 8,
+    "per": 8,
+    "mean": 5,
+    "dis": 7,
+    "time": 9
+   },
+   "metrics": {
+    "r16": 0.9049,
+    "contrast_ratio": 9.76,
+    "hue_families": 1,
+    "complexity": 8.0,
+    "fid16": 0.5829282489828959,
+    "contrast": 1.0,
+    "mono": 1.0,
+    "simple": 1.0,
+    "circle": 1.0
+   },
+   "measured": 28.7,
+   "judged": 47.1,
+   "panel": 0.0,
+   "total": 75.9,
+   "rank": 1
+  },
+  {
+   "id": "N13",
+   "name": "Compass",
+   "file": "round3/n13-compass-mark.svg",
+   "shape": "circle",
+   "judge": {
+    "lux": 8,
+    "str": 8,
+    "pro": 8,
+    "per": 8,
+    "mean": 8,
+    "dis": 7,
+    "time": 8
+   },
+   "metrics": {
+    "r16": 0.8818,
+    "contrast_ratio": 11.98,
+    "hue_families": 1,
+    "complexity": 13.5,
+    "fid16": 0.45436543681205915,
+    "contrast": 1.0,
+    "mono": 1.0,
+    "simple": 0.9083333333333333,
+    "circle": 1.0
+   },
+   "measured": 26.4,
+   "judged": 45.9,
+   "panel": 0.0,
+   "total": 72.2,
+   "rank": 2
+  },
+  {
+   "id": "N1",
+   "name": "Crest",
+   "file": "luxe/n1-crest-mark.svg",
+   "shape": "circle",
+   "judge": {
+    "lux": 8,
+    "str": 8,
+    "pro": 9,
+    "per": 9,
+    "mean": 7,
+    "dis": 6,
+    "time": 9
+   },
+   "metrics": {
+    "r16": 0.8633,
+    "contrast_ratio": 12.34,
+    "hue_families": 1,
+    "complexity": 23.0,
+    "fid16": 0.3519290869835132,
+    "contrast": 1.0,
+    "mono": 1.0,
+    "simple": 0.75,
+    "circle": 1.0
+   },
+   "measured": 24.0,
+   "judged": 47.4,
+   "panel": 0.0,
+   "total": 71.5,
+   "rank": 3
+  },
+  {
+   "id": "N19",
+   "name": "MOYA Ring",
+   "file": "round3/n19-moya-ring-mark.svg",
+   "shape": "circle",
+   "judge": {
+    "lux": 8,
+    "str": 7,
+    "pro": 8,
+    "per": 8,
+    "mean": 6,
+    "dis": 7,
+    "time": 8
+   },
+   "metrics": {
+    "r16": 0.8868,
+    "contrast_ratio": 10.29,
+    "hue_families": 1,
+    "complexity": 13.0,
+    "fid16": 0.48220965570196567,
+    "contrast": 1.0,
+    "mono": 1.0,
+    "simple": 0.9166666666666666,
+    "circle": 1.0
+   },
+   "measured": 26.8,
+   "judged": 43.7,
+   "panel": 0.0,
+   "total": 70.5,
+   "rank": 4
+  },
+  {
+   "id": "N18",
+   "name": "Didone",
+   "file": "round3/n18-didone-mark.svg",
+   "shape": "circle",
+   "judge": {
+    "lux": 9,
+    "str": 7,
+    "pro": 8,
+    "per": 8,
+    "mean": 5,
+    "dis": 7,
+    "time": 9
+   },
+   "metrics": {
+    "r16": 0.8733,
+    "contrast_ratio": 9.66,
+    "hue_families": 1,
+    "complexity": 18.5,
+    "fid16": 0.40720065566940844,
+    "contrast": 1.0,
+    "mono": 1.0,
+    "simple": 0.825,
+    "circle": 1.0
+   },
+   "measured": 25.2,
+   "judged": 45.1,
+   "panel": 0.0,
+   "total": 70.3,
+   "rank": 5
+  },
+  {
+   "id": "N11",
+   "name": "Laurel",
+   "file": "round3/n11-laurel-mark.svg",
+   "shape": "circle",
+   "judge": {
+    "lux": 8,
+    "str": 7,
+    "pro": 8,
+    "per": 9,
+    "mean": 6,
+    "dis": 5,
+    "time": 8
+   },
+   "metrics": {
+    "r16": 0.8867,
+    "contrast_ratio": 11.63,
+    "hue_families": 1,
+    "complexity": 20.0,
+    "fid16": 0.48152341941780397,
+    "contrast": 1.0,
+    "mono": 1.0,
+    "simple": 0.8,
+    "circle": 1.0
+   },
+   "measured": 26.2,
+   "judged": 43.2,
+   "panel": 0.0,
+   "total": 69.4,
+   "rank": 6
+  },
+  {
+   "id": "N15",
+   "name": "Facet",
+   "file": "round3/n15-facet-mark.svg",
+   "shape": "circle",
+   "judge": {
+    "lux": 8,
+    "str": 8,
+    "pro": 7,
+    "per": 7,
+    "mean": 4,
+    "dis": 8,
+    "time": 7
+   },
+   "metrics": {
+    "r16": 0.8872,
+    "contrast_ratio": 9.25,
+    "hue_families": 1,
+    "complexity": 13.5,
+    "fid16": 0.4845090714666335,
+    "contrast": 1.0,
+    "mono": 1.0,
+    "simple": 0.9083333333333333,
+    "circle": 1.0
+   },
+   "measured": 26.8,
+   "judged": 41.6,
+   "panel": 0.0,
+   "total": 68.4,
+   "rank": 7
+  },
+  {
+   "id": "N5",
+   "name": "Pillar",
+   "file": "luxe/n5-pillar-mark.svg",
+   "shape": "circle",
+   "judge": {
+    "lux": 7,
+    "str": 7,
+    "pro": 8,
+    "per": 9,
+    "mean": 7,
+    "dis": 7,
+    "time": 8
+   },
+   "metrics": {
+    "r16": 0.8435,
+    "contrast_ratio": 9.97,
+    "hue_families": 1,
+    "complexity": 12.0,
+    "fid16": 0.24187957653867215,
+    "contrast": 1.0,
+    "mono": 1.0,
+    "simple": 0.9333333333333333,
+    "circle": 1.0
+   },
+   "measured": 23.3,
+   "judged": 44.0,
+   "panel": 0.0,
+   "total": 67.3,
+   "rank": 8
+  },
+  {
+   "id": "N12",
+   "name": "Keystone",
+   "file": "round3/n12-keystone-mark.svg",
+   "shape": "circle",
+   "judge": {
+    "lux": 7,
+    "str": 7,
+    "pro": 8,
+    "per": 9,
+    "mean": 6,
+    "dis": 7,
+    "time": 8
+   },
+   "metrics": {
+    "r16": 0.8509,
+    "contrast_ratio": 11.51,
+    "hue_families": 1,
+    "complexity": 14.5,
+    "fid16": 0.2828966155613381,
+    "contrast": 1.0,
+    "mono": 1.0,
+    "simple": 0.8916666666666666,
+    "circle": 1.0
+   },
+   "measured": 23.7,
+   "judged": 43.4,
+   "panel": 0.0,
+   "total": 67.1,
+   "rank": 9
+  },
+  {
+   "id": "N7",
+   "name": "Coin",
+   "file": "luxe/n7-coin-mark.svg",
+   "shape": "circle",
+   "judge": {
+    "lux": 8,
+    "str": 6,
+    "pro": 9,
+    "per": 9,
+    "mean": 9,
+    "dis": 5,
+    "time": 9
+   },
+   "metrics": {
+    "r16": 0.8731,
+    "contrast_ratio": 10.83,
+    "hue_families": 1,
+    "complexity": 73.0,
+    "fid16": 0.4061550525917742,
+    "contrast": 1.0,
+    "mono": 1.0,
+    "simple": 0.0,
+    "circle": 1.0
+   },
+   "measured": 21.1,
+   "judged": 45.6,
+   "panel": 0.0,
+   "total": 66.6,
+   "rank": 10
+  },
+  {
+   "id": "N2",
+   "name": "Signet",
+   "file": "luxe/n2-signet-mark.svg",
+   "shape": "circle",
+   "judge": {
+    "lux": 7,
+    "str": 7,
+    "pro": 8,
+    "per": 8,
+    "mean": 6,
+    "dis": 8,
+    "time": 8
+   },
+   "metrics": {
+    "r16": 0.8372,
+    "contrast_ratio": 11.98,
+    "hue_families": 1,
+    "complexity": 9.0,
+    "fid16": 0.206487451257671,
+    "contrast": 1.0,
+    "mono": 1.0,
+    "simple": 0.9833333333333333,
+    "circle": 1.0
+   },
+   "measured": 23.0,
+   "judged": 43.1,
+   "panel": 0.0,
+   "total": 66.1,
+   "rank": 11
+  },
+  {
+   "id": "N3",
+   "name": "Quadrant",
+   "file": "luxe/n3-quadrant-mark.svg",
+   "shape": "circle",
+   "judge": {
+    "lux": 8,
+    "str": 5,
+    "pro": 8,
+    "per": 8,
+    "mean": 8,
+    "dis": 6,
+    "time": 8
+   },
+   "metrics": {
+    "r16": 0.8484,
+    "contrast_ratio": 9.25,
+    "hue_families": 1,
+    "complexity": 15.5,
+    "fid16": 0.2690006753201604,
+    "contrast": 1.0,
+    "mono": 1.0,
+    "simple": 0.875,
+    "circle": 1.0
+   },
+   "measured": 23.4,
+   "judged": 41.8,
+   "panel": 0.0,
+   "total": 65.2,
+   "rank": 12
+  },
+  {
+   "id": "N8",
+   "name": "Deco",
+   "file": "round3/n8-deco-mark.svg",
+   "shape": "circle",
+   "judge": {
+    "lux": 9,
+    "str": 7,
+    "pro": 8,
+    "per": 8,
+    "mean": 5,
+    "dis": 7,
+    "time": 8
+   },
+   "metrics": {
+    "r16": 0.8151,
+    "contrast_ratio": 11.98,
+    "hue_families": 1,
+    "complexity": 16.0,
+    "fid16": 0.08395791973146007,
+    "contrast": 1.0,
+    "mono": 1.0,
+    "simple": 0.8666666666666667,
+    "circle": 1.0
+   },
+   "measured": 20.6,
+   "judged": 44.4,
+   "panel": 0.0,
+   "total": 65.0,
+   "rank": 13
+  },
+  {
+   "id": "N21",
+   "name": "Ledger",
+   "file": "round3/n21-ledger-mark.svg",
+   "shape": "circle",
+   "judge": {
+    "lux": 6,
+    "str": 8,
+    "pro": 8,
+    "per": 8,
+    "mean": 6,
+    "dis": 5,
+    "time": 7
+   },
+   "metrics": {
+    "r16": 0.8522,
+    "contrast_ratio": 11.63,
+    "hue_families": 1,
+    "complexity": 14.0,
+    "fid16": 0.2901818766690705,
+    "contrast": 1.0,
+    "mono": 1.0,
+    "simple": 0.9,
+    "circle": 1.0
+   },
+   "measured": 23.9,
+   "judged": 39.9,
+   "panel": 0.0,
+   "total": 63.7,
+   "rank": 14
+  },
+  {
+   "id": "N9",
+   "name": "MY Ring",
+   "file": "round3/n9-my-ring-mark.svg",
+   "shape": "circle",
+   "judge": {
+    "lux": 7,
+    "str": 8,
+    "pro": 7,
+    "per": 7,
+    "mean": 5,
+    "dis": 8,
+    "time": 7
+   },
+   "metrics": {
+    "r16": 0.8257,
+    "contrast_ratio": 12.1,
+    "hue_families": 1,
+    "complexity": 10.0,
+    "fid16": 0.1428811825674503,
+    "contrast": 1.0,
+    "mono": 1.0,
+    "simple": 0.9666666666666667,
+    "circle": 1.0
+   },
+   "measured": 22.0,
+   "judged": 40.8,
+   "panel": 0.0,
+   "total": 62.8,
+   "rank": 15
+  },
+  {
+   "id": "N16",
+   "name": "Rays",
+   "file": "round3/n16-rays-mark.svg",
+   "shape": "circle",
+   "judge": {
+    "lux": 6,
+    "str": 8,
+    "pro": 7,
+    "per": 7,
+    "mean": 7,
+    "dis": 5,
+    "time": 6
+   },
+   "metrics": {
+    "r16": 0.8736,
+    "contrast_ratio": 11.98,
+    "hue_families": 1,
+    "complexity": 26.0,
+    "fid16": 0.4088678951405325,
+    "contrast": 1.0,
+    "mono": 1.0,
+    "simple": 0.7,
+    "circle": 1.0
+   },
+   "measured": 24.6,
+   "judged": 37.6,
+   "panel": 0.0,
+   "total": 62.2,
+   "rank": 16
+  },
+  {
+   "id": "N10",
+   "name": "Engraved",
+   "file": "round3/n10-engraved-mark.svg",
+   "shape": "circle",
+   "judge": {
+    "lux": 8,
+    "str": 6,
+    "pro": 8,
+    "per": 8,
+    "mean": 5,
+    "dis": 6,
+    "time": 8
+   },
+   "metrics": {
+    "r16": 0.8143,
+    "contrast_ratio": 11.98,
+    "hue_families": 1,
+    "complexity": 12.5,
+    "fid16": 0.0796933673112331,
+    "contrast": 1.0,
+    "mono": 1.0,
+    "simple": 0.925,
+    "circle": 1.0
+   },
+   "measured": 20.8,
+   "judged": 41.2,
+   "panel": 0.0,
+   "total": 62.0,
+   "rank": 17
+  },
+  {
+   "id": "N17",
+   "name": "MM Diamond",
+   "file": "round3/n17-mm-diamond-mark.svg",
+   "shape": "circle",
+   "judge": {
+    "lux": 6,
+    "str": 7,
+    "pro": 7,
+    "per": 6,
+    "mean": 5,
+    "dis": 7,
+    "time": 6
+   },
+   "metrics": {
+    "r16": 0.8769,
+    "contrast_ratio": 11.4,
+    "hue_families": 1,
+    "complexity": 11.5,
+    "fid16": 0.4273139800225466,
+    "contrast": 1.0,
+    "mono": 1.0,
+    "simple": 0.9416666666666667,
+    "circle": 1.0
+   },
+   "measured": 26.1,
+   "judged": 35.8,
+   "panel": 0.0,
+   "total": 61.9,
+   "rank": 18
+  },
+  {
+   "id": "N4",
+   "name": "Twin Ring",
+   "file": "luxe/n4-twin-ring-mark.svg",
+   "shape": "circle",
+   "judge": {
+    "lux": 6,
+    "str": 8,
+    "pro": 7,
+    "per": 7,
+    "mean": 6,
+    "dis": 6,
+    "time": 7
+   },
+   "metrics": {
+    "r16": 0.8358,
+    "contrast_ratio": 10.29,
+    "hue_families": 1,
+    "complexity": 10.0,
+    "fid16": 0.1991391898301763,
+    "contrast": 1.0,
+    "mono": 1.0,
+    "simple": 0.9666666666666667,
+    "circle": 1.0
+   },
+   "measured": 22.8,
+   "judged": 38.4,
+   "panel": 0.0,
+   "total": 61.3,
+   "rank": 19
+  },
+  {
+   "id": "N14",
+   "name": "Shield Seal",
+   "file": "round3/n14-shield-mark.svg",
+   "shape": "circle",
+   "judge": {
+    "lux": 6,
+    "str": 7,
+    "pro": 8,
+    "per": 8,
+    "mean": 6,
+    "dis": 4,
+    "time": 7
+   },
+   "metrics": {
+    "r16": 0.836,
+    "contrast_ratio": 11.51,
+    "hue_families": 1,
+    "complexity": 12.5,
+    "fid16": 0.19984015429316518,
+    "contrast": 1.0,
+    "mono": 1.0,
+    "simple": 0.925,
+    "circle": 1.0
+   },
+   "measured": 22.6,
+   "judged": 38.0,
+   "panel": 0.0,
+   "total": 60.6,
+   "rank": 20
+  },
+  {
+   "id": "N22",
+   "name": "Circuit",
+   "file": "round3/n22-circuit-mark.svg",
+   "shape": "circle",
+   "judge": {
+    "lux": 5,
+    "str": 7,
+    "pro": 6,
+    "per": 6,
+    "mean": 6,
+    "dis": 6,
+    "time": 5
+   },
+   "metrics": {
+    "r16": 0.8726,
+    "contrast_ratio": 11.86,
+    "hue_families": 1,
+    "complexity": 13.0,
+    "fid16": 0.40313625484370685,
+    "contrast": 1.0,
+    "mono": 1.0,
+    "simple": 0.9166666666666666,
+    "circle": 1.0
+   },
+   "measured": 25.6,
+   "judged": 32.4,
+   "panel": 0.0,
+   "total": 58.1,
+   "rank": 21
+  },
+  {
+   "id": "N6",
+   "name": "MOYA Wordmark",
+   "file": "luxe/n6-wordmark.svg",
+   "shape": "wordmark",
+   "judge": {
+    "lux": 9,
+    "str": 9,
+    "pro": 8,
+    "per": 8,
+    "mean": 6,
+    "dis": 8,
+    "time": 8
+   },
+   "metrics": {
+    "r16": 0.6653,
+    "contrast_ratio": 2.26,
+    "hue_families": 1,
+    "complexity": 60.0,
+    "fid16": 0.0,
+    "contrast": 0.2100279898851237,
+    "mono": 1.0,
+    "simple": 0.1333333333333333,
+    "circle": 0.0
+   },
+   "measured": 6.7,
+   "judged": 48.0,
+   "panel": 0.0,
+   "total": 54.7,
+   "rank": 22
+  },
+  {
+   "id": "A4",
+   "name": "Folio",
+   "file": "d-folio-mark.svg",
+   "shape": "squircle",
+   "judge": {
+    "lux": 3,
+    "str": 7,
+    "pro": 6,
+    "per": 6,
+    "mean": 6,
+    "dis": 6,
+    "time": 6
+   },
+   "metrics": {
+    "r16": 0.8654,
+    "contrast_ratio": 19.26,
+    "hue_families": 1,
+    "complexity": 9.0,
+    "fid16": 0.36310657663194473,
+    "contrast": 1.0,
+    "mono": 1.0,
+    "simple": 0.9833333333333333,
+    "circle": 0.3
+   },
+   "measured": 21.9,
+   "judged": 30.4,
+   "panel": 0.0,
+   "total": 52.3,
+   "rank": 23
+  },
+  {
+   "id": "A5",
+   "name": "Seal",
+   "file": "e-seal-mark.svg",
+   "shape": "shield",
+   "judge": {
+    "lux": 4,
+    "str": 7,
+    "pro": 7,
+    "per": 7,
+    "mean": 6,
+    "dis": 5,
+    "time": 6
+   },
+   "metrics": {
+    "r16": 0.8656,
+    "contrast_ratio": 19.26,
+    "hue_families": 4,
+    "complexity": 12.0,
+    "fid16": 0.3643851121872099,
+    "contrast": 1.0,
+    "mono": 0.2,
+    "simple": 0.9333333333333333,
+    "circle": 0.5
+   },
+   "measured": 18.6,
+   "judged": 33.2,
+   "panel": 0.0,
+   "total": 51.9,
+   "rank": 24
+  },
+  {
+   "id": "A1",
+   "name": "Four Strokes",
+   "file": "a-four-strokes-mark.svg",
+   "shape": "squircle",
+   "judge": {
+    "lux": 3,
+    "str": 6,
+    "pro": 5,
+    "per": 5,
+    "mean": 8,
+    "dis": 5,
+    "time": 4
+   },
+   "metrics": {
+    "r16": 0.9158,
+    "contrast_ratio": 4.82,
+    "hue_families": 4,
+    "complexity": 5.0,
+    "fid16": 0.6434335192325558,
+    "contrast": 0.6360769355225666,
+    "mono": 0.2,
+    "simple": 1.0,
+    "circle": 0.3
+   },
+   "measured": 20.3,
+   "judged": 26.1,
+   "panel": 0.0,
+   "total": 46.4,
+   "rank": 25
+  },
+  {
+   "id": "A2",
+   "name": "Twin",
+   "file": "b-twin-mark.svg",
+   "shape": "squircle",
+   "judge": {
+    "lux": 2,
+    "str": 6,
+    "pro": 4,
+    "per": 4,
+    "mean": 6,
+    "dis": 5,
+    "time": 4
+   },
+   "metrics": {
+    "r16": 0.9211,
+    "contrast_ratio": 4.82,
+    "hue_families": 4,
+    "complexity": 8.0,
+    "fid16": 0.6728277249941893,
+    "contrast": 0.6360769355225666,
+    "mono": 0.2,
+    "simple": 1.0,
+    "circle": 0.3
+   },
+   "measured": 20.8,
+   "judged": 21.4,
+   "panel": 0.0,
+   "total": 42.2,
+   "rank": 26
+  },
+  {
+   "id": "A3",
+   "name": "Quad",
+   "file": "c-quad-mark.svg",
+   "shape": "squircle",
+   "judge": {
+    "lux": 2,
+    "str": 7,
+    "pro": 5,
+    "per": 4,
+    "mean": 7,
+    "dis": 4,
+    "time": 4
+   },
+   "metrics": {
+    "r16": 0.8587,
+    "contrast_ratio": 5.25,
+    "hue_families": 4,
+    "complexity": 8.5,
+    "fid16": 0.3261301982636534,
+    "contrast": 0.7085092882878311,
+    "mono": 0.2,
+    "simple": 0.9916666666666667,
+    "circle": 0.3
+   },
+   "measured": 15.9,
+   "judged": 23.4,
+   "panel": 0.0,
+   "total": 39.3,
+   "rank": 27
+  },
+  {
+   "id": "A6",
+   "name": "Gradient Wordmark",
+   "file": "f-wordmark.svg",
+   "shape": "wordmark",
+   "judge": {
+    "lux": 4,
+    "str": 4,
+    "pro": 6,
+    "per": 5,
+    "mean": 5,
+    "dis": 4,
+    "time": 4
+   },
+   "metrics": {
+    "r16": 0.6304,
+    "contrast_ratio": 2.87,
+    "hue_families": 4,
+    "complexity": 47.0,
+    "fid16": 0.0,
+    "contrast": 0.3109284025102306,
+    "mono": 0.2,
+    "simple": 0.35,
+    "circle": 0.0
+   },
+   "measured": 4.3,
+   "judged": 23.9,
+   "panel": 0.0,
+   "total": 28.2,
+   "rank": 28
+  }
+ ]
+}
