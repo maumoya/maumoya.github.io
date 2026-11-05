@@ -166,23 +166,31 @@
   }
 
   // ---------- Sound ----------
-  // Calm by design, after the studies on restorative sound: steady nature-like noise (soft rain,
-  // stream, wind) lowers stress more than tones do, and steady pink/brown noise has no beat or
-  // pulse to follow. No binaural beats, no swells, no wobble: the level never moves on its own.
-  // `color`: 'pink' or 'brown' noise; `cut`: low-pass in Hz (lower = darker, like distant rain).
+  // Generative background music, written from what music-emotion research agrees on:
+  // - major mode reads as happy and hopeful, minor as sad (Hevner 1935; Gagnon & Peretz 2003);
+  // - slow tempo (~60-70 BPM) lowers heart and breathing rate (Bernardi et al. 2006), so 64 BPM;
+  // - consonant intervals feel pleasant (Bidelman & Krishnan 2009): major pentatonic melody
+  //   has no semitone clashes, over the familiar, uplifting I-V-vi-IV progression;
+  // - soft attacks, warm low-passed timbres and a long reverb, no sudden changes; a melody that
+  //   tends to rise at the start of each phrase gives the "lift" of optimism.
+  // `root`: key in semitones from C4; `wave`: melody timbre; `cut`: brightness in Hz.
   var PROFILES = {
-    clean: { color: 'pink', cut: 2600, blip: ['sine', 659.25, 783.99, .12] },
-    material: { color: 'pink', cut: 3000, blip: ['sine', 587.33, 698.46, .12] },
-    hud: { color: 'brown', cut: 900, blip: ['sine', 880, 987.77, .1] },
-    soft: { color: 'pink', cut: 1800, blip: ['sine', 523.25, 659.25, .14] },
-    night: { color: 'brown', cut: 600, blip: ['sine', 440, 493.88, .14] },
-    terminal: { color: 'brown', cut: 750, blip: ['sine', 1046.5, 1046.5, .05] },
-    arcade: { color: 'pink', cut: 2200, blip: ['triangle', 659.25, 987.77, .1] },
-    holo: { color: 'brown', cut: 1100, blip: ['sine', 783.99, 1046.5, .1] },
-    grid: { color: 'brown', cut: 800, blip: ['square', 880, 880, .04] }
+    clean: { root: 0, wave: 'triangle', cut: 2400, blip: ['sine', 659.25, 783.99, .12] },
+    material: { root: 2, wave: 'triangle', cut: 2600, blip: ['sine', 587.33, 698.46, .12] },
+    hud: { root: 7, wave: 'sine', cut: 2000, blip: ['sine', 880, 987.77, .1] },
+    soft: { root: 5, wave: 'sine', cut: 1800, blip: ['sine', 523.25, 659.25, .14] },
+    night: { root: -3, wave: 'sine', cut: 1400, blip: ['sine', 440, 493.88, .14] },
+    terminal: { root: -2, wave: 'sine', cut: 1600, blip: ['sine', 1046.5, 1046.5, .05] },
+    arcade: { root: 4, wave: 'triangle', cut: 2800, blip: ['triangle', 659.25, 987.77, .1] },
+    holo: { root: 7, wave: 'sine', cut: 2200, blip: ['sine', 783.99, 1046.5, .1] },
+    grid: { root: 9, wave: 'triangle', cut: 2000, blip: ['square', 880, 880, .04] }
   };
+  var BEAT = 60 / 64, CHORD_BEATS = 8;
+  var CHORDS = [[0, 4, 7], [-5, -1, 2], [-3, 0, 4], [-7, -3, 0]];   // I, V, vi, IV
+  var PENTA = [0, 2, 4, 7, 9, 12, 14, 16, 19, 21];                     // major pentatonic, 2 octaves
   var sound = (function () {
-    var ctx, master, pad, on = load('mm-sound', 'on') !== 'off', vol = +load('mm-volume', '15');
+    // 'mm-vol' replaces the old 'mm-volume' key so every visitor starts again at 15%.
+    var ctx, master, pad, on = load('mm-sound', 'on') !== 'off', vol = +load('mm-vol', '15');
     var profile = PROFILES.clean;
     if (!(vol >= 0 && vol <= 100)) vol = 15;
     function level() { return on ? Math.pow(vol / 100, 2) * 0.8 : 0; }
@@ -199,44 +207,71 @@
       }
       if (ctx.state === 'suspended' && !document.hidden) ctx.resume();
     }
-    function stopPad() {
-      if (!pad) return;
-      var p = pad, now = ctx.currentTime;
-      p.gain.gain.cancelScheduledValues(now);
-      p.gain.gain.setValueAtTime(p.gain.gain.value, now);
-      p.gain.gain.linearRampToValueAtTime(0, now + 2);
-      setTimeout(function () { p.src.stop(); p.gain.disconnect(); }, 2100);
-      pad = null;
-    }
-    // 8 s of stereo noise, looped. Pink: Paul Kellet's filter; brown: integrated white noise.
-    function noise(color) {
-      var n = ctx.sampleRate * 8, buf = ctx.createBuffer(2, n, ctx.sampleRate);
+    function hz(semi) { return 261.63 * Math.pow(2, semi / 12); }
+    // A soft hall: 3 s of decaying stereo noise as the reverb impulse.
+    function hall() {
+      var n = ctx.sampleRate * 3, buf = ctx.createBuffer(2, n, ctx.sampleRate);
       for (var c = 0; c < 2; c++) {
-        var d = buf.getChannelData(c), b0 = 0, b1 = 0, b2 = 0, b3 = 0, b4 = 0, b5 = 0, b6 = 0, last = 0;
-        for (var i = 0; i < n; i++) {
-          var w = Math.random() * 2 - 1;
-          if (color === 'brown') { last = (last + .02 * w) / 1.02; d[i] = last * 3.5; }
-          else {
-            b0 = .99886 * b0 + w * .0555179; b1 = .99332 * b1 + w * .0750759; b2 = .969 * b2 + w * .153852;
-            b3 = .8665 * b3 + w * .3104856; b4 = .55 * b4 + w * .5329522; b5 = -.7616 * b5 - w * .016898;
-            d[i] = (b0 + b1 + b2 + b3 + b4 + b5 + b6 + w * .5362) * .11; b6 = w * .115926;
-          }
-        }
-        // Fade the loop seam so it never clicks.
-        for (var j = 0; j < 2048; j++) { var k = j / 2048; d[j] *= k; d[n - 1 - j] *= k; }
+        var d = buf.getChannelData(c);
+        for (var i = 0; i < n; i++) d[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / n, 3);
       }
-      return buf;
+      var conv = ctx.createConvolver(); conv.buffer = buf; return conv;
+    }
+    // One voice: oscillator -> low-pass -> envelope -> dry bus and reverb.
+    function voice(wave, freq, at, attack, hold, release, peak) {
+      var o = ctx.createOscillator(), f = ctx.createBiquadFilter(), g = ctx.createGain();
+      o.type = wave; o.frequency.value = freq;
+      f.type = 'lowpass'; f.frequency.value = profile.cut; f.Q.value = .3;
+      g.gain.setValueAtTime(0, at);
+      g.gain.linearRampToValueAtTime(peak, at + attack);
+      g.gain.setValueAtTime(peak, at + attack + hold);
+      g.gain.exponentialRampToValueAtTime(.0001, at + attack + hold + release);
+      o.connect(f); f.connect(g); g.connect(pad.bus);
+      o.start(at); o.stop(at + attack + hold + release + .1);
+    }
+    function playChord(at, chord) {
+      for (var i = 0; i < chord.length; i++)
+        voice('sine', hz(profile.root + chord[i] - 12), at, 2, CHORD_BEATS * BEAT - 1, 2.5, .05);
+      voice('sine', hz(profile.root + chord[0] - 24), at, 2, CHORD_BEATS * BEAT - 1, 2.5, .06);
+    }
+    // Sparse melody: a gentle random walk on the pentatonic scale, rising at each phrase start
+    // and resting on a chord tone when the chord changes.
+    function playMelody(at, beat, chord) {
+      if (beat === 0) {
+        pad.step = 0;
+        for (var i = chord.length - 1; i >= 0; i--) {
+          var at12 = PENTA.indexOf(((chord[i] % 12) + 12) % 12);
+          if (at12 >= 0) pad.step = at12;
+        }
+      } else {
+        if (Math.random() < .45) return;
+        var move = [-1, 1, 1, 2, -2][Math.floor(Math.random() * 5)];
+        if (beat < 4 && move < 0) move = -move;
+        pad.step = Math.max(0, Math.min(PENTA.length - 1, pad.step + move));
+      }
+      voice(profile.wave, hz(profile.root + PENTA[pad.step]), at, .03, .1, 2.4, .045);
+    }
+    // Look-ahead scheduler: every 250 ms, book the notes due in the next second.
+    function tick() {
+      if (!pad || ctx.state !== 'running') return;
+      while (pad.next < ctx.currentTime + 1) {
+        var beat = pad.beat % CHORD_BEATS;
+        var chord = CHORDS[Math.floor(pad.beat / CHORD_BEATS) % CHORDS.length];
+        if (beat === 0) playChord(pad.next, chord);
+        if (beat % 2 === 0 || Math.random() < .25) playMelody(pad.next, beat, chord);
+        pad.beat++; pad.next += BEAT;
+      }
     }
     function startPad() {
-      if (!ctx) return;
-      stopPad();
-      var src = ctx.createBufferSource(), f = ctx.createBiquadFilter(), g = ctx.createGain(), now = ctx.currentTime;
-      src.buffer = noise(profile.color); src.loop = true;
-      f.type = 'lowpass'; f.frequency.value = profile.cut; f.Q.value = .2;
-      g.gain.setValueAtTime(0, now);
-      g.gain.linearRampToValueAtTime(profile.color === 'brown' ? .22 : .16, now + 4);
-      src.connect(f); f.connect(g); g.connect(master); src.start();
-      pad = { gain: g, src: src };
+      if (!ctx || pad) return;
+      var bus = ctx.createGain(), rev = hall(), wet = ctx.createGain(), now = ctx.currentTime;
+      bus.gain.setValueAtTime(0, now);
+      bus.gain.linearRampToValueAtTime(1, now + 4);
+      wet.gain.value = .5;
+      bus.connect(master); bus.connect(rev); rev.connect(wet); wet.connect(master);
+      pad = { bus: bus, next: now + .2, beat: 0, step: 0 };
+      setInterval(tick, 250);
+      tick();
     }
     function note(type, f1, f2, len, peak) {
       if (!ctx || ctx.state !== 'running') return;
@@ -256,10 +291,11 @@
       get on() { return on; }, get vol() { return vol; },
       start: start,
       blip: function () { var b = profile.blip; note(b[0], b[1], b[2], b[3], .12); },
-      theme: function (id) { profile = PROFILES[id] || PROFILES.clean; startPad(); },
+      // A new theme changes key and timbre from the next note on; the music never restarts.
+      theme: function (id) { profile = PROFILES[id] || PROFILES.clean; },
       set: function (o, v) {
         on = o; vol = v;
-        save('mm-sound', on ? 'on' : 'off'); save('mm-volume', String(vol));
+        save('mm-sound', on ? 'on' : 'off'); save('mm-vol', String(vol));
         if (on) start();
         if (ctx) {
           master.gain.setTargetAtTime(level(), ctx.currentTime, .05);
