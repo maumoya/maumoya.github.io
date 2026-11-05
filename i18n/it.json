@@ -423,5 +423,22 @@
   "News": "Notizie",
   "Hologram": "Ologramma",
   "Vision": "Visione",
-  "Grids": "Griglia"
+  "Grids": "Griglia",
+  "Finds grants that fit, drafts the application and keeps the award compliant to the last report.": "Trova i bandi giusti, scrive la domanda e mantiene il finanziamento in regola fino all’ultimo rendiconto.",
+  "Boredom Blaster": "Boredom Blaster",
+  "Christian Trivia v2": "Christian Trivia v2",
+  "Christian Trivia v1": "Christian Trivia v1",
+  "Boredom Blaster versions": "Versioni di Boredom Blaster",
+  "Previous version": "Versione precedente",
+  "Next version": "Versione successiva",
+  "Bible adventure for kids": "Avventura biblica per bambini",
+  "Christian Trivia versions": "Versioni di Christian Trivia",
+  "Browser game · the adventure": "Gioco per browser · l’avventura",
+  "Walk through Creation.": "Cammina nella Creazione.",
+  "The full adventure after the one-day MVP. Kids 5 to 10 walk through the seven days of Creation, find what God made and answer to open the next day. English and Spanish with read-aloud, two players, works offline.": "L’avventura completa dopo l’MVP fatto in un giorno. I bambini dai 5 ai 10 anni attraversano i sette giorni della Creazione, scoprono ciò che Dio ha fatto e rispondono per aprire il giorno dopo. In inglese e spagnolo con lettura ad alta voce, per due giocatori, funziona offline.",
+  "automated tests passing": "test automatici superati",
+  "requests to other hosts": "richieste ad altri server",
+  "Christian Trivia v2 gameplay: the child walks to a glowing light, answers what God made on day 1, gets a timeline card and walks through the open gate into day 2.": "Partita a Christian Trivia v2: il bambino cammina verso una luce che brilla, dice cosa Dio ha fatto il giorno 1, riceve una carta della linea del tempo e attraversa il cancello aperto verso il giorno 2.",
+  "GrantPRO card: a timesheet line is coded to a grant, passes an eligibility check and is locked into the audit trail.": "Scheda GrantPRO: una riga del foglio ore viene assegnata a un finanziamento, supera un controllo di ammissibilità e viene bloccata nella traccia di audit.",
+  "View repo {0}": "Vedi il repository {0}"
 }

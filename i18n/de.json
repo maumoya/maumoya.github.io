@@ -423,5 +423,22 @@
   "News": "Zeitung",
   "Hologram": "Hologramm",
   "Vision": "Vision",
-  "Grids": "Raster"
+  "Grids": "Raster",
+  "Finds grants that fit, drafts the application and keeps the award compliant to the last report.": "Findet passende Fördermittel, schreibt den Antrag und hält die Förderung bis zum letzten Bericht regelkonform.",
+  "Boredom Blaster": "Boredom Blaster",
+  "Christian Trivia v2": "Christian Trivia v2",
+  "Christian Trivia v1": "Christian Trivia v1",
+  "Boredom Blaster versions": "Versionen von Boredom Blaster",
+  "Previous version": "Vorherige Version",
+  "Next version": "Nächste Version",
+  "Bible adventure for kids": "Bibel-Abenteuer für Kinder",
+  "Christian Trivia versions": "Versionen von Christian Trivia",
+  "Browser game · the adventure": "Browserspiel · das Abenteuer",
+  "Walk through Creation.": "Geh durch die Schöpfung.",
+  "The full adventure after the one-day MVP. Kids 5 to 10 walk through the seven days of Creation, find what God made and answer to open the next day. English and Spanish with read-aloud, two players, works offline.": "Das ganze Abenteuer nach dem MVP aus einem Tag. Kinder von 5 bis 10 gehen durch die sieben Schöpfungstage, finden, was Gott gemacht hat, und öffnen mit jeder Antwort den nächsten Tag. Auf Englisch und Spanisch mit Vorlesefunktion, zu zweit spielbar, läuft offline.",
+  "automated tests passing": "automatische Tests bestanden",
+  "requests to other hosts": "Anfragen an andere Server",
+  "Christian Trivia v2 gameplay: the child walks to a glowing light, answers what God made on day 1, gets a timeline card and walks through the open gate into day 2.": "Christian Trivia v2 im Spiel: Das Kind läuft zu einem leuchtenden Licht, sagt, was Gott am Tag 1 gemacht hat, bekommt eine Zeitleistenkarte und geht durch das offene Tor in Tag 2.",
+  "GrantPRO card: a timesheet line is coded to a grant, passes an eligibility check and is locked into the audit trail.": "GrantPRO-Karte: Eine Zeile im Stundenzettel wird einem Förderprojekt zugeordnet, besteht eine Förderfähigkeitsprüfung und wird im Prüfpfad gesperrt.",
+  "View repo {0}": "Repository {0} ansehen"
 }

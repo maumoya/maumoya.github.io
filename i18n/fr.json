@@ -423,5 +423,22 @@
   "News": "Presse",
   "Hologram": "Hologramme",
   "Vision": "Vision",
-  "Grids": "Grille"
+  "Grids": "Grille",
+  "Finds grants that fit, drafts the application and keeps the award compliant to the last report.": "Trouve les subventions adaptées, rédige le dossier et garde le financement conforme jusqu’au dernier rapport.",
+  "Boredom Blaster": "Boredom Blaster",
+  "Christian Trivia v2": "Christian Trivia v2",
+  "Christian Trivia v1": "Christian Trivia v1",
+  "Boredom Blaster versions": "Versions de Boredom Blaster",
+  "Previous version": "Version précédente",
+  "Next version": "Version suivante",
+  "Bible adventure for kids": "Aventure biblique pour enfants",
+  "Christian Trivia versions": "Versions de Christian Trivia",
+  "Browser game · the adventure": "Jeu de navigateur · l’aventure",
+  "Walk through Creation.": "Parcourez la Création.",
+  "The full adventure after the one-day MVP. Kids 5 to 10 walk through the seven days of Creation, find what God made and answer to open the next day. English and Spanish with read-aloud, two players, works offline.": "L’aventure complète, après le MVP fait en un jour. Les enfants de 5 à 10 ans parcourent les sept jours de la Création, trouvent ce que Dieu a fait et répondent pour ouvrir le jour suivant. En anglais et en espagnol avec lecture à voix haute, à deux joueurs, et sans connexion.",
+  "automated tests passing": "tests automatisés réussis",
+  "requests to other hosts": "requêtes vers d’autres serveurs",
+  "Christian Trivia v2 gameplay: the child walks to a glowing light, answers what God made on day 1, gets a timeline card and walks through the open gate into day 2.": "Partie de Christian Trivia v2 : l’enfant marche vers une lumière qui brille, dit ce que Dieu a fait le jour 1, reçoit une carte de frise chronologique et passe la porte ouverte vers le jour 2.",
+  "GrantPRO card: a timesheet line is coded to a grant, passes an eligibility check and is locked into the audit trail.": "Carte GrantPRO : une ligne de feuille de temps est imputée à une subvention, passe un contrôle d'éligibilité et est verrouillée dans la piste d'audit.",
+  "View repo {0}": "Voir le dépôt {0}"
 }

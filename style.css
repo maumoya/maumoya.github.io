@@ -336,6 +336,19 @@ h3 { font-size: clamp(36px, 5.5vw, 64px); letter-spacing: -0.03em; line-height: 
 .js .hero .fx { opacity: 1; transform: none; transition: none; animation: rise 1s var(--ease) both; animation-delay: calc(var(--i, 0) * 90ms); }
 
 @keyframes rise { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+/* Game families: one carousel per game, newest version first; each slide keeps its own palette. */
+.fam { flex-direction: column; align-items: stretch; justify-content: center; }
+.fam-nav { display: flex; gap: 10px; align-items: center; justify-content: center; margin-bottom: 32px; }
+.fam-tab, .fam-arrow { font: inherit; font-weight: 700; color: var(--s-fg); background: transparent; border: 1px solid var(--s-line); border-radius: 999px; cursor: pointer; min-height: 44px; }
+.fam-tab { padding: 0 20px; }
+.fam-arrow { width: 44px; font-size: 22px; line-height: 1; }
+.fam-tab[aria-current="true"] { background: var(--s-btn); color: var(--s-btn-fg); border-color: var(--s-btn); }
+.fam-tab:hover, .fam-arrow:hover { border-color: var(--s-accent); }
+.fam-track { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; overscroll-behavior-x: contain; scrollbar-width: none; }
+.fam-track::-webkit-scrollbar { display: none; }
+.fam-track:focus-visible { outline: 2px solid var(--s-accent); outline-offset: -2px; }
+.fam-slide { flex: 0 0 100%; min-width: 0; scroll-snap-align: start; scroll-snap-stop: always; background: var(--s-bg); color: var(--s-fg); }
+@media (prefers-reduced-motion: reduce) { .fam-track { scroll-behavior: auto; } }
 @media (max-width: 860px) {
   .split, .split:has(.wide), .split.rev:has(.wide) { grid-template-columns: 1fr; gap: 48px; }
   .split.rev .copy { order: 0; }

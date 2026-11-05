@@ -423,5 +423,22 @@
   "News": "Novaĵoj",
   "Hologram": "Holografio",
   "Vision": "Vizio",
-  "Grids": "Krado"
+  "Grids": "Krado",
+  "Finds grants that fit, drafts the application and keeps the award compliant to the last report.": "Trovas konvenajn subvenciojn, redaktas la peton kaj tenas la premion plenuma ĝis la lasta raporto.",
+  "Boredom Blaster": "Boredom Blaster",
+  "Christian Trivia v2": "Christian Trivia v2",
+  "Christian Trivia v1": "Christian Trivia v1",
+  "Boredom Blaster versions": "Versioj de Boredom Blaster",
+  "Previous version": "Antaŭa versio",
+  "Next version": "Sekva versio",
+  "Bible adventure for kids": "Biblia aventuro por infanoj",
+  "Christian Trivia versions": "Versioj de Christian Trivia",
+  "Browser game · the adventure": "Retumila ludo · la aventuro",
+  "Walk through Creation.": "Promenu tra la Kreado.",
+  "The full adventure after the one-day MVP. Kids 5 to 10 walk through the seven days of Creation, find what God made and answer to open the next day. English and Spanish with read-aloud, two players, works offline.": "La plena aventuro post la unutaga MVP. Infanoj de 5 ĝis 10 jaroj promenas tra la sep tagoj de la Kreado, trovas tion, kion Dio faris, kaj respondas por malfermi la sekvan tagon. En la angla kaj la hispana kun laŭtlegado, por du ludantoj, funkcias senrete.",
+  "automated tests passing": "aŭtomataj testoj sukcesaj",
+  "requests to other hosts": "petoj al aliaj serviloj",
+  "Christian Trivia v2 gameplay: the child walks to a glowing light, answers what God made on day 1, gets a timeline card and walks through the open gate into day 2.": "Ludado de Christian Trivia v2: la infano iras al brila lumo, respondas, kion Dio faris en la unua tago, ricevas tempolinian karton kaj trapasas la malfermitan pordegon al la dua tago.",
+  "GrantPRO card: a timesheet line is coded to a grant, passes an eligibility check and is locked into the audit trail.": "Karto de GrantPRO: linio de horfolio estas asignita al subvencio, trapasas kontrolon de rajteco kaj estas ŝlosita en la revizia spuro.",
+  "View repo {0}": "Vidi deponejon {0}"
 }

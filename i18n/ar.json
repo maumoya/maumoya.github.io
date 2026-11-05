@@ -423,5 +423,22 @@
   "News": "أخبار",
   "Hologram": "هولوغرام",
   "Vision": "رؤية",
-  "Grids": "شبكة"
+  "Grids": "شبكة",
+  "Finds grants that fit, drafts the application and keeps the award compliant to the last report.": "يعثر على المنح المناسبة، ويصوغ الطلب، ويُبقي التمويل ملتزمًا بالشروط حتى آخر تقرير.",
+  "Boredom Blaster": "Boredom Blaster",
+  "Christian Trivia v2": "Christian Trivia v2",
+  "Christian Trivia v1": "Christian Trivia v1",
+  "Boredom Blaster versions": "إصدارات Boredom Blaster",
+  "Previous version": "الإصدار السابق",
+  "Next version": "الإصدار التالي",
+  "Bible adventure for kids": "مغامرة من الكتاب المقدس للأطفال",
+  "Christian Trivia versions": "إصدارات Christian Trivia",
+  "Browser game · the adventure": "لعبة متصفح · المغامرة",
+  "Walk through Creation.": "تجوّل في أيام الخلق.",
+  "The full adventure after the one-day MVP. Kids 5 to 10 walk through the seven days of Creation, find what God made and answer to open the next day. English and Spanish with read-aloud, two players, works offline.": "المغامرة الكاملة بعد النموذج الأولي الذي بُني في يوم واحد. يتجول الأطفال من 5 إلى 10 سنوات في أيام الخلق السبعة، ويكتشفون ما صنعه الله، ويجيبون ليفتحوا اليوم التالي. بالإنجليزية والإسبانية مع القراءة بصوت عالٍ، للاعبَين، وتعمل دون اتصال.",
+  "automated tests passing": "اختبارات آلية ناجحة",
+  "requests to other hosts": "طلبات إلى خوادم أخرى",
+  "Christian Trivia v2 gameplay: the child walks to a glowing light, answers what God made on day 1, gets a timeline card and walks through the open gate into day 2.": "لقطة من Christian Trivia v2: يمشي الطفل نحو ضوء متوهج، ويجيب عمّا صنعه الله في اليوم الأول، ويحصل على بطاقة في الخط الزمني، ثم يعبر البوابة المفتوحة إلى اليوم الثاني.",
+  "GrantPRO card: a timesheet line is coded to a grant, passes an eligibility check and is locked into the audit trail.": "بطاقة GrantPRO: يُنسب سطر في جدول الساعات إلى منحة، ويجتاز فحص الأهلية، ثم يُقفل في سجل التدقيق.",
+  "View repo {0}": "عرض المستودع {0}"
 }

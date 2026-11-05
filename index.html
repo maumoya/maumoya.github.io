@@ -37,7 +37,7 @@
 <!-- /seo -->
 <link rel="canonical" href="https://maumoya.github.io/">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="style.css?v=c41d82f3">
+<link rel="stylesheet" href="style.css?v=dcd55007">
 <script>(function(d){if("IntersectionObserver" in window)d.classList.add("js");try{var t=localStorage.getItem("mm-theme"),l=localStorage.getItem("mm-lang");if(t&&t!=="clean")d.dataset.theme=t;if(l&&l!=="en"){d.classList.add("i18n-wait");if(l==="ar"||l==="he")d.dir="rtl";}}catch(e){}})(document.documentElement);</script>
 </head>
 <body data-scene="base">
@@ -61,9 +61,8 @@
   <a href="#forger" data-for="forger"><span>skill-forger-e2e</span></a>
   <a href="#ppd" data-for="ppd"><span>PRO-Portfolio-DEV</span></a>
   <a href="#ghost" data-for="ghost"><span>LKND Ghost Text</span></a>
-  <a href="#bbv2" data-for="bbv2"><span>Boredom Blaster v2</span></a>
-  <a href="#bbv1" data-for="bbv1"><span>Boredom Blaster v1</span></a>
-  <a href="#trivia" data-for="trivia"><span>Christian Trivia</span></a>
+  <a href="#bb" data-for="bb"><span>Boredom Blaster</span></a>
+  <a href="#ct" data-for="ct"><span>Christian Trivia</span></a>
 </nav>
 
 <main id="main">
@@ -242,76 +241,109 @@
         </figure>
       </div>
     </section>
-    <section id="bbv2" class="scene project" data-scene="bbv2" aria-labelledby="bbv2-h">
-      <div class="wrap split rev">
-        <div class="copy">
-          <p class="eyebrow fx">Browser game</p>
-          <h3 id="bbv2-h" class="fx">Boredom Blaster v2</h3>
-          <p class="tag fx">Five worlds. 500 waves. World bosses.</p>
-          <p class="fx">A space shooter with power-ups, gamepad support and anti-cheat global scores. Plain JavaScript and canvas, no engine, no login.</p>
-          <dl class="stats fx">
-            <div><dt>worlds, a boss every 100 waves</dt><dd>5</dd></div>
-            <div><dt>game engines</dt><dd>0</dd></div>
-          </dl>
-          <p class="links fx"><a class="btn" href="https://maumoya.github.io/boredom-blaster-v2/">Play now</a><a href="https://github.com/maumoya/boredom-blaster-v2">Repo <span aria-hidden="true">›</span></a></p>
-        </div>
-        <figure class="media fx-media">
-          <div class="screen">
-            <video muted loop playsinline preload="none" width="480" height="640" poster="media/blaster-v2.jpg" aria-label="Boredom Blaster v2 gameplay: a fully upgraded ship moving in all directions, then a new record and the top-10 table.">
-              <source src="media/blaster-v2.mp4" type="video/mp4">
-              <source src="media/blaster-v2.webm" type="video/webm">
-            </video>
-            <button class="vbtn" type="button" aria-label="Play video" aria-pressed="false"></button>
+    <section id="bb" class="scene project fam" data-scene="bbv2" aria-label="Boredom Blaster versions">
+      <div class="wrap fam-nav fx"><button class="fam-arrow" type="button" data-dir="-1" aria-label="Previous version">‹</button><button class="fam-tab" type="button" aria-controls="bbv2" translate="no">v2</button><button class="fam-tab" type="button" aria-controls="bbv1" translate="no">v1</button><button class="fam-arrow" type="button" data-dir="1" aria-label="Next version">›</button></div>
+      <div class="fam-track" tabindex="0" aria-label="Boredom Blaster versions">
+        <div id="bbv2" class="fam-slide" data-scene="bbv2" role="group" aria-roledescription="slide" aria-labelledby="bbv2-h">
+        <div class="wrap split rev">
+          <div class="copy">
+            <p class="eyebrow fx">Browser game</p>
+            <h3 id="bbv2-h" class="fx">Boredom Blaster v2</h3>
+            <p class="tag fx">Five worlds. 500 waves. World bosses.</p>
+            <p class="fx">A space shooter with power-ups, gamepad support and anti-cheat global scores. Plain JavaScript and canvas, no engine, no login.</p>
+            <dl class="stats fx">
+              <div><dt>worlds, a boss every 100 waves</dt><dd>5</dd></div>
+              <div><dt>game engines</dt><dd>0</dd></div>
+            </dl>
+            <p class="links fx"><a class="btn" href="https://maumoya.github.io/boredom-blaster-v2/">Play now</a><a href="https://github.com/maumoya/boredom-blaster-v2">Repo <span aria-hidden="true">›</span></a></p>
           </div>
-        </figure>
+          <figure class="media fx-media">
+            <div class="screen">
+              <video muted loop playsinline preload="none" width="480" height="640" poster="media/blaster-v2.jpg" aria-label="Boredom Blaster v2 gameplay: a fully upgraded ship moving in all directions, then a new record and the top-10 table.">
+                <source src="media/blaster-v2.mp4" type="video/mp4">
+                <source src="media/blaster-v2.webm" type="video/webm">
+              </video>
+              <button class="vbtn" type="button" aria-label="Play video" aria-pressed="false"></button>
+            </div>
+          </figure>
+        </div>
+        </div>
+        <div id="bbv1" class="fam-slide" data-scene="bbv1" role="group" aria-roledescription="slide" aria-labelledby="bbv1-h">
+        <div class="wrap split">
+          <div class="copy">
+            <p class="eyebrow fx">Browser game · the original</p>
+            <h3 id="bbv1-h" class="fx">Boredom Blaster v1</h3>
+            <p class="tag fx">A whole game in one file.</p>
+            <p class="fx">The retro space shooter that started it, for short breaks on Mac or phone.</p>
+            <dl class="stats fx">
+              <div><dt>the whole game, one HTML file</dt><dd><!--fact:bb1_size_kb-->13.6 KB<!--/fact--></dd></div>
+            </dl>
+            <p class="links fx"><a class="btn" href="https://maumoya.github.io/boredom-blaster-play/">Play now</a><a href="https://github.com/maumoya/boredom-blaster-play">Repo <span aria-hidden="true">›</span></a></p>
+          </div>
+          <figure class="media fx-media">
+            <div class="screen">
+              <video muted loop playsinline preload="none" width="480" height="640" poster="media/blaster-v1.jpg" aria-label="Boredom Blaster v1 gameplay through the first three waves.">
+                <source src="media/blaster-v1.mp4" type="video/mp4">
+                <source src="media/blaster-v1.webm" type="video/webm">
+              </video>
+              <button class="vbtn" type="button" aria-label="Play video" aria-pressed="false"></button>
+            </div>
+          </figure>
+        </div>
+        </div>
       </div>
     </section>
-
-    <section id="bbv1" class="scene project" data-scene="bbv1" aria-labelledby="bbv1-h">
-      <div class="wrap split">
-        <div class="copy">
-          <p class="eyebrow fx">Browser game · the original</p>
-          <h3 id="bbv1-h" class="fx">Boredom Blaster v1</h3>
-          <p class="tag fx">A whole game in one file.</p>
-          <p class="fx">The retro space shooter that started it, for short breaks on Mac or phone.</p>
-          <dl class="stats fx">
-            <div><dt>the whole game, one HTML file</dt><dd><!--fact:bb1_size_kb-->13.6 KB<!--/fact--></dd></div>
-          </dl>
-          <p class="links fx"><a class="btn" href="https://maumoya.github.io/boredom-blaster-play/">Play now</a><a href="https://github.com/maumoya/boredom-blaster-play">Repo <span aria-hidden="true">›</span></a></p>
-        </div>
-        <figure class="media fx-media">
-          <div class="screen">
-            <video muted loop playsinline preload="none" width="480" height="640" poster="media/blaster-v1.jpg" aria-label="Boredom Blaster v1 gameplay through the first three waves.">
-              <source src="media/blaster-v1.mp4" type="video/mp4">
-              <source src="media/blaster-v1.webm" type="video/webm">
-            </video>
-            <button class="vbtn" type="button" aria-label="Play video" aria-pressed="false"></button>
+    <section id="ct" class="scene project fam" data-scene="trivia" aria-label="Christian Trivia versions">
+      <div class="wrap fam-nav fx"><button class="fam-arrow" type="button" data-dir="-1" aria-label="Previous version">‹</button><button class="fam-tab" type="button" aria-controls="ctv2" translate="no">v2</button><button class="fam-tab" type="button" aria-controls="trivia" translate="no">v1</button><button class="fam-arrow" type="button" data-dir="1" aria-label="Next version">›</button></div>
+      <div class="fam-track" tabindex="0" aria-label="Christian Trivia versions">
+        <div id="ctv2" class="fam-slide" data-scene="trivia" role="group" aria-roledescription="slide" aria-labelledby="ctv2-h">
+        <div class="wrap split">
+          <div class="copy">
+            <p class="eyebrow fx">Browser game · the adventure</p>
+            <h3 id="ctv2-h" class="fx">Christian Trivia v2</h3>
+            <p class="tag fx">Walk through Creation.</p>
+            <p class="fx">The full adventure after the one-day MVP. Kids 5 to 10 walk through the seven days of Creation, find what God made and answer to open the next day. English and Spanish with read-aloud, two players, works offline.</p>
+            <dl class="stats fx">
+              <div><dt>automated tests passing</dt><dd>40</dd></div>
+              <div><dt>requests to other hosts</dt><dd>0</dd></div>
+            </dl>
+            <p class="links fx"><a class="btn" href="https://maumoya.github.io/christian-trivia-v2/">Play now</a><a href="https://github.com/maumoya/christian-trivia-v2">Repo <span aria-hidden="true">›</span></a></p>
           </div>
-        </figure>
-      </div>
-    </section>
-    <section id="trivia" class="scene project" data-scene="trivia" aria-labelledby="trivia-h">
-      <div class="wrap split rev">
-        <div class="copy">
-          <p class="eyebrow fx">Browser game · MVP in a day</p>
-          <h3 id="trivia-h" class="fx">Christian Trivia</h3>
-          <p class="tag fx">Idea to playable demo in one day.</p>
-          <p class="fx">A Bible trivia game for kids 5 to 10 about the seven days of Creation, in English and Spanish with read-aloud. Built as a fast MVP to test the idea with real families before the full adventure game.</p>
-          <dl class="stats fx">
-            <div><dt>day from idea to playable</dt><dd>1</dd></div>
-            <div><dt>scenes, one HTML file</dt><dd>8</dd></div>
-          </dl>
-          <p class="links fx"><a class="btn" href="https://maumoya.github.io/christian-trivia/">Play now</a><a href="https://github.com/maumoya/christian-trivia">Repo <span aria-hidden="true">›</span></a></p>
+          <figure class="media fx-media">
+            <div class="screen wide">
+              <video muted loop playsinline preload="none" width="800" height="506" poster="media/christian-trivia-v2.jpg" aria-label="Christian Trivia v2 gameplay: the child walks to a glowing light, answers what God made on day 1, gets a timeline card and walks through the open gate into day 2.">
+                <source src="media/christian-trivia-v2.mp4" type="video/mp4">
+                <source src="media/christian-trivia-v2.webm" type="video/webm">
+              </video>
+              <button class="vbtn" type="button" aria-label="Play video" aria-pressed="false"></button>
+            </div>
+          </figure>
         </div>
-        <figure class="media fx-media">
-          <div class="screen wide">
-            <video muted loop playsinline preload="none" width="800" height="560" poster="media/christian-trivia.jpg" aria-label="Christian Trivia gameplay: light appears over the water, then sky and sea, then dry land with trees; each scene asks a question with three picture answers.">
-              <source src="media/christian-trivia.mp4" type="video/mp4">
-              <source src="media/christian-trivia.webm" type="video/webm">
-            </video>
-            <button class="vbtn" type="button" aria-label="Play video" aria-pressed="false"></button>
+        </div>
+        <div id="trivia" class="fam-slide" data-scene="trivia" role="group" aria-roledescription="slide" aria-labelledby="trivia-h">
+        <div class="wrap split rev">
+          <div class="copy">
+            <p class="eyebrow fx">Browser game · MVP in a day</p>
+            <h3 id="trivia-h" class="fx">Christian Trivia v1</h3>
+            <p class="tag fx">Idea to playable demo in one day.</p>
+            <p class="fx">A Bible trivia game for kids 5 to 10 about the seven days of Creation, in English and Spanish with read-aloud. Built as a fast MVP to test the idea with real families before the full adventure game.</p>
+            <dl class="stats fx">
+              <div><dt>day from idea to playable</dt><dd>1</dd></div>
+              <div><dt>scenes, one HTML file</dt><dd>8</dd></div>
+            </dl>
+            <p class="links fx"><a class="btn" href="https://maumoya.github.io/christian-trivia/">Play now</a><a href="https://github.com/maumoya/christian-trivia">Repo <span aria-hidden="true">›</span></a></p>
           </div>
-        </figure>
+          <figure class="media fx-media">
+            <div class="screen wide">
+              <video muted loop playsinline preload="none" width="800" height="560" poster="media/christian-trivia.jpg" aria-label="Christian Trivia gameplay: light appears over the water, then sky and sea, then dry land with trees; each scene asks a question with three picture answers.">
+                <source src="media/christian-trivia.mp4" type="video/mp4">
+                <source src="media/christian-trivia.webm" type="video/webm">
+              </video>
+              <button class="vbtn" type="button" aria-label="Play video" aria-pressed="false"></button>
+            </div>
+          </figure>
+        </div>
+        </div>
       </div>
     </section>
   </div>
@@ -450,7 +482,7 @@
   <p>© 2026 Mauricio Moya · Open source under MIT · No tracking, no cookies.</p>
 </footer>
 <script src="options.js?v=999fef0a" defer></script>
-<script src="search.js?v=8dbfa4df" defer></script>
-<script src="app.js?v=233cf222" defer></script>
+<script src="search.js?v=fd213057" defer></script>
+<script src="app.js?v=eb5d1ab9" defer></script>
 </body>
 </html>

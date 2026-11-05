@@ -423,5 +423,22 @@
   "News": "Willakuy",
   "Hologram": "Hologram",
   "Vision": "Rikuy",
-  "Grids": "Grids"
+  "Grids": "Grids",
+  "Finds grants that fit, drafts the application and keeps the award compliant to the last report.": "Allin qullqi quykunata tarin, mañakuyta qillqan hinaspa qusqa qullqita qhipa willakuykama kamachikuyman hina waqaychan.",
+  "Boredom Blaster": "Boredom Blaster",
+  "Christian Trivia v2": "Christian Trivia v2",
+  "Christian Trivia v1": "Christian Trivia v1",
+  "Boredom Blaster versions": "Boredom Blaster nisqapa versionninkuna",
+  "Previous version": "Ñawpaq version",
+  "Next version": "Qatiq version",
+  "Bible adventure for kids": "Wawakunapaq Biblia puriy",
+  "Christian Trivia versions": "Christian Trivia nisqapa versionninkuna",
+  "Browser game · the adventure": "Navegador pukllay · puriy",
+  "Walk through Creation.": "Kamakuypi puriy.",
+  "The full adventure after the one-day MVP. Kids 5 to 10 walk through the seven days of Creation, find what God made and answer to open the next day. English and Spanish with read-aloud, two players, works offline.": "Huk p'unchawpi MVP ruwasqa qhipa hunt'asqa puriy. 5 manta 10 watayuq wawakuna Kamakuypa qanchis p'unchawninta purinku, Diospa ruwasqanta tarinku, kutichispa qatiq p'unchawta kicharinku. Inglés simipi español simipiwan kunkawan ñawirisqa, iskay pukllaqkunapaq, mana internetwan llamk'an.",
+  "automated tests passing": "kikillanmanta pruebakuna atisqa",
+  "requests to other hosts": "huk servidorkunaman mañakuykuna",
+  "Christian Trivia v2 gameplay: the child walks to a glowing light, answers what God made on day 1, gets a timeline card and walks through the open gate into day 2.": "Christian Trivia v2 pukllay: wawa k'anchaq k'anchayman purin, ñawpaq p'unchawpi Dios ima ruwasqanta kutichin, huk pacha seqe tarjetata chaskin, kichasqa punkuta pasaspa iskay kaq p'unchawman haykun.",
+  "GrantPRO card: a timesheet line is coded to a grant, passes an eligibility check and is locked into the audit trail.": "GrantPRO tarjeta: huk ruwana p'unchaw siq'i subvencionman churasqa, allin kasqanta qhawasqa, hinaspa auditoria qillqapi wichqasqa.",
+  "View repo {0}": "{0} repositoriota qhawariy"
 }

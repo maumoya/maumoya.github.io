@@ -423,5 +423,22 @@
   "News": "Noticias",
   "Hologram": "Holograma",
   "Vision": "Visión",
-  "Grids": "Cuadrícula"
+  "Grids": "Cuadrícula",
+  "Finds grants that fit, drafts the application and keeps the award compliant to the last report.": "Encuentra las subvenciones adecuadas, redacta la postulación y mantiene el fondo en regla hasta el último informe.",
+  "Boredom Blaster": "Boredom Blaster",
+  "Christian Trivia v2": "Christian Trivia v2",
+  "Christian Trivia v1": "Christian Trivia v1",
+  "Boredom Blaster versions": "Versiones de Boredom Blaster",
+  "Previous version": "Versión anterior",
+  "Next version": "Versión siguiente",
+  "Bible adventure for kids": "Aventura bíblica para niños",
+  "Christian Trivia versions": "Versiones de Christian Trivia",
+  "Browser game · the adventure": "Juego de navegador · la aventura",
+  "Walk through Creation.": "Recorre la Creación.",
+  "The full adventure after the one-day MVP. Kids 5 to 10 walk through the seven days of Creation, find what God made and answer to open the next day. English and Spanish with read-aloud, two players, works offline.": "La aventura completa después del MVP de un día. Niños de 5 a 10 años recorren los siete días de la Creación, encuentran lo que Dios hizo y responden para abrir el día siguiente. En inglés y español con lectura en voz alta, para dos jugadores y funciona sin conexión.",
+  "automated tests passing": "pruebas automáticas superadas",
+  "requests to other hosts": "peticiones a otros servidores",
+  "Christian Trivia v2 gameplay: the child walks to a glowing light, answers what God made on day 1, gets a timeline card and walks through the open gate into day 2.": "Partida de Christian Trivia v2: el niño camina hacia una luz brillante, responde qué hizo Dios el día 1, recibe una tarjeta de la línea del tiempo y cruza la puerta abierta hacia el día 2.",
+  "GrantPRO card: a timesheet line is coded to a grant, passes an eligibility check and is locked into the audit trail.": "Tarjeta de GrantPRO: una línea de hoja de horas se asigna a una subvención, pasa un control de elegibilidad y queda fijada en el registro de auditoría.",
+  "View repo {0}": "Ver repositorio {0}"
 }
