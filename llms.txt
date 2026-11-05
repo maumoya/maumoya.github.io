@@ -1,0 +1,21 @@
+# Mauricio Moya
+
+> Finance leader with an MBA and AI agent engineer. Builds the systems that run finance: FP&A, budgeting and forecasting, cash flow, receivables, funding strategy, internal controls and grant compliance, plus the automation, dashboards and AI agents that cut cost and manual work. Twenty years in finance, operations and software. Open to roles and consulting.
+
+Skills: FP&A, budgeting, forecasting, cash flow, accounts receivable, funding strategy, internal controls, audit readiness, grant compliance, finance automation, AI agents, agent skills for Claude Code, evals, Python, SQL, Excel, Power BI, Tableau, ERP systems, dashboards, data analysis, SaaS, university teaching.
+
+Contact: LinkedIn https://www.linkedin.com/in/mba-mmoyat/ (the best way to reach him about roles, consulting or products).
+
+## Pages
+
+- [Portfolio](https://maumoya.github.io/): overview, open-source agent skills with measured results, browser games, products
+- [Development](https://maumoya.github.io/development/): AI agent engineering, skills and workflows measured with evals and shipped
+- [Finance](https://maumoya.github.io/finance/): FP&A, cash flow, receivables and funding strategy on clean data and automation
+- [Compliance](https://maumoya.github.io/compliance/): internal controls, grant compliance, audit readiness and security
+- [Education](https://maumoya.github.io/education/): university teaching, data tutoring and AI workshops
+
+## Elsewhere
+
+- [GitHub](https://github.com/maumoya): source for every project on the site
+- [X](https://x.com/mau_amt)
+- [YouTube](https://www.youtube.com/@maumoya85)

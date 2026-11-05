@@ -9,7 +9,7 @@ import re
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-ASSETS = ("style.css", "app.js")
+ASSETS = ("style.css", "app.js", "options.js")
 
 
 def digest(name):

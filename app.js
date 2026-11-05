@@ -51,8 +51,10 @@
     function sync() {
       var playing = !v.paused;
       btn.setAttribute('aria-pressed', String(playing));
-      btn.setAttribute('aria-label', playing ? 'Pause video' : 'Play video');
+      var T = window.mmT || String;
+      btn.setAttribute('aria-label', T(playing ? 'Pause video' : 'Play video'));
     }
+    document.addEventListener('mm:lang', sync);
     function play() {
       var p = v.play();
       if (p && p.catch) p.catch(function () { sync(); });

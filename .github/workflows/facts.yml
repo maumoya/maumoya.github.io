@@ -21,5 +21,7 @@ jobs:
         run: python3 -I tools/sync.py check . --no-outward
       - name: style.css and app.js stamps match their content
         run: python3 -I tools/stamp.py check
+      - name: Every page string has a translation
+        run: python3 -I tools/i18n.py check
       - name: Copied facts match their source repos
         run: python3 -I tools/upstream.py .
