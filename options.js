@@ -18,13 +18,16 @@
     { id: 'terminal', name: 'Terminal', sw: ['#000000', '#33ff66'] },
     { id: 'arcade', name: 'Arcade', sw: ['#16002e', '#ff3df0'] }
   ];
-  // Ethnologue 2026, top five languages by total speakers.
+  // Ethnologue 2026 top five by total speakers, then French, Portuguese and German.
   var LANGS = [
     { id: 'en', tag: 'en', name: 'English', flag: 'us' },
     { id: 'zh', tag: 'zh-Hans', name: '中文', flag: 'cn' },
     { id: 'hi', tag: 'hi', name: 'हिन्दी', flag: 'in' },
     { id: 'es', tag: 'es', name: 'Español', flag: 'es' },
-    { id: 'ar', tag: 'ar', name: 'العربية', flag: 'sa', rtl: true }
+    { id: 'ar', tag: 'ar', name: 'العربية', flag: 'sa', rtl: true },
+    { id: 'fr', tag: 'fr', name: 'Français', flag: 'fr' },
+    { id: 'pt', tag: 'pt-BR', name: 'Português', flag: 'br' },
+    { id: 'de', tag: 'de', name: 'Deutsch', flag: 'de' }
   ];
 
   // ---------- Flags: simple original drawings, 30x20 ----------
@@ -45,7 +48,10 @@
     cn: '<rect width="30" height="20" fill="#de2910"/>' + star(5, 5, 3) + star(10, 2, 1, .3) + star(12, 4, 1, .8) + star(12, 7, 1, 0) + star(10, 9, 1, .4),
     in: '<rect width="30" height="20" fill="#fff"/><rect width="30" height="6.67" fill="#ff9933"/><rect y="13.33" width="30" height="6.67" fill="#138808"/><circle cx="15" cy="10" r="2.6" fill="none" stroke="#000080" stroke-width=".8"/>',
     es: '<rect width="30" height="20" fill="#c60b1e"/><rect y="5" width="30" height="10" fill="#ffc400"/>',
-    sa: '<rect width="30" height="20" fill="#006c35"/><path d="M7 8.2h16M8 12.6h13l1.6-1" stroke="#fff" stroke-width="1.1" fill="none" stroke-linecap="round"/>'
+    sa: '<rect width="30" height="20" fill="#006c35"/><path d="M7 8.2h16M8 12.6h13l1.6-1" stroke="#fff" stroke-width="1.1" fill="none" stroke-linecap="round"/>',
+    fr: '<rect width="30" height="20" fill="#fff"/><rect width="10" height="20" fill="#002395"/><rect x="20" width="10" height="20" fill="#ed2939"/>',
+    br: '<rect width="30" height="20" fill="#009c3b"/><path d="M15 2.5 27 10 15 17.5 3 10z" fill="#ffdf00"/><circle cx="15" cy="10" r="4.2" fill="#002776"/>',
+    de: '<rect width="30" height="20" fill="#ffce00"/><rect width="30" height="6.67" fill="#000"/><rect y="6.67" width="30" height="6.67" fill="#dd0000"/>'
   };
   function flag(id) {
     return '<svg class="flag" viewBox="0 0 30 20" width="21" height="14" aria-hidden="true" focusable="false">' + FLAGS[id] + '</svg>';
