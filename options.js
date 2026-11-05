@@ -12,16 +12,20 @@
   // Theme ids stay short (they are saved in localStorage); names say what each one looks like.
   var THEMES = [
     { id: 'clean', name: 'Minimal', sw: ['#f5f5f7', '#0071e3'] },
-    { id: 'vision', name: 'VISION AI', sw: ['#07040f', '#8b5cf6'] },
-    { id: 'material', name: 'Material', sw: ['#eef1fb', '#3d5afe'] },
+    { id: 'variety', name: 'Variety', sw: ['#ffffff', '#ef4444'] },
+    { id: 'traditional', name: 'Traditional', sw: ['#f0f0f0', '#0067c0'] },
+    { id: 'soft', name: 'Paper', sw: ['#f3ecdf', '#8a6a3b'] },
+    { id: 'night', name: 'Contrast', sw: ['#000000', '#ffd60a'] },
+    { id: 'luxury', name: 'Luxury', sw: ['#14110d', '#c8a96a'] },
+    { id: 'news', name: 'News', sw: ['#fbfaf6', '#121212'] },
+    { id: 'holo', name: 'Hologram', sw: ['#020812', '#f2b84b'] },
     { id: 'fluent', name: 'Fluent', sw: ['#f3f6fa', '#0f6cbd'] },
-    { id: 'hud', name: 'Sci-Fi HUD', sw: ['#04101c', '#45d6ff'] },
-    { id: 'soft', name: 'Warm Paper', sw: ['#f3ecdf', '#8a6a3b'] },
-    { id: 'night', name: 'High Contrast', sw: ['#000000', '#ffd60a'] },
-    { id: 'terminal', name: 'Hacker Terminal', sw: ['#000000', '#33ff66'] },
-    { id: 'arcade', name: 'Retro Arcade', sw: ['#16002e', '#ff3df0'] },
-    { id: 'holo', name: 'Gold Hologram', sw: ['#020812', '#f2b84b'] },
-    { id: 'grid', name: 'Neon Grid', sw: ['#000000', '#6ff3ff'] }
+    { id: 'material', name: 'Material', sw: ['#eef1fb', '#3d5afe'] },
+    { id: 'vision', name: 'Vision', sw: ['#020a14', '#38e1ff'] },
+    { id: 'grid', name: 'Grids', sw: ['#000000', '#6ff3ff'] },
+    { id: 'hud', name: 'HUD', sw: ['#04101c', '#45d6ff'] },
+    { id: 'terminal', name: 'Terminal', sw: ['#000000', '#33ff66'] },
+    { id: 'arcade', name: 'Arcade', sw: ['#16002e', '#ff3df0'] }
   ];
   // Shown without searching, in the owner's order. Every other language appears through the search box.
   var LANGS = [
@@ -326,6 +330,14 @@
       kick: [1, 0, 1, 0, 1, 0, 1, 0], clap: [0, 0, 1, 0, 0, 0, 1, 0], hat: [0, 1, 0, 1, 0, 1, 0, 1], bass: [1, 1, 0, 1, 1, 1, 0, 1], wave: 'square', mel: .7, cut: 3000, blip: ['triangle', 659.25, 987.77, .1] },
     holo: { style: 'Cinematic', root: 7, bpm: 66, bars: 2, prog: EPIC, padWave: 'sawtooth', pad: .022, arpWave: 'sine', arp: [0, 1, 2, 3, 4, 3, 2, 1], arpOct: 0,
       kick: [1, 0, 0, 0, 0, 0, 0, 0], clap: [0, 0, 0, 0, 0, 0, 0, 0], hat: [0, 0, 0, 0, 0, 0, 0, 0], bass: [1, 0, 0, 0, 0, 0, 0, 0], wave: 'sine', mel: .5, cut: 1800, blip: ['sine', 783.99, 1046.5, .1] },
+    variety: { style: 'Playful pop', root: 0, bpm: 112, prog: [I, IV, VI, V], padWave: 'triangle', pad: .028, arpWave: 'triangle', arp: [0, 2, 1, 3, 2, 4, 3, 1], arpOct: 12,
+      kick: [1, 0, 0, 1, 1, 0, 0, 0], clap: [0, 0, 1, 0, 0, 0, 1, 0], hat: [1, 1, 1, 1, 1, 1, 1, 1], bass: [1, 0, 1, 0, 1, 0, 1, 1], wave: 'triangle', mel: .65, cut: 2800, blip: ['triangle', 783.99, 1046.5, .1] },
+    traditional: { style: 'Soft keys', root: 0, bpm: 76, prog: [I, VI, II7, V7], padWave: 'sine', pad: .04, arpWave: 'triangle', arp: [0, 1, 2, 1, 0, 1, 2, 1], arpOct: 0,
+      kick: [1, 0, 0, 0, 0, 0, 0, 0], clap: [0, 0, 0, 0, 1, 0, 0, 0], hat: [0, 0, 1, 0, 0, 0, 1, 0], bass: [1, 0, 0, 0, 1, 0, 0, 0], wave: 'triangle', mel: .45, cut: 2000, blip: ['sine', 523.25, 587.33, .12] },
+    luxury: { style: 'Lounge jazz', root: -4, bpm: 68, prog: [II7, V7, I7, VI7], padWave: 'sine', pad: .045, arpWave: 'sine', arp: [0, -1, 2, -1, 3, -1, 1, -1], arpOct: 0,
+      kick: [1, 0, 0, 0, 0, 0, 0, 0], clap: [0, 0, 0, 0, 0, 0, 0, 0], hat: [1, 0, 1, 1, 1, 0, 1, 1], bass: [1, 0, 1, 0, 1, 0, 1, 0], wave: 'sine', mel: .4, cut: 1500, blip: ['sine', 659.25, 830.61, .14] },
+    news: { style: 'Newsroom pulse', root: -5, bpm: 92, prog: [VI, IV, I, V], padWave: 'triangle', pad: .02, arpWave: 'square', arp: [0, 0, 2, 0, 0, 0, 2, 3], arpOct: 0,
+      kick: [1, 0, 0, 0, 1, 0, 0, 0], clap: [0, 0, 1, 0, 0, 0, 1, 0], hat: [1, 1, 1, 1, 1, 1, 1, 1], bass: [1, 0, 0, 1, 1, 0, 0, 0], wave: 'triangle', mel: .35, cut: 1800, blip: ['square', 698.46, 698.46, .05] },
     grid: { style: 'Synthwave', root: 9, bpm: 100, prog: EPIC, padWave: 'sawtooth', pad: .02, arpWave: 'sawtooth', arp: [0, 1, 2, 1, 3, 1, 2, 1], arpOct: 12,
       kick: [1, 0, 0, 0, 1, 0, 0, 0], clap: [0, 0, 1, 0, 0, 0, 1, 0], hat: [0, 1, 0, 1, 0, 1, 0, 1], bass: [1, 1, 1, 1, 1, 1, 1, 1], wave: 'triangle', mel: .45, cut: 2000, blip: ['square', 880, 880, .04] }
   };
