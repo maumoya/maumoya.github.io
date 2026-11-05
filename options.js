@@ -153,19 +153,21 @@
   }
 
   // ---------- Sound ----------
+  // Calm by design: soft sine/triangle pads on major chords, a slow "breathing" swell (6 per minute)
+  // and a 10 Hz alpha-wave binaural beat (left and right ears 10 Hz apart; best with headphones).
   var PROFILES = {
-    clean: { pad: 'sine', notes: [220, 277.18, 329.63], cut: 900, blip: ['sine', 880, 1320, .06] },
-    material: { pad: 'triangle', notes: [261.63, 329.63, 392], cut: 1100, blip: ['triangle', 660, 990, .05] },
-    hud: { pad: 'sawtooth', notes: [55, 110, 164.81], cut: 380, lfo: .08, blip: ['square', 1400, 900, .05] },
-    soft: { pad: 'sine', notes: [196, 246.94, 293.66], cut: 600, blip: ['sine', 523.25, 659.25, .08] },
-    night: { pad: 'sine', notes: [146.83, 220], cut: 500, blip: ['sine', 440, 440, .07] },
-    terminal: { pad: 'square', notes: [60], cut: 160, blip: ['square', 1800, 1800, .015] },
-    arcade: { arp: [523.25, 659.25, 783.99, 1046.5, 783.99, 659.25], blip: ['square', 440, 1320, .08] }
+    clean: { pad: 'sine', notes: [196, 246.94, 293.66], cut: 700, blip: ['sine', 659.25, 783.99, .12] },
+    material: { pad: 'sine', notes: [174.61, 220, 261.63], cut: 800, blip: ['sine', 587.33, 698.46, .12] },
+    hud: { pad: 'triangle', notes: [110, 164.81, 220], cut: 420, beat: 8, blip: ['sine', 880, 987.77, .1] },
+    soft: { pad: 'sine', notes: [174.61, 220, 261.63, 329.63], cut: 600, blip: ['sine', 523.25, 659.25, .14] },
+    night: { pad: 'sine', notes: [130.81, 196, 246.94], cut: 500, beat: 7, blip: ['sine', 440, 493.88, .14] },
+    terminal: { pad: 'sine', notes: [110, 164.81], cut: 360, blip: ['sine', 1046.5, 1046.5, .05] },
+    arcade: { arp: [523.25, 659.25, 783.99, 659.25], blip: ['triangle', 659.25, 987.77, .1] }
   };
   var sound = (function () {
-    var ctx, master, pad, arpTimer, on = load('mm-sound', 'on') !== 'off', vol = +load('mm-volume', '25');
+    var ctx, master, pad, arpTimer, on = load('mm-sound', 'on') !== 'off', vol = +load('mm-volume', '15');
     var profile = PROFILES.clean;
-    if (!(vol >= 0 && vol <= 100)) vol = 25;
+    if (!(vol >= 0 && vol <= 100)) vol = 15;
     function level() { return on ? Math.pow(vol / 100, 2) * 0.8 : 0; }
     function start() {
       if (!on) return;
@@ -186,8 +188,8 @@
       var p = pad, now = ctx.currentTime;
       p.gain.gain.cancelScheduledValues(now);
       p.gain.gain.setValueAtTime(p.gain.gain.value, now);
-      p.gain.gain.linearRampToValueAtTime(0, now + .8);
-      setTimeout(function () { p.osc.forEach(function (o) { o.stop(); }); p.gain.disconnect(); }, 900);
+      p.gain.gain.linearRampToValueAtTime(0, now + 2);
+      setTimeout(function () { p.osc.forEach(function (o) { o.stop(); }); p.gain.disconnect(); }, 2100);
       pad = null;
     }
     function startPad() {
@@ -197,27 +199,28 @@
         var i = 0;
         arpTimer = setInterval(function () {
           if (ctx.state !== 'running') return;
-          note('square', profile.arp[i++ % profile.arp.length], null, .12, .05);
-        }, 220);
+          note('sine', profile.arp[i++ % profile.arp.length], null, .9, .035);
+        }, 700);
         return;
       }
       var g = ctx.createGain(), f = ctx.createBiquadFilter(), now = ctx.currentTime, osc = [];
-      f.type = 'lowpass'; f.frequency.value = profile.cut;
+      var beat = profile.beat || 10, pan = ctx.createStereoPanner ? function (v) { var p = ctx.createStereoPanner(); p.pan.value = v; p.connect(f); return p; } : function () { return f; };
+      var left = pan(-1), right = pan(1);
+      f.type = 'lowpass'; f.frequency.value = profile.cut; f.Q.value = .3;
       g.gain.setValueAtTime(0, now);
-      g.gain.linearRampToValueAtTime(.16 / profile.notes.length, now + 2.5);
+      g.gain.linearRampToValueAtTime(.1 / profile.notes.length, now + 6);
       f.connect(g); g.connect(master);
       profile.notes.forEach(function (fr) {
-        [-6, 6].forEach(function (d) {
+        [[left, fr], [right, fr + beat]].forEach(function (s) {
           var o = ctx.createOscillator();
-          o.type = profile.pad; o.frequency.value = fr; o.detune.value = d;
-          o.connect(f); o.start(); osc.push(o);
+          o.type = profile.pad; o.frequency.value = s[1];
+          o.connect(s[0]); o.start(); osc.push(o);
         });
       });
-      if (profile.lfo) {
-        var l = ctx.createOscillator(), lg = ctx.createGain();
-        l.frequency.value = profile.lfo; lg.gain.value = profile.cut * .5;
-        l.connect(lg); lg.connect(f.frequency); l.start(); osc.push(l);
-      }
+      // Breathing swell: about 6 breaths a minute.
+      var l = ctx.createOscillator(), lg = ctx.createGain();
+      l.frequency.value = .1; lg.gain.value = .35 * (.1 / profile.notes.length);
+      l.connect(lg); lg.connect(g.gain); l.start(); osc.push(l);
       pad = { gain: g, osc: osc };
     }
     function note(type, f1, f2, len, peak) {
@@ -226,9 +229,9 @@
       o.type = type; o.frequency.setValueAtTime(f1, now);
       if (f2 && f2 !== f1) o.frequency.exponentialRampToValueAtTime(f2, now + len);
       g.gain.setValueAtTime(0, now);
-      g.gain.linearRampToValueAtTime(peak, now + .005);
-      g.gain.exponentialRampToValueAtTime(.0001, now + len + .04);
-      o.connect(g); g.connect(master); o.start(now); o.stop(now + len + .06);
+      g.gain.linearRampToValueAtTime(peak, now + .02);
+      g.gain.exponentialRampToValueAtTime(.0001, now + len + .25);
+      o.connect(g); g.connect(master); o.start(now); o.stop(now + len + .3);
     }
     document.addEventListener('visibilitychange', function () {
       if (!ctx) return;
@@ -237,7 +240,7 @@
     return {
       get on() { return on; }, get vol() { return vol; },
       start: start,
-      blip: function () { var b = profile.blip; note(b[0], b[1], b[2], b[3], .35); },
+      blip: function () { var b = profile.blip; note(b[0], b[1], b[2], b[3], .12); },
       theme: function (id) { profile = PROFILES[id] || PROFILES.clean; startPad(); },
       set: function (o, v) {
         on = o; vol = v;
