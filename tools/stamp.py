@@ -1,4 +1,4 @@
-"""Stamp style.css and app.js links with a hash of their content, so browsers fetch a new copy after every change.
+"""Stamp style.css, app.js, options.js and search.js links with a hash of their content, so browsers fetch a new copy after every change.
 
   python3 tools/stamp.py        rewrite the ?v= stamps in every page
   python3 tools/stamp.py check  exit 1 if a stamp is stale (CI)
@@ -9,7 +9,7 @@ import re
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-ASSETS = ("style.css", "app.js", "options.js")
+ASSETS = ("style.css", "app.js", "options.js", "search.js")
 
 
 def digest(name):
