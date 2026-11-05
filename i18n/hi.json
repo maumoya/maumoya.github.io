@@ -386,5 +386,19 @@
   "university teaching": "विश्वविद्यालय में शिक्षण",
   "Holo": "होलो",
   "Grid": "ग्रिड",
-  "Find a language": "भाषा खोजें"
+  "Find a language": "भाषा खोजें",
+  "DevEn, in development": "DevEn, विकास में",
+  "The development and production environment: an agent-run software line that builds, tests and ships products, with a human sign-off.": "डेवलपमेंट और प्रोडक्शन एनवायरनमेंट: एजेंटों से चलने वाली सॉफ़्टवेयर लाइन जो प्रोडक्ट बनाती, टेस्ट करती और लॉन्च करती है, अंतिम मंज़ूरी इंसान की।",
+  "Buy DevEn by message on LinkedIn": "LinkedIn पर संदेश भेजकर DevEn खरीदें",
+  "Grants · In progress": "अनुदान · विकास में",
+  "Finds grants that fit, drafts the application and keeps the award compliant to the last report.": "सही अनुदान ढूँढता है, आवेदन तैयार करता है और आख़िरी रिपोर्ट तक अनुदान को नियमों के अनुरूप रखता है।",
+  "On request": "अनुरोध पर",
+  "Ask about GrantPRO by message on LinkedIn": "LinkedIn पर संदेश भेजकर GrantPRO के बारे में पूछें",
+  "Ask": "पूछें",
+  "Trading · In progress": "ट्रेडिंग · विकास में",
+  "High-frequency quantitative trading research: signals, backtests and risk limits run by a supervised agent team.": "हाई-फ़्रीक्वेंसी क्वांटिटेटिव ट्रेडिंग रिसर्च: सिग्नल, बैकटेस्ट और रिस्क लिमिट, एक निगरानी वाली एजेंट टीम द्वारा।",
+  "Ask about VisionHFQX by message on LinkedIn": "LinkedIn पर संदेश भेजकर VisionHFQX के बारे में पूछें",
+  "DevEn": "DevEn",
+  "GrantPRO": "GrantPRO",
+  "VisionHFQX": "VisionHFQX"
 }

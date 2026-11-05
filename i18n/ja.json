@@ -386,5 +386,19 @@
   "university teaching": "大学での教育",
   "Holo": "ホロ",
   "Grid": "グリッド",
-  "Find a language": "言語を探す"
+  "Find a language": "言語を探す",
+  "DevEn, in development": "DevEn（開発中）",
+  "The development and production environment: an agent-run software line that builds, tests and ships products, with a human sign-off.": "開発・本番環境：エージェントが運用するソフトウェア生産ラインで、製品の構築・テスト・リリースまでを行い、最終承認は人が行います。",
+  "Buy DevEn by message on LinkedIn": "LinkedIn のメッセージで DevEn を購入",
+  "Grants · In progress": "助成金 · 開発中",
+  "Finds grants that fit, drafts the application and keeps the award compliant to the last report.": "最適な助成金を探し、申請書を作成し、最後の報告まで受給条件を守ります。",
+  "On request": "価格は要相談",
+  "Ask about GrantPRO by message on LinkedIn": "LinkedIn のメッセージで GrantPRO について問い合わせる",
+  "Ask": "問い合わせる",
+  "Trading · In progress": "トレーディング · 開発中",
+  "High-frequency quantitative trading research: signals, backtests and risk limits run by a supervised agent team.": "高頻度クオンツ取引の研究：シグナル、バックテスト、リスク上限を、監督付きのエージェントチームが運用します。",
+  "Ask about VisionHFQX by message on LinkedIn": "LinkedIn のメッセージで VisionHFQX について問い合わせる",
+  "DevEn": "DevEn",
+  "GrantPRO": "GrantPRO",
+  "VisionHFQX": "VisionHFQX"
 }

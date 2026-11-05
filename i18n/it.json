@@ -386,5 +386,19 @@
   "university teaching": "docenza universitaria",
   "Holo": "Holo",
   "Grid": "Griglia",
-  "Find a language": "Trova una lingua"
+  "Find a language": "Trova una lingua",
+  "DevEn, in development": "DevEn, in sviluppo",
+  "The development and production environment: an agent-run software line that builds, tests and ships products, with a human sign-off.": "L'ambiente di sviluppo e produzione: una linea software gestita da agenti che crea, testa e rilascia prodotti, con approvazione umana.",
+  "Buy DevEn by message on LinkedIn": "Acquista DevEn con un messaggio su LinkedIn",
+  "Grants · In progress": "Bandi · In lavorazione",
+  "Finds grants that fit, drafts the application and keeps the award compliant to the last report.": "Trova i bandi giusti, scrive la domanda e mantiene il finanziamento in regola fino all’ultimo rendiconto.",
+  "On request": "Su richiesta",
+  "Ask about GrantPRO by message on LinkedIn": "Chiedi di GrantPRO con un messaggio su LinkedIn",
+  "Ask": "Chiedi",
+  "Trading · In progress": "Trading · In lavorazione",
+  "High-frequency quantitative trading research: signals, backtests and risk limits run by a supervised agent team.": "Ricerca sul trading quantitativo ad alta frequenza: segnali, backtest e limiti di rischio gestiti da un team di agenti supervisionato.",
+  "Ask about VisionHFQX by message on LinkedIn": "Chiedi di VisionHFQX con un messaggio su LinkedIn",
+  "DevEn": "DevEn",
+  "GrantPRO": "GrantPRO",
+  "VisionHFQX": "VisionHFQX"
 }

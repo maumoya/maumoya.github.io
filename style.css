@@ -170,6 +170,7 @@ h3 { font-size: clamp(36px, 5.5vw, 64px); letter-spacing: -0.03em; line-height: 
 .keynote { overflow: hidden; isolation: isolate; }
 .keynote .kn-glow { position: absolute; inset: -20% -10% auto; height: 120%; z-index: -1; pointer-events: none; background: radial-gradient(40% 35% at 30% 45%, color-mix(in srgb, #34d399 22%, transparent), transparent 70%), radial-gradient(38% 32% at 70% 40%, color-mix(in srgb, #60a5fa 24%, transparent), transparent 70%), radial-gradient(45% 30% at 50% 75%, color-mix(in srgb, #fbbf24 14%, transparent), transparent 70%); filter: blur(20px); opacity: .9; }
 .kn-title { font-size: clamp(40px, 7.4vw, 104px); line-height: 1.02; letter-spacing: -0.035em; font-weight: 700; background: linear-gradient(100deg, #10b981 0%, #3b82f6 38%, #8b5cf6 62%, #f59e0b 100%); -webkit-background-clip: text; background-clip: text; color: transparent; padding-bottom: .06em; }
+.build-logo { display: block; width: 48px; height: 48px; margin-bottom: 14px; border-radius: 12px; box-shadow: 0 6px 18px rgba(0,0,0,.18); }
 .repos-h { margin-top: 48px; }
 .repos { list-style: none; padding: 0; margin: 12px 0 0; columns: 2 280px; column-gap: 32px; }
 .repos li { break-inside: avoid; padding: 6px 0; border-bottom: 1px solid var(--line); font-size: 15px; }

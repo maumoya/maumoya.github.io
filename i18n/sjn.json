@@ -386,5 +386,19 @@
   "university teaching": "dortho mbair",
   "Holo": "Holo",
   "Grid": "Grid",
-  "Find a language": "Cen peth lam"
+  "Find a language": "Cen peth lam",
+  "DevEn, in development": "DevEn, ne garo",
+  "The development and production environment: an agent-run software line that builds, tests and ships products, with a human sign-off.": "Tham-i-ceredir: echad ceredir ne maeth i-gelaidh, eb sennas atan.",
+  "Buy DevEn by message on LinkedIn": "Bach DevEn na ped vi LinkedIn",
+  "Grants · In progress": "Annann · Ne garo",
+  "Finds grants that fit, drafts the application and keeps the award compliant to the last report.": "Hîr i annann, teitha i chaun a beria i ammen na-mbeth meth.",
+  "On request": "Na iest",
+  "Ask about GrantPRO by message on LinkedIn": "Maetho GrantPRO na ped vi LinkedIn",
+  "Ask": "Maetho",
+  "Trading · In progress": "Banga · Ne garo",
+  "High-frequency quantitative trading research: signals, backtests and risk limits run by a supervised agent team.": "Ceredir banga lint: tinc, tiriel a gleinion gorth, ben-gelaidh tirnen.",
+  "Ask about VisionHFQX by message on LinkedIn": "Maetho VisionHFQX na ped vi LinkedIn",
+  "DevEn": "DevEn",
+  "GrantPRO": "GrantPRO",
+  "VisionHFQX": "VisionHFQX"
 }

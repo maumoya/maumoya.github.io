@@ -386,5 +386,19 @@
   "university teaching": "大学教学",
   "Holo": "全息",
   "Grid": "网格",
-  "Find a language": "查找语言"
+  "Find a language": "查找语言",
+  "DevEn, in development": "DevEn，开发中",
+  "The development and production environment: an agent-run software line that builds, tests and ships products, with a human sign-off.": "开发与生产环境：由智能体运行的软件产线，负责构建、测试和交付产品，并由人工最终把关。",
+  "Buy DevEn by message on LinkedIn": "在 LinkedIn 留言购买 DevEn",
+  "Grants · In progress": "资助申请 · 开发中",
+  "Finds grants that fit, drafts the application and keeps the award compliant to the last report.": "找到合适的资助项目，起草申请书，并让资金合规直到最后一份报告。",
+  "On request": "价格面议",
+  "Ask about GrantPRO by message on LinkedIn": "在 LinkedIn 留言咨询 GrantPRO",
+  "Ask": "咨询",
+  "Trading · In progress": "交易 · 开发中",
+  "High-frequency quantitative trading research: signals, backtests and risk limits run by a supervised agent team.": "高频量化交易研究：信号、回测与风险限额，由受监督的智能体团队执行。",
+  "Ask about VisionHFQX by message on LinkedIn": "在 LinkedIn 留言咨询 VisionHFQX",
+  "DevEn": "DevEn",
+  "GrantPRO": "GrantPRO",
+  "VisionHFQX": "VisionHFQX"
 }
