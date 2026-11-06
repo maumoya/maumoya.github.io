@@ -448,5 +448,11 @@
   "$3.2B": "$3.2B",
   "$2B": "$2B",
   "$26.2B": "$26.2B",
-  "$27B": "$27B"
+  "$27B": "$27B",
+  "your-authorship-skill": "your-authorship-skill",
+  "You built it. Your name on it.": "Le echant hon. Eneth lîn arno.",
+  "It finds every place an AI tool put its name on your work, in your repos, your GitHub account and your AI tool settings, turns each one off on your OK, and installs a hook that blocks new AI credit. Also a GitHub Action that fails a pull request carrying it.": "Hirith ilphant i nûr ias tamm AI sennin eneth dîn erin tamm lîn, vi repo lîn, i GitHub lîn a i nostar tamm AI lîn; pelia pen erui ab i 'ûr lîn, a thâd hook i dharth eneth AI gwain. GitHub Action hefyd, i ú-gerin pull request i cholia hon.",
+  "eval runs passed, vs 0% without it": "eval narnar thoren, ar 0% ennas ú-han",
+  "trigger phrases picked up": "peth echedir sintar",
+  "Demo: a scan finds a repo with no commit-msg hook, the hook is installed on a yes, a commit carrying an AI co-author trailer is refused, a normal commit goes through, and the re-scan shows 0 high, 0 medium.": "Tíw: cened hirith repo ú-hook commit-msg, i hook thaded ab 'e', commit ah thîr AI ú-gerin, commit vain pada, a cened adh tíra 0 brand, 0 enedh."
 }

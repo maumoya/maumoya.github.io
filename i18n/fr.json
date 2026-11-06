@@ -448,5 +448,11 @@
   "$3.2B": "$3.2B",
   "$2B": "$2B",
   "$26.2B": "$26.2B",
-  "$27B": "$27B"
+  "$27B": "$27B",
+  "your-authorship-skill": "your-authorship-skill",
+  "You built it. Your name on it.": "Vous l'avez construit. Votre nom dessus.",
+  "It finds every place an AI tool put its name on your work, in your repos, your GitHub account and your AI tool settings, turns each one off on your OK, and installs a hook that blocks new AI credit. Also a GitHub Action that fails a pull request carrying it.": "Il trouve chaque endroit où un outil d'IA a mis son nom sur votre travail, dans vos dépôts, votre compte GitHub et les réglages de vos outils d'IA, désactive chacun avec votre accord et installe un hook qui bloque tout nouveau crédit d'IA. C'est aussi une GitHub Action qui fait échouer une pull request qui en contient.",
+  "eval runs passed, vs 0% without it": "des évaluations réussies, contre 0 % sans lui",
+  "trigger phrases picked up": "des phrases de déclenchement reconnues",
+  "Demo: a scan finds a repo with no commit-msg hook, the hook is installed on a yes, a commit carrying an AI co-author trailer is refused, a normal commit goes through, and the re-scan shows 0 high, 0 medium.": "Démo : une analyse trouve un dépôt sans hook commit-msg, le hook est installé après un oui, un commit portant une mention de co-auteur IA est refusé, un commit normal passe et la nouvelle analyse affiche 0 élevé, 0 moyen."
 }

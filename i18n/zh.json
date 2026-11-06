@@ -448,5 +448,11 @@
   "$3.2B": "$3.2B",
   "$2B": "$2B",
   "$26.2B": "$26.2B",
-  "$27B": "$27B"
+  "$27B": "$27B",
+  "your-authorship-skill": "your-authorship-skill",
+  "You built it. Your name on it.": "你做的。只署你的名。",
+  "It finds every place an AI tool put its name on your work, in your repos, your GitHub account and your AI tool settings, turns each one off on your OK, and installs a hook that blocks new AI credit. Also a GitHub Action that fails a pull request carrying it.": "它找出 AI 工具在你的作品上署名的每一处：你的仓库、GitHub 账户和 AI 工具设置，经你同意逐一关闭，并安装一个钩子阻止新的 AI 署名。它也是一个 GitHub Action，会让带有 AI 署名的拉取请求失败。",
+  "eval runs passed, vs 0% without it": "的评测运行通过，不用它时为 0%",
+  "trigger phrases picked up": "的触发语句被识别",
+  "Demo: a scan finds a repo with no commit-msg hook, the hook is installed on a yes, a commit carrying an AI co-author trailer is refused, a normal commit goes through, and the re-scan shows 0 high, 0 medium.": "演示：扫描发现一个没有 commit-msg 钩子的仓库，确认后安装钩子，带 AI 共同作者行的提交被拒绝，普通提交通过，重新扫描显示 0 高、0 中。"
 }

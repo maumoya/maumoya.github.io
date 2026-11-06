@@ -37,7 +37,7 @@
 <!-- /seo -->
 <link rel="canonical" href="https://maumoya.github.io/">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="style.css?v=8060bff6">
+<link rel="stylesheet" href="style.css?v=c23fbc4a">
 <script>(function(d){if("IntersectionObserver" in window)d.classList.add("js");try{var t=localStorage.getItem("mm-theme"),l=localStorage.getItem("mm-lang");if(t&&t!=="clean")d.dataset.theme=t;if(l&&l!=="en"){d.classList.add("i18n-wait");if(l==="ar"||l==="he")d.dir="rtl";}}catch(e){}})(document.documentElement);</script>
 </head>
 <body data-scene="base">
@@ -60,6 +60,7 @@
   <a href="#optim" data-for="optim"><span>resource-optimizer</span></a>
   <a href="#forger" data-for="forger"><span>skill-forger-e2e</span></a>
   <a href="#ppd" data-for="ppd"><span>PRO-Portfolio-DEV</span></a>
+  <a href="#authorship" data-for="authorship"><span>your-authorship-skill</span></a>
   <a href="#ghost" data-for="ghost"><span>LKND Ghost Text</span></a>
   <a href="#bb" data-for="bb"><span>Boredom Blaster</span></a>
   <a href="#ct" data-for="ct"><span>Christian Trivia</span></a>
@@ -215,10 +216,30 @@
         </figure>
       </div>
     </section>
+    <section id="authorship" class="scene project" data-scene="authorship" aria-labelledby="authorship-h">
+      <div class="wrap split">
+        <div class="copy">
+          <p class="eyebrow fx">Agent skill · GitHub Action</p>
+          <h3 id="authorship-h" class="fx">your-authorship-skill</h3>
+          <p class="tag fx">You built it. Your name on it.</p>
+          <p class="fx">It finds every place an AI tool put its name on your work, in your repos, your GitHub account and your AI tool settings, turns each one off on your OK, and installs a hook that blocks new AI credit. Also a GitHub Action that fails a pull request carrying it.</p>
+          <dl class="stats fx">
+            <div><dt>eval runs passed, vs 0% without it</dt><dd>100%</dd></div>
+            <div><dt>trigger phrases picked up</dt><dd>88%</dd></div>
+          </dl>
+          <p class="links fx"><a class="btn" href="https://github.com/maumoya/your-authorship-skill">View repo</a><a href="https://github.com/maumoya/your-authorship-skill/releases">Releases <span aria-hidden="true">›</span></a></p>
+        </div>
+        <figure class="media fx-media">
+          <div class="screen wide">
+            <img src="media/authorship-demo.gif" width="900" height="570" loading="lazy" alt="Demo: a scan finds a repo with no commit-msg hook, the hook is installed on a yes, a commit carrying an AI co-author trailer is refused, a normal commit goes through, and the re-scan shows 0 high, 0 medium.">
+          </div>
+        </figure>
+      </div>
+    </section>
 
 
     <section id="ghost" class="scene project" data-scene="ghost" aria-labelledby="ghost-h">
-      <div class="wrap split">
+      <div class="wrap split rev">
         <div class="copy">
           <p class="eyebrow fx">Creativity · plug-in development</p>
           <h3 id="ghost-h" class="fx">LKND Ghost Text</h3>
@@ -245,7 +266,7 @@
       <div class="wrap fam-nav fx"><button class="fam-arrow" type="button" data-dir="-1" aria-label="Previous version">‹</button><button class="fam-tab" type="button" aria-controls="bbv2" translate="no">v2</button><button class="fam-tab" type="button" aria-controls="bbv1" translate="no">v1</button><button class="fam-arrow" type="button" data-dir="1" aria-label="Next version">›</button></div>
       <div class="fam-track" tabindex="0" aria-label="Boredom Blaster versions">
         <div id="bbv2" class="fam-slide" data-scene="bbv2" role="group" aria-roledescription="slide" aria-labelledby="bbv2-h">
-        <div class="wrap split rev">
+        <div class="wrap split">
           <div class="copy">
             <p class="eyebrow fx">Browser game</p>
             <h3 id="bbv2-h" class="fx">Boredom Blaster v2</h3>
@@ -269,7 +290,7 @@
         </div>
         </div>
         <div id="bbv1" class="fam-slide" data-scene="bbv1" role="group" aria-roledescription="slide" aria-labelledby="bbv1-h">
-        <div class="wrap split">
+        <div class="wrap split rev">
           <div class="copy">
             <p class="eyebrow fx">Browser game · the original</p>
             <h3 id="bbv1-h" class="fx">Boredom Blaster v1</h3>
@@ -297,7 +318,7 @@
       <div class="wrap fam-nav fx"><button class="fam-arrow" type="button" data-dir="-1" aria-label="Previous version">‹</button><button class="fam-tab" type="button" aria-controls="ctv2" translate="no">v2</button><button class="fam-tab" type="button" aria-controls="trivia" translate="no">v1</button><button class="fam-arrow" type="button" data-dir="1" aria-label="Next version">›</button></div>
       <div class="fam-track" tabindex="0" aria-label="Christian Trivia versions">
         <div id="ctv2" class="fam-slide" data-scene="trivia" role="group" aria-roledescription="slide" aria-labelledby="ctv2-h">
-        <div class="wrap split">
+        <div class="wrap split rev">
           <div class="copy">
             <p class="eyebrow fx">Browser game · the adventure</p>
             <h3 id="ctv2-h" class="fx">Christian Trivia v2</h3>
@@ -321,7 +342,7 @@
         </div>
         </div>
         <div id="trivia" class="fam-slide" data-scene="trivia" role="group" aria-roledescription="slide" aria-labelledby="trivia-h">
-        <div class="wrap split rev">
+        <div class="wrap split">
           <div class="copy">
             <p class="eyebrow fx">Browser game · MVP in a day</p>
             <h3 id="trivia-h" class="fx">Christian Trivia v1</h3>
@@ -487,7 +508,7 @@
   <p>© 2026 Mauricio Moya · Open source under MIT · No tracking, no cookies.</p>
 </footer>
 <script src="options.js?v=999fef0a" defer></script>
-<script src="search.js?v=85cec7d7" defer></script>
+<script src="search.js?v=d2da2c76" defer></script>
 <script src="app.js?v=eb5d1ab9" defer></script>
 </body>
 </html>
