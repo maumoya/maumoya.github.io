@@ -448,5 +448,11 @@
   "$3.2B": "$3.2B",
   "$2B": "$2B",
   "$26.2B": "$26.2B",
-  "$27B": "$27B"
+  "$27B": "$27B",
+  "your-authorship-skill": "your-authorship-skill",
+  "You built it. Your name on it.": "أنت بنيته. اسمك عليه.",
+  "It finds every place an AI tool put its name on your work, in your repos, your GitHub account and your AI tool settings, turns each one off on your OK, and installs a hook that blocks new AI credit. Also a GitHub Action that fails a pull request carrying it.": "يجد كل موضع وضعت فيه أداة ذكاء اصطناعي اسمها على عملك، في مستودعاتك وحسابك على GitHub وإعدادات أدوات الذكاء الاصطناعي، ويوقف كل واحد بموافقتك، ويثبّت خطافًا يمنع أي نسبة جديدة للذكاء الاصطناعي. وهو أيضًا GitHub Action تُفشل أي طلب سحب يحملها.",
+  "eval runs passed, vs 0% without it": "من جولات التقييم نجحت، مقابل 0% من دونه",
+  "trigger phrases picked up": "من عبارات التشغيل تم التقاطها",
+  "Demo: a scan finds a repo with no commit-msg hook, the hook is installed on a yes, a commit carrying an AI co-author trailer is refused, a normal commit goes through, and the re-scan shows 0 high, 0 medium.": "عرض: الفحص يجد مستودعًا بلا خطاف commit-msg، يُثبَّت الخطاف بعد الموافقة، يُرفض commit يحمل سطر مؤلف مشارك من الذكاء الاصطناعي، يمر commit عادي، وإعادة الفحص تُظهر 0 مرتفع و0 متوسط."
 }
