@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="560" viewBox="0 0 800 560">
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#091521"/><stop offset="1" stop-color="#0d3438"/></linearGradient></defs>
+<rect width="800" height="560" rx="18" fill="url(#bg)"/>
+<g stroke="#59efce" fill="none"><circle cx="400" cy="245" r="173" opacity=".18"/><circle cx="400" cy="245" r="130" opacity=".36"/><circle cx="400" cy="245" r="88" opacity=".52"/><circle cx="400" cy="245" r="38" opacity=".9"/><path d="M400 245 L532 157" stroke-width="6"/><circle cx="532" cy="157" r="10" fill="#59efce"/></g>
+<text x="400" y="451" text-anchor="middle" font-family="Arial, sans-serif" font-size="46" font-weight="bold" fill="#ffffff">Signal<tspan fill="#59efce">Forge</tspan></text>
+<text x="400" y="489" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#b7e5df" letter-spacing="1.8">DISCOVER · VALIDATE · PRIORITIZE</text>
+</svg>
