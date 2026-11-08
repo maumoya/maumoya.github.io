@@ -454,5 +454,16 @@
   "It finds every place an AI tool put its name on your work, in your repos, your GitHub account and your AI tool settings, turns each one off on your OK, and installs a hook that blocks new AI credit. Also a GitHub Action that fails a pull request carrying it.": "Находит каждое место, где ИИ-инструмент поставил своё имя на вашу работу: в репозиториях, аккаунте GitHub и настройках ИИ-инструментов, отключает каждое после вашего согласия и ставит хук, который блокирует новые упоминания ИИ. А ещё это GitHub Action, которая не пропускает pull request с таким упоминанием.",
   "eval runs passed, vs 0% without it": "прогонов оценки пройдено, против 0% без него",
   "trigger phrases picked up": "фраз-триггеров распознано",
-  "Demo: a scan finds a repo with no commit-msg hook, the hook is installed on a yes, a commit carrying an AI co-author trailer is refused, a normal commit goes through, and the re-scan shows 0 high, 0 medium.": "Демо: сканирование находит репозиторий без хука commit-msg, хук ставится после «да», коммит со строкой соавторства ИИ отклоняется, обычный коммит проходит, а повторное сканирование показывает 0 высоких, 0 средних."
+  "Demo: a scan finds a repo with no commit-msg hook, the hook is installed on a yes, a commit carrying an AI co-author trailer is refused, a normal commit goes through, and the re-scan shows 0 high, 0 medium.": "Демо: сканирование находит репозиторий без хука commit-msg, хук ставится после «да», коммит со строкой соавторства ИИ отклоняется, обычный коммит проходит, а повторное сканирование показывает 0 высоких, 0 средних.",
+  "SignalForge · preview": "SignalForge · предварительный просмотр",
+  "Agent skill · Pre-release": "Навык агента · предварительная версия",
+  "SignalForge": "SignalForge",
+  "Discover. Validate. Prioritize.": "Находите. Проверяйте. Расставляйте приоритеты.",
+  "Turn public signals into explainable intelligence. The initial offline engine compares video performance against each creator's baseline and ranks recurring topics without mistaking popularity for proof.": "Превращайте открытые сигналы в объяснимые выводы. Первая офлайн-версия сравнивает показатели видео с обычным уровнем того же автора и ранжирует повторяющиеся темы, не путая популярность с доказательствами.",
+  "synthetic unit tests passed in GitHub CI (2026-11-08)": "синтетических модульных тестов пройдено в GitHub CI (2026-11-08)",
+  "runtime dependencies for the offline core": "зависимости выполнения офлайн-ядра",
+  "Public development repo and preview PR are available; signed release, OpenSSF Scorecard, Best Practices and live source connectors are pending.": "Публичный репозиторий разработки и предварительный PR доступны; подписанный релиз, OpenSSF Scorecard, Best Practices и подключения к источникам в реальном времени ещё не готовы.",
+  "View development repo": "Открыть репозиторий разработки",
+  "Preview PR {0}": "Предварительный PR {0}",
+  "SignalForge preview: concentric radar rings and the statement Discover, Validate, Prioritize.": "Предпросмотр SignalForge: концентрические радарные кольца и девиз «Находите. Проверяйте. Расставляйте приоритеты»."
 }
