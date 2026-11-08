@@ -454,5 +454,16 @@
   "It finds every place an AI tool put its name on your work, in your repos, your GitHub account and your AI tool settings, turns each one off on your OK, and installs a hook that blocks new AI credit. Also a GitHub Action that fails a pull request carrying it.": "リポジトリ、GitHub アカウント、AI ツールの設定から、AI ツールがあなたの作品に名前を入れた箇所をすべて見つけ、あなたの OK ごとに無効にし、新しい AI クレジットを止めるフックを入れます。AI クレジットを含むプルリクエストを失敗させる GitHub Action としても使えます。",
   "eval runs passed, vs 0% without it": "の評価実行に合格（なしでは 0%）",
   "trigger phrases picked up": "のトリガー文を認識",
-  "Demo: a scan finds a repo with no commit-msg hook, the hook is installed on a yes, a commit carrying an AI co-author trailer is refused, a normal commit goes through, and the re-scan shows 0 high, 0 medium.": "デモ: スキャンで commit-msg フックのないリポジトリが見つかり、「はい」でフックを導入。AI 共著者行のあるコミットは拒否され、通常のコミットは通り、再スキャンは 高 0・中 0。"
+  "Demo: a scan finds a repo with no commit-msg hook, the hook is installed on a yes, a commit carrying an AI co-author trailer is refused, a normal commit goes through, and the re-scan shows 0 high, 0 medium.": "デモ: スキャンで commit-msg フックのないリポジトリが見つかり、「はい」でフックを導入。AI 共著者行のあるコミットは拒否され、通常のコミットは通り、再スキャンは 高 0・中 0。",
+  "SignalForge · preview": "SignalForge · プレビュー",
+  "Agent skill · Pre-release": "エージェントスキル · プレリリース",
+  "SignalForge": "SignalForge",
+  "Discover. Validate. Prioritize.": "発見。検証。優先順位付け。",
+  "Turn public signals into explainable intelligence. The initial offline engine compares video performance against each creator's baseline and ranks recurring topics without mistaking popularity for proof.": "公開シグナルを説明可能なインサイトに変換します。初期のオフラインエンジンは、動画の成果を同じクリエイターの通常の水準と比較し、人気を証拠と混同せずに繰り返し現れる話題を順位付けします。",
+  "synthetic unit tests passed in GitHub CI (2026-11-08)": "GitHub CI で成功した合成ユニットテスト（2026-11-08）",
+  "runtime dependencies for the offline core": "オフラインコアの実行時依存関係",
+  "Public development repo and preview PR are available; signed release, OpenSSF Scorecard, Best Practices and live source connectors are pending.": "公開開発リポジトリとプレビュー PR は利用可能です。署名付きリリース、OpenSSF Scorecard、Best Practices、ライブソースコネクターは未完了です。",
+  "View development repo": "開発リポジトリを見る",
+  "Preview PR {0}": "プレビュー PR {0}",
+  "SignalForge preview: concentric radar rings and the statement Discover, Validate, Prioritize.": "SignalForge のプレビュー：同心円状のレーダーと「発見・検証・優先順位付け」のメッセージ。"
 }

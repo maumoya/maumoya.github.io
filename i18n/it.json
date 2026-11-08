@@ -454,5 +454,16 @@
   "It finds every place an AI tool put its name on your work, in your repos, your GitHub account and your AI tool settings, turns each one off on your OK, and installs a hook that blocks new AI credit. Also a GitHub Action that fails a pull request carrying it.": "Trova ogni punto in cui uno strumento di IA ha messo il proprio nome sul tuo lavoro, nei tuoi repository, nel tuo account GitHub e nelle impostazioni dei tuoi strumenti di IA, lo disattiva con il tuo ok e installa un hook che blocca nuovi crediti all'IA. È anche una GitHub Action che fa fallire una pull request che li contiene.",
   "eval runs passed, vs 0% without it": "delle esecuzioni di valutazione superate, contro lo 0% senza",
   "trigger phrases picked up": "delle frasi di attivazione riconosciute",
-  "Demo: a scan finds a repo with no commit-msg hook, the hook is installed on a yes, a commit carrying an AI co-author trailer is refused, a normal commit goes through, and the re-scan shows 0 high, 0 medium.": "Demo: una scansione trova un repository senza hook commit-msg, l'hook viene installato dopo un sì, un commit con una riga di coautore IA viene rifiutato, un commit normale passa e la nuova scansione mostra 0 alti, 0 medi."
+  "Demo: a scan finds a repo with no commit-msg hook, the hook is installed on a yes, a commit carrying an AI co-author trailer is refused, a normal commit goes through, and the re-scan shows 0 high, 0 medium.": "Demo: una scansione trova un repository senza hook commit-msg, l'hook viene installato dopo un sì, un commit con una riga di coautore IA viene rifiutato, un commit normale passa e la nuova scansione mostra 0 alti, 0 medi.",
+  "SignalForge · preview": "SignalForge · anteprima",
+  "Agent skill · Pre-release": "Skill per agenti · pre-release",
+  "SignalForge": "SignalForge",
+  "Discover. Validate. Prioritize.": "Scopri. Verifica. Dai priorità.",
+  "Turn public signals into explainable intelligence. The initial offline engine compares video performance against each creator's baseline and ranks recurring topics without mistaking popularity for proof.": "Trasforma segnali pubblici in informazioni spiegabili. Il primo motore offline confronta le prestazioni dei video con il livello abituale del rispettivo creatore e ordina gli argomenti ricorrenti senza confondere popolarità e prova.",
+  "synthetic unit tests passed in GitHub CI (2026-11-08)": "test unitari sintetici superati in GitHub CI (2026-11-08)",
+  "runtime dependencies for the offline core": "dipendenze runtime del motore offline",
+  "Public development repo and preview PR are available; signed release, OpenSSF Scorecard, Best Practices and live source connectors are pending.": "Il repository pubblico di sviluppo e la PR di anteprima sono disponibili; release firmata, OpenSSF Scorecard, Best Practices e connettori a fonti live sono ancora in sospeso.",
+  "View development repo": "Visualizza repository di sviluppo",
+  "Preview PR {0}": "PR di anteprima {0}",
+  "SignalForge preview: concentric radar rings and the statement Discover, Validate, Prioritize.": "Anteprima SignalForge: anelli radar concentrici e il motto Scopri, Verifica, Dai priorità."
 }

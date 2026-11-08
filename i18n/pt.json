@@ -454,5 +454,16 @@
   "It finds every place an AI tool put its name on your work, in your repos, your GitHub account and your AI tool settings, turns each one off on your OK, and installs a hook that blocks new AI credit. Also a GitHub Action that fails a pull request carrying it.": "Encontra cada lugar onde uma ferramenta de IA colocou o nome dela no seu trabalho, nos seus repositórios, na sua conta do GitHub e nas configurações das suas ferramentas de IA, desliga cada um com o seu OK e instala um hook que bloqueia novos créditos de IA. Também é uma GitHub Action que reprova um pull request que os contenha.",
   "eval runs passed, vs 0% without it": "das execuções de avaliação aprovadas, contra 0% sem ela",
   "trigger phrases picked up": "das frases de ativação reconhecidas",
-  "Demo: a scan finds a repo with no commit-msg hook, the hook is installed on a yes, a commit carrying an AI co-author trailer is refused, a normal commit goes through, and the re-scan shows 0 high, 0 medium.": "Demo: uma varredura encontra um repositório sem hook commit-msg, o hook é instalado após um sim, um commit com uma linha de coautoria de IA é recusado, um commit normal passa e a nova varredura mostra 0 altos, 0 médios."
+  "Demo: a scan finds a repo with no commit-msg hook, the hook is installed on a yes, a commit carrying an AI co-author trailer is refused, a normal commit goes through, and the re-scan shows 0 high, 0 medium.": "Demo: uma varredura encontra um repositório sem hook commit-msg, o hook é instalado após um sim, um commit com uma linha de coautoria de IA é recusado, um commit normal passa e a nova varredura mostra 0 altos, 0 médios.",
+  "SignalForge · preview": "SignalForge · prévia",
+  "Agent skill · Pre-release": "Skill de agente · pré-lançamento",
+  "SignalForge": "SignalForge",
+  "Discover. Validate. Prioritize.": "Descubra. Valide. Priorize.",
+  "Turn public signals into explainable intelligence. The initial offline engine compares video performance against each creator's baseline and ranks recurring topics without mistaking popularity for proof.": "Transforme sinais públicos em inteligência explicável. O mecanismo offline inicial compara o desempenho de cada vídeo com a referência do próprio criador e classifica temas recorrentes sem confundir popularidade com evidência.",
+  "synthetic unit tests passed in GitHub CI (2026-11-08)": "testes unitários sintéticos aprovados no GitHub CI (2026-11-08)",
+  "runtime dependencies for the offline core": "dependências de execução do mecanismo offline",
+  "Public development repo and preview PR are available; signed release, OpenSSF Scorecard, Best Practices and live source connectors are pending.": "O repositório público de desenvolvimento e o PR de prévia estão disponíveis; lançamento assinado, OpenSSF Scorecard, Best Practices e conectores de fontes ao vivo ainda estão pendentes.",
+  "View development repo": "Ver repositório de desenvolvimento",
+  "Preview PR {0}": "PR de prévia {0}",
+  "SignalForge preview: concentric radar rings and the statement Discover, Validate, Prioritize.": "Prévia do SignalForge: anéis concêntricos de radar e a frase Descubra, Valide, Priorize."
 }

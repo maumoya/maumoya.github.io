@@ -454,5 +454,16 @@
   "It finds every place an AI tool put its name on your work, in your repos, your GitHub account and your AI tool settings, turns each one off on your OK, and installs a hook that blocks new AI credit. Also a GitHub Action that fails a pull request carrying it.": "يجد كل موضع وضعت فيه أداة ذكاء اصطناعي اسمها على عملك، في مستودعاتك وحسابك على GitHub وإعدادات أدوات الذكاء الاصطناعي، ويوقف كل واحد بموافقتك، ويثبّت خطافًا يمنع أي نسبة جديدة للذكاء الاصطناعي. وهو أيضًا GitHub Action تُفشل أي طلب سحب يحملها.",
   "eval runs passed, vs 0% without it": "من جولات التقييم نجحت، مقابل 0% من دونه",
   "trigger phrases picked up": "من عبارات التشغيل تم التقاطها",
-  "Demo: a scan finds a repo with no commit-msg hook, the hook is installed on a yes, a commit carrying an AI co-author trailer is refused, a normal commit goes through, and the re-scan shows 0 high, 0 medium.": "عرض: الفحص يجد مستودعًا بلا خطاف commit-msg، يُثبَّت الخطاف بعد الموافقة، يُرفض commit يحمل سطر مؤلف مشارك من الذكاء الاصطناعي، يمر commit عادي، وإعادة الفحص تُظهر 0 مرتفع و0 متوسط."
+  "Demo: a scan finds a repo with no commit-msg hook, the hook is installed on a yes, a commit carrying an AI co-author trailer is refused, a normal commit goes through, and the re-scan shows 0 high, 0 medium.": "عرض: الفحص يجد مستودعًا بلا خطاف commit-msg، يُثبَّت الخطاف بعد الموافقة، يُرفض commit يحمل سطر مؤلف مشارك من الذكاء الاصطناعي، يمر commit عادي، وإعادة الفحص تُظهر 0 مرتفع و0 متوسط.",
+  "SignalForge · preview": "SignalForge · معاينة",
+  "Agent skill · Pre-release": "مهارة وكيل · إصدار تجريبي",
+  "SignalForge": "SignalForge",
+  "Discover. Validate. Prioritize.": "اكتشف. تحقّق. حدّد الأولويات.",
+  "Turn public signals into explainable intelligence. The initial offline engine compares video performance against each creator's baseline and ranks recurring topics without mistaking popularity for proof.": "حوّل الإشارات العامة إلى معلومات قابلة للتفسير. يقارن المحرك الأولي غير المتصل أداء الفيديو بالمستوى المعتاد لصانعه، ويرتّب الموضوعات المتكررة دون الخلط بين الشعبية والدليل.",
+  "synthetic unit tests passed in GitHub CI (2026-11-08)": "اختبارات وحدة اصطناعية نجحت في GitHub CI ‏(2026-11-08)",
+  "runtime dependencies for the offline core": "تبعيات تشغيل المحرك غير المتصل",
+  "Public development repo and preview PR are available; signed release, OpenSSF Scorecard, Best Practices and live source connectors are pending.": "المستودع العام للتطوير وطلب السحب التجريبي متاحان؛ وما زال الإصدار الموقّع وOpenSSF Scorecard وBest Practices وموصلات المصادر الحية قيد الانتظار.",
+  "View development repo": "عرض مستودع التطوير",
+  "Preview PR {0}": "طلب السحب التجريبي {0}",
+  "SignalForge preview: concentric radar rings and the statement Discover, Validate, Prioritize.": "معاينة SignalForge: حلقات رادار متحدة المركز وشعار اكتشف، تحقّق، حدّد الأولويات."
 }

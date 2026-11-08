@@ -451,5 +451,16 @@
   "It finds every place an AI tool put its name on your work, in your repos, your GitHub account and your AI tool settings, turns each one off on your OK, and installs a hook that blocks new AI credit. Also a GitHub Action that fails a pull request carrying it.": "מוצא כל מקום שבו כלי AI שם את שמו על העבודה שלך, במאגרים, בחשבון GitHub ובהגדרות כלי ה-AI, מכבה כל אחד באישורך ומתקין hook שחוסם קרדיט AI חדש. וגם GitHub Action שמכשיל pull request שנושא קרדיט כזה.",
   "eval runs passed, vs 0% without it": "מהרצות ההערכה עברו, לעומת 0% בלעדיו",
   "trigger phrases picked up": "מביטויי ההפעלה זוהו",
-  "Demo: a scan finds a repo with no commit-msg hook, the hook is installed on a yes, a commit carrying an AI co-author trailer is refused, a normal commit goes through, and the re-scan shows 0 high, 0 medium.": "הדגמה: סריקה מוצאת מאגר בלי hook של commit-msg, ה-hook מותקן אחרי כן, commit עם שורת שותף-לכתיבה של AI נדחה, commit רגיל עובר, והסריקה החוזרת מראה 0 גבוה, 0 בינוני."
+  "Demo: a scan finds a repo with no commit-msg hook, the hook is installed on a yes, a commit carrying an AI co-author trailer is refused, a normal commit goes through, and the re-scan shows 0 high, 0 medium.": "הדגמה: סריקה מוצאת מאגר בלי hook של commit-msg, ה-hook מותקן אחרי כן, commit עם שורת שותף-לכתיבה של AI נדחה, commit רגיל עובר, והסריקה החוזרת מראה 0 גבוה, 0 בינוני.",
+  "SignalForge · preview": "SignalForge · תצוגה מקדימה",
+  "Agent skill · Pre-release": "מיומנות סוכן · גרסת קדם",
+  "SignalForge": "SignalForge",
+  "Discover. Validate. Prioritize.": "לגלות. לאמת. לתעדף.",
+  "Turn public signals into explainable intelligence. The initial offline engine compares video performance against each creator's baseline and ranks recurring topics without mistaking popularity for proof.": "הפיכת אותות ציבוריים לתובנות שניתן להסביר. המנוע הלא מקוון הראשוני משווה את ביצועי הסרטונים לקו הבסיס של אותו יוצר ומדרג נושאים חוזרים בלי לבלבל בין פופולריות לבין ראיות.",
+  "synthetic unit tests passed in GitHub CI (2026-11-08)": "בדיקות יחידה סינתטיות שעברו ב-GitHub CI ‏(2026-11-08)",
+  "runtime dependencies for the offline core": "תלויות זמן הריצה של הליבה הלא מקוונת",
+  "Public development repo and preview PR are available; signed release, OpenSSF Scorecard, Best Practices and live source connectors are pending.": "מאגר הפיתוח הציבורי ובקשת המשיכה לתצוגה מקדימה זמינים; גרסה חתומה, OpenSSF Scorecard, Best Practices ומחברים למקורות חיים עדיין בהמתנה.",
+  "View development repo": "הצגת מאגר הפיתוח",
+  "Preview PR {0}": "בקשת משיכה לתצוגה מקדימה {0}",
+  "SignalForge preview: concentric radar rings and the statement Discover, Validate, Prioritize.": "תצוגה מקדימה של SignalForge: טבעות מכ״ם קונצנטריות והסיסמה לגלות, לאמת, לתעדף."
 }

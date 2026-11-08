@@ -454,5 +454,16 @@
   "It finds every place an AI tool put its name on your work, in your repos, your GitHub account and your AI tool settings, turns each one off on your OK, and installs a hook that blocks new AI credit. Also a GitHub Action that fails a pull request carrying it.": "Es findet jede Stelle, an der ein KI-Tool seinen Namen auf deine Arbeit gesetzt hat, in deinen Repos, deinem GitHub-Konto und den Einstellungen deiner KI-Tools, schaltet jede nach deinem OK ab und installiert einen Hook, der neue KI-Nennungen blockiert. Dazu eine GitHub Action, die einen Pull Request mit solchen Nennungen scheitern lässt.",
   "eval runs passed, vs 0% without it": "der Eval-Läufe bestanden, gegenüber 0 % ohne",
   "trigger phrases picked up": "der Auslöse-Sätze erkannt",
-  "Demo: a scan finds a repo with no commit-msg hook, the hook is installed on a yes, a commit carrying an AI co-author trailer is refused, a normal commit goes through, and the re-scan shows 0 high, 0 medium.": "Demo: Ein Scan findet ein Repo ohne commit-msg-Hook, der Hook wird nach einem Ja installiert, ein Commit mit KI-Co-Autor-Zeile wird abgelehnt, ein normaler Commit geht durch, und der neue Scan zeigt 0 hoch, 0 mittel."
+  "Demo: a scan finds a repo with no commit-msg hook, the hook is installed on a yes, a commit carrying an AI co-author trailer is refused, a normal commit goes through, and the re-scan shows 0 high, 0 medium.": "Demo: Ein Scan findet ein Repo ohne commit-msg-Hook, der Hook wird nach einem Ja installiert, ein Commit mit KI-Co-Autor-Zeile wird abgelehnt, ein normaler Commit geht durch, und der neue Scan zeigt 0 hoch, 0 mittel.",
+  "SignalForge · preview": "SignalForge · Vorschau",
+  "Agent skill · Pre-release": "Agenten-Skill · Vorabversion",
+  "SignalForge": "SignalForge",
+  "Discover. Validate. Prioritize.": "Entdecken. Prüfen. Priorisieren.",
+  "Turn public signals into explainable intelligence. The initial offline engine compares video performance against each creator's baseline and ranks recurring topics without mistaking popularity for proof.": "Öffentliche Signale werden zu nachvollziehbaren Erkenntnissen. Die erste Offline-Engine vergleicht die Videoleistung mit dem üblichen Niveau des jeweiligen Creators und ordnet wiederkehrende Themen, ohne Popularität mit Belegen zu verwechseln.",
+  "synthetic unit tests passed in GitHub CI (2026-11-08)": "synthetische Unit-Tests in GitHub CI bestanden (2026-11-08)",
+  "runtime dependencies for the offline core": "Laufzeitabhängigkeiten des Offline-Kerns",
+  "Public development repo and preview PR are available; signed release, OpenSSF Scorecard, Best Practices and live source connectors are pending.": "Das öffentliche Entwicklungs-Repository und der Vorschau-PR sind verfügbar; signiertes Release, OpenSSF Scorecard, Best Practices und Live-Quellen-Konnektoren stehen noch aus.",
+  "View development repo": "Entwicklungs-Repository ansehen",
+  "Preview PR {0}": "Vorschau-PR {0}",
+  "SignalForge preview: concentric radar rings and the statement Discover, Validate, Prioritize.": "SignalForge-Vorschau: konzentrische Radarringe und das Motto Entdecken, Prüfen, Priorisieren."
 }

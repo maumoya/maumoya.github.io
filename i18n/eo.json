@@ -454,5 +454,16 @@
   "It finds every place an AI tool put its name on your work, in your repos, your GitHub account and your AI tool settings, turns each one off on your OK, and installs a hook that blocks new AI credit. Also a GitHub Action that fails a pull request carrying it.": "Ĝi trovas ĉiun lokon, kie AI-ilo metis sian nomon sur vian laboron, en viaj deponejoj, via GitHub-konto kaj la agordoj de viaj AI-iloj, malŝaltas ĉiun post via jeso kaj instalas hokon, kiu blokas novan AI-krediton. Ankaŭ GitHub Action, kiu malsukcesigas tirpeton portantan ĝin.",
   "eval runs passed, vs 0% without it": "de taksaj rulumoj sukcesis, kontraŭ 0% sen ĝi",
   "trigger phrases picked up": "de ekigaj frazoj rekonitaj",
-  "Demo: a scan finds a repo with no commit-msg hook, the hook is installed on a yes, a commit carrying an AI co-author trailer is refused, a normal commit goes through, and the re-scan shows 0 high, 0 medium.": "Demo: skano trovas deponejon sen commit-msg-hoko, la hoko instaliĝas post jeso, enmeto kun AI-kunaŭtora linio estas rifuzita, normala enmeto pasas, kaj la nova skano montras 0 altajn, 0 mezajn."
+  "Demo: a scan finds a repo with no commit-msg hook, the hook is installed on a yes, a commit carrying an AI co-author trailer is refused, a normal commit goes through, and the re-scan shows 0 high, 0 medium.": "Demo: skano trovas deponejon sen commit-msg-hoko, la hoko instaliĝas post jeso, enmeto kun AI-kunaŭtora linio estas rifuzita, normala enmeto pasas, kaj la nova skano montras 0 altajn, 0 mezajn.",
+  "SignalForge · preview": "SignalForge · antaŭrigardo",
+  "Agent skill · Pre-release": "Agenta kapablo · antaŭeldono",
+  "SignalForge": "SignalForge",
+  "Discover. Validate. Prioritize.": "Malkovru. Kontrolu. Prioritatigu.",
+  "Turn public signals into explainable intelligence. The initial offline engine compares video performance against each creator's baseline and ranks recurring topics without mistaking popularity for proof.": "Transformu publikajn signalojn en klarigeblajn komprenojn. La komenca eksterreta motoro komparas la rendimenton de filmetoj kun la kutima nivelo de la sama kreinto kaj rangigas ripetajn temojn sen konfuzi popularecon kun pruvoj.",
+  "synthetic unit tests passed in GitHub CI (2026-11-08)": "sintezaj unutestoj sukcesis en GitHub CI (2026-11-08)",
+  "runtime dependencies for the offline core": "rultempaj dependecoj de la eksterreta kerno",
+  "Public development repo and preview PR are available; signed release, OpenSSF Scorecard, Best Practices and live source connectors are pending.": "La publika disvolva deponejo kaj antaŭrigarda PR haveblas; subskribita eldono, OpenSSF Scorecard, Best Practices kaj rektaj fontokonektiloj ankoraŭ atendas.",
+  "View development repo": "Vidi disvolvan deponejon",
+  "Preview PR {0}": "Antaŭrigarda PR {0}",
+  "SignalForge preview: concentric radar rings and the statement Discover, Validate, Prioritize.": "Antaŭrigardo de SignalForge: samcentraj radarringoj kaj la moto Malkovru, Kontrolu, Prioritatigu."
 }
