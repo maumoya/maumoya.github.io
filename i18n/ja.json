@@ -465,5 +465,6 @@
   "Public development repo and preview PR are available; signed release, OpenSSF Scorecard, Best Practices and live source connectors are pending.": "公開開発リポジトリとプレビュー PR は利用可能です。署名付きリリース、OpenSSF Scorecard、Best Practices、ライブソースコネクターは未完了です。",
   "View development repo": "開発リポジトリを見る",
   "Preview PR {0}": "プレビュー PR {0}",
-  "SignalForge preview: concentric radar rings and the statement Discover, Validate, Prioritize.": "SignalForge のプレビュー：同心円状のレーダーと「発見・検証・優先順位付け」のメッセージ。"
+  "SignalForge preview: concentric radar rings and the statement Discover, Validate, Prioritize.": "SignalForge のプレビュー：同心円状のレーダーと「発見・検証・優先順位付け」のメッセージ。",
+  "SignalForge animated demo: discover, validate and prioritize synthetic research signals.": "SignalForge のアニメーションデモ：合成研究シグナルの発見、検証、優先順位付け。"
 }
