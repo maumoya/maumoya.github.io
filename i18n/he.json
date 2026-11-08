@@ -462,5 +462,6 @@
   "Public development repo and preview PR are available; signed release, OpenSSF Scorecard, Best Practices and live source connectors are pending.": "מאגר הפיתוח הציבורי ובקשת המשיכה לתצוגה מקדימה זמינים; גרסה חתומה, OpenSSF Scorecard, Best Practices ומחברים למקורות חיים עדיין בהמתנה.",
   "View development repo": "הצגת מאגר הפיתוח",
   "Preview PR {0}": "בקשת משיכה לתצוגה מקדימה {0}",
-  "SignalForge preview: concentric radar rings and the statement Discover, Validate, Prioritize.": "תצוגה מקדימה של SignalForge: טבעות מכ״ם קונצנטריות והסיסמה לגלות, לאמת, לתעדף."
+  "SignalForge preview: concentric radar rings and the statement Discover, Validate, Prioritize.": "תצוגה מקדימה של SignalForge: טבעות מכ״ם קונצנטריות והסיסמה לגלות, לאמת, לתעדף.",
+  "SignalForge animated demo: discover, validate and prioritize synthetic research signals.": "הדגמה מונפשת של SignalForge: גילוי, אימות ותיעדוף של אותות מחקר סינתטיים."
 }
