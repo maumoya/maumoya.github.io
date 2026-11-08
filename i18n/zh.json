@@ -465,5 +465,6 @@
   "Public development repo and preview PR are available; signed release, OpenSSF Scorecard, Best Practices and live source connectors are pending.": "公共开发仓库和预览 PR 已开放；签名发布、OpenSSF Scorecard、Best Practices 及实时数据连接器仍待完成。",
   "View development repo": "查看开发仓库",
   "Preview PR {0}": "预览 PR {0}",
-  "SignalForge preview: concentric radar rings and the statement Discover, Validate, Prioritize.": "SignalForge 预览：同心雷达环及“发现、验证、排序”的标语。"
+  "SignalForge preview: concentric radar rings and the statement Discover, Validate, Prioritize.": "SignalForge 预览：同心雷达环及“发现、验证、排序”的标语。",
+  "SignalForge animated demo: discover, validate and prioritize synthetic research signals.": "SignalForge 动画演示：发现、验证并优先处理合成研究信号。"
 }
