@@ -465,5 +465,6 @@
   "Public development repo and preview PR are available; signed release, OpenSSF Scorecard, Best Practices and live source connectors are pending.": "Публичный репозиторий разработки и предварительный PR доступны; подписанный релиз, OpenSSF Scorecard, Best Practices и подключения к источникам в реальном времени ещё не готовы.",
   "View development repo": "Открыть репозиторий разработки",
   "Preview PR {0}": "Предварительный PR {0}",
-  "SignalForge preview: concentric radar rings and the statement Discover, Validate, Prioritize.": "Предпросмотр SignalForge: концентрические радарные кольца и девиз «Находите. Проверяйте. Расставляйте приоритеты»."
+  "SignalForge preview: concentric radar rings and the statement Discover, Validate, Prioritize.": "Предпросмотр SignalForge: концентрические радарные кольца и девиз «Находите. Проверяйте. Расставляйте приоритеты».",
+  "SignalForge animated demo: discover, validate and prioritize synthetic research signals.": "Анимированная демонстрация SignalForge: обнаружение, проверка и приоритизация синтетических исследовательских сигналов."
 }
