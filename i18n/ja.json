@@ -473,5 +473,6 @@
   "median processing time, seconds": "処理時間の中央値（秒）",
   "Measured on synthetic metadata only; no videos watched or verified human productivity gain. Marketplace release and branch protection are pending.": "合成メタデータのみの測定です。動画は視聴しておらず、人間の生産性向上も検証していません。Marketplace 公開とブランチ保護は未完了です。",
   "View GitHub repository": "GitHub リポジトリを見る",
-  "Benchmark evidence": "ベンチマークの証拠"
+  "Benchmark evidence": "ベンチマークの証拠",
+  "Benchmark evidence {0}": "ベンチマークの証拠 {0}"
 }
