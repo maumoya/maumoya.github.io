@@ -473,5 +473,6 @@
   "median processing time, seconds": "मध्यिका प्रसंस्करण समय, सेकंड",
   "Measured on synthetic metadata only; no videos watched or verified human productivity gain. Marketplace release and branch protection are pending.": "केवल सिंथेटिक मेटाडेटा मापा गया; वीडियो नहीं देखे गए और मानव उत्पादकता लाभ सत्यापित नहीं है। Marketplace प्रकाशन और शाखा सुरक्षा लंबित हैं।",
   "View GitHub repository": "GitHub रिपॉज़िटरी देखें",
-  "Benchmark evidence": "बेंचमार्क प्रमाण"
+  "Benchmark evidence": "बेंचमार्क प्रमाण",
+  "Benchmark evidence {0}": "बेंचमार्क प्रमाण {0}"
 }
