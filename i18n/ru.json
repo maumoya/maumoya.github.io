@@ -473,5 +473,6 @@
   "median processing time, seconds": "медианное время обработки, секунды",
   "Measured on synthetic metadata only; no videos watched or verified human productivity gain. Marketplace release and branch protection are pending.": "Измерены только синтетические метаданные: видео не просматривались, рост продуктивности человека не подтверждён. Публикация в Marketplace и защита ветки ещё не завершены.",
   "View GitHub repository": "Открыть репозиторий GitHub",
-  "Benchmark evidence": "Подтверждение бенчмарка"
+  "Benchmark evidence": "Подтверждение бенчмарка",
+  "Benchmark evidence {0}": "Подтверждение бенчмарка {0}"
 }
