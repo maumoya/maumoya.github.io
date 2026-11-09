@@ -473,5 +473,6 @@
   "median processing time, seconds": "الوقت الوسيط للمعالجة بالثواني",
   "Measured on synthetic metadata only; no videos watched or verified human productivity gain. Marketplace release and branch protection are pending.": "القياس لبيانات وصفية اصطناعية فقط؛ لم تتم مشاهدة فيديوهات ولم يُثبت تحسن إنتاجية بشرية. النشر في Marketplace وحماية الفرع ما زالا معلّقين.",
   "View GitHub repository": "عرض مستودع GitHub",
-  "Benchmark evidence": "دليل اختبار الأداء"
+  "Benchmark evidence": "دليل اختبار الأداء",
+  "Benchmark evidence {0}": "دليل اختبار الأداء {0}"
 }
