@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title description">
+<title id="title">SignalForge: a slow, readable four-stage intelligence workflow</title>
+<desc id="description">An illustrative 20-second animation with a stable screen. A user-provided video JSON and an opt-in GitHub API query flow into a SignalForge intelligence core. Four phases appear sequentially: collect, compare with the creator baseline, validate sources and output a read-only research lead. Video results use synthetic 21-item data, 100 median views and an 8.0 times outlier. No malware scan, growth prediction or time-savings benchmark is claimed.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#100c26"/><stop offset="1" stop-color="#18143b"/></linearGradient>
+  <linearGradient id="eye" x1="0" x2="1"><stop stop-color="#8b5cf6"/><stop offset=".52" stop-color="#55e1df"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient>
+  <linearGradient id="bar" x1="0" x2="1"><stop stop-color="#845cf6"/><stop offset="1" stop-color="#4fe6d2"/></linearGradient>
+  <filter id="glow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur in="SourceGraphic" stdDeviation="4"/></filter>
+</defs>
+<rect width="960" height="540" rx="24" fill="url(#bg)"/>
+<g font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif">
+ <g transform="translate(35 31)">
+  <path d="M21 0 4 23h13L7 46l36-31H27L34 0Z" fill="#ae84ff"/>
+  <text x="52" y="31" font-size="31" font-weight="800" fill="#fff">Signal<tspan fill="#b68cff">Forge</tspan></text>
+  <text x="54" y="56" font-size="14" fill="#b8b0d4">Discover. Validate. Prioritize.</text>
+ </g>
+ <rect x="743" y="35" width="178" height="32" rx="16" fill="#251c48" stroke="#52436c"/>
+ <text x="832" y="56" font-size="12" font-weight="600" fill="#d3c5f7" text-anchor="middle">20-SECOND WALKTHROUGH</text>
+ <path d="M34 105 H925" stroke="#42335c" stroke-width="1"/>
+ <text x="42" y="139" fill="#aa9dca" font-size="12" font-weight="700" letter-spacing="1.6">01  SOURCES</text>
+ <text x="321" y="139" fill="#aa9dca" font-size="12" font-weight="700" letter-spacing="1.6">02  INTELLIGENCE</text>
+ <text x="682" y="139" fill="#aa9dca" font-size="12" font-weight="700" letter-spacing="1.6">03  RESEARCH LEAD</text>
+
+ <rect x="34" y="159" width="232" height="268" rx="17" fill="#1a1536" stroke="#46365f"/>
+ <rect x="50" y="179" width="200" height="76" rx="12" fill="#27204b" stroke="#745ac1"/>
+ <circle cx="70" cy="201" r="7" fill="#b18cff"/>
+ <text x="87" y="206" fill="#fff" font-size="16" font-weight="700">Video metadata</text>
+ <text x="67" y="232" fill="#bcb0da" font-size="13">JSON file · offline</text>
+ <rect x="50" y="270" width="200" height="76" rx="12" fill="#27204b" stroke="#745ac1"/>
+ <circle cx="70" cy="292" r="7" fill="#5fe6d7"/>
+ <text x="87" y="297" fill="#fff" font-size="16" font-weight="700">GitHub search</text>
+ <text x="67" y="323" fill="#bcb0da" font-size="13">Public API · opt-in</text>
+ <rect x="50" y="361" width="200" height="48" rx="10" fill="#191631" stroke="#3b3156"/>
+ <text x="67" y="383" fill="#958aad" font-size="13">Reels · News · PDFs</text>
+ <text x="67" y="399" fill="#796e96" font-size="11">Future integrations</text>
+
+ <path d="M265 216 C298 216 297 274 324 274" stroke="#6c5db1" stroke-width="2" fill="none" opacity=".45"/>
+ <path d="M265 309 C298 309 297 274 324 274" stroke="#5bd8cd" stroke-width="2" fill="none" opacity=".45"/>
+ <g opacity="0"><path d="M265 216 C298 216 297 274 324 274" stroke="#b69cff" stroke-width="4" stroke-linecap="round" fill="none"/><path d="M265 309 C298 309 297 274 324 274" stroke="#52e2da" stroke-width="4" stroke-linecap="round" fill="none"/><animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.100;0.125;0.325;0.350;1" values="0;0;1;1;0;0"/></g>
+
+ <rect x="323" y="159" width="310" height="268" rx="17" fill="#1b1739" stroke="#53427a"/>
+ <circle cx="478" cy="245" r="72" fill="none" stroke="#594a85" opacity=".48"/>
+ <circle cx="478" cy="245" r="57" fill="none" stroke="#6b5ba0" opacity=".6"/>
+ <path d="M401 245 Q478 175 555 245 Q478 315 401 245Z" fill="#231b49" stroke="url(#eye)" stroke-width="3"/>
+ <circle cx="478" cy="245" r="30" fill="#3f2b76" stroke="#4edfd4" stroke-width="3"/>
+ <circle cx="478" cy="245" r="15" fill="#5de6dc"/>
+ <circle cx="486" cy="235" r="5" fill="#f2ffff" opacity=".8"/>
+ <g opacity="0"><circle cx="478" cy="245" r="43" fill="none" stroke="#6cf4e5" stroke-width="4" filter="url(#glow)"/><circle cx="478" cy="245" r="30" fill="none" stroke="#79f7ed" stroke-width="2"/><animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.250;0.275;0.575;0.600;1" values="0;0;1;1;0;0"/></g>
+ <text x="478" y="341" text-anchor="middle" fill="#f0eaff" font-weight="750" font-size="20">Signal analysis</text>
+ <text x="478" y="363" text-anchor="middle" fill="#b4a8cf" font-size="13">Deterministic · explainable</text>
+ <g opacity="0"><rect x="364" y="380" width="227" height="29" rx="14" fill="#2a2151"/><text x="478" y="400" fill="#bfa5ff" text-anchor="middle" font-size="13">21 synthetic video records</text><animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.100;0.125;0.375;0.400;1" values="0;0;1;1;0;0"/></g>
+ <g opacity="0"><rect x="355" y="380" width="246" height="29" rx="14" fill="#2a2151"/><text x="478" y="400" fill="#bfa5ff" text-anchor="middle" font-size="13">Median baseline · 100 views</text><animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.400;0.425;0.625;0.650;1" values="0;0;1;1;0;0"/></g>
+ <g opacity="0"><rect x="355" y="380" width="246" height="29" rx="14" fill="#123d3b"/><text x="478" y="400" fill="#74e6cb" text-anchor="middle" font-size="13">URL &amp; trust-boundary checks</text><animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.650;0.675;0.875;0.900;1" values="0;0;1;1;0;0"/></g>
+
+ <path d="M634 283 H672" fill="none" stroke="#61519e" stroke-width="2"/>
+ <g opacity="0"><path d="M634 283 H672" fill="none" stroke="#5fe6df" stroke-width="4" stroke-linecap="round"/><animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.650;0.675;0.925;0.950;1" values="0;0;1;1;0;0"/></g>
+ <rect x="673" y="159" width="251" height="268" rx="17" fill="#1a1536" stroke="#46365f"/>
+ <text x="691" y="193" fill="#b2a6d2" font-size="14">Relative performance</text>
+ <text x="691" y="245" fill="#9b8fae" font-size="45" font-weight="800">—</text>
+ <g opacity="0"><rect x="688" y="203" width="220" height="69" fill="#1a1536"/><text x="692" y="247" fill="#75e7d8" font-size="46" font-weight="800">8.0×</text><text x="826" y="243" fill="#bfb3d5" font-size="12">sample outlier</text><animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;0.600;0.99;1" values="0;1;1;0"/></g>
+ <path d="M691 277 H906" stroke="#3b3158"/>
+ <text x="691" y="307" fill="#b2a6d2" font-size="14">Decision</text>
+ <text x="691" y="335" fill="#726784" font-size="16">Pending analysis</text>
+ <g opacity="0"><rect x="685" y="312" width="223" height="44" rx="9" fill="#1a1536"/><text x="692" y="337" fill="#f7d67e" font-size="18" font-weight="750">Investigate only</text><animate attributeName="opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;0.800;0.99;1" values="0;1;1;0"/></g>
+ <rect x="690" y="367" width="217" height="38" rx="9" fill="#24203e" stroke="#433760"/>
+ <text x="799" y="391" fill="#ab9dcb" text-anchor="middle" font-size="13">Owner approval required</text>
+
+ <text x="42" y="469" fill="#c5b8e0" font-size="14" font-weight="700">PROCESS</text>
+ <g>
+  <rect x="143" y="452" width="171" height="22" rx="7" fill="#6d58ba" fill-opacity=".18"><animate attributeName="fill-opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;0.001;0.250;1" values=".18;1;.18;.18"/></rect>
+  <rect x="326" y="452" width="171" height="22" rx="7" fill="#6d58ba" fill-opacity=".18"><animate attributeName="fill-opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;0.250;0.500;1" values=".18;1;.18;.18"/></rect>
+  <rect x="509" y="452" width="171" height="22" rx="7" fill="#6d58ba" fill-opacity=".18"><animate attributeName="fill-opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;0.500;0.750;1" values=".18;1;.18;.18"/></rect>
+  <rect x="692" y="452" width="171" height="22" rx="7" fill="#6d58ba" fill-opacity=".18"><animate attributeName="fill-opacity" dur="20s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;0.750;0.990;1" values=".18;1;.18;.18"/></rect>
+  <text x="228" y="468" fill="#e3daf8" text-anchor="middle" font-size="13">Collect</text>
+  <text x="412" y="468" fill="#e3daf8" text-anchor="middle" font-size="13">Compare</text>
+  <text x="594" y="468" fill="#e3daf8" text-anchor="middle" font-size="13">Validate</text>
+  <text x="777" y="468" fill="#e3daf8" text-anchor="middle" font-size="13">Prioritize</text>
+ </g>
+ <text x="42" y="511" fill="#8d80ab" font-size="12">Illustrative workflow · synthetic views · URL validation is not malware scanning · no claimed time savings</text>
+</g>
+</svg>
