@@ -466,5 +466,12 @@
   "View development repo": "開発リポジトリを見る",
   "Preview PR {0}": "プレビュー PR {0}",
   "SignalForge preview: concentric radar rings and the statement Discover, Validate, Prioritize.": "SignalForge のプレビュー：同心円状のレーダーと「発見・検証・優先順位付け」のメッセージ。",
-  "SignalForge animated demo: discover, validate and prioritize synthetic research signals.": "SignalForge のアニメーションデモ：合成研究シグナルの発見、検証、優先順位付け。"
+  "SignalForge animated demo: discover, validate and prioritize synthetic research signals.": "SignalForge のアニメーションデモ：合成研究シグナルの発見、検証、優先順位付け。",
+  "Spot the signal. Build what matters.": "シグナルを見極め、本当に大切なものを作る。",
+  "Analyze video metadata offline and discover public GitHub repositories on request. Findings are read-only research leads, never automatic installations.": "動画メタデータをオフラインで分析し、必要に応じて公開 GitHub リポジトリを検索します。結果は読み取り専用の調査候補であり、自動インストールは行いません。",
+  "synthetic metadata records analyzed (2026-11-09)": "分析した合成メタデータ件数（2026-11-09）",
+  "median processing time, seconds": "処理時間の中央値（秒）",
+  "Measured on synthetic metadata only; no videos watched or verified human productivity gain. Marketplace release and branch protection are pending.": "合成メタデータのみの測定です。動画は視聴しておらず、人間の生産性向上も検証していません。Marketplace 公開とブランチ保護は未完了です。",
+  "View GitHub repository": "GitHub リポジトリを見る",
+  "Benchmark evidence": "ベンチマークの証拠"
 }
