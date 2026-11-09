@@ -466,5 +466,13 @@
   "View development repo": "Vidi disvolvan deponejon",
   "Preview PR {0}": "Antaŭrigarda PR {0}",
   "SignalForge preview: concentric radar rings and the statement Discover, Validate, Prioritize.": "Antaŭrigardo de SignalForge: samcentraj radarringoj kaj la moto Malkovru, Kontrolu, Prioritatigu.",
-  "SignalForge animated demo: discover, validate and prioritize synthetic research signals.": "Animacia demonstraĵo de SignalForge: malkovru, kontrolu kaj prioritatigu sintezajn esplorsignalojn."
+  "SignalForge animated demo: discover, validate and prioritize synthetic research signals.": "Animacia demonstraĵo de SignalForge: malkovru, kontrolu kaj prioritatigu sintezajn esplorsignalojn.",
+  "Spot the signal. Build what matters.": "Trovu la signalon. Konstruu tion, kio gravas.",
+  "Analyze video metadata offline and discover public GitHub repositories on request. Findings are read-only research leads, never automatic installations.": "Analizas videajn metadatenojn senrete kaj serĉas publikajn GitHub-deponejojn laŭpete. Rezultoj estas nurlegeblaj esplorpistaĵoj, neniam aŭtomataj instalaĵoj.",
+  "synthetic metadata records analyzed (2026-11-09)": "analizitaj sintezaj metadatenaj rikordoj (2026-11-09)",
+  "median processing time, seconds": "meza prilabortempo laŭ mediano, sekundoj",
+  "Measured on synthetic metadata only; no videos watched or verified human productivity gain. Marketplace release and branch protection are pending.": "Nur sintezaj metadatenoj estis mezuritaj; neniuj filmetoj estis spektitaj kaj homa produktiveca gajno ne estis kontrolita. Marketplace-eldono kaj branĉprotekto atendas.",
+  "View GitHub repository": "Vidi GitHub-deponejon",
+  "Benchmark evidence": "Pruvo de rendimenta testo",
+  "Benchmark evidence {0}": "Pruvo de rendimenta testo {0}"
 }

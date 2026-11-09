@@ -466,5 +466,13 @@
   "View development repo": "विकास रिपॉज़िटरी देखें",
   "Preview PR {0}": "पूर्वावलोकन PR {0}",
   "SignalForge preview: concentric radar rings and the statement Discover, Validate, Prioritize.": "SignalForge पूर्वावलोकन: केंद्रित रडार के छल्ले और खोजें, सत्यापित करें, प्राथमिकता दें का संदेश।",
-  "SignalForge animated demo: discover, validate and prioritize synthetic research signals.": "SignalForge का एनिमेटेड डेमो: कृत्रिम शोध संकेतों को खोजें, सत्यापित करें और प्राथमिकता दें।"
+  "SignalForge animated demo: discover, validate and prioritize synthetic research signals.": "SignalForge का एनिमेटेड डेमो: कृत्रिम शोध संकेतों को खोजें, सत्यापित करें और प्राथमिकता दें।",
+  "Spot the signal. Build what matters.": "सही संकेत पहचानें। वही बनाएँ जो महत्वपूर्ण है।",
+  "Analyze video metadata offline and discover public GitHub repositories on request. Findings are read-only research leads, never automatic installations.": "वीडियो मेटाडेटा का ऑफ़लाइन विश्लेषण करता है और अनुरोध पर सार्वजनिक GitHub रिपॉज़िटरी खोजता है। परिणाम केवल पढ़ने योग्य शोध संकेत हैं, स्वतः इंस्टॉलेशन नहीं।",
+  "synthetic metadata records analyzed (2026-11-09)": "विश्लेषित सिंथेटिक मेटाडेटा रिकॉर्ड (2026-11-09)",
+  "median processing time, seconds": "मध्यिका प्रसंस्करण समय, सेकंड",
+  "Measured on synthetic metadata only; no videos watched or verified human productivity gain. Marketplace release and branch protection are pending.": "केवल सिंथेटिक मेटाडेटा मापा गया; वीडियो नहीं देखे गए और मानव उत्पादकता लाभ सत्यापित नहीं है। Marketplace प्रकाशन और शाखा सुरक्षा लंबित हैं।",
+  "View GitHub repository": "GitHub रिपॉज़िटरी देखें",
+  "Benchmark evidence": "बेंचमार्क प्रमाण",
+  "Benchmark evidence {0}": "बेंचमार्क प्रमाण {0}"
 }

@@ -466,5 +466,13 @@
   "View development repo": "查看开发仓库",
   "Preview PR {0}": "预览 PR {0}",
   "SignalForge preview: concentric radar rings and the statement Discover, Validate, Prioritize.": "SignalForge 预览：同心雷达环及“发现、验证、排序”的标语。",
-  "SignalForge animated demo: discover, validate and prioritize synthetic research signals.": "SignalForge 动画演示：发现、验证并优先处理合成研究信号。"
+  "SignalForge animated demo: discover, validate and prioritize synthetic research signals.": "SignalForge 动画演示：发现、验证并优先处理合成研究信号。",
+  "Spot the signal. Build what matters.": "识别信号，构建真正重要的东西。",
+  "Analyze video metadata offline and discover public GitHub repositories on request. Findings are read-only research leads, never automatic installations.": "离线分析视频元数据，并按需搜索公开 GitHub 仓库。结果仅为只读研究线索，不会自动安装软件。",
+  "synthetic metadata records analyzed (2026-11-09)": "已分析的合成元数据记录（2026-11-09）",
+  "median processing time, seconds": "处理时间中位数（秒）",
+  "Measured on synthetic metadata only; no videos watched or verified human productivity gain. Marketplace release and branch protection are pending.": "仅测量合成元数据；未观看视频，也未验证人工生产率提升。Marketplace 发布和分支保护仍待完成。",
+  "View GitHub repository": "查看 GitHub 仓库",
+  "Benchmark evidence": "基准测试证据",
+  "Benchmark evidence {0}": "基准测试证据 {0}"
 }
