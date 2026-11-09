@@ -473,5 +473,6 @@
   "median processing time, seconds": "tempo mediano di elaborazione, secondi",
   "Measured on synthetic metadata only; no videos watched or verified human productivity gain. Marketplace release and branch protection are pending.": "Misurati solo metadati sintetici: nessun video visionato né guadagno di produttività umana verificato. Pubblicazione nel Marketplace e protezione del branch in sospeso.",
   "View GitHub repository": "Visualizza repository GitHub",
-  "Benchmark evidence": "Prova del benchmark"
+  "Benchmark evidence": "Prova del benchmark",
+  "Benchmark evidence {0}": "Prova del benchmark {0}"
 }
