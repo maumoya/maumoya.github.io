@@ -466,5 +466,12 @@
   "View development repo": "Entwicklungs-Repository ansehen",
   "Preview PR {0}": "Vorschau-PR {0}",
   "SignalForge preview: concentric radar rings and the statement Discover, Validate, Prioritize.": "SignalForge-Vorschau: konzentrische Radarringe und das Motto Entdecken, Prüfen, Priorisieren.",
-  "SignalForge animated demo: discover, validate and prioritize synthetic research signals.": "Animierte SignalForge-Demo: synthetische Forschungssignale erkennen, prüfen und priorisieren."
+  "SignalForge animated demo: discover, validate and prioritize synthetic research signals.": "Animierte SignalForge-Demo: synthetische Forschungssignale erkennen, prüfen und priorisieren.",
+  "Spot the signal. Build what matters.": "Erkenne das Signal. Baue, was zählt.",
+  "Analyze video metadata offline and discover public GitHub repositories on request. Findings are read-only research leads, never automatic installations.": "Analysiert Videometadaten offline und entdeckt öffentliche GitHub-Repositories auf Anfrage. Ergebnisse sind schreibgeschützte Recherchehinweise, keine automatischen Installationen.",
+  "synthetic metadata records analyzed (2026-11-09)": "analysierte synthetische Metadatensätze (2026-11-09)",
+  "median processing time, seconds": "mediane Verarbeitungszeit, Sekunden",
+  "Measured on synthetic metadata only; no videos watched or verified human productivity gain. Marketplace release and branch protection are pending.": "Nur synthetische Metadaten gemessen; keine Videos angesehen und kein menschlicher Produktivitätsgewinn belegt. Marketplace-Veröffentlichung und Branch-Schutz stehen aus.",
+  "View GitHub repository": "GitHub-Repository ansehen",
+  "Benchmark evidence": "Benchmark-Nachweis"
 }
