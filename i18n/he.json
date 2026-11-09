@@ -470,5 +470,6 @@
   "median processing time, seconds": "זמן עיבוד חציוני, בשניות",
   "Measured on synthetic metadata only; no videos watched or verified human productivity gain. Marketplace release and branch protection are pending.": "נמדדו מטא־נתונים סינתטיים בלבד; לא נצפו סרטונים ולא הוכח שיפור בפריון האנושי. פרסום ב-Marketplace והגנה על הענף עדיין ממתינים.",
   "View GitHub repository": "הצגת מאגר GitHub",
-  "Benchmark evidence": "ראיות למבחן ביצועים"
+  "Benchmark evidence": "ראיות למבחן ביצועים",
+  "Benchmark evidence {0}": "ראיות למבחן ביצועים {0}"
 }
