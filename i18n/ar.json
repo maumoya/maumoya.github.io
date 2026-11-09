@@ -466,5 +466,12 @@
   "View development repo": "عرض مستودع التطوير",
   "Preview PR {0}": "طلب السحب التجريبي {0}",
   "SignalForge preview: concentric radar rings and the statement Discover, Validate, Prioritize.": "معاينة SignalForge: حلقات رادار متحدة المركز وشعار اكتشف، تحقّق، حدّد الأولويات.",
-  "SignalForge animated demo: discover, validate and prioritize synthetic research signals.": "عرض متحرك لـ SignalForge: اكتشف إشارات البحث الاصطناعية وتحقق منها وحدد أولوياتها."
+  "SignalForge animated demo: discover, validate and prioritize synthetic research signals.": "عرض متحرك لـ SignalForge: اكتشف إشارات البحث الاصطناعية وتحقق منها وحدد أولوياتها.",
+  "Spot the signal. Build what matters.": "اكتشف الإشارة. وابنِ ما يستحق.",
+  "Analyze video metadata offline and discover public GitHub repositories on request. Findings are read-only research leads, never automatic installations.": "يحلّل بيانات الفيديو الوصفية دون اتصال ويبحث عند الطلب عن مستودعات GitHub العامة. النتائج فرص بحث للقراءة فقط وليست عمليات تثبيت تلقائية.",
+  "synthetic metadata records analyzed (2026-11-09)": "سجلات البيانات الوصفية الاصطناعية المحللة (2026-11-09)",
+  "median processing time, seconds": "الوقت الوسيط للمعالجة بالثواني",
+  "Measured on synthetic metadata only; no videos watched or verified human productivity gain. Marketplace release and branch protection are pending.": "القياس لبيانات وصفية اصطناعية فقط؛ لم تتم مشاهدة فيديوهات ولم يُثبت تحسن إنتاجية بشرية. النشر في Marketplace وحماية الفرع ما زالا معلّقين.",
+  "View GitHub repository": "عرض مستودع GitHub",
+  "Benchmark evidence": "دليل اختبار الأداء"
 }
