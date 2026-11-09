@@ -463,5 +463,12 @@
   "View development repo": "הצגת מאגר הפיתוח",
   "Preview PR {0}": "בקשת משיכה לתצוגה מקדימה {0}",
   "SignalForge preview: concentric radar rings and the statement Discover, Validate, Prioritize.": "תצוגה מקדימה של SignalForge: טבעות מכ״ם קונצנטריות והסיסמה לגלות, לאמת, לתעדף.",
-  "SignalForge animated demo: discover, validate and prioritize synthetic research signals.": "הדגמה מונפשת של SignalForge: גילוי, אימות ותיעדוף של אותות מחקר סינתטיים."
+  "SignalForge animated demo: discover, validate and prioritize synthetic research signals.": "הדגמה מונפשת של SignalForge: גילוי, אימות ותיעדוף של אותות מחקר סינתטיים.",
+  "Spot the signal. Build what matters.": "זהו את האות. בנו את מה שחשוב.",
+  "Analyze video metadata offline and discover public GitHub repositories on request. Findings are read-only research leads, never automatic installations.": "מנתח מטא־נתונים של סרטונים ללא חיבור לרשת ומחפש מאגרי GitHub ציבוריים לפי בקשה. הממצאים הם כיווני מחקר לקריאה בלבד, ללא התקנה אוטומטית.",
+  "synthetic metadata records analyzed (2026-11-09)": "רשומות מטא־נתונים סינתטיות שנותחו (2026-11-09)",
+  "median processing time, seconds": "זמן עיבוד חציוני, בשניות",
+  "Measured on synthetic metadata only; no videos watched or verified human productivity gain. Marketplace release and branch protection are pending.": "נמדדו מטא־נתונים סינתטיים בלבד; לא נצפו סרטונים ולא הוכח שיפור בפריון האנושי. פרסום ב-Marketplace והגנה על הענף עדיין ממתינים.",
+  "View GitHub repository": "הצגת מאגר GitHub",
+  "Benchmark evidence": "ראיות למבחן ביצועים"
 }
