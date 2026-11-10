@@ -474,5 +474,11 @@
   "Measured on synthetic metadata only; no videos watched or verified human productivity gain. Marketplace release and branch protection are pending.": "Mesure sur des métadonnées synthétiques uniquement ; aucune vidéo visionnée ni gain de productivité humaine vérifié. Publication Marketplace et protection de branche en attente.",
   "View GitHub repository": "Voir le dépôt GitHub",
   "Benchmark evidence": "Preuve du benchmark",
-  "Benchmark evidence {0}": "Preuve du benchmark {0}"
+  "Benchmark evidence {0}": "Preuve du benchmark {0}",
+  "crawlhound": "crawlhound",
+  "Pick the data. Get it clean. Touch nothing.": "Choisissez les données. Recevez-les propres. Sans rien toucher.",
+  "A read-only data crawler for Claude Code. Pick a preset (text, tables, links, prices, product, article) or write a schema, and it walks the site, maps single-page app states and returns clean records. It respects robots.txt, waits a second between requests and blocks every write.": "Un collecteur de données en lecture seule pour Claude Code. Choisissez un préréglage (texte, tableaux, liens, prix, produit, article) ou écrivez un schéma : il parcourt le site, cartographie les états des applications monopages et renvoie des enregistrements propres. Il respecte robots.txt, attend une seconde entre les requêtes et bloque toute écriture.",
+  "of items and fields on 4 of 4 benchmark targets": "des éléments et champs sur 4 cibles de test sur 4",
+  "of write requests that reached the site": "des requêtes d'écriture parvenues au site",
+  "Demo: crawlhound crawls a loopback shop, lists a form without sending it, blocks a POST and writes 6 items.": "Démo : crawlhound explore une boutique locale, liste un formulaire sans l'envoyer, bloque un POST et écrit 6 éléments."
 }

@@ -474,5 +474,11 @@
   "Measured on synthetic metadata only; no videos watched or verified human productivity gain. Marketplace release and branch protection are pending.": "Measured on synthetic metadata only; no videos watched or verified human productivity gain. Marketplace release and branch protection are pending.",
   "View GitHub repository": "View GitHub repository",
   "Benchmark evidence": "Benchmark evidence",
-  "Benchmark evidence {0}": "Benchmark evidence {0}"
+  "Benchmark evidence {0}": "Benchmark evidence {0}",
+  "crawlhound": "crawlhound",
+  "Pick the data. Get it clean. Touch nothing.": "Cil i ngolth. Hiro i lim. Ú-maetho nad.",
+  "A read-only data crawler for Claude Code. Pick a preset (text, tables, links, prices, product, article) or write a schema, and it walks the site, maps single-page app states and returns clean records. It respects robots.txt, waits a second between requests and blocks every write.": "Ceriad ngolth ned henna erin Claude Code. Cil teithad (teithad, tablaid, nodweth, mirion, tan, pennas) egor teitho tegil, a pedia trin i gaurdh, teitha i nadhath, a anna teithad lim. Tiria robots.txt, darthia lû imbi nirn, a hollia ilye teithad.",
+  "of items and fields on 4 of 4 benchmark targets": "o nadath ar gelydh na 4 o 4 tîr",
+  "of write requests that reached the site": "o nirn teitho i thenthant na i gaurdh",
+  "Demo: crawlhound crawls a loopback shop, lists a form without sending it, blocks a POST and writes 6 items.": "Tegin: crawlhound pedia trin bennas, tíria i nyrn ú-ortho, hollia POST a teitha 6 nadath."
 }

@@ -474,5 +474,11 @@
   "Measured on synthetic metadata only; no videos watched or verified human productivity gain. Marketplace release and branch protection are pending.": "केवल सिंथेटिक मेटाडेटा मापा गया; वीडियो नहीं देखे गए और मानव उत्पादकता लाभ सत्यापित नहीं है। Marketplace प्रकाशन और शाखा सुरक्षा लंबित हैं।",
   "View GitHub repository": "GitHub रिपॉज़िटरी देखें",
   "Benchmark evidence": "बेंचमार्क प्रमाण",
-  "Benchmark evidence {0}": "बेंचमार्क प्रमाण {0}"
+  "Benchmark evidence {0}": "बेंचमार्क प्रमाण {0}",
+  "crawlhound": "crawlhound",
+  "Pick the data. Get it clean. Touch nothing.": "डेटा चुनें। साफ़ पाएं। कुछ भी न बदलें।",
+  "A read-only data crawler for Claude Code. Pick a preset (text, tables, links, prices, product, article) or write a schema, and it walks the site, maps single-page app states and returns clean records. It respects robots.txt, waits a second between requests and blocks every write.": "Claude Code के लिए केवल-पढ़ने वाला डेटा क्रॉलर। एक प्रीसेट (टेक्स्ट, टेबल, लिंक, कीमतें, उत्पाद, लेख) चुनें या एक स्कीमा लिखें, और यह साइट पर चलता है, सिंगल-पेज ऐप की अवस्थाओं को मैप करता है और साफ़ रिकॉर्ड लौटाता है। यह robots.txt का पालन करता है, हर अनुरोध के बीच एक सेकंड रुकता है और हर लेखन को रोकता है।",
+  "of items and fields on 4 of 4 benchmark targets": "आइटम और फ़ील्ड, 4 में से 4 परीक्षण लक्ष्यों पर",
+  "of write requests that reached the site": "लेखन अनुरोध जो साइट तक पहुंचे",
+  "Demo: crawlhound crawls a loopback shop, lists a form without sending it, blocks a POST and writes 6 items.": "डेमो: crawlhound एक लोकल दुकान को क्रॉल करता है, एक फ़ॉर्म को भेजे बिना सूचीबद्ध करता है, एक POST को रोकता है और 6 आइटम लिखता है।"
 }

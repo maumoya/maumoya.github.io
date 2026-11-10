@@ -29,6 +29,7 @@
 [data-scene="adhd"]   { --s-bg: #1b1140; --s-fg: #ffffff; --s-muted: #cfc6f2; --s-accent: #c4b5fd; --s-btn: #7c3aed; --s-btn-fg: #fff; --s-line: #3b2d75; }
 [data-scene="forger"] { --s-bg: #0b1020; --s-fg: #f5f5f7; --s-muted: #b8c0d4; --s-accent: #4ade80; --s-btn: #4ade80; --s-btn-fg: #052e16; --s-line: #26304a; }
 [data-scene="signalforge"] { --s-bg: #140d2e; --s-fg: #faf7ff; --s-muted: #c9b9e5; --s-accent: #a78bfa; --s-btn: #a78bfa; --s-btn-fg: #140d2e; --s-line: #48366e; }
+[data-scene="crawlhound"] { --s-bg: #0b2a24; --s-fg: #effcf6; --s-muted: #9fe3c9; --s-accent: #5eead4; --s-btn: #5eead4; --s-btn-fg: #0b2a24; --s-line: #1e4d42; }
 [data-scene="authorship"] { --s-bg: #1b1240; --s-fg: #f5f3ff; --s-muted: #c9b8ff; --s-accent: #c9b8ff; --s-btn: #c9b8ff; --s-btn-fg: #1b1240; --s-line: #3a2d70; }
 [data-scene="ghost"]  { --s-bg: #0b1f33; --s-fg: #f2f8ff; --s-muted: #b8d4ee; --s-accent: #3fa9f5; --s-btn: #3fa9f5; --s-btn-fg: #04223a; --s-line: #1f4266; }
 [data-scene="trivia"] { --s-bg: #0b1424; --s-fg: #f3f7ff; --s-muted: #c9d3ea; --s-accent: #ffc93c; --s-btn: #ffc93c; --s-btn-fg: #1b2340; --s-line: #24345c; }
