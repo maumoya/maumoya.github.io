@@ -485,5 +485,11 @@
   "Finds which videos beat their own creator's normal, then tests your title and hook rules across creators. It reads public metadata offline, with no tracking, and never watches or downloads a video.": "Encontra quais vídeos superam o normal do próprio criador e depois testa as suas regras de títulos e ganchos entre criadores. Lê metadados públicos offline, sem rastreamento, e nunca assiste nem baixa um vídeo.",
   "real videos read and scored (2026-11-10)": "vídeos reais lidos e pontuados (2026-11-10)",
   "seconds, against 3,558 hours to watch each one once": "segundos, contra 3,558 horas para assistir a cada um uma vez",
-  "Demo: SignalForge reads 6,855 real videos from 23 public channels in 293 seconds; watching each one once would take 3,558 hours.": "Demo: o SignalForge lê 6,855 vídeos reais de 23 canais públicos em 293 segundos; assistir a cada um uma vez levaria 3,558 horas."
+  "Demo: SignalForge reads 6,855 real videos from 23 public channels in 293 seconds; watching each one once would take 3,558 hours.": "Demo: o SignalForge lê 6,855 vídeos reais de 23 canais públicos em 293 segundos; assistir a cada um uma vez levaria 3,558 horas.",
+  "truly-done": "truly-done",
+  "Is it truly done? Prove it in the app.": "Diz que está pronto. O Truly Done confere.",
+  "A skill for Claude Code that proves a change works in the running app. It opens your own app in headless Chrome, clicks and types like a user, and checks each claim on the live page: pass, fail or cannot tell, with a screenshot. It runs on your machine only: no telemetry, no cloud, no account.": "Uma skill para o Claude Code que prova que uma mudança funciona na app em execução. Abre a sua própria app no Chrome sem interface, clica e digita como um usuário e confere cada afirmação na página real: passa, falha ou não dá para saber, com uma captura de tela. Roda só na sua máquina: sem telemetria, sem nuvem, sem conta.",
+  "of 9 planted bugs caught": "de 9 bugs plantados detectados",
+  "caught by a page-returns-200 check": "detectados por uma verificação de que a página responde 200",
+  "Demo: a watchdog walks through a running app, clicks Add, checks five claims on the live page and stamps the verdict FAIL because the item is gone after a reload.": "Demo: um cão farejador percorre uma app em execução, clica em Adicionar, confere cinco afirmações na página real e carimba o veredito FALHA porque o item some depois de recarregar."
 }

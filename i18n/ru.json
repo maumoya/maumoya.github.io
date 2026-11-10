@@ -485,5 +485,11 @@
   "Finds which videos beat their own creator's normal, then tests your title and hook rules across creators. It reads public metadata offline, with no tracking, and never watches or downloads a video.": "Находит видео, которые превосходят обычный уровень своего автора, а затем проверяет ваши правила для заголовков и хуков на разных авторах. Читает открытые метаданные офлайн, без отслеживания, и никогда не смотрит и не скачивает видео.",
   "real videos read and scored (2026-11-10)": "реальных видео прочитано и оценено (2026-11-10)",
   "seconds, against 3,558 hours to watch each one once": "секунды против 3,558 часов, чтобы посмотреть каждое один раз",
-  "Demo: SignalForge reads 6,855 real videos from 23 public channels in 293 seconds; watching each one once would take 3,558 hours.": "Демо: SignalForge читает 6,855 реальных видео с 23 открытых каналов за 293 секунды; просмотр каждого по одному разу занял бы 3,558 часов."
+  "Demo: SignalForge reads 6,855 real videos from 23 public channels in 293 seconds; watching each one once would take 3,558 hours.": "Демо: SignalForge читает 6,855 реальных видео с 23 открытых каналов за 293 секунды; просмотр каждого по одному разу занял бы 3,558 часов.",
+  "truly-done": "truly-done",
+  "Is it truly done? Prove it in the app.": "Говорит «готово». Truly Done проверяет.",
+  "A skill for Claude Code that proves a change works in the running app. It opens your own app in headless Chrome, clicks and types like a user, and checks each claim on the live page: pass, fail or cannot tell, with a screenshot. It runs on your machine only: no telemetry, no cloud, no account.": "Навык для Claude Code, который доказывает, что изменение работает в запущенном приложении. Он открывает ваше приложение в Chrome без интерфейса, кликает и печатает как пользователь и проверяет каждое утверждение на живой странице: пройдено, не пройдено или нельзя определить, со снимком экрана. Работает только на вашей машине: без телеметрии, без облака, без аккаунта.",
+  "of 9 planted bugs caught": "из 9 заложенных ошибок найдено",
+  "caught by a page-returns-200 check": "найдено проверкой, что страница отвечает 200",
+  "Demo: a watchdog walks through a running app, clicks Add, checks five claims on the live page and stamps the verdict FAIL because the item is gone after a reload.": "Демо: гончая проходит по запущенному приложению, нажимает «Добавить», проверяет пять утверждений на живой странице и ставит вердикт НЕ ПРОЙДЕНО, потому что элемент исчез после перезагрузки."
 }
