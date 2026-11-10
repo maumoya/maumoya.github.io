@@ -480,5 +480,6 @@
   "A read-only data crawler for Claude Code. Pick a preset (text, tables, links, prices, product, article) or write a schema, and it walks the site, maps single-page app states and returns clean records. It respects robots.txt, waits a second between requests and blocks every write.": "Un collecteur de données en lecture seule pour Claude Code. Choisissez un préréglage (texte, tableaux, liens, prix, produit, article) ou écrivez un schéma : il parcourt le site, cartographie les états des applications monopages et renvoie des enregistrements propres. Il respecte robots.txt, attend une seconde entre les requêtes et bloque toute écriture.",
   "of items and fields on 4 of 4 benchmark targets": "des éléments et champs sur 4 cibles de test sur 4",
   "of write requests that reached the site": "des requêtes d'écriture parvenues au site",
-  "Demo: crawlhound crawls a loopback shop, lists a form without sending it, blocks a POST and writes 6 items.": "Démo : crawlhound explore une boutique locale, liste un formulaire sans l'envoyer, bloque un POST et écrit 6 éléments."
+  "Demo: a spider walks seven pages of a shop, reads each one, blocks the checkout POST and carries 6 prices home.": "Démo : une araignée parcourt sept pages d'une boutique, lit chacune, bloque le POST du paiement et rapporte 6 prix.",
+  "Marketplace {0}": "Marketplace {0}"
 }
