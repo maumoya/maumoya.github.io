@@ -481,5 +481,9 @@
   "of items and fields on 4 of 4 benchmark targets": "の項目とフィールド（4 つのテスト対象のうち 4 つ）",
   "of write requests that reached the site": "のサイトに届いた書き込みリクエスト",
   "Demo: a spider walks seven pages of a shop, reads each one, blocks the checkout POST and carries 6 prices home.": "デモ：クモがショップの7ページを歩き、各ページを読み、決済の POST を止め、6件の価格を持ち帰ります。",
-  "Marketplace {0}": "Marketplace {0}"
+  "Marketplace {0}": "Marketplace {0}",
+  "Finds which videos beat their own creator's normal, then tests your title and hook rules across creators. It reads public metadata offline, with no tracking, and never watches or downloads a video.": "クリエイター自身の通常値を上回った動画を見つけ、タイトルやフックのルールを複数のクリエイターで検証します。公開メタデータをオフラインで読み取り、トラッキングはなく、動画を視聴もダウンロードもしません。",
+  "real videos read and scored (2026-11-10)": "本の実在動画を読み取り採点（2026-11-10）",
+  "seconds, against 3,558 hours to watch each one once": "秒。すべてを一度ずつ視聴すると 3,558 時間",
+  "Demo: SignalForge reads 6,855 real videos from 23 public channels in 293 seconds; watching each one once would take 3,558 hours.": "デモ：SignalForge が 23 の公開チャンネルの実在動画 6,855 本を 293 秒で読み取ります。一度ずつ視聴すると 3,558 時間かかります。"
 }

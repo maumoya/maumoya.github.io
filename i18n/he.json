@@ -478,5 +478,9 @@
   "of items and fields on 4 of 4 benchmark targets": "מהפריטים והשדות ב-4 מתוך 4 יעדי בדיקה",
   "of write requests that reached the site": "מבקשות הכתיבה שהגיעו לאתר",
   "Demo: a spider walks seven pages of a shop, reads each one, blocks the checkout POST and carries 6 prices home.": "הדגמה: עכביש עובר על שבעה עמודים בחנות, קורא כל אחד, חוסם את בקשת ה־POST של התשלום ומביא הביתה 6 מחירים.",
-  "Marketplace {0}": "Marketplace {0}"
+  "Marketplace {0}": "Marketplace {0}",
+  "Finds which videos beat their own creator's normal, then tests your title and hook rules across creators. It reads public metadata offline, with no tracking, and never watches or downloads a video.": "מוצא אילו סרטונים עקפו את הרגיל של היוצר שלהם, ואז בודק את כללי הכותרות והפתיחים שלך על פני יוצרים שונים. קורא מטא-נתונים ציבוריים במצב לא מקוון, ללא מעקב, ולעולם אינו צופה בסרטון או מוריד אותו.",
+  "real videos read and scored (2026-11-10)": "סרטונים אמיתיים נקראו ודורגו (2026-11-10)",
+  "seconds, against 3,558 hours to watch each one once": "שניות, לעומת 3,558 שעות כדי לצפות בכל אחד פעם אחת",
+  "Demo: SignalForge reads 6,855 real videos from 23 public channels in 293 seconds; watching each one once would take 3,558 hours.": "הדגמה: SignalForge קורא 6,855 סרטונים אמיתיים מ-23 ערוצים ציבוריים ב-293 שניות; צפייה בכל אחד פעם אחת הייתה אורכת 3,558 שעות."
 }

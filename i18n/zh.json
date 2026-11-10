@@ -481,5 +481,9 @@
   "of items and fields on 4 of 4 benchmark targets": "的条目和字段准确（4 个测试目标中的 4 个）",
   "of write requests that reached the site": "的写入请求到达了网站",
   "Demo: a spider walks seven pages of a shop, reads each one, blocks the checkout POST and carries 6 prices home.": "演示：一只蜘蛛走过商店的七个页面，逐页读取，拦下结账 POST，把 6 个价格带回家。",
-  "Marketplace {0}": "Marketplace {0}"
+  "Marketplace {0}": "Marketplace {0}",
+  "Finds which videos beat their own creator's normal, then tests your title and hook rules across creators. It reads public metadata offline, with no tracking, and never watches or downloads a video.": "找出哪些视频超过了创作者自己的平均水平，再在不同创作者之间检验你的标题和开头规则。离线读取公开元数据，不做跟踪，从不观看或下载视频。",
+  "real videos read and scored (2026-11-10)": "个真实视频已读取并评分（2026-11-10）",
+  "seconds, against 3,558 hours to watch each one once": "秒，而每个视频看一遍需要 3,558 小时",
+  "Demo: SignalForge reads 6,855 real videos from 23 public channels in 293 seconds; watching each one once would take 3,558 hours.": "演示：SignalForge 在 293 秒内读取了 23 个公开频道的 6,855 个真实视频；每个看一遍需要 3,558 小时。"
 }

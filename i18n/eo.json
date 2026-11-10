@@ -481,5 +481,9 @@
   "of items and fields on 4 of 4 benchmark targets": "de eroj kaj kampoj ĉe 4 el 4 testaj celoj",
   "of write requests that reached the site": "de skribaj petoj, kiuj atingis la retejon",
   "Demo: a spider walks seven pages of a shop, reads each one, blocks the checkout POST and carries 6 prices home.": "Demo: araneo trairas sep paĝojn de vendejo, legas ĉiun, blokas la pagan POST kaj portas 6 prezojn hejmen.",
-  "Marketplace {0}": "Marketplace {0}"
+  "Marketplace {0}": "Marketplace {0}",
+  "Finds which videos beat their own creator's normal, then tests your title and hook rules across creators. It reads public metadata offline, with no tracking, and never watches or downloads a video.": "Trovas, kiuj videoj superas la normon de sia propra kreinto, kaj poste testas viajn regulojn pri titoloj kaj hokoj trans kreintoj. Ĝi legas publikajn metadatenojn senrete, sen spurado, kaj neniam spektas aŭ elŝutas videon.",
+  "real videos read and scored (2026-11-10)": "realaj videoj legitaj kaj poentitaj (2026-11-10)",
+  "seconds, against 3,558 hours to watch each one once": "sekundoj, kontraŭ 3,558 horoj por spekti ĉiun unufoje",
+  "Demo: SignalForge reads 6,855 real videos from 23 public channels in 293 seconds; watching each one once would take 3,558 hours.": "Demonstraĵo: SignalForge legas 6,855 realajn videojn el 23 publikaj kanaloj en 293 sekundoj; spekti ĉiun unufoje daŭrus 3,558 horojn."
 }

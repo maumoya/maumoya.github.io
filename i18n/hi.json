@@ -481,5 +481,9 @@
   "of items and fields on 4 of 4 benchmark targets": "आइटम और फ़ील्ड, 4 में से 4 परीक्षण लक्ष्यों पर",
   "of write requests that reached the site": "लेखन अनुरोध जो साइट तक पहुंचे",
   "Demo: a spider walks seven pages of a shop, reads each one, blocks the checkout POST and carries 6 prices home.": "डेमो: एक मकड़ी दुकान के सात पन्नों पर चलती है, हर पन्ना पढ़ती है, चेकआउट POST रोकती है और 6 कीमतें घर लाती है।",
-  "Marketplace {0}": "Marketplace {0}"
+  "Marketplace {0}": "Marketplace {0}",
+  "Finds which videos beat their own creator's normal, then tests your title and hook rules across creators. It reads public metadata offline, with no tracking, and never watches or downloads a video.": "यह पता लगाता है कि कौन से वीडियो अपने ही क्रिएटर के सामान्य स्तर से आगे निकले, फिर आपके शीर्षक और हुक के नियमों को कई क्रिएटरों पर परखता है। यह सार्वजनिक मेटाडेटा ऑफ़लाइन पढ़ता है, बिना ट्रैकिंग के, और कभी कोई वीडियो न देखता है न डाउनलोड करता है।",
+  "real videos read and scored (2026-11-10)": "असली वीडियो पढ़े और आँके गए (2026-11-10)",
+  "seconds, against 3,558 hours to watch each one once": "सेकंड, जबकि हर एक को एक बार देखने में 3,558 घंटे लगते",
+  "Demo: SignalForge reads 6,855 real videos from 23 public channels in 293 seconds; watching each one once would take 3,558 hours.": "डेमो: SignalForge 23 सार्वजनिक चैनलों के 6,855 असली वीडियो 293 सेकंड में पढ़ता है; हर एक को एक बार देखने में 3,558 घंटे लगते।"
 }

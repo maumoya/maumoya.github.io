@@ -481,5 +481,9 @@
   "of items and fields on 4 of 4 benchmark targets": "элементов и полей на 4 из 4 тестовых целей",
   "of write requests that reached the site": "запросов на запись дошло до сайта",
   "Demo: a spider walks seven pages of a shop, reads each one, blocks the checkout POST and carries 6 prices home.": "Демо: паук обходит семь страниц магазина, читает каждую, блокирует POST оплаты и приносит домой 6 цен.",
-  "Marketplace {0}": "Marketplace {0}"
+  "Marketplace {0}": "Marketplace {0}",
+  "Finds which videos beat their own creator's normal, then tests your title and hook rules across creators. It reads public metadata offline, with no tracking, and never watches or downloads a video.": "Находит видео, которые превосходят обычный уровень своего автора, а затем проверяет ваши правила для заголовков и хуков на разных авторах. Читает открытые метаданные офлайн, без отслеживания, и никогда не смотрит и не скачивает видео.",
+  "real videos read and scored (2026-11-10)": "реальных видео прочитано и оценено (2026-11-10)",
+  "seconds, against 3,558 hours to watch each one once": "секунды против 3,558 часов, чтобы посмотреть каждое один раз",
+  "Demo: SignalForge reads 6,855 real videos from 23 public channels in 293 seconds; watching each one once would take 3,558 hours.": "Демо: SignalForge читает 6,855 реальных видео с 23 открытых каналов за 293 секунды; просмотр каждого по одному разу занял бы 3,558 часов."
 }

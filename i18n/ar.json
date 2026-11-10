@@ -481,5 +481,9 @@
   "of items and fields on 4 of 4 benchmark targets": "من العناصر والحقول في 4 من 4 أهداف اختبار",
   "of write requests that reached the site": "من طلبات الكتابة التي وصلت إلى الموقع",
   "Demo: a spider walks seven pages of a shop, reads each one, blocks the checkout POST and carries 6 prices home.": "عرض: عنكبوت يتنقل بين سبع صفحات في متجر، يقرأ كل صفحة، يمنع طلب POST الخاص بالدفع ويعود بستة أسعار.",
-  "Marketplace {0}": "Marketplace {0}"
+  "Marketplace {0}": "Marketplace {0}",
+  "Finds which videos beat their own creator's normal, then tests your title and hook rules across creators. It reads public metadata offline, with no tracking, and never watches or downloads a video.": "يكتشف أي المقاطع تجاوزت المعدل المعتاد لصانعها نفسه، ثم يختبر قواعدك للعناوين والافتتاحيات عبر عدة صنّاع. يقرأ البيانات الوصفية العامة دون اتصال ودون تتبع، ولا يشاهد أي مقطع ولا ينزّله أبدًا.",
+  "real videos read and scored (2026-11-10)": "مقطعًا حقيقيًا تمت قراءته وتقييمه (2026-11-10)",
+  "seconds, against 3,558 hours to watch each one once": "ثانية، مقابل 3,558 ساعة لمشاهدة كل مقطع مرة واحدة",
+  "Demo: SignalForge reads 6,855 real videos from 23 public channels in 293 seconds; watching each one once would take 3,558 hours.": "عرض توضيحي: SignalForge يقرأ 6,855 مقطعًا حقيقيًا من 23 قناة عامة في 293 ثانية؛ مشاهدة كل منها مرة واحدة تستغرق 3,558 ساعة."
 }
