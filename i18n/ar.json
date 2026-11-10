@@ -480,5 +480,6 @@
   "A read-only data crawler for Claude Code. Pick a preset (text, tables, links, prices, product, article) or write a schema, and it walks the site, maps single-page app states and returns clean records. It respects robots.txt, waits a second between requests and blocks every write.": "زاحف بيانات للقراءة فقط لـ Claude Code. اختر إعدادًا مسبقًا (نص، جداول، روابط، أسعار، منتج، مقال) أو اكتب مخططًا، فيتجول في الموقع ويرسم حالات تطبيقات الصفحة الواحدة ويعيد سجلات نظيفة. يحترم robots.txt وينتظر ثانية بين الطلبات ويمنع أي كتابة.",
   "of items and fields on 4 of 4 benchmark targets": "من العناصر والحقول في 4 من 4 أهداف اختبار",
   "of write requests that reached the site": "من طلبات الكتابة التي وصلت إلى الموقع",
-  "Demo: crawlhound crawls a loopback shop, lists a form without sending it, blocks a POST and writes 6 items.": "عرض: يزحف crawlhound في متجر محلي، ويسرد نموذجًا دون إرساله، ويمنع طلب POST ويكتب 6 عناصر."
+  "Demo: a spider walks seven pages of a shop, reads each one, blocks the checkout POST and carries 6 prices home.": "عرض: عنكبوت يتنقل بين سبع صفحات في متجر، يقرأ كل صفحة، يمنع طلب POST الخاص بالدفع ويعود بستة أسعار.",
+  "Marketplace {0}": "Marketplace {0}"
 }

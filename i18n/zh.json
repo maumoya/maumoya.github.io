@@ -480,5 +480,6 @@
   "A read-only data crawler for Claude Code. Pick a preset (text, tables, links, prices, product, article) or write a schema, and it walks the site, maps single-page app states and returns clean records. It respects robots.txt, waits a second between requests and blocks every write.": "一款为 Claude Code 打造的只读数据爬虫。选择一个预设（文本、表格、链接、价格、产品、文章）或编写一个结构定义，它会遍历网站、映射单页应用的各个状态，并返回干净的记录。它遵守 robots.txt，每次请求间隔一秒，并拦截所有写入操作。",
   "of items and fields on 4 of 4 benchmark targets": "的条目和字段准确（4 个测试目标中的 4 个）",
   "of write requests that reached the site": "的写入请求到达了网站",
-  "Demo: crawlhound crawls a loopback shop, lists a form without sending it, blocks a POST and writes 6 items.": "演示：crawlhound 爬取一个本地商店，列出表单但不提交，拦截一个 POST 请求，并写出 6 条记录。"
+  "Demo: a spider walks seven pages of a shop, reads each one, blocks the checkout POST and carries 6 prices home.": "演示：一只蜘蛛走过商店的七个页面，逐页读取，拦下结账 POST，把 6 个价格带回家。",
+  "Marketplace {0}": "Marketplace {0}"
 }
