@@ -474,5 +474,11 @@
   "Measured on synthetic metadata only; no videos watched or verified human productivity gain. Marketplace release and branch protection are pending.": "仅测量合成元数据；未观看视频，也未验证人工生产率提升。Marketplace 发布和分支保护仍待完成。",
   "View GitHub repository": "查看 GitHub 仓库",
   "Benchmark evidence": "基准测试证据",
-  "Benchmark evidence {0}": "基准测试证据 {0}"
+  "Benchmark evidence {0}": "基准测试证据 {0}",
+  "crawlhound": "crawlhound",
+  "Pick the data. Get it clean. Touch nothing.": "选好数据，拿到干净结果，什么都不改动。",
+  "A read-only data crawler for Claude Code. Pick a preset (text, tables, links, prices, product, article) or write a schema, and it walks the site, maps single-page app states and returns clean records. It respects robots.txt, waits a second between requests and blocks every write.": "一款为 Claude Code 打造的只读数据爬虫。选择一个预设（文本、表格、链接、价格、产品、文章）或编写一个结构定义，它会遍历网站、映射单页应用的各个状态，并返回干净的记录。它遵守 robots.txt，每次请求间隔一秒，并拦截所有写入操作。",
+  "of items and fields on 4 of 4 benchmark targets": "的条目和字段准确（4 个测试目标中的 4 个）",
+  "of write requests that reached the site": "的写入请求到达了网站",
+  "Demo: crawlhound crawls a loopback shop, lists a form without sending it, blocks a POST and writes 6 items.": "演示：crawlhound 爬取一个本地商店，列出表单但不提交，拦截一个 POST 请求，并写出 6 条记录。"
 }

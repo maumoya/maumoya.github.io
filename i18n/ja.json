@@ -474,5 +474,11 @@
   "Measured on synthetic metadata only; no videos watched or verified human productivity gain. Marketplace release and branch protection are pending.": "合成メタデータのみの測定です。動画は視聴しておらず、人間の生産性向上も検証していません。Marketplace 公開とブランチ保護は未完了です。",
   "View GitHub repository": "GitHub リポジトリを見る",
   "Benchmark evidence": "ベンチマークの証拠",
-  "Benchmark evidence {0}": "ベンチマークの証拠 {0}"
+  "Benchmark evidence {0}": "ベンチマークの証拠 {0}",
+  "crawlhound": "crawlhound",
+  "Pick the data. Get it clean. Touch nothing.": "データを選ぶ。きれいに受け取る。何も変えない。",
+  "A read-only data crawler for Claude Code. Pick a preset (text, tables, links, prices, product, article) or write a schema, and it walks the site, maps single-page app states and returns clean records. It respects robots.txt, waits a second between requests and blocks every write.": "Claude Code 用の読み取り専用データクローラー。プリセット（テキスト、表、リンク、価格、商品、記事）を選ぶかスキーマを書くと、サイトを巡回し、シングルページアプリの状態をマップして、きれいなレコードを返します。robots.txt を守り、リクエストの間に 1 秒待ち、あらゆる書き込みをブロックします。",
+  "of items and fields on 4 of 4 benchmark targets": "の項目とフィールド（4 つのテスト対象のうち 4 つ）",
+  "of write requests that reached the site": "のサイトに届いた書き込みリクエスト",
+  "Demo: crawlhound crawls a loopback shop, lists a form without sending it, blocks a POST and writes 6 items.": "デモ：crawlhound がローカルのショップを巡回し、フォームを送信せずに一覧化し、POST をブロックして 6 件を書き出します。"
 }
