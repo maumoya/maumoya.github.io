@@ -482,5 +482,11 @@
   "Finds which videos beat their own creator's normal, then tests your title and hook rules across creators. It reads public metadata offline, with no tracking, and never watches or downloads a video.": "מוצא אילו סרטונים עקפו את הרגיל של היוצר שלהם, ואז בודק את כללי הכותרות והפתיחים שלך על פני יוצרים שונים. קורא מטא-נתונים ציבוריים במצב לא מקוון, ללא מעקב, ולעולם אינו צופה בסרטון או מוריד אותו.",
   "real videos read and scored (2026-11-10)": "סרטונים אמיתיים נקראו ודורגו (2026-11-10)",
   "seconds, against 3,558 hours to watch each one once": "שניות, לעומת 3,558 שעות כדי לצפות בכל אחד פעם אחת",
-  "Demo: SignalForge reads 6,855 real videos from 23 public channels in 293 seconds; watching each one once would take 3,558 hours.": "הדגמה: SignalForge קורא 6,855 סרטונים אמיתיים מ-23 ערוצים ציבוריים ב-293 שניות; צפייה בכל אחד פעם אחת הייתה אורכת 3,558 שעות."
+  "Demo: SignalForge reads 6,855 real videos from 23 public channels in 293 seconds; watching each one once would take 3,558 hours.": "הדגמה: SignalForge קורא 6,855 סרטונים אמיתיים מ-23 ערוצים ציבוריים ב-293 שניות; צפייה בכל אחד פעם אחת הייתה אורכת 3,558 שעות.",
+  "truly-done": "truly-done",
+  "Is it truly done? Prove it in the app.": "הוא אומר שסיים. Truly Done בודק.",
+  "A skill for Claude Code that proves a change works in the running app. It opens your own app in headless Chrome, clicks and types like a user, and checks each claim on the live page: pass, fail or cannot tell, with a screenshot. It runs on your machine only: no telemetry, no cloud, no account.": "מיומנות ל-Claude Code שמוכיחה ששינוי עובד באפליקציה הרצה. היא פותחת את האפליקציה שלך ב-Chrome ללא ממשק, לוחצת ומקלידה כמו משתמש, ובודקת כל טענה בדף החי: עבר, נכשל או אי אפשר לדעת, עם צילום מסך. היא רצה רק במחשב שלך: בלי טלמטריה, בלי ענן, בלי חשבון.",
+  "of 9 planted bugs caught": "מתוך 9 באגים שתולים נתפסו",
+  "caught by a page-returns-200 check": "נתפסו בבדיקה שהדף מחזיר 200",
+  "Demo: a watchdog walks through a running app, clicks Add, checks five claims on the live page and stamps the verdict FAIL because the item is gone after a reload.": "הדגמה: כלב ציד עובר באפליקציה רצה, לוחץ על הוספה, בודק חמש טענות בדף החי וחותם את פסק הדין נכשל כי הפריט נעלם אחרי טעינה מחדש."
 }

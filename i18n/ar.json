@@ -485,5 +485,11 @@
   "Finds which videos beat their own creator's normal, then tests your title and hook rules across creators. It reads public metadata offline, with no tracking, and never watches or downloads a video.": "يكتشف أي المقاطع تجاوزت المعدل المعتاد لصانعها نفسه، ثم يختبر قواعدك للعناوين والافتتاحيات عبر عدة صنّاع. يقرأ البيانات الوصفية العامة دون اتصال ودون تتبع، ولا يشاهد أي مقطع ولا ينزّله أبدًا.",
   "real videos read and scored (2026-11-10)": "مقطعًا حقيقيًا تمت قراءته وتقييمه (2026-11-10)",
   "seconds, against 3,558 hours to watch each one once": "ثانية، مقابل 3,558 ساعة لمشاهدة كل مقطع مرة واحدة",
-  "Demo: SignalForge reads 6,855 real videos from 23 public channels in 293 seconds; watching each one once would take 3,558 hours.": "عرض توضيحي: SignalForge يقرأ 6,855 مقطعًا حقيقيًا من 23 قناة عامة في 293 ثانية؛ مشاهدة كل منها مرة واحدة تستغرق 3,558 ساعة."
+  "Demo: SignalForge reads 6,855 real videos from 23 public channels in 293 seconds; watching each one once would take 3,558 hours.": "عرض توضيحي: SignalForge يقرأ 6,855 مقطعًا حقيقيًا من 23 قناة عامة في 293 ثانية؛ مشاهدة كل منها مرة واحدة تستغرق 3,558 ساعة.",
+  "truly-done": "truly-done",
+  "Is it truly done? Prove it in the app.": "يقول إنه انتهى. Truly Done يتحقق.",
+  "A skill for Claude Code that proves a change works in the running app. It opens your own app in headless Chrome, clicks and types like a user, and checks each claim on the live page: pass, fail or cannot tell, with a screenshot. It runs on your machine only: no telemetry, no cloud, no account.": "مهارة لـ Claude Code تثبت أن التغيير يعمل في التطبيق أثناء تشغيله. تفتح تطبيقك في Chrome بلا واجهة، تنقر وتكتب مثل المستخدم، وتتحقق من كل ادعاء على الصفحة الحية: نجح، فشل أو لا يمكن الجزم، مع لقطة شاشة. تعمل على جهازك فقط: بلا قياس عن بُعد، بلا سحابة، بلا حساب.",
+  "of 9 planted bugs caught": "من 9 أخطاء مزروعة تم اكتشافها",
+  "caught by a page-returns-200 check": "اكتشفها فحص أن الصفحة ترد بـ 200",
+  "Demo: a watchdog walks through a running app, clicks Add, checks five claims on the live page and stamps the verdict FAIL because the item is gone after a reload.": "عرض: كلب صيد يتجول في تطبيق يعمل، ينقر على «إضافة»، يتحقق من خمسة ادعاءات على الصفحة الحية ويختم الحكم «فشل» لأن العنصر اختفى بعد إعادة التحميل."
 }

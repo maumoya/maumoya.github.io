@@ -485,5 +485,11 @@
   "Finds which videos beat their own creator's normal, then tests your title and hook rules across creators. It reads public metadata offline, with no tracking, and never watches or downloads a video.": "クリエイター自身の通常値を上回った動画を見つけ、タイトルやフックのルールを複数のクリエイターで検証します。公開メタデータをオフラインで読み取り、トラッキングはなく、動画を視聴もダウンロードもしません。",
   "real videos read and scored (2026-11-10)": "本の実在動画を読み取り採点（2026-11-10）",
   "seconds, against 3,558 hours to watch each one once": "秒。すべてを一度ずつ視聴すると 3,558 時間",
-  "Demo: SignalForge reads 6,855 real videos from 23 public channels in 293 seconds; watching each one once would take 3,558 hours.": "デモ：SignalForge が 23 の公開チャンネルの実在動画 6,855 本を 293 秒で読み取ります。一度ずつ視聴すると 3,558 時間かかります。"
+  "Demo: SignalForge reads 6,855 real videos from 23 public channels in 293 seconds; watching each one once would take 3,558 hours.": "デモ：SignalForge が 23 の公開チャンネルの実在動画 6,855 本を 293 秒で読み取ります。一度ずつ視聴すると 3,558 時間かかります。",
+  "truly-done": "truly-done",
+  "Is it truly done? Prove it in the app.": "「完了」と言う。Truly Done が確かめる。",
+  "A skill for Claude Code that proves a change works in the running app. It opens your own app in headless Chrome, clicks and types like a user, and checks each claim on the live page: pass, fail or cannot tell, with a screenshot. It runs on your machine only: no telemetry, no cloud, no account.": "変更が実行中のアプリで本当に動くことを証明する Claude Code 用スキル。あなた自身のアプリをヘッドレス Chrome で開き、ユーザーのようにクリックして入力し、実際のページで主張を一つずつ確認します。結果は合格、不合格、判定不能のいずれかで、スクリーンショット付き。あなたのマシンだけで動作し、テレメトリもクラウドもアカウントもありません。",
+  "of 9 planted bugs caught": "仕込んだ 9 件のバグを検出",
+  "caught by a page-returns-200 check": "「ページが 200 を返す」チェックで検出",
+  "Demo: a watchdog walks through a running app, clicks Add, checks five claims on the live page and stamps the verdict FAIL because the item is gone after a reload.": "デモ：猟犬が実行中のアプリを歩き、「追加」をクリックし、実際のページで 5 つの主張を確認して、再読み込み後に項目が消えたため「不合格」の判定を押します。"
 }

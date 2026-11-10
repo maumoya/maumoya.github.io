@@ -485,5 +485,11 @@
   "Finds which videos beat their own creator's normal, then tests your title and hook rules across creators. It reads public metadata offline, with no tracking, and never watches or downloads a video.": "Finds which videos beat their own creator's normal, then tests your title and hook rules across creators. It reads public metadata offline, with no tracking, and never watches or downloads a video.",
   "real videos read and scored (2026-11-10)": "real videos read and scored (2026-11-10)",
   "seconds, against 3,558 hours to watch each one once": "seconds, against 3,558 hours to watch each one once",
-  "Demo: SignalForge reads 6,855 real videos from 23 public channels in 293 seconds; watching each one once would take 3,558 hours.": "Demo: SignalForge reads 6,855 real videos from 23 public channels in 293 seconds; watching each one once would take 3,558 hours."
+  "Demo: SignalForge reads 6,855 real videos from 23 public channels in 293 seconds; watching each one once would take 3,558 hours.": "Demo: SignalForge reads 6,855 real videos from 23 public channels in 293 seconds; watching each one once would take 3,558 hours.",
+  "truly-done": "truly-done",
+  "Is it truly done? Prove it in the app.": "Tukusqañam nin. Truly Done chiqanchan.",
+  "A skill for Claude Code that proves a change works in the running app. It opens your own app in headless Chrome, clicks and types like a user, and checks each claim on the live page: pass, fail or cannot tell, with a screenshot. It runs on your machine only: no telemetry, no cloud, no account.": "Claude Code-paq huk yachay, purichkaq app-pi huk tikray llamk'asqanta rikuchin. Kikiykipa app-niykita mana uyayuq Chrome-pi kichan, ruraq hina ñit'in qillqantaq, sapa nisqata kawsaq rap'ipi chiqanchan: yallin, pantan utaq mana yachakunchu, huk rikch'aywan. Makinaykillapi purin: mana telemetria, mana phuyu, mana cuenta.",
+  "of 9 planted bugs caught": "9 churasqa pantaykunamanta tarisqa",
+  "caught by a page-returns-200 check": "rap'i 200 kutichisqanta qhawaywan tarisqa",
+  "Demo: a watchdog walks through a running app, clicks Add, checks five claims on the live page and stamps the verdict FAIL because the item is gone after a reload.": "Qhawachiy: huk maskaq allqu purichkaq app-ta purin, Yapay nisqata ñit'in, kawsaq rap'ipi pichqa nisqata chiqanchan, PANTAN nisqa taripayta churan, imaraykuchus musuqmanta kichaptin chay imapas chinkan."
 }

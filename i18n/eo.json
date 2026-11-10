@@ -485,5 +485,11 @@
   "Finds which videos beat their own creator's normal, then tests your title and hook rules across creators. It reads public metadata offline, with no tracking, and never watches or downloads a video.": "Trovas, kiuj videoj superas la normon de sia propra kreinto, kaj poste testas viajn regulojn pri titoloj kaj hokoj trans kreintoj. Ĝi legas publikajn metadatenojn senrete, sen spurado, kaj neniam spektas aŭ elŝutas videon.",
   "real videos read and scored (2026-11-10)": "realaj videoj legitaj kaj poentitaj (2026-11-10)",
   "seconds, against 3,558 hours to watch each one once": "sekundoj, kontraŭ 3,558 horoj por spekti ĉiun unufoje",
-  "Demo: SignalForge reads 6,855 real videos from 23 public channels in 293 seconds; watching each one once would take 3,558 hours.": "Demonstraĵo: SignalForge legas 6,855 realajn videojn el 23 publikaj kanaloj en 293 sekundoj; spekti ĉiun unufoje daŭrus 3,558 horojn."
+  "Demo: SignalForge reads 6,855 real videos from 23 public channels in 293 seconds; watching each one once would take 3,558 hours.": "Demonstraĵo: SignalForge legas 6,855 realajn videojn el 23 publikaj kanaloj en 293 sekundoj; spekti ĉiun unufoje daŭrus 3,558 horojn.",
+  "truly-done": "truly-done",
+  "Is it truly done? Prove it in the app.": "Ĝi diras preta. Truly Done kontrolas.",
+  "A skill for Claude Code that proves a change works in the running app. It opens your own app in headless Chrome, clicks and types like a user, and checks each claim on the live page: pass, fail or cannot tell, with a screenshot. It runs on your machine only: no telemetry, no cloud, no account.": "Lerto por Claude Code, kiu pruvas, ke ŝanĝo funkcias en la ruliĝanta aplikaĵo. Ĝi malfermas vian propran aplikaĵon en senkapa Chrome, klakas kaj tajpas kiel uzanto, kaj kontrolas ĉiun aserton sur la vera paĝo: sukcesas, malsukcesas aŭ ne eblas diri, kun ekrankopio. Ĝi ruliĝas nur sur via maŝino: neniu telemetrio, neniu nubo, neniu konto.",
+  "of 9 planted bugs caught": "el 9 plantitaj cimoj trovitaj",
+  "caught by a page-returns-200 check": "trovitaj per kontrolo, ke la paĝo respondas 200",
+  "Demo: a watchdog walks through a running app, clicks Add, checks five claims on the live page and stamps the verdict FAIL because the item is gone after a reload.": "Demonstro: ĉashundo trairas ruliĝantan aplikaĵon, klakas Aldoni, kontrolas kvin asertojn sur la vera paĝo kaj stampas la verdikton MALSUKCESO, ĉar la ero malaperis post reŝargo."
 }

@@ -485,5 +485,11 @@
   "Finds which videos beat their own creator's normal, then tests your title and hook rules across creators. It reads public metadata offline, with no tracking, and never watches or downloads a video.": "找出哪些视频超过了创作者自己的平均水平，再在不同创作者之间检验你的标题和开头规则。离线读取公开元数据，不做跟踪，从不观看或下载视频。",
   "real videos read and scored (2026-11-10)": "个真实视频已读取并评分（2026-11-10）",
   "seconds, against 3,558 hours to watch each one once": "秒，而每个视频看一遍需要 3,558 小时",
-  "Demo: SignalForge reads 6,855 real videos from 23 public channels in 293 seconds; watching each one once would take 3,558 hours.": "演示：SignalForge 在 293 秒内读取了 23 个公开频道的 6,855 个真实视频；每个看一遍需要 3,558 小时。"
+  "Demo: SignalForge reads 6,855 real videos from 23 public channels in 293 seconds; watching each one once would take 3,558 hours.": "演示：SignalForge 在 293 秒内读取了 23 个公开频道的 6,855 个真实视频；每个看一遍需要 3,558 小时。",
+  "truly-done": "truly-done",
+  "Is it truly done? Prove it in the app.": "它说完成了。Truly Done 来核实。",
+  "A skill for Claude Code that proves a change works in the running app. It opens your own app in headless Chrome, clicks and types like a user, and checks each claim on the live page: pass, fail or cannot tell, with a screenshot. It runs on your machine only: no telemetry, no cloud, no account.": "一个 Claude Code 技能，用来证明改动在运行中的应用里确实有效。它用无头 Chrome 打开你自己的应用，像用户一样点击和输入，并在真实页面上核对每一条断言：通过、失败或无法判断，并附截图。只在你的电脑上运行：无遥测、无云端、无账号。",
+  "of 9 planted bugs caught": "的 9 个预埋缺陷被发现",
+  "caught by a page-returns-200 check": "被“页面返回 200”检查发现",
+  "Demo: a watchdog walks through a running app, clicks Add, checks five claims on the live page and stamps the verdict FAIL because the item is gone after a reload.": "演示：一只猎犬走过运行中的应用，点击“添加”，在真实页面上核对五条断言，并盖上“失败”的结论，因为刷新后条目不见了。"
 }
