@@ -491,5 +491,11 @@
   "A skill for Claude Code that proves a change works in the running app. It opens your own app in headless Chrome, clicks and types like a user, and checks each claim on the live page: pass, fail or cannot tell, with a screenshot. It runs on your machine only: no telemetry, no cloud, no account.": "一个 Claude Code 技能，用来证明改动在运行中的应用里确实有效。它用无头 Chrome 打开你自己的应用，像用户一样点击和输入，并在真实页面上核对每一条断言：通过、失败或无法判断，并附截图。只在你的电脑上运行：无遥测、无云端、无账号。",
   "of 9 planted bugs caught": "的 9 个预埋缺陷被发现",
   "caught by a page-returns-200 check": "被“页面返回 200”检查发现",
-  "Demo: a watchdog walks through a running app, clicks Add, checks five claims on the live page and stamps the verdict FAIL because the item is gone after a reload.": "演示：一只猎犬走过运行中的应用，点击“添加”，在真实页面上核对五条断言，并盖上“失败”的结论，因为刷新后条目不见了。"
+  "Demo: a watchdog walks through a running app, clicks Add, checks five claims on the live page and stamps the verdict FAIL because the item is gone after a reload.": "演示：一只猎犬走过运行中的应用，点击“添加”，在真实页面上核对五条断言，并盖上“失败”的结论，因为刷新后条目不见了。",
+  "token-meter": "token-meter",
+  "Know your tokens before you compact.": "压缩之前，先看清你的 token。",
+  "A live, read-only token meter for Claude Code: how full each session's context is, turns left before auto-compact, a cold-cache warning and the MCP servers and skills you never call. Advise mode proposes what to cut and improve: compact, start fresh, trim, plan and build on different models, a local model, a new skill. It runs offline: no telemetry, no hooks, no settings edits.": "Claude Code 的实时只读 token 计量器：每个会话的上下文有多满、距离自动压缩还剩几轮、缓存变冷提醒，以及你从未调用的 MCP 服务器和技能。建议模式会提出可以削减和改进的地方：压缩、重新开始、精简、用不同模型规划和构建、本地模型、新技能。完全离线运行：无遥测、无钩子、不改设置。",
+  "turns-left forecast within 2 turns, on {0} real compactions (was {1})": "剩余轮数预测误差在 2 轮以内，基于 {0} 次真实压缩（之前为 {1}）",
+  "network calls, hooks or settings edits": "网络调用、钩子或设置修改",
+  "Demo: each turn pours more context into a tank; the meter counts the fill and the turns left, marks the cache COLD, the CI gate stamps FAIL past the 92% auto-compact line, then advise mode proposes what to cut.": "演示：每一轮都向水箱倒入更多上下文；计量器统计填充量和剩余轮数，把缓存标为 COLD，越过 92% 自动压缩线时 CI 闸门盖上 FAIL，然后建议模式提出可以削减的内容。"
 }

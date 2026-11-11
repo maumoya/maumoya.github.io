@@ -58,5 +58,23 @@
   "source": "launch/facts.json of maumoya/boredom-blaster-play",
   "date": "2026-11-03",
   "from": "maumoya/boredom-blaster-play#size_kb"
+ },
+ "tm_close_now": {
+  "value": "49%",
+  "source": "launch/facts.json of maumoya/token-meter",
+  "date": "2026-11-11",
+  "from": "maumoya/token-meter#close_now"
+ },
+ "tm_close_before": {
+  "value": "40%",
+  "source": "launch/facts.json of maumoya/token-meter",
+  "date": "2026-11-11",
+  "from": "maumoya/token-meter#close_before"
+ },
+ "tm_compactions": {
+  "value": "617",
+  "source": "launch/facts.json of maumoya/token-meter",
+  "date": "2026-11-11",
+  "from": "maumoya/token-meter#compactions"
  }
 }
