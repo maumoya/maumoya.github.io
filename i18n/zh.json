@@ -497,5 +497,6 @@
   "A live, read-only token meter for Claude Code: how full each session's context is, turns left before auto-compact, a cold-cache warning and the MCP servers and skills you never call. Advise mode proposes what to cut and improve: compact, start fresh, trim, plan and build on different models, a local model, a new skill. It runs offline: no telemetry, no hooks, no settings edits.": "Claude Code 的实时只读 token 计量器：每个会话的上下文有多满、距离自动压缩还剩几轮、缓存变冷提醒，以及你从未调用的 MCP 服务器和技能。建议模式会提出可以削减和改进的地方：压缩、重新开始、精简、用不同模型规划和构建、本地模型、新技能。完全离线运行：无遥测、无钩子、不改设置。",
   "turns-left forecast within 2 turns, on {0} real compactions (was {1})": "剩余轮数预测误差在 2 轮以内，基于 {0} 次真实压缩（之前为 {1}）",
   "network calls, hooks or settings edits": "网络调用、钩子或设置修改",
-  "Demo: each turn pours more context into a tank; the meter counts the fill and the turns left, marks the cache COLD, the CI gate stamps FAIL past the 92% auto-compact line, then advise mode proposes what to cut.": "演示：每一轮都向水箱倒入更多上下文；计量器统计填充量和剩余轮数，把缓存标为 COLD，越过 92% 自动压缩线时 CI 闸门盖上 FAIL，然后建议模式提出可以削减的内容。"
+  "Demo: each turn pours more context into a tank; the meter counts the fill and the turns left, marks the cache COLD, the CI gate stamps FAIL past the 92% auto-compact line, then advise mode proposes what to cut.": "演示：每一轮都向水箱倒入更多上下文；计量器统计填充量和剩余轮数，把缓存标为 COLD，越过 92% 自动压缩线时 CI 闸门盖上 FAIL，然后建议模式提出可以削减的内容。",
+  "New in v0.5.0: what each CLAUDE.md, rule and skill header costs on every call, a status line meter, and the tokens each cut saves.": "v0.5.0 新增：每个 CLAUDE.md、规则和技能头在每次调用中的开销，一个状态栏计量器，以及每项削减能省下的 token。"
 }
