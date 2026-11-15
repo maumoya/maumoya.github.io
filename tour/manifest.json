@@ -1,0 +1,40 @@
+{
+  "title": "Mauricio Moya",
+  "frames": 495,
+  "width": 1280,
+  "height": 720,
+  "pattern": "frames/{n}.jpg",
+  "pad": 5,
+  "sections": [
+    {
+      "start": 0,
+      "end": 74,
+      "heading": "Mauricio Moya",
+      "body": "Finance leader and AI agent engineer."
+    },
+    {
+      "start": 105,
+      "end": 179,
+      "heading": "Development",
+      "body": "AI agents that ship, measured with evals."
+    },
+    {
+      "start": 210,
+      "end": 284,
+      "heading": "Education",
+      "body": ""
+    },
+    {
+      "start": 315,
+      "end": 389,
+      "heading": "Compliance",
+      "body": ""
+    },
+    {
+      "start": 420,
+      "end": 494,
+      "heading": "Finance",
+      "body": ""
+    }
+  ]
+}
