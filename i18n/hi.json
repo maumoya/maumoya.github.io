@@ -499,5 +499,7 @@
   "network calls, hooks or settings edits": "नेटवर्क कॉल, हुक या सेटिंग बदलाव",
   "Demo: each turn pours more context into a tank; the meter counts the fill and the turns left, marks the cache COLD, the CI gate stamps FAIL past the 92% auto-compact line, then advise mode proposes what to cut.": "डेमो: हर टर्न टंकी में और संदर्भ डालता है; मीटर भराव और बचे टर्न गिनता है, कैश को COLD बताता है, 92% ऑटो-कॉम्पैक्ट रेखा पार होने पर CI गेट FAIL की मुहर लगाता है, फिर सलाह मोड बताता है क्या काटें।",
   "New in v0.5.0: what each CLAUDE.md, rule and skill header costs on every call, a status line meter, and the tokens each cut saves.": "v0.5.0 में नया: हर CLAUDE.md, नियम और स्किल हेडर हर कॉल पर कितना खर्च करता है, एक स्टेटस लाइन मीटर, और हर कटौती से बचने वाले टोकन।",
-  "Take the tour": "टूर देखें"
+  "Take the tour": "टूर देखें",
+  "See project": "प्रोजेक्ट देखें",
+  "Pause": "रोकें"
 }

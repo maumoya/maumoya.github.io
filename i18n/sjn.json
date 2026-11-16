@@ -499,5 +499,7 @@
   "network calls, hooks or settings edits": "nath, gail egor nathad",
   "Demo: each turn pours more context into a tank; the meter counts the fill and the turns left, marks the cache COLD, the CI gate stamps FAIL past the 92% auto-compact line, then advise mode proposes what to cut.": "Tegeth: pân rîw neth gonath nan i-thaen; i-nediad gonetha, teitha i-thîn COLD, i-annon CI vedha FAIL na 92%, ar i-cheled nedia i-noth.",
   "New in v0.5.0: what each CLAUDE.md, rule and skill header costs on every call, a status line meter, and the tokens each cut saves.": "Sen vi v0.5.0: man ne gar pân CLAUDE.md, sant ar dôl curu vi pân lam, nediad vi i-thîr, ar i-thîw i-noth pân hedha.",
-  "Take the tour": "Tolo na lend"
+  "Take the tour": "Tolo na lend",
+  "See project": "Tiro i dant",
+  "Pause": "Dartho"
 }
