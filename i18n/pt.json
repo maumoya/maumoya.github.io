@@ -499,5 +499,7 @@
   "network calls, hooks or settings edits": "chamadas de rede, hooks ou mudanças de configuração",
   "Demo: each turn pours more context into a tank; the meter counts the fill and the turns left, marks the cache COLD, the CI gate stamps FAIL past the 92% auto-compact line, then advise mode proposes what to cut.": "Demo: cada turno despeja mais contexto num tanque; o medidor conta o enchimento e os turnos restantes, marca o cache como COLD, o portão de CI carimba FAIL ao passar a linha de compactação automática de 92% e então o modo conselho propõe o que cortar.",
   "New in v0.5.0: what each CLAUDE.md, rule and skill header costs on every call, a status line meter, and the tokens each cut saves.": "Novo na v0.5.0: quanto custa em cada chamada cada CLAUDE.md, regra e cabeçalho de skill, um medidor na linha de status e os tokens que cada corte economiza.",
-  "Take the tour": "Faça o tour"
+  "Take the tour": "Faça o tour",
+  "See project": "Ver projeto",
+  "Pause": "Pausar"
 }

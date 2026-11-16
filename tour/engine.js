@@ -79,6 +79,8 @@
       if (i < 0) return;
       caption.querySelector("h2").textContent = man.sections[i].heading;
       caption.querySelector("p").textContent = man.sections[i].body;
+      var more = caption.querySelector("a");
+      if (more) { more.hidden = !man.sections[i].link; if (man.sections[i].link) more.href = man.sections[i].link; }
       if (man.sections[i].heading || man.sections[i].body) {
         requestAnimationFrame(function () { caption.classList.add("on"); });
       }
@@ -91,7 +93,33 @@
       target = p * (man.frames - 1);
     }
 
-    function tick() {
+    // Autoplay: the page scrolls itself at one frame per video frame until the visitor scrolls, taps or presses a key.
+    var playBtn = document.getElementById("play");
+    var auto = !reduce, last = 0, carry = 0;
+    function setAuto(on) { auto = on; last = 0; if (playBtn) playBtn.textContent = on ? "Pause" : "Play"; }
+    function userTook() { if (auto) setAuto(false); }
+    ["wheel", "touchstart", "keydown"].forEach(function (ev) { window.addEventListener(ev, userTook, { passive: true }); });
+    if (playBtn) {
+      playBtn.hidden = false;
+      playBtn.addEventListener("click", function (ev) {
+        ev.stopPropagation();
+        if (!auto && window.scrollY >= document.documentElement.scrollHeight - window.innerHeight - 2) window.scrollTo(0, 0);
+        setAuto(!auto);
+      });
+    }
+    function autoStep(now) {
+      if (!auto) return;
+      if (last) {
+        carry += Math.min(100, now - last) / 1000 * (man.fps || 24) * PX_PER_FRAME;
+        var px = Math.floor(carry);
+        if (px > 0) { carry -= px; window.scrollBy(0, px); }
+        if (window.scrollY >= document.documentElement.scrollHeight - window.innerHeight - 1) setAuto(false);
+      }
+      last = now;
+    }
+
+    function tick(now) {
+      autoStep(now);
       shown += (target - shown) * (reduce ? 1 : EASE);
       if (Math.abs(target - shown) < 0.01) shown = target;
       var n = Math.round(shown);
@@ -112,6 +140,7 @@
     resize();
     onScroll();
     preload(0);
+    setAuto(auto);
     requestAnimationFrame(tick);
   }
 
