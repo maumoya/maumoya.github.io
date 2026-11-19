@@ -1,0 +1,20 @@
+# Mauricio Moya
+
+> Mauricio Moya, MBA: ผู้นำด้านการเงินและวิศวกรเอเจนต์ AI งาน FP&A ระบบการเงินอัตโนมัติ แดชบอร์ด และเอเจนต์ AI ที่ช่วยลดต้นทุน เปิดรับตำแหน่งงานและงานที่ปรึกษา
+
+ไทย (Thai). English: https://maumoya.github.io/llms.txt
+
+## หน้า
+
+- [Mauricio Moya — ผู้นำด้านการเงิน และวิศวกร AI Agent](https://maumoya.github.io/th/): Mauricio Moya, MBA: ผู้นำด้านการเงินและวิศวกรเอเจนต์ AI งาน FP&A ระบบการเงินอัตโนมัติ แดชบอร์ด และเอเจนต์ AI ที่ช่วยลดต้นทุน เปิดรับตำแหน่งงานและงานที่ปรึกษา
+- [Mauricio Moya — FP&A กระแสเงินสด และระบบการเงินอัตโนมัติ](https://maumoya.github.io/th/finance/): ผู้นำ FP&A ที่มี MBA: งบประมาณ การพยากรณ์ กระแสเงินสด ลูกหนี้ และกลยุทธ์การระดมทุน บนข้อมูลที่สะอาด แดชบอร์ด และระบบอัตโนมัติ
+- [Mauricio Moya — วิศวกร AI Agent และระบบอัตโนมัติ](https://maumoya.github.io/th/development/): วิศวกรเอเจนต์ AI: สกิลและเวิร์กโฟลว์ของเอเจนต์สำหรับ Claude Code วัดผลด้วย eval เสริมความแข็งแรง และเผยแพร่จริง Python, SQL, ระบบอัตโนมัติ เปิดรับตำแหน่งงานและงานที่ปรึกษา
+- [Mauricio Moya — การควบคุมภายใน การปฏิบัติตามเงื่อนไขทุน และการตรวจสอบ](https://maumoya.github.io/th/compliance/): การควบคุมภายใน การปฏิบัติตามเงื่อนไขทุน ความพร้อมรับการตรวจสอบ และความปลอดภัย ที่ฝังอยู่ในระบบการเงิน เพื่อให้บัญชีมั่นคงเมื่อผู้สอบบัญชีมาตรวจ
+- [Mauricio Moya — สอนด้านข้อมูล การเงิน และ AI](https://maumoya.github.io/th/education/): การสอนระดับมหาวิทยาลัย การติวด้านข้อมูล และเวิร์กช็อป AI ด้านการเงิน ข้อมูล และ AI ที่ทำให้ทีมดูแลสิ่งที่สร้างขึ้นได้เอง
+
+## Links
+
+- LinkedIn: https://www.linkedin.com/in/mba-mmoyat/
+- GitHub: https://github.com/maumoya
+- X: https://x.com/mau_amt
+- YouTube: https://www.youtube.com/@maumoya85

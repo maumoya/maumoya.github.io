@@ -1,0 +1,20 @@
+# Mauricio Moya
+
+> Mauricio Moya, MBA: מוביל פיננסי ומהנדס סוכני בינה מלאכותית. FP&A, אוטומציה פיננסית, דשבורדים וסוכני AI שמקטינים עלויות. פתוח לתפקידים ולייעוץ.
+
+עברית (Hebrew). English: https://maumoya.github.io/llms.txt
+
+## עמודים
+
+- [Mauricio Moya — מנהיג פיננסי ומהנדס סוכני AI](https://maumoya.github.io/he/): Mauricio Moya, MBA: מוביל פיננסי ומהנדס סוכני בינה מלאכותית. FP&A, אוטומציה פיננסית, דשבורדים וסוכני AI שמקטינים עלויות. פתוח לתפקידים ולייעוץ.
+- [Mauricio Moya — FP&A, תזרים מזומנים ואוטומציה פיננסית](https://maumoya.github.io/he/finance/): מוביל FP&A בעל MBA: תקציב, תחזיות, תזרים מזומנים, חייבים ואסטרטגיית מימון, על נתונים נקיים, דשבורדים ואוטומציה.
+- [Mauricio Moya — מהנדס סוכני AI ואוטומציה](https://maumoya.github.io/he/development/): מהנדס סוכני AI: מיומנויות סוכנים ותהליכי עבודה ל-Claude Code, נמדדים ב-evals, מוקשחים ומושקים. Python, SQL, אוטומציה. פתוח לתפקידים ולייעוץ.
+- [Mauricio Moya — בקרות פנימיות, ציות למענקים וביקורת](https://maumoya.github.io/he/compliance/): בקרות פנימיות, ציות לתנאי מענקים, מוכנות לביקורת ואבטחה מובנים במערכות הכספים, כדי שהספרים יעמדו כשהמבקר מתקשר.
+- [Mauricio Moya — הוראת נתונים, פיננסים ו-AI](https://maumoya.github.io/he/education/): הוראה באוניברסיטה, שיעורי נתונים וסדנאות AI בפיננסים, נתונים ו-AI, שמשאירים צוותים מסוגלים להפעיל את מה שנבנה.
+
+## Links
+
+- LinkedIn: https://www.linkedin.com/in/mba-mmoyat/
+- GitHub: https://github.com/maumoya
+- X: https://x.com/mau_amt
+- YouTube: https://www.youtube.com/@maumoya85

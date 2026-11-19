@@ -1,0 +1,20 @@
+# Mauricio Moya
+
+> Mauricio Moya, MBA: líder financeiro e engenheiro de agentes de IA. FP&A, automação financeira, dashboards e agentes de IA que cortam custos. Aberto a vagas e consultoria.
+
+Português (Portuguese). English: https://maumoya.github.io/llms.txt
+
+## Páginas
+
+- [Mauricio Moya — Líder financeiro e engenheiro de agentes de IA](https://maumoya.github.io/pt/): Mauricio Moya, MBA: líder financeiro e engenheiro de agentes de IA. FP&A, automação financeira, dashboards e agentes de IA que cortam custos. Aberto a vagas e consultoria.
+- [Mauricio Moya — FP&A, fluxo de caixa e automação financeira](https://maumoya.github.io/pt/finance/): Líder de FP&A com MBA: orçamento, projeções, fluxo de caixa, contas a receber e estratégia de captação, sobre dados limpos, dashboards e automação.
+- [Mauricio Moya — Engenheiro de agentes de IA e automação](https://maumoya.github.io/pt/development/): Engenheiro de agentes de IA: skills e fluxos de trabalho para o Claude Code, medidos com evals, reforçados e entregues. Python, SQL, automação. Aberto a vagas e consultoria.
+- [Mauricio Moya — Controles internos, compliance de subvenções e auditoria](https://maumoya.github.io/pt/compliance/): Controles internos, conformidade de subsídios, preparação para auditoria e segurança embutidos nos sistemas financeiros, para que os livros se sustentem quando o auditor ligar.
+- [Mauricio Moya — Ensino de dados, finanças e IA](https://maumoya.github.io/pt/education/): Ensino universitário, tutoria de dados e workshops de IA em finanças, dados e IA que deixam as equipes capazes de operar o que foi construído.
+
+## Links
+
+- LinkedIn: https://www.linkedin.com/in/mba-mmoyat/
+- GitHub: https://github.com/maumoya
+- X: https://x.com/mau_amt
+- YouTube: https://www.youtube.com/@maumoya85

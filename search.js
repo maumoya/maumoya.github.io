@@ -4,6 +4,9 @@
 (function () {
   var me = document.currentScript;
   var base = new URL('.', me ? me.src : location.href);
+  // On a translated page (/es/...) results open the same language's pages.
+  var pageLang = document.documentElement.getAttribute('data-page-lang');
+  if (pageLang) base = new URL(pageLang + '/', base);
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var T = function (s) { return (window.mmT || String)(s); };
   var MAX = 5, FIND = 'mm-find';

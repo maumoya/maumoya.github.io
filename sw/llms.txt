@@ -1,0 +1,20 @@
+# Mauricio Moya
+
+> Mauricio Moya, MBA: kiongozi wa fedha na mhandisi wa mawakala wa AI. FP&A, uendeshaji otomatiki wa fedha, dashibodi na mawakala wa AI wanaopunguza gharama. Yuko tayari kwa ajira na ushauri.
+
+Kiswahili (Swahili). English: https://maumoya.github.io/llms.txt
+
+## Kurasa
+
+- [Mauricio Moya — Kiongozi wa Fedha na Mhandisi wa Mawakala wa AI](https://maumoya.github.io/sw/): Mauricio Moya, MBA: kiongozi wa fedha na mhandisi wa mawakala wa AI. FP&A, uendeshaji otomatiki wa fedha, dashibodi na mawakala wa AI wanaopunguza gharama. Yuko tayari kwa ajira na ushauri.
+- [Mauricio Moya — FP&A, Mtiririko wa Fedha na Uendeshaji Otomatiki wa Fedha](https://maumoya.github.io/sw/finance/): Kiongozi wa FP&A mwenye MBA: bajeti, utabiri, mtiririko wa fedha, madeni ya kupokea na mkakati wa ufadhili, juu ya data safi, dashibodi na uendeshaji otomatiki.
+- [Mauricio Moya — Mhandisi wa Mawakala wa AI na Uendeshaji Otomatiki](https://maumoya.github.io/sw/development/): Mhandisi wa mawakala wa AI: ujuzi na mitiririko ya kazi ya mawakala kwa Claude Code, iliyopimwa kwa evals, kuimarishwa na kuzinduliwa. Python, SQL, uendeshaji otomatiki. Yuko tayari kwa ajira na ushauri.
+- [Mauricio Moya — Udhibiti wa Ndani, Uzingatiaji wa Ruzuku na Ukaguzi](https://maumoya.github.io/sw/compliance/): Udhibiti wa ndani, utiifu wa ruzuku, utayari wa ukaguzi na usalama vilivyojengwa ndani ya mifumo ya fedha, ili vitabu visimame imara mkaguzi anapokuja.
+- [Mauricio Moya — Ufundishaji wa Data, Fedha na AI](https://maumoya.github.io/sw/education/): Ufundishaji wa chuo kikuu, mafunzo ya data na warsha za AI katika fedha, data na AI, zinazowaacha timu wakiweza kuendesha kilichojengwa.
+
+## Links
+
+- LinkedIn: https://www.linkedin.com/in/mba-mmoyat/
+- GitHub: https://github.com/maumoya
+- X: https://x.com/mau_amt
+- YouTube: https://www.youtube.com/@maumoya85

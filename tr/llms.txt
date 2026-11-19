@@ -1,0 +1,20 @@
+# Mauricio Moya
+
+> Mauricio Moya, MBA: finans lideri ve yapay zekâ ajan mühendisi. FP&A, finans otomasyonu, panolar ve maliyeti düşüren yapay zekâ ajanları. İş tekliflerine ve danışmanlığa açık.
+
+Türkçe (Turkish). English: https://maumoya.github.io/llms.txt
+
+## Sayfalar
+
+- [Mauricio Moya — Finans Lideri ve Yapay Zekâ Ajan Mühendisi](https://maumoya.github.io/tr/): Mauricio Moya, MBA: finans lideri ve yapay zekâ ajan mühendisi. FP&A, finans otomasyonu, panolar ve maliyeti düşüren yapay zekâ ajanları. İş tekliflerine ve danışmanlığa açık.
+- [Mauricio Moya — FP&A, Nakit Akışı ve Finans Otomasyonu](https://maumoya.github.io/tr/finance/): MBA sahibi FP&A lideri: bütçeleme, tahminleme, nakit akışı, alacaklar ve fonlama stratejisi; temiz veri, panolar ve otomasyon üzerinde.
+- [Mauricio Moya — Yapay Zekâ Ajan Mühendisi ve Otomasyon](https://maumoya.github.io/tr/development/): Yapay zekâ ajan mühendisi: Claude Code için ajan becerileri ve iş akışları; eval'lerle ölçülmüş, güçlendirilmiş ve yayımlanmış. Python, SQL, otomasyon. İş tekliflerine ve danışmanlığa açık.
+- [Mauricio Moya — İç Kontrol, Hibe Uyumu ve Denetim](https://maumoya.github.io/tr/compliance/): Finans sistemlerine yerleşik iç kontroller, hibe uyumu, denetime hazırlık ve güvenlik; denetçi geldiğinde defterler sağlam kalsın diye.
+- [Mauricio Moya — Veri, Finans ve Yapay Zekâ Eğitimi](https://maumoya.github.io/tr/education/): Finans, veri ve yapay zekâ alanında üniversite dersleri, veri özel dersleri ve yapay zekâ atölyeleri; ekipler kurulanı kendileri yürütebilsin diye.
+
+## Links
+
+- LinkedIn: https://www.linkedin.com/in/mba-mmoyat/
+- GitHub: https://github.com/maumoya
+- X: https://x.com/mau_amt
+- YouTube: https://www.youtube.com/@maumoya85

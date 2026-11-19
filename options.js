@@ -283,9 +283,22 @@
   function t(s) { return (lang !== 'en' && dict[s]) || s; }
   window.mmT = t;
 
+  // Pages under /<id>/ are pre-translated by tools/seo.py (for search engines); English pages have no mark.
+  var PAGE_LANG = root.getAttribute('data-page-lang') || 'en';
+  var SITE = new URL('.', base); // options.js sits at the site root
+  // The same page in another language: /finance/#x -> /es/finance/#x. Languages without a page use English.
+  function langURL(id) {
+    var rest = location.pathname;
+    if (rest.indexOf(SITE.pathname) !== 0) return null;
+    rest = rest.slice(SITE.pathname.length);
+    if (PAGE_LANG !== 'en') rest = rest.slice(PAGE_LANG.length + 1);
+    return new URL((id !== 'en' && ready(id) ? id + '/' : '') + rest, SITE).href + location.hash;
+  }
+  function pageOf(id) { return id !== 'en' && ready(id) ? id : 'en'; }
+
   function render() {
     if (!units) collect();
-    units.forEach(function (u) {
+    if (PAGE_LANG === 'en') units.forEach(function (u) {
       var tr = lang !== 'en' && dict[u.key];
       if (!tr) { u.el.replaceChildren.apply(u.el, u.orig); return; }
       var out = [], last = 0, m;
@@ -298,8 +311,10 @@
       if (last < tr.length) out.push(document.createTextNode(tr.slice(last)));
       u.el.replaceChildren.apply(u.el, out);
     });
-    attrs.forEach(function (x) { x.el.setAttribute(x.a, (lang !== 'en' && dict[x.key]) || x.orig); });
-    document.title = t(norm(origTitle));
+    if (PAGE_LANG === 'en') {
+      attrs.forEach(function (x) { x.el.setAttribute(x.a, (lang !== 'en' && dict[x.key]) || x.orig); });
+      document.title = t(norm(origTitle));
+    }
     document.querySelectorAll('[data-t]').forEach(function (el) {
       if (el.dataset.tText) el.textContent = t(el.dataset.t);
       else el.setAttribute('aria-label', t(el.dataset.t));
@@ -319,6 +334,11 @@
     }
     chosen = L.id;
     if (fromUser) save('mm-lang', L.id);
+    // Each language has its own address: go there, so the URL, links and search engines agree.
+    if (pageOf(L.id) !== PAGE_LANG) {
+      var to = langURL(L.id);
+      if (to) { (fromUser ? location.assign : location.replace).call(location, to); return; }
+    }
     // No translation yet: the page stays in English, the choice stays checked.
     if (L.id === 'en' || !ready(L.id)) return apply(null);
     fetch(new URL('i18n/' + L.id + '.json', base)).then(function (r) { return r.ok ? r.json() : null; })
@@ -682,7 +702,8 @@
     }
     return 'en';
   }
-  var startLang = load('mm-lang', '') || guess();
+  // A translated page shows its own language; an English page follows the saved choice or the browser.
+  var startLang = PAGE_LANG !== 'en' ? PAGE_LANG : load('mm-lang', '') || guess();
   setLang(startLang, false);
   if (startLang === 'en') render();
   sync();
