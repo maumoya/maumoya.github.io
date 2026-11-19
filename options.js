@@ -303,6 +303,14 @@
   }
 
   // ---------- Theme ----------
+  // Light / Dark / System for the Minimal theme; named themes keep their own fixed palette.
+  var MODES = [{ id: 'system', name: 'System' }, { id: 'light', name: 'Light' }, { id: 'dark', name: 'Dark' }];
+  function setMode(id, fromUser) {
+    if (id !== 'light' && id !== 'dark') id = 'system';
+    if (id === 'system') root.removeAttribute('data-mode'); else root.dataset.mode = id;
+    if (fromUser) { save('mm-mode', id); if (root.dataset.theme) setTheme('clean', true); }
+    sync();
+  }
   function setTheme(id, fromUser) {
     if (!ALL_THEMES.some(function (x) { return x.id === id; })) id = 'clean';
     if (id === 'clean') root.removeAttribute('data-theme'); else root.dataset.theme = id;
@@ -536,6 +544,9 @@
       // A searched-for choice stays in view next to the pinned ones.
       if (!q && r.checked) r.closest('label').hidden = false;
     });
+    panel.querySelectorAll('input[name="mm-mode"]').forEach(function (r) { r.checked = r.value === (root.dataset.mode || 'system'); });
+    // A named theme keeps its own palette, so the mode row dims until Minimal is back.
+    panel.querySelector('.set-mode').classList.toggle('idle', !!root.dataset.theme);
     panel.querySelectorAll('input[name="mm-music"]').forEach(function (r) { r.checked = r.value === sound.music; r.disabled = !sound.on; });
     var sb = panel.querySelector('.set-sound button'), sv = panel.querySelector('.set-sound input');
     sb.setAttribute('aria-pressed', String(sound.on));
@@ -563,7 +574,7 @@
     '<path class="w" d="M16 9.5a3.5 3.5 0 0 1 0 5M18.5 7a7 7 0 0 1 0 10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>' +
     '<path class="x" d="M16.5 9.5l5 5m0-5l-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>' +
     '<input type="range" min="0" max="100" step="5" data-t="Volume"><span class="set-vol" aria-hidden="true"></span></div></fieldset>' +
-    radios('music', MUSIC, 'Music') + radios('theme', THEMES, 'Theme') +
+    radios('music', MUSIC, 'Music') + radios('mode', MODES, 'Mode') + radios('theme', THEMES, 'Theme') +
     radios('theme', BRANDS, 'Inspired by').replace('</fieldset>', '<small class="set-note" data-t="Colors only. Not affiliated with these companies." data-t-text="1">' + t('Colors only. Not affiliated with these companies.') + '</small></fieldset>').replace('class="set-theme"', 'class="set-theme set-brands"') + radios('lang', LANGS, 'Language').replace('<div class="set-lang">', '<input type="search" class="set-find" data-t="Find a language" placeholder="' + t('Find a language') + '" aria-label="' + t('Find a language') + '" autocomplete="off" spellcheck="false"><div class="set-lang">');
 
   var navIn = document.querySelector('.nav-in');
@@ -606,6 +617,7 @@
     var r = e.target;
     if (r.name === 'mm-theme') setTheme(r.value, true);
     else if (r.name === 'mm-lang') setLang(r.value, true);
+    else if (r.name === 'mm-mode') setMode(r.value, true);
     else if (r.name === 'mm-music') { sound.setMusic(r.value); sync(); }
     sound.blip();
   });
@@ -623,6 +635,7 @@
     if (a && !panel.contains(a)) sound.blip();
   }, true);
 
+  setMode(load('mm-mode', 'system'), false);
   setTheme(load('mm-theme', 'clean'), false);
   // The menu bar matches the HANDS ON headline width (CSS reads --hands-w on desktop).
   var hands = document.querySelector('.v3-hands');

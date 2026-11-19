@@ -553,5 +553,9 @@
   "I map your invoicing and reimbursement cycle, find where cash waits, and set the cadence that took one nonprofit from 90 to 30 days.": "أرسم خريطة لدورة الفوترة والسداد لديك، وأجد أين ينتظر النقد، وأضع الإيقاع الذي نقل منظمة غير ربحية من 90 يومًا إلى 30.",
   "See technology {0}": "اطّلع على التقنية {0}",
   "Inspired by": "مستوحى من",
-  "Colors only. Not affiliated with these companies.": "الألوان فقط. لا انتماء لهذه الشركات."
+  "Colors only. Not affiliated with these companies.": "الألوان فقط. لا انتماء لهذه الشركات.",
+  "Mode": "الوضع",
+  "System": "النظام",
+  "Light": "فاتح",
+  "Dark": "داكن"
 }

@@ -553,5 +553,9 @@
   "I map your invoicing and reimbursement cycle, find where cash waits, and set the cadence that took one nonprofit from 90 to 30 days.": "我梳理你的开票和报销周期，找出资金停滞之处，并设定节奏，曾帮一家非营利组织把周期从 90 天缩短到 30 天。",
   "See technology {0}": "查看技术 {0}",
   "Inspired by": "灵感来源",
-  "Colors only. Not affiliated with these companies.": "仅借用配色。与这些公司无关联。"
+  "Colors only. Not affiliated with these companies.": "仅借用配色。与这些公司无关联。",
+  "Mode": "模式",
+  "System": "跟随系统",
+  "Light": "浅色",
+  "Dark": "深色"
 }

@@ -553,5 +553,9 @@
   "I map your invoicing and reimbursement cycle, find where cash waits, and set the cadence that took one nonprofit from 90 to 30 days.": "Я описываю ваш цикл выставления счетов и возмещений, нахожу, где деньги ждут, и настраиваю ритм, который сократил срок у одной НКО с 90 до 30 дней.",
   "See technology {0}": "Смотреть технологии {0}",
   "Inspired by": "По мотивам",
-  "Colors only. Not affiliated with these companies.": "Только цвета. Не связано с этими компаниями."
+  "Colors only. Not affiliated with these companies.": "Только цвета. Не связано с этими компаниями.",
+  "Mode": "Режим",
+  "System": "Системный",
+  "Light": "Светлый",
+  "Dark": "Тёмный"
 }

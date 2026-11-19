@@ -12,8 +12,10 @@
   --ease: cubic-bezier(.2, .7, .2, 1);
   color-scheme: light;
 }
+/* Mode: data-mode="light" / "dark" overrides the system choice; no attribute follows the system.
+   :where() keeps specificity at :root so every named theme still wins. */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:where(:not([data-mode="light"])) {
     --bg: #000000;
     --fg: #f5f5f7;
     --muted: #a1a1a6;
@@ -23,6 +25,7 @@
     color-scheme: dark;
   }
 }
+:root:where([data-mode="dark"]) { --bg: #000000; --fg: #f5f5f7; --muted: #a1a1a6; --line: #424245; --accent: #2997ff; --card: #161617; color-scheme: dark; }
 
 /* Scene palettes. Each project has its own; the page background glides between them. */
 [data-scene="base"]   { --s-bg: var(--bg); --s-fg: var(--fg); --s-muted: var(--muted); --s-accent: var(--accent); --s-btn: var(--btn); --s-btn-fg: #fff; --s-line: var(--line); }
@@ -47,9 +50,11 @@
 [data-scene="ghost"]       { --s-bg: #eaf4fd; --s-fg: #0b1f33; --s-muted: #405b74; --s-accent: #0b6bb5; --s-btn: #0b6bb5; --s-btn-fg: #fff; --s-line: #c7e0f5; }
 [data-scene="trivia"]      { --s-bg: #fff7e0; --s-fg: #0b1424; --s-muted: #575038; --s-accent: #8a5206; --s-btn: #0b1424; --s-btn-fg: #ffc93c; --s-line: #f0e2b5; }
 [data-scene="soft"]        { --s-bg: #e8e8ed; --s-fg: #1d1d1f; --s-muted: #515154; --s-accent: #0066cc; --s-btn: #0071e3; --s-btn-fg: #fff; --s-line: #d2d2d7; }
-@media (prefers-color-scheme: dark) { [data-scene="soft"] { --s-bg: #f5f5f7; } }
+@media (prefers-color-scheme: dark) { :where(:root:not([data-mode="light"])) [data-scene="soft"] { --s-bg: #f5f5f7; } }
+:where(:root[data-mode="dark"]) [data-scene="soft"] { --s-bg: #f5f5f7; }
 [data-scene="base2"]       { --s-bg: #0b1a33; --s-fg: #f5f7ff; --s-muted: #b7c3dc; --s-accent: #6cb4ff; --s-btn: #0071e3; --s-btn-fg: #fff; --s-line: #22375c; }
-@media (prefers-color-scheme: dark) { [data-scene="base2"] { --s-bg: #10213f; } }
+@media (prefers-color-scheme: dark) { :where(:root:not([data-mode="light"])) [data-scene="base2"] { --s-bg: #10213f; } }
+:where(:root[data-mode="dark"]) [data-scene="base2"] { --s-bg: #10213f; }
 /* Cards keep their own surface colours whatever band they sit on. */
 .card, .offer, .pillar, .area { --s-fg: var(--fg); --s-muted: var(--muted); --s-accent: var(--accent); --s-btn: var(--btn); --s-btn-fg: var(--btn-fg); color: var(--fg); }
 /* Area pages */
@@ -195,7 +200,8 @@ h3 { font-size: clamp(36px, 5.5vw, 64px); letter-spacing: -0.03em; line-height: 
 .area p { margin: 0 0 16px; color: var(--muted); font-size: 16px; }
 .area .more { margin-top: auto; color: var(--a); font-weight: 500; }
 .a-dev { --a: #7c3aed; } .a-fin { --a: #059669; } .a-comp { --a: #2563eb; } .a-edu { --a: #d97706; }
-@media (prefers-color-scheme: dark) { .a-dev { --a: #a78bfa; } .a-fin { --a: #34d399; } .a-comp { --a: #60a5fa; } .a-edu { --a: #fbbf24; } }
+@media (prefers-color-scheme: dark) { :where(:root:not([data-mode="light"])) .a-dev { --a: #a78bfa; } :where(:root:not([data-mode="light"])) .a-fin { --a: #34d399; } :where(:root:not([data-mode="light"])) .a-comp { --a: #60a5fa; } :where(:root:not([data-mode="light"])) .a-edu { --a: #fbbf24; } }
+:where(:root[data-mode="dark"]) .a-dev { --a: #a78bfa; } :where(:root[data-mode="dark"]) .a-fin { --a: #34d399; } :where(:root[data-mode="dark"]) .a-comp { --a: #60a5fa; } :where(:root[data-mode="dark"]) .a-edu { --a: #fbbf24; }
 .hero.sub { min-height: 72svh; }
 /* Keynote hero: dark stage, oversized gradient type, one still glow. No motion beyond the entry fade. */
 .keynote { overflow: hidden; isolation: isolate; }
@@ -644,6 +650,9 @@ h3 { font-size: clamp(36px, 5.5vw, 64px); letter-spacing: -0.03em; line-height: 
 .set-panel .set-theme, .set-panel .set-lang { gap: 2px; }
 .set-panel .set-find { padding: 5px 8px; font-size: inherit; }
 .set-music { display: grid; grid-template-columns: repeat(5, 1fr); gap: 2px; }
+.set-mode { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+.set-mode.idle .set-opt { opacity: .55; }
+.set-mode.idle .set-opt:hover { opacity: 1; }
 /* Same font and size as the theme's menu bar; wide enough that every section shows without scrolling. */
 .nav .set-panel { width: min(408px, calc(100vw - 32px)); max-height: calc(100svh - 60px); font-family: inherit; font-size: inherit; letter-spacing: inherit; line-height: 1.35; }
 .nav .set-panel .set-group legend { font-size: .92em; }
@@ -652,8 +661,8 @@ h3 { font-size: clamp(36px, 5.5vw, 64px); letter-spacing: -0.03em; line-height: 
 .set-lang .set-opt:has(.set-soon) { flex-wrap: wrap; row-gap: 0; }
 .set-panel .set-theme { grid-auto-flow: column; grid-template-rows: repeat(5, auto); }
 @media (max-width: 600px) { .set-panel .set-lang { grid-template-columns: 1fr 1fr; } .set-music { grid-template-columns: repeat(3, 1fr); } }
-.set-music .set-opt { justify-content: center; text-align: center; }
-.set-music .set-opt:has(input:checked)::after, .set-panel .set-lang .set-opt:has(input:checked)::after { content: none; }
+.set-music .set-opt, .set-mode .set-opt { justify-content: center; text-align: center; }
+.set-music .set-opt:has(input:checked)::after, .set-mode .set-opt:has(input:checked)::after, .set-panel .set-lang .set-opt:has(input:checked)::after { content: none; }
 .set-music .set-opt:has(input:disabled) { opacity: .45; cursor: default; }
 
 /* ---------- Company-inspired themes: colors and type mood only. No logos, no brand assets. ---------- */

@@ -553,5 +553,9 @@
   "I map your invoicing and reimbursement cycle, find where cash waits, and set the cadence that took one nonprofit from 90 to 30 days.": "Mapeo tu ciclo de facturación y reembolsos, encuentro dónde espera el efectivo y establezco el ritmo que llevó a una organización sin fines de lucro de 90 a 30 días.",
   "See technology {0}": "Ver la tecnología {0}",
   "Inspired by": "Inspirado en",
-  "Colors only. Not affiliated with these companies.": "Solo colores. Sin afiliación con estas empresas."
+  "Colors only. Not affiliated with these companies.": "Solo colores. Sin afiliación con estas empresas.",
+  "Mode": "Modo",
+  "System": "Sistema",
+  "Light": "Claro",
+  "Dark": "Oscuro"
 }
