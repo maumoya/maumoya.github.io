@@ -45,6 +45,9 @@
   ];
   var ALL_THEMES = THEMES.concat(BRANDS);
   // Shown without searching, in the owner's order. Every other language appears through the search box.
+  // Ten more top languages by speakers, pinned with their flags.
+  var PIN = ['zh', 'hi', 'bn', 'ur', 'id', 'tr', 'vi', 'ko', 'fa', 'th', 'sw', 'tl'];
+  var FLAG_OF = { zh: 'cn', hi: 'in', bn: 'bd', ur: 'pk', id: 'idn', tr: 'tr', vi: 'vn', ko: 'kr', fa: 'ir', th: 'th', sw: 'tz', tl: 'ph' };
   var LANGS = [
     { id: 'en', tag: 'en', name: 'English', flag: 'us', en: 'English', pin: 1 },
     { id: 'es', tag: 'es', name: 'Español', flag: 'es', en: 'Spanish Castellano', pin: 1 },
@@ -171,10 +174,13 @@
     'arc|arc|ܐܪܡܝܐ|Aramaic Syriac|r'
   ].map(function (row) {
     var c = row.split('|');
-    return { id: c[0], tag: c[1], name: c[2], en: c[3], rtl: !!c[4], flag: { zh: 'cn', hi: 'in' }[c[0]] || 'globe' };
+    return { id: c[0], tag: c[1], name: c[2], en: c[3], rtl: !!c[4], flag: FLAG_OF[c[0]] || 'globe', pin: PIN.indexOf(c[0]) >= 0 ? 1 : 0 };
   }));
   // Languages with a file in i18n/. The others render in English for now.
-  var READY = ['en', 'es', 'qu', 'ru', 'pt', 'fr', 'de', 'it', 'ja', 'ar', 'he', 'sjn', 'eo', 'zh', 'hi'];
+  var READY = ['en', 'es', 'qu', 'ru', 'pt', 'fr', 'de', 'it', 'ja', 'ar', 'he', 'sjn', 'eo', 'zh', 'hi',
+    'bn', 'ur', 'id', 'tr', 'vi', 'ko', 'fa', 'th', 'sw', 'tl'];
+  // Short chip label: ISO 639-1 code, or a 2-letter stand-in for 3-letter ids.
+  function code(L) { return ({ sjn: 'ED' }[L.id] || L.id.slice(0, 2)).toUpperCase(); }
   function ready(id) { return READY.indexOf(id) >= 0; }
 
   // ---------- Flags: simple original drawings, 30x20 ----------
@@ -206,6 +212,16 @@
     pe: '<rect width="30" height="20" fill="#fff"/><rect width="10" height="20" fill="#d91023"/><rect x="20" width="10" height="20" fill="#d91023"/>',
     ru: '<rect width="30" height="20" fill="#fff"/><rect y="6.67" width="30" height="6.67" fill="#0039a6"/><rect y="13.33" width="30" height="6.67" fill="#d52b1e"/>',
     eo: '<rect width="30" height="20" fill="#009900"/><rect width="10" height="10" fill="#fff"/>' + star(5, 5, 3.6).replace('#ffde00', '#009900'),
+    bd: '<rect width="30" height="20" fill="#006a4e"/><circle cx="13.5" cy="10" r="5.2" fill="#f42a41"/>',
+    pk: '<rect width="30" height="20" fill="#01411c"/><rect width="7.5" height="20" fill="#fff"/><circle cx="19" cy="10" r="5.4" fill="#fff"/><circle cx="20.6" cy="8.6" r="4.6" fill="#01411c"/>' + star(23.2, 6.6, 1.8, .5).replace('#ffde00', '#fff'),
+    idn: '<rect width="30" height="20" fill="#fff"/><rect width="30" height="10" fill="#ce1126"/>',
+    tr: '<rect width="30" height="20" fill="#e30a17"/><circle cx="11" cy="10" r="5" fill="#fff"/><circle cx="12.4" cy="10" r="4" fill="#e30a17"/>' + star(18, 10, 2.2, -.3).replace('#ffde00', '#fff'),
+    vn: '<rect width="30" height="20" fill="#da251d"/>' + star(15, 10.4, 5.4),
+    kr: '<rect width="30" height="20" fill="#fff"/><path d="M10 10a5 5 0 0 1 10 0z" fill="#cd2e3a"/><path d="M10 10a5 5 0 0 0 10 0z" fill="#0047a0"/><path d="M4 4l3 2M23 14l3 2M4 16l3-2M23 6l3-2" stroke="#000" stroke-width="1"/>',
+    ir: '<rect width="30" height="20" fill="#fff"/><rect width="30" height="6.67" fill="#239f40"/><rect y="13.33" width="30" height="6.67" fill="#da0000"/><circle cx="15" cy="10" r="1.8" fill="none" stroke="#da0000" stroke-width=".8"/>',
+    th: '<rect width="30" height="20" fill="#a51931"/><rect y="3.33" width="30" height="13.33" fill="#f4f5f8"/><rect y="6.67" width="30" height="6.67" fill="#2d2a4a"/>',
+    tz: '<rect width="30" height="20" fill="#1eb53a"/><path d="M30 0v20H0z" fill="#00a3dd"/><path d="M0 20 30 0" stroke="#fcd116" stroke-width="7.5"/><path d="M0 20 30 0" stroke="#000" stroke-width="5"/>',
+    ph: '<rect width="30" height="20" fill="#ce1126"/><rect width="30" height="10" fill="#0038a8"/><path d="M0 0l15 10L0 20z" fill="#fff"/><circle cx="5" cy="10" r="2" fill="#fcd116"/>',
     globe: '<rect width="30" height="20" rx="2" fill="#5b6b7f"/><g fill="none" stroke="#fff" stroke-width=".9"><circle cx="15" cy="10" r="7"/><ellipse cx="15" cy="10" rx="3" ry="7"/><path d="M8 10h14M9.2 6.5h11.6M9.2 13.5h11.6"/></g>',
     elf:'<rect width="30" height="20" fill="#1d3b2a"/><path d="M8 15C10 6 18 4 23 4c0 6-4 13-14 11z" fill="#c9e4b4"/><path d="M8 15 19 7" stroke="#1d3b2a" stroke-width=".9"/>'
   };
@@ -528,8 +544,8 @@
     return '<fieldset class="set-group"><legend data-t="' + label + '" data-t-text="1">' + t(label) + '</legend><div class="set-' + name + '">' +
       items.map(function (it) {
         var swatch = name === 'theme' ? '<span class="sw" aria-hidden="true" style="--a:' + it.sw[0] + ';--b:' + it.sw[1] + '"></span>' : '';
-        return '<label class="set-opt"' + (name === 'lang' && !it.pin ? ' hidden' : '') + '><input type="radio" name="mm-' + name + '" value="' + it.id + '">' + (name === 'lang'
-            ? flag(it.flag) + '<span lang="' + it.tag + '"' + (it.rtl ? ' dir="rtl"' : '') + '>' + it.name + '</span>' +
+        return '<label class="set-opt"' + (name === 'lang' ? ' title="' + it.name + (it.en && it.en.split(' ')[0] !== it.name ? ' · ' + it.en.split(' ')[0] : '') + '"' + (it.pin ? '' : ' hidden') : '') + '><input type="radio" name="mm-' + name + '" value="' + it.id + '">' + (name === 'lang'
+            ? flag(it.flag) + '<span class="set-code" aria-hidden="true">' + code(it) + '</span><span class="' + (it.pin ? 'sr-only' : 'set-name') + '" lang="' + it.tag + '"' + (it.rtl ? ' dir="rtl"' : '') + '>' + it.name + '</span>' +
               (ready(it.id) ? '' : '<small class="set-soon" data-t="English for now" data-t-text="1">' + t('English for now') + '</small>')
             : swatch + '<span data-t="' + it.name + '" data-t-text="1">' + t(it.name) + '</span>') + '</label>';
       }).join('') + '</div></fieldset>';
@@ -603,7 +619,7 @@
     var q = fold(find.value.trim());
     panel.querySelectorAll('input[name="mm-lang"]').forEach(function (r) {
       var L = LANGS.filter(function (x) { return x.id === r.value; })[0];
-      r.closest('label').hidden = q ? fold(L.name + ' ' + L.en + ' ' + L.id + ' ' + L.tag).indexOf(q) < 0 : !L.pin;
+      r.closest('label').hidden = q ? fold(L.name + ' ' + L.en + ' ' + L.id + ' ' + L.tag + ' ' + code(L)).indexOf(q) < 0 : !L.pin;
     });
   });
   find.addEventListener('keydown', function (e) {
