@@ -40,7 +40,7 @@
     { id: 'tesla', name: 'Tesla', sw: ['#ffffff', '#3e6ae1'] },
     { id: 'anthropic', name: 'Anthropic', sw: ['#f0eee6', '#d97757'] },
     { id: 'openai', name: 'OpenAI', sw: ['#ffffff', '#0d0d0d'] },
-    { id: 'adobe', name: 'Adobe', sw: ['#ffffff', '#eb1000'] },
+    { id: 'adobe', name: 'Acrobat', sw: ['#252525', '#eb1000'] },
     { id: 'ibm', name: 'IBM', sw: ['#161616', '#0f62fe'] }
   ];
   var ALL_THEMES = THEMES.concat(BRANDS);

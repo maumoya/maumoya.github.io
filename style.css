@@ -735,12 +735,17 @@ h3 { font-size: clamp(36px, 5.5vw, 64px); letter-spacing: -0.03em; line-height: 
 [data-theme="openai"] .screen { border-radius: 20px; }
 [data-theme="openai"] #top.v3 { --v3-bg: #000; --v3-fg: #fff; --v3-muted: #b4b4b4; --v3-ghost: #fff; --v3-mark: #10a37f; --v3-rule: linear-gradient(90deg, #ff6b4a, #ffc94a, #10a37f, #4a8cff); --v3-photo: grayscale(1) contrast(1.05) brightness(.8); --v3-h-weight: 500; --v3-h-track: -.035em; --v3-h-fill: linear-gradient(180deg, #fff 0%, #e8e8e8 55%, #8f8f8f 100%); --v3-h-phone: 18vw; }
 
-[data-theme="adobe"] { --bg: #fff; --fg: #2c2c2c; --muted: #505050; --line: #e1e1e1; --accent: #d31510; --card: #f8f8f8; --btn: #eb1000; --btn-fg: #fff; --font: "Adobe Clean", "Source Sans 3", "Source Sans Pro", -apple-system, "Segoe UI", Arial, sans-serif; color-scheme: light; }
-[data-theme="adobe"] h1, [data-theme="adobe"] h2, [data-theme="adobe"] h3 { font-weight: 800; letter-spacing: -.02em; }
-[data-theme="adobe"] .card, [data-theme="adobe"] .area, [data-theme="adobe"] .offer, [data-theme="adobe"] .pillar { border-radius: 16px; border: 1px solid var(--line); box-shadow: 0 1px 4px rgba(0, 0, 0, .08); }
-[data-theme="adobe"] .btn { border-radius: 999px; font-weight: 700; }
-[data-theme="adobe"] .screen { border-radius: 16px; }
-[data-theme="adobe"] #top.v3 { --v3-bg: #120404; --v3-fg: #fff; --v3-muted: #d6c9c9; --v3-ghost: #ff6a5c; --v3-mark: #ff6a5c; --v3-rule: linear-gradient(90deg, #eb1000, #ff7a00, #ff2bd1); --v3-photo: sepia(.9) hue-rotate(-35deg) saturate(2.2) brightness(.75) contrast(1.15); --v3-h-weight: 800; --v3-h-track: -.03em; --v3-h-fill: linear-gradient(120deg, #ffffff 0%, #ffd2cc 45%, #eb1000 100%); --v3-h-phone: 17.4vw; }
+[data-theme="adobe"] { --bg: #252525; --fg: #fff; --muted: #cdcdcd; --line: #4a4a4a; --accent: #6eb4ff; --card: #323232; --btn: #0367e0; --btn-fg: #fff; --font: "adobe-clean", "Adobe Clean", "Source Sans 3", "Source Sans Pro", -apple-system, "Segoe UI", Arial, sans-serif; color-scheme: dark; }
+[data-theme="adobe"] h1, [data-theme="adobe"] h2, [data-theme="adobe"] h3 { font-weight: 800; letter-spacing: -.01em; }
+[data-theme="adobe"] .eyebrow { color: #ff5c4d; }
+[data-theme="adobe"] .card, [data-theme="adobe"] .area, [data-theme="adobe"] .offer, [data-theme="adobe"] .pillar { border-radius: 4px; border: 1px solid #3e3e3e; box-shadow: none; transition: background-color .2s; }
+[data-theme="adobe"] .card:hover, [data-theme="adobe"] .area:hover { background-color: #3a3a3a; }
+[data-theme="adobe"] .btn { border-radius: 20px; font-weight: 700; }
+[data-theme="adobe"] .screen { border-radius: 4px; box-shadow: 0 0 0 1px #4a4a4a, 0 24px 60px rgba(0, 0, 0, .5); }
+[data-theme="adobe"] .set-panel, [data-theme="adobe"] .srch-panel { border-radius: 8px; }
+[data-theme="adobe"] [data-scene] { --s-bg: var(--bg); }
+[data-theme="adobe"] [data-scene="soft"], [data-theme="adobe"] [data-scene="base2"] { --s-bg: #1e1e1e; }
+[data-theme="adobe"] #top.v3 { --v3-bg: #1b1b1b; --v3-fg: #fff; --v3-muted: #cdcdcd; --v3-ghost: #6eb4ff; --v3-mark: #ff5c4d; --v3-rule: #eb1000; --v3-photo: grayscale(1) contrast(1.1) brightness(.6); --v3-h-weight: 800; --v3-h-track: -.02em; --v3-h-fill: linear-gradient(180deg, #ffffff 0%, #ffffff 45%, #ff5c4d 80%, #eb1000 100%); --v3-h-phone: 17.4vw; }
 
 [data-theme="ibm"] { --bg: #161616; --fg: #f4f4f4; --muted: #c6c6c6; --line: #393939; --accent: #78a9ff; --card: #262626; --btn: #0f62fe; --btn-fg: #fff; --font: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; color-scheme: dark; }
 [data-theme="ibm"] h1, [data-theme="ibm"] h2, [data-theme="ibm"] h3 { font-weight: 300; letter-spacing: 0; }
