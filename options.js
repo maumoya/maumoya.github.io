@@ -186,8 +186,8 @@
   // Languages group by home continent (largest group first), then by speakers inside each group.
   var REGIONS = [['Americas', ['en', 'pt', 'qu']], ['Europe', ['es', 'fr', 'ru', 'de', 'it']],
     ['Asia', ['zh', 'hi', 'bn', 'ur', 'id', 'ja', 'vi', 'ko', 'tl', 'th']], ['Middle East & Africa', ['ar', 'tr', 'fa', 'he', 'sw']], ['Constructed', ['eo', 'sjn']]];
-  // The picker shows these five (plus the current choice); the find bar reaches every other language.
-  var TOP = ['en', 'es', 'zh', 'hi', 'ar'];
+  // The picker shows these six (plus the current choice); the find bar reaches every other language.
+  var TOP = ['en', 'pt', 'es', 'ru', 'zh', 'hi'];
   function top(L) { return TOP.indexOf(L.id) >= 0 ? 1 : 0; }
   function region(L) { for (var i = 0; i < REGIONS.length; i++) if (REGIONS[i][1].indexOf(L.id) >= 0) return i; return 99; }
   function code(L) { return ({ sjn: 'ED' }[L.id] || L.id.slice(0, 2)).toUpperCase(); }
@@ -587,7 +587,7 @@
     var q = panel.querySelector('.set-find').value;
     panel.querySelectorAll('input[name="mm-lang"]').forEach(function (r) {
       r.checked = r.value === chosen;
-      // A searched-for choice stays in view next to the top five.
+      // A searched-for choice stays in view next to the top six.
       if (!q && r.checked) r.closest('label').hidden = false;
     });
     panel.querySelectorAll('input[name="mm-mode"]').forEach(function (r) { r.checked = r.value === (root.dataset.mode || 'system'); });
@@ -642,7 +642,7 @@
   document.addEventListener('pointerdown', function (e) { if (!panel.hidden && !panel.contains(e.target) && !btn.contains(e.target)) close(); });
   panel.addEventListener('focusout', function (e) { if (e.relatedTarget && !panel.contains(e.relatedTarget) && e.relatedTarget !== btn) close(); });
 
-  // Language finder: empty shows the top five and the current choice; typing searches every language. Matches native name, English name or code, ignoring accents and case.
+  // Language finder: empty shows the top six and the current choice; typing searches every language. Matches native name, English name or code, ignoring accents and case.
   var find = panel.querySelector('.set-find');
   function fold(x) { return (x || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase(); }
   find.addEventListener('input', function () {
