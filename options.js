@@ -634,6 +634,7 @@
   function close(focus) {
     if (panel.hidden) return;
     panel.hidden = true; btn.setAttribute('aria-expanded', 'false');
+    find.value = ''; showAll = false; filter();
     if (focus) btn.focus();
   }
   btn.addEventListener('click', function () { panel.hidden ? open() : close(); });
@@ -642,16 +643,19 @@
   document.addEventListener('pointerdown', function (e) { if (!panel.hidden && !panel.contains(e.target) && !btn.contains(e.target)) close(); });
   panel.addEventListener('focusout', function (e) { if (e.relatedTarget && !panel.contains(e.relatedTarget) && e.relatedTarget !== btn) close(); });
 
-  // Language finder: empty shows the top twelve and the current choice; typing searches every language. Matches native name, English name or code, ignoring accents and case.
+  // Language finder: empty shows the top twelve and the current choice, or every language once the find bar is clicked; typing searches every language. Matches native name, English name or code, ignoring accents and case.
   var find = panel.querySelector('.set-find');
   function fold(x) { return (x || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase(); }
-  find.addEventListener('input', function () {
+  var showAll = false;
+  find.addEventListener('focus', function () { showAll = true; filter(); });
+  find.addEventListener('input', filter);
+  function filter() {
     var q = fold(find.value.trim());
     panel.querySelectorAll('input[name="mm-lang"]').forEach(function (r) {
       var L = LANGS.filter(function (x) { return x.id === r.value; })[0];
-      r.closest('label').hidden = q ? fold(L.name + ' ' + L.en + ' ' + L.id + ' ' + L.tag + ' ' + code(L)).indexOf(q) < 0 : !(top(L) || r.checked);
+      r.closest('label').hidden = q ? fold(L.name + ' ' + L.en + ' ' + L.id + ' ' + L.tag + ' ' + code(L)).indexOf(q) < 0 : !(showAll || top(L) || r.checked);
     });
-  });
+  }
   find.addEventListener('keydown', function (e) {
     if (e.key !== 'Enter') return;
     e.preventDefault();
