@@ -571,5 +571,20 @@
   "FP&A leader with an MBA: budgeting, forecasting, cash flow, receivables and funding strategy, run on clean data, dashboards and automation.": "MBA を持つ FP&A リーダー：予算、予測、キャッシュフロー、売掛金、資金調達戦略を、整ったデータとダッシュボード、自動化で運営します。",
   "AI agent engineer: agent skills and workflows for Claude Code, measured with evals, hardened and shipped. Python, SQL, automation. Open to roles and consulting.": "AI エージェントエンジニア：Claude Code 向けのエージェントスキルとワークフローを、評価で測定し、堅牢化して公開。Python、SQL、自動化。求人・コンサルティングのご相談を受け付けています。",
   "Internal controls, grant compliance, audit readiness and security built into finance systems, so the books hold up when the auditor calls.": "内部統制、助成金コンプライアンス、監査対応、セキュリティを財務システムに組み込み、監査人が来ても帳簿が揺るがないようにします。",
-  "University teaching, data tutoring and AI workshops in finance, data and AI that leave teams able to run what was built.": "財務・データ・AI の大学講義、データ個別指導、AI ワークショップ。構築したものをチームが自ら運用できるようにします。"
+  "University teaching, data tutoring and AI workshops in finance, data and AI that leave teams able to run what was built.": "財務・データ・AI の大学講義、データ個別指導、AI ワークショップ。構築したものをチームが自ら運用できるようにします。",
+  "Career": "経歴",
+  "Experience": "職務経験",
+  "Director of Finance": "財務ディレクター",
+  "Promoted twice in two years, from finance officer to director. Reimbursements cut from 90+ days to about 30, receivables from $300K+ to about $60K, payroll allocation from 16 hours to 3.": "2 年で 2 度昇進し、ファイナンスオフィサーからディレクターへ。償還期間を 90 日超から約 30 日に、売掛金を 30 万ドル超から約 6 万ドルに、給与配賦作業を 16 時間から 3 時間に短縮。",
+  "Teaching assistant and data analysis tutor": "ティーチングアシスタント兼データ分析チューター",
+  "Teaching assistant for AI and the Future of Work. Tutored 180+ students in data analysis.": "「AI と仕事の未来」のティーチングアシスタント。180 人以上の学生にデータ分析を指導。",
+  "Business analysis and strategy internships": "ビジネス分析と戦略のインターンシップ",
+  "Due diligence on a $100M private equity deal, then strategy consulting.": "1 億ドル規模のプライベートエクイティ案件のデューデリジェンス、その後は戦略コンサルティング。",
+  "Finance and operations manager, startup CFO": "財務・オペレーションマネージャー、スタートアップ CFO",
+  "Cut operating costs 9% two years running and the receivables and payables cycle by 30%. Co-founded a tech startup as CFO.": "運営コストを 2 年連続で 9% 削減し、売掛・買掛サイクルを 30% 短縮。CFO としてテック系スタートアップを共同創業。",
+  "Branch manager and founding partner": "支店長兼創業パートナー",
+  "Reached breakeven in year one and cut costs by half.": "初年度で損益分岐点に到達し、コストを半減。",
+  "Facility manager, then university professor": "ファシリティマネージャー、のちに大学教授",
+  "Up to 17% budget savings as a facility manager, then over 90% of students passing.": "ファシリティマネージャーとして最大 17% の予算削減、その後は合格率 90% 超。",
+  "Full history on LinkedIn {0}": "LinkedIn で全経歴を見る {0}"
 }

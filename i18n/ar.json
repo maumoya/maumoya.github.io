@@ -571,5 +571,20 @@
   "FP&A leader with an MBA: budgeting, forecasting, cash flow, receivables and funding strategy, run on clean data, dashboards and automation.": "قائد في التخطيط والتحليل المالي بماجستير إدارة الأعمال: الميزانيات والتوقعات والتدفق النقدي والذمم المدينة واستراتيجية التمويل، على بيانات نظيفة ولوحات معلومات وأتمتة.",
   "AI agent engineer: agent skills and workflows for Claude Code, measured with evals, hardened and shipped. Python, SQL, automation. Open to roles and consulting.": "مهندس وكلاء ذكاء اصطناعي: مهارات وسير عمل لـ Claude Code، تُقاس بالتقييمات وتُحصَّن وتُطلَق. Python وSQL والأتمتة. متاح للوظائف والاستشارات.",
   "Internal controls, grant compliance, audit readiness and security built into finance systems, so the books hold up when the auditor calls.": "ضوابط داخلية وامتثال للمنح وجاهزية للتدقيق وأمان مدمجة في الأنظمة المالية، لتصمد الدفاتر حين يأتي المدقق.",
-  "University teaching, data tutoring and AI workshops in finance, data and AI that leave teams able to run what was built.": "تدريس جامعي ودروس خصوصية في البيانات وورش عمل في الذكاء الاصطناعي، في المالية والبيانات والذكاء الاصطناعي، تترك الفرق قادرة على تشغيل ما بُني."
+  "University teaching, data tutoring and AI workshops in finance, data and AI that leave teams able to run what was built.": "تدريس جامعي ودروس خصوصية في البيانات وورش عمل في الذكاء الاصطناعي، في المالية والبيانات والذكاء الاصطناعي، تترك الفرق قادرة على تشغيل ما بُني.",
+  "Career": "المسيرة المهنية",
+  "Experience": "الخبرة",
+  "Director of Finance": "مدير المالية",
+  "Promoted twice in two years, from finance officer to director. Reimbursements cut from 90+ days to about 30, receivables from $300K+ to about $60K, payroll allocation from 16 hours to 3.": "ترقيتان خلال عامين، من مسؤول مالي إلى مدير. تقليص مدة التعويضات من أكثر من 90 يومًا إلى نحو 30، والذمم المدينة من أكثر من 300 ألف دولار إلى نحو 60 ألفًا، وتوزيع الرواتب من 16 ساعة إلى 3.",
+  "Teaching assistant and data analysis tutor": "مساعد تدريس ومدرّس تحليل بيانات",
+  "Teaching assistant for AI and the Future of Work. Tutored 180+ students in data analysis.": "مساعد تدريس لمقرر الذكاء الاصطناعي ومستقبل العمل. درّس أكثر من 180 طالبًا تحليل البيانات.",
+  "Business analysis and strategy internships": "تدريب في تحليل الأعمال والاستراتيجية",
+  "Due diligence on a $100M private equity deal, then strategy consulting.": "فحص نافٍ للجهالة لصفقة أسهم خاصة بقيمة 100 مليون دولار، ثم استشارات استراتيجية.",
+  "Finance and operations manager, startup CFO": "مدير المالية والعمليات، المدير المالي لشركة ناشئة",
+  "Cut operating costs 9% two years running and the receivables and payables cycle by 30%. Co-founded a tech startup as CFO.": "خفض تكاليف التشغيل 9% عامين متتاليين ودورة الذمم المدينة والدائنة 30%. شارك في تأسيس شركة تقنية ناشئة بصفته مديرها المالي.",
+  "Branch manager and founding partner": "مدير فرع وشريك مؤسس",
+  "Reached breakeven in year one and cut costs by half.": "بلوغ نقطة التعادل في العام الأول وخفض التكاليف إلى النصف.",
+  "Facility manager, then university professor": "مدير مرافق، ثم أستاذ جامعي",
+  "Up to 17% budget savings as a facility manager, then over 90% of students passing.": "توفير في الميزانية يصل إلى 17% كمدير مرافق، ثم نسبة نجاح تفوق 90%.",
+  "Full history on LinkedIn {0}": "السجل الكامل على LinkedIn {0}"
 }
