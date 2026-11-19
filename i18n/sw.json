@@ -571,5 +571,20 @@
   "FP&A leader with an MBA: budgeting, forecasting, cash flow, receivables and funding strategy, run on clean data, dashboards and automation.": "Kiongozi wa FP&A mwenye MBA: bajeti, utabiri, mtiririko wa fedha, madeni ya kupokea na mkakati wa ufadhili, juu ya data safi, dashibodi na uendeshaji otomatiki.",
   "AI agent engineer: agent skills and workflows for Claude Code, measured with evals, hardened and shipped. Python, SQL, automation. Open to roles and consulting.": "Mhandisi wa mawakala wa AI: ujuzi na mitiririko ya kazi ya mawakala kwa Claude Code, iliyopimwa kwa evals, kuimarishwa na kuzinduliwa. Python, SQL, uendeshaji otomatiki. Yuko tayari kwa ajira na ushauri.",
   "Internal controls, grant compliance, audit readiness and security built into finance systems, so the books hold up when the auditor calls.": "Udhibiti wa ndani, utiifu wa ruzuku, utayari wa ukaguzi na usalama vilivyojengwa ndani ya mifumo ya fedha, ili vitabu visimame imara mkaguzi anapokuja.",
-  "University teaching, data tutoring and AI workshops in finance, data and AI that leave teams able to run what was built.": "Ufundishaji wa chuo kikuu, mafunzo ya data na warsha za AI katika fedha, data na AI, zinazowaacha timu wakiweza kuendesha kilichojengwa."
+  "University teaching, data tutoring and AI workshops in finance, data and AI that leave teams able to run what was built.": "Ufundishaji wa chuo kikuu, mafunzo ya data na warsha za AI katika fedha, data na AI, zinazowaacha timu wakiweza kuendesha kilichojengwa.",
+  "Career": "Kazi",
+  "Experience": "Uzoefu",
+  "Director of Finance": "Mkurugenzi wa Fedha",
+  "Promoted twice in two years, from finance officer to director. Reimbursements cut from 90+ days to about 30, receivables from $300K+ to about $60K, payroll allocation from 16 hours to 3.": "Kupandishwa cheo mara mbili ndani ya miaka miwili, kutoka afisa wa fedha hadi mkurugenzi. Marejesho kutoka siku 90+ hadi takriban 30, madeni ya wateja kutoka $300K+ hadi takriban $60K, mgao wa mishahara kutoka saa 16 hadi 3.",
+  "Teaching assistant and data analysis tutor": "Msaidizi wa kufundisha na mkufunzi wa uchambuzi wa data",
+  "Teaching assistant for AI and the Future of Work. Tutored 180+ students in data analysis.": "Msaidizi wa kufundisha kwa AI na Mustakabali wa Kazi. Alifundisha wanafunzi 180+ uchambuzi wa data.",
+  "Business analysis and strategy internships": "Mafunzo kazini ya uchambuzi wa biashara na mkakati",
+  "Due diligence on a $100M private equity deal, then strategy consulting.": "Uchunguzi wa kina wa mpango wa private equity wa $100M, kisha ushauri wa mkakati.",
+  "Finance and operations manager, startup CFO": "Meneja wa fedha na uendeshaji, CFO wa kampuni changa",
+  "Cut operating costs 9% two years running and the receivables and payables cycle by 30%. Co-founded a tech startup as CFO.": "Alipunguza gharama za uendeshaji kwa 9% miaka miwili mfululizo na mzunguko wa madeni ya kupokea na kulipa kwa 30%. Alianzisha kwa ushirikiano kampuni changa ya teknolojia kama CFO.",
+  "Branch manager and founding partner": "Meneja wa tawi na mbia mwanzilishi",
+  "Reached breakeven in year one and cut costs by half.": "Alifikia hali ya kutopata hasara mwaka wa kwanza na kupunguza gharama kwa nusu.",
+  "Facility manager, then university professor": "Meneja wa majengo, kisha profesa wa chuo kikuu",
+  "Up to 17% budget savings as a facility manager, then over 90% of students passing.": "Hadi 17% ya akiba ya bajeti kama meneja wa majengo, kisha zaidi ya 90% ya wanafunzi kufaulu.",
+  "Full history on LinkedIn {0}": "Historia kamili kwenye LinkedIn {0}"
 }
