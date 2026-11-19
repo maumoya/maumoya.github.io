@@ -184,8 +184,8 @@
   var BY_SPEAKERS = ['en', 'zh', 'hi', 'es', 'ar', 'fr', 'bn', 'pt', 'ru', 'ur', 'id', 'de', 'ja', 'tr', 'vi', 'ko', 'tl', 'fa', 'sw', 'it', 'th', 'he', 'qu', 'eo', 'sjn'];
   function rank(L) { var i = BY_SPEAKERS.indexOf(L.id); return i < 0 ? 999 : i; }
   // Languages group by home continent (largest group first), then by speakers inside each group.
-  var REGIONS = [['Asia', ['zh', 'hi', 'ar', 'bn', 'ur', 'id', 'ja', 'tr', 'vi', 'ko', 'tl', 'fa', 'th', 'he']],
-    ['Europe', ['en', 'es', 'fr', 'pt', 'ru', 'de', 'it']], ['Africa', ['sw']], ['Americas', ['qu']], ['Constructed', ['eo', 'sjn']]];
+  var REGIONS = [['Americas', ['en', 'pt', 'qu']], ['Europe', ['es', 'fr', 'ru', 'de', 'it']],
+    ['Asia', ['zh', 'hi', 'bn', 'ur', 'id', 'ja', 'vi', 'ko', 'tl', 'th']], ['Middle East & Africa', ['ar', 'tr', 'fa', 'he', 'sw']], ['Constructed', ['eo', 'sjn']]];
   function region(L) { for (var i = 0; i < REGIONS.length; i++) if (REGIONS[i][1].indexOf(L.id) >= 0) return i; return 99; }
   function code(L) { return ({ sjn: 'ED' }[L.id] || L.id.slice(0, 2)).toUpperCase(); }
   function ready(id) { return READY.indexOf(id) >= 0; }
