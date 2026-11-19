@@ -176,9 +176,11 @@
     var c = row.split('|');
     return { id: c[0], tag: c[1], name: c[2], en: c[3], rtl: !!c[4], flag: FLAG_OF[c[0]] || 'globe', pin: PIN.indexOf(c[0]) >= 0 ? 1 : 0 };
   }));
-  // Languages with a file in i18n/. The others render in English for now.
+  // Languages with a file in i18n/.
   var READY = ['en', 'es', 'qu', 'ru', 'pt', 'fr', 'de', 'it', 'ja', 'ar', 'he', 'sjn', 'eo', 'zh', 'hi',
     'bn', 'ur', 'id', 'tr', 'vi', 'ko', 'fa', 'th', 'sw', 'tl'];
+  // Only list languages that are really translated; the rest would just show English.
+  LANGS = LANGS.filter(function (L) { return READY.indexOf(L.id) >= 0; });
   // Short chip label: ISO 639-1 code, or a 2-letter stand-in for 3-letter ids.
   // Pinned chips run from most to least spoken (total speakers, first + second language).
   var BY_SPEAKERS = ['en', 'zh', 'hi', 'es', 'ar', 'fr', 'bn', 'pt', 'ru', 'ur', 'id', 'de', 'ja', 'tr', 'vi', 'ko', 'tl', 'fa', 'sw', 'it', 'th', 'he', 'qu', 'eo', 'sjn'];
