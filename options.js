@@ -591,7 +591,7 @@
     '<path class="x" d="M16.5 9.5l5 5m0-5l-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>' +
     '<input type="range" min="0" max="100" step="5" data-t="Volume"><span class="set-vol" aria-hidden="true"></span></div></fieldset>' +
     radios('music', MUSIC, 'Music') + radios('mode', MODES, 'Mode') + radios('theme', THEMES, 'Theme') +
-    radios('theme', BRANDS, 'Inspired by').replace('</fieldset>', '<small class="set-note" data-t="Colors only. Not affiliated with these companies." data-t-text="1">' + t('Colors only. Not affiliated with these companies.') + '</small></fieldset>').replace('class="set-theme"', 'class="set-theme set-brands"') + radios('lang', LANGS, 'Language').replace('<div class="set-lang">', '<input type="search" class="set-find" data-t="Find a language" placeholder="' + t('Find a language') + '" aria-label="' + t('Find a language') + '" autocomplete="off" spellcheck="false"><div class="set-lang">');
+    radios('theme', BRANDS, 'Inspired by').replace('</fieldset>', '<small class="set-note" data-t="Colors only. Not affiliated with these companies." data-t-text="1">' + t('Colors only. Not affiliated with these companies.') + '</small></fieldset>').replace('class="set-theme"', 'class="set-theme set-brands"') + radios('lang', LANGS.slice().sort(function (a, b) { return (b.pin || 0) - (a.pin || 0) || code(a).localeCompare(code(b)); }), 'Language').replace('<div class="set-lang">', '<input type="search" class="set-find" data-t="Find a language" placeholder="' + t('Find a language') + '" aria-label="' + t('Find a language') + '" autocomplete="off" spellcheck="false"><div class="set-lang">');
 
   var navIn = document.querySelector('.nav-in');
   (navIn || document.body).appendChild(btn);
