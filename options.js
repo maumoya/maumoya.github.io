@@ -180,6 +180,9 @@
   var READY = ['en', 'es', 'qu', 'ru', 'pt', 'fr', 'de', 'it', 'ja', 'ar', 'he', 'sjn', 'eo', 'zh', 'hi',
     'bn', 'ur', 'id', 'tr', 'vi', 'ko', 'fa', 'th', 'sw', 'tl'];
   // Short chip label: ISO 639-1 code, or a 2-letter stand-in for 3-letter ids.
+  // Pinned chips run from most to least spoken (total speakers, first + second language).
+  var BY_SPEAKERS = ['en', 'zh', 'hi', 'es', 'ar', 'fr', 'bn', 'pt', 'ru', 'ur', 'id', 'de', 'ja', 'tr', 'vi', 'ko', 'tl', 'fa', 'sw', 'it', 'th', 'he', 'qu', 'eo', 'sjn'];
+  function rank(L) { var i = BY_SPEAKERS.indexOf(L.id); return i < 0 ? 999 : i; }
   function code(L) { return ({ sjn: 'ED' }[L.id] || L.id.slice(0, 2)).toUpperCase(); }
   function ready(id) { return READY.indexOf(id) >= 0; }
 
@@ -591,7 +594,7 @@
     '<path class="x" d="M16.5 9.5l5 5m0-5l-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>' +
     '<input type="range" min="0" max="100" step="5" data-t="Volume"><span class="set-vol" aria-hidden="true"></span></div></fieldset>' +
     radios('music', MUSIC, 'Music') + radios('mode', MODES, 'Mode') + radios('theme', THEMES, 'Theme') +
-    radios('theme', BRANDS, 'Inspired by').replace('</fieldset>', '<small class="set-note" data-t="Colors only. Not affiliated with these companies." data-t-text="1">' + t('Colors only. Not affiliated with these companies.') + '</small></fieldset>').replace('class="set-theme"', 'class="set-theme set-brands"') + radios('lang', LANGS.slice().sort(function (a, b) { return (b.pin || 0) - (a.pin || 0) || code(a).localeCompare(code(b)); }), 'Language').replace('<div class="set-lang">', '<input type="search" class="set-find" data-t="Find a language" placeholder="' + t('Find a language') + '" aria-label="' + t('Find a language') + '" autocomplete="off" spellcheck="false"><div class="set-lang">');
+    radios('theme', BRANDS, 'Inspired by').replace('</fieldset>', '<small class="set-note" data-t="Colors only. Not affiliated with these companies." data-t-text="1">' + t('Colors only. Not affiliated with these companies.') + '</small></fieldset>').replace('class="set-theme"', 'class="set-theme set-brands"') + radios('lang', LANGS.slice().sort(function (a, b) { return (b.pin || 0) - (a.pin || 0) || rank(a) - rank(b) || code(a).localeCompare(code(b)); }), 'Language').replace('<div class="set-lang">', '<input type="search" class="set-find" data-t="Find a language" placeholder="' + t('Find a language') + '" aria-label="' + t('Find a language') + '" autocomplete="off" spellcheck="false"><div class="set-lang">');
 
   var navIn = document.querySelector('.nav-in');
   (navIn || document.body).appendChild(btn);
