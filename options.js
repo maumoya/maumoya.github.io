@@ -682,7 +682,7 @@
   }, true);
 
   setMode(load('mm-mode', 'system'), false);
-  setTheme(load('mm-theme', 'clean'), false);
+  setTheme(load('mm-theme', 'apple'), false);
   // The menu bar matches the HANDS ON headline width (CSS reads --hands-w on desktop).
   var hands = document.querySelector('.v3-hands');
   if (hands && window.ResizeObserver) new ResizeObserver(function () {
