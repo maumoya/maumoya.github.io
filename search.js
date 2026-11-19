@@ -137,6 +137,8 @@
     {"p": "", "a": "hire", "t": "Finance and operations leader", "b": ["Hiring", "Director, controller or FP&A roles where finance also owns the systems: automation, data and reporting. Remote or Vermont, USA."]},
     {"p": "", "a": "hire", "t": "Automation and dashboards", "b": ["Consulting", "I map where your team loses hours, then build the automation, data pipeline or custom dashboard that gives them back."]},
     {"p": "", "a": "hire", "t": "AI agents, hardened", "b": ["Consulting", "Agent skills and workflows built for your process, with evals, signed releases and security checks."]},
+    {"p": "", "a": "assistant-built", "t": "Shipped end to end", "b": ["Built with my AI assistant"]},
+    {"p": "", "a": "assistant-built", "t": "Hello page", "b": ["The first page my AI assistant built, tested and shipped on its own release line, with my sign-off at every step. Checked on 6 devices and browsers and by 7 security scanners. No cookies, no trackers."]},
     {"p": "", "a": "data", "t": "Earlier data work", "b": ["Before agents"]},
     {"p": "", "a": "data", "t": "House rental price prediction", "b": ["A regression model that estimates rental prices from listing features."]},
     {"p": "", "a": "data", "t": "DataCamp solutions", "b": ["Worked solutions from data science and analysis courses."]},
