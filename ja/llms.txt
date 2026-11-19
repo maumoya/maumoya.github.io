@@ -1,0 +1,20 @@
+# Mauricio Moya
+
+> Mauricio Moya（MBA）：財務リーダー兼 AI エージェントエンジニア。FP&A、財務の自動化、ダッシュボード、コストを削減する AI エージェント。求人・コンサルティングのご相談を受け付けています。
+
+日本語 (Japanese). English: https://maumoya.github.io/llms.txt
+
+## ページ
+
+- [Mauricio Moya — 財務リーダー & AIエージェントエンジニア](https://maumoya.github.io/ja/): Mauricio Moya（MBA）：財務リーダー兼 AI エージェントエンジニア。FP&A、財務の自動化、ダッシュボード、コストを削減する AI エージェント。求人・コンサルティングのご相談を受け付けています。
+- [Mauricio Moya — FP&A・キャッシュフロー・財務自動化](https://maumoya.github.io/ja/finance/): MBA を持つ FP&A リーダー：予算、予測、キャッシュフロー、売掛金、資金調達戦略を、整ったデータとダッシュボード、自動化で運営します。
+- [Mauricio Moya — AIエージェントエンジニア・自動化](https://maumoya.github.io/ja/development/): AI エージェントエンジニア：Claude Code 向けのエージェントスキルとワークフローを、評価で測定し、堅牢化して公開。Python、SQL、自動化。求人・コンサルティングのご相談を受け付けています。
+- [Mauricio Moya — 内部統制・助成金コンプライアンス・監査](https://maumoya.github.io/ja/compliance/): 内部統制、助成金コンプライアンス、監査対応、セキュリティを財務システムに組み込み、監査人が来ても帳簿が揺るがないようにします。
+- [Mauricio Moya — データ・財務・AIの教育](https://maumoya.github.io/ja/education/): 財務・データ・AI の大学講義、データ個別指導、AI ワークショップ。構築したものをチームが自ら運用できるようにします。
+
+## Links
+
+- LinkedIn: https://www.linkedin.com/in/mba-mmoyat/
+- GitHub: https://github.com/maumoya
+- X: https://x.com/mau_amt
+- YouTube: https://www.youtube.com/@maumoya85

@@ -1,0 +1,20 @@
+# Mauricio Moya
+
+> Mauricio Moya، MBA: رهبر مالی و مهندس عامل‌های هوش مصنوعی. FP&A، خودکارسازی مالی، داشبوردها و عامل‌های هوش مصنوعی که هزینه را کم می‌کنند. آماده برای موقعیت شغلی و مشاوره.
+
+فارسی (Persian). English: https://maumoya.github.io/llms.txt
+
+## صفحه‌ها
+
+- [Mauricio Moya — رهبر مالی و مهندس ایجنت‌های هوش مصنوعی](https://maumoya.github.io/fa/): Mauricio Moya، MBA: رهبر مالی و مهندس عامل‌های هوش مصنوعی. FP&A، خودکارسازی مالی، داشبوردها و عامل‌های هوش مصنوعی که هزینه را کم می‌کنند. آماده برای موقعیت شغلی و مشاوره.
+- [Mauricio Moya — FP&A، جریان نقدی و اتوماسیون مالی](https://maumoya.github.io/fa/finance/): رهبر FP&A با مدرک MBA: بودجه‌ریزی، پیش‌بینی، جریان نقدی، مطالبات و راهبرد تأمین مالی، بر پایه داده‌های پاک، داشبوردها و خودکارسازی.
+- [Mauricio Moya — مهندس ایجنت‌های هوش مصنوعی و اتوماسیون](https://maumoya.github.io/fa/development/): مهندس عامل‌های هوش مصنوعی: مهارت‌ها و گردش‌کارهای عامل برای Claude Code، سنجیده با eval، مقاوم‌سازی‌شده و منتشرشده. Python، SQL، خودکارسازی. آماده برای موقعیت شغلی و مشاوره.
+- [Mauricio Moya — کنترل‌های داخلی، انطباق گرنت‌ها و حسابرسی](https://maumoya.github.io/fa/compliance/): کنترل‌های داخلی، انطباق با شرایط کمک‌هزینه، آمادگی حسابرسی و امنیت، تعبیه‌شده در سامانه‌های مالی تا دفاتر هنگام آمدن حسابرس استوار بمانند.
+- [Mauricio Moya — آموزش داده، مالی و هوش مصنوعی](https://maumoya.github.io/fa/education/): تدریس دانشگاهی، آموزش خصوصی داده و کارگاه‌های هوش مصنوعی در مالی، داده و هوش مصنوعی، تا تیم‌ها بتوانند آنچه ساخته شده را خودشان اداره کنند.
+
+## Links
+
+- LinkedIn: https://www.linkedin.com/in/mba-mmoyat/
+- GitHub: https://github.com/maumoya
+- X: https://x.com/mau_amt
+- YouTube: https://www.youtube.com/@maumoya85

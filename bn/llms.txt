@@ -1,0 +1,20 @@
+# Mauricio Moya
+
+> Mauricio Moya, MBA: ফাইন্যান্স লিডার ও AI এজেন্ট ইঞ্জিনিয়ার। FP&A, ফাইন্যান্স অটোমেশন, ড্যাশবোর্ড এবং খরচ কমানো AI এজেন্ট। চাকরি ও কনসাল্টিংয়ের জন্য প্রস্তুত।
+
+বাংলা (Bengali). English: https://maumoya.github.io/llms.txt
+
+## পেজসমূহ
+
+- [Mauricio Moya — ফাইন্যান্স লিডার ও AI এজেন্ট ইঞ্জিনিয়ার](https://maumoya.github.io/bn/): Mauricio Moya, MBA: ফাইন্যান্স লিডার ও AI এজেন্ট ইঞ্জিনিয়ার। FP&A, ফাইন্যান্স অটোমেশন, ড্যাশবোর্ড এবং খরচ কমানো AI এজেন্ট। চাকরি ও কনসাল্টিংয়ের জন্য প্রস্তুত।
+- [Mauricio Moya — FP&A, ক্যাশ ফ্লো ও ফাইন্যান্স অটোমেশন](https://maumoya.github.io/bn/finance/): MBA সহ FP&A লিডার: বাজেট, পূর্বাভাস, নগদ প্রবাহ, প্রাপ্য হিসাব ও তহবিল কৌশল, পরিষ্কার ডেটা, ড্যাশবোর্ড ও অটোমেশনের ওপর।
+- [Mauricio Moya — AI এজেন্ট ইঞ্জিনিয়ার ও অটোমেশন](https://maumoya.github.io/bn/development/): AI এজেন্ট ইঞ্জিনিয়ার: Claude Code-এর জন্য এজেন্ট স্কিল ও ওয়ার্কফ্লো, evals দিয়ে মাপা, মজবুত করা ও প্রকাশিত। Python, SQL, অটোমেশন। চাকরি ও কনসাল্টিংয়ের জন্য প্রস্তুত।
+- [Mauricio Moya — ইন্টারনাল কন্ট্রোল, গ্র্যান্ট কমপ্লায়েন্স ও অডিট](https://maumoya.github.io/bn/compliance/): অভ্যন্তরীণ নিয়ন্ত্রণ, অনুদান সম্মতি, অডিট প্রস্তুতি ও নিরাপত্তা ফাইন্যান্স সিস্টেমে গাঁথা, যাতে অডিটর এলে হিসাব টিকে থাকে।
+- [Mauricio Moya — ডেটা, ফাইন্যান্স ও AI শিক্ষাদান](https://maumoya.github.io/bn/education/): ফাইন্যান্স, ডেটা ও AI-তে বিশ্ববিদ্যালয়ে পাঠদান, ডেটা টিউটরিং ও AI কর্মশালা, যাতে দল নিজেরাই তৈরি জিনিস চালাতে পারে।
+
+## Links
+
+- LinkedIn: https://www.linkedin.com/in/mba-mmoyat/
+- GitHub: https://github.com/maumoya
+- X: https://x.com/mau_amt
+- YouTube: https://www.youtube.com/@maumoya85

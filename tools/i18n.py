@@ -10,6 +10,7 @@ Extra strings that options.js draws itself (menus, labels) live in i18n/ui.json.
   python3 tools/i18n.py keys    print every English key (one JSON list)
   python3 tools/i18n.py check   exit 1 when a language misses a key or breaks a {n} placeholder (CI)
 """
+import html
 import html.parser
 import json
 import pathlib
@@ -117,7 +118,8 @@ def walk(el, keys):
 
 def pages():
     # brand/ holds internal logo review pages, not site pages, so they are not translated
-    skip = {".claude", "brand"}
+    # <lang>/ folders are the static translations tools/seo.py writes from these pages
+    skip = {".claude", "brand"} | set(LANGS)
     return [p for p in sorted(ROOT.glob("**/index.html")) if not skip & set(p.relative_to(ROOT).parts)]
 
 
@@ -128,6 +130,9 @@ def all_keys():
         t.feed(page.read_text())
         if t.title:
             keys.append(norm(t.title))
+        desc = re.search(r'<meta name="description" content="([^"]*)"', page.read_text())
+        if desc:  # search engines show it; tools/seo.py writes it into each language's page
+            keys.append(norm(html.unescape(desc.group(1))))
         walk(t.root, keys)
     ui = ROOT / "i18n" / "ui.json"
     keys += json.loads(ui.read_text()) if ui.exists() else []

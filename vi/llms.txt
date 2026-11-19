@@ -1,0 +1,20 @@
+# Mauricio Moya
+
+> Mauricio Moya, MBA: lãnh đạo tài chính và kỹ sư tác tử AI. FP&A, tự động hóa tài chính, bảng điều khiển và tác tử AI giúp cắt giảm chi phí. Sẵn sàng cho vị trí việc làm và tư vấn.
+
+Tiếng Việt (Vietnamese). English: https://maumoya.github.io/llms.txt
+
+## Trang
+
+- [Mauricio Moya — Lãnh đạo Tài chính & Kỹ sư AI Agent](https://maumoya.github.io/vi/): Mauricio Moya, MBA: lãnh đạo tài chính và kỹ sư tác tử AI. FP&A, tự động hóa tài chính, bảng điều khiển và tác tử AI giúp cắt giảm chi phí. Sẵn sàng cho vị trí việc làm và tư vấn.
+- [Mauricio Moya — FP&A, Dòng tiền & Tự động hóa Tài chính](https://maumoya.github.io/vi/finance/): Lãnh đạo FP&A có bằng MBA: lập ngân sách, dự báo, dòng tiền, khoản phải thu và chiến lược huy động vốn, dựa trên dữ liệu sạch, bảng điều khiển và tự động hóa.
+- [Mauricio Moya — Kỹ sư AI Agent & Tự động hóa](https://maumoya.github.io/vi/development/): Kỹ sư tác tử AI: kỹ năng và quy trình tác tử cho Claude Code, đo bằng eval, gia cố và phát hành. Python, SQL, tự động hóa. Sẵn sàng cho vị trí việc làm và tư vấn.
+- [Mauricio Moya — Kiểm soát nội bộ, Tuân thủ tài trợ & Kiểm toán](https://maumoya.github.io/vi/compliance/): Kiểm soát nội bộ, tuân thủ tài trợ, sẵn sàng kiểm toán và bảo mật được tích hợp vào hệ thống tài chính, để sổ sách vững vàng khi kiểm toán viên gọi đến.
+- [Mauricio Moya — Giảng dạy Dữ liệu, Tài chính & AI](https://maumoya.github.io/vi/education/): Giảng dạy đại học, kèm dữ liệu và hội thảo AI về tài chính, dữ liệu và AI, giúp đội ngũ tự vận hành những gì đã xây dựng.
+
+## Links
+
+- LinkedIn: https://www.linkedin.com/in/mba-mmoyat/
+- GitHub: https://github.com/maumoya
+- X: https://x.com/mau_amt
+- YouTube: https://www.youtube.com/@maumoya85

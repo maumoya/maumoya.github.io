@@ -571,5 +571,10 @@
   "Europe": "Europa",
   "Africa": "Africa",
   "Americas": "Americhe",
-  "Constructed": "Lingue artificiali"
+  "Constructed": "Lingue artificiali",
+  "Mauricio Moya, MBA: finance leader and AI agent engineer. FP&A, finance automation, dashboards and AI agents that cut cost. Open to roles and consulting.": "Mauricio Moya, MBA: responsabile finanziario e ingegnere di agenti IA. FP&A, automazione finanziaria, dashboard e agenti IA che tagliano i costi. Disponibile per ruoli e consulenze.",
+  "FP&A leader with an MBA: budgeting, forecasting, cash flow, receivables and funding strategy, run on clean data, dashboards and automation.": "Responsabile FP&A con MBA: budget, previsioni, flussi di cassa, crediti e strategia di finanziamento, su dati puliti, dashboard e automazione.",
+  "AI agent engineer: agent skills and workflows for Claude Code, measured with evals, hardened and shipped. Python, SQL, automation. Open to roles and consulting.": "Ingegnere di agenti IA: skill e workflow per Claude Code, misurati con eval, rafforzati e rilasciati. Python, SQL, automazione. Disponibile per ruoli e consulenze.",
+  "Internal controls, grant compliance, audit readiness and security built into finance systems, so the books hold up when the auditor calls.": "Controlli interni, conformità dei contributi, preparazione agli audit e sicurezza integrati nei sistemi finanziari, perché i conti reggano quando chiama il revisore.",
+  "University teaching, data tutoring and AI workshops in finance, data and AI that leave teams able to run what was built.": "Insegnamento universitario, tutoraggio sui dati e workshop di IA in finanza, dati e IA, che lasciano i team in grado di gestire ciò che è stato costruito."
 }
