@@ -132,7 +132,6 @@
     {"p": "finance/", "a": "hire", "t": "Cash and receivables reset", "b": ["Consulting", "I map your invoicing and reimbursement cycle, find where cash waits, and set the cadence that took one nonprofit from 90 to 30 days."]},
     {"p": "finance/", "a": "hire", "t": "Automation and dashboards", "b": ["Consulting", "I map where your team loses hours, then build the automation, data pipeline or custom dashboard that gives them back."]},
     {"p": "finance/", "a": "contact", "t": "Let's talk", "b": ["Tell me where cash or forecasts surprise you. I'll tell you what I'd measure first and what I'd automate."]},
-    {"p": "", "a": "top", "t": "Delivering solutions,{0}Driving {1}", "b": ["Four disciplines. One professional.", "profits.", "Automation, dashboards and AI agents that cut cost, remove manual work and keep you audit-ready. Twenty years of experience in finance, operations and technology."]},
     {"p": "", "a": "areas", "t": "Four ways I move the numbers", "b": []},
     {"p": "", "a": "areas", "t": "Software that removes the busywork", "b": ["Technology", "16h → 3h {0}", "a monthly task, automated", "SaaS, process automation, data lakes and dashboards built to your process."]},
     {"p": "", "a": "areas", "t": "Cash you can see and count on", "b": ["Finance", "90 → 30 days {0}", "to get reimbursed", "Budgeting, forecasting, cash flow and funding strategy, run on clean data."]},

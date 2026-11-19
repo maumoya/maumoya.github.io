@@ -239,16 +239,17 @@ h3 { font-size: clamp(36px, 5.5vw, 64px); letter-spacing: -0.03em; line-height: 
 [data-theme="holo"] #top.v3 { --v3-bg: #00050f; }
 [data-theme="grid"] #top.v3 { --v3-bg: #000; }
 /* Mono and wide themes: smaller headline so it never clips. */
-[data-theme="terminal"] #top.v3 h1, [data-theme="arcade"] #top.v3 h1 { font-size: clamp(26px, 3.7vw, 56px); }
-[data-theme="hud"] #top.v3 h1, [data-theme="grid"] #top.v3 h1 { font-size: clamp(28px, 4.3vw, 66px); }
+[data-theme="terminal"] #top.v3 .slogan, [data-theme="arcade"] #top.v3 .slogan { font-size: clamp(26px, 3.7vw, 56px); }
+[data-theme="hud"] #top.v3 .slogan, [data-theme="grid"] #top.v3 .slogan { font-size: clamp(28px, 4.3vw, 66px); }
 #top.v3 .v3-top { padding-top: clamp(20px, 2.6vw, 44px); text-align: center; }
+#top.v3 h1.id { font-size: 17px; line-height: 1.4; }
 #top.v3 .eyebrow { color: color-mix(in srgb, var(--v3-fg) 70%, transparent); font-weight: 600; }
 :root:not([data-theme]) #top.v3 .eyebrow { letter-spacing: -.01em; }
-:root:not([data-theme]) #top.v3 h1 { font-weight: 700; letter-spacing: -.035em; }
-[data-theme]:not([data-theme="arcade"]) #top.v3 h1 { color: var(--v3-fg); }
-[data-theme="arcade"] #top.v3 h1, [data-theme="arcade"] .kn-title { color: #ffe500; text-shadow: 3px 3px 0 #ff3df0, 6px 6px 0 #3b0a74; }
+:root:not([data-theme]) #top.v3 .slogan { font-weight: 700; letter-spacing: -.035em; }
+[data-theme]:not([data-theme="arcade"]) #top.v3 .slogan { color: var(--v3-fg); }
+[data-theme="arcade"] #top.v3 .slogan, [data-theme="arcade"] .kn-title { color: #ffe500; text-shadow: 3px 3px 0 #ff3df0, 6px 6px 0 #3b0a74; }
 [data-theme="arcade"] #top.v3 .v3-hands { background: url(media/hero/hands-pixel.svg) center / contain no-repeat; -webkit-background-clip: border-box; background-clip: border-box; color: transparent; -webkit-text-stroke: 0; filter: drop-shadow(0 0 14px rgba(255, 61, 240, .55)); -webkit-mask-image: none; mask-image: none; }
-#top.v3 h1 { color: var(--v3-fg); line-height: 1.04; font-size: clamp(34px, 5vw, 76px); margin: 0; }
+#top.v3 .slogan { color: var(--v3-fg); font-weight: 700; line-height: 1.04; font-size: clamp(34px, 5vw, 76px); margin: 0; }
 .v3-pic { position: relative; isolation: isolate; width: 100%; aspect-ratio: 3 / 1; margin-top: clamp(4px, 1vw, 16px); -webkit-mask-image: linear-gradient(transparent, #000 14%); mask-image: linear-gradient(transparent, #000 14%); }
 .v3-pic::before { content: ""; position: absolute; inset: 0; z-index: -1; background: url(media/hero/v3.webp) center / cover no-repeat; background-image: image-set(url(media/hero/v3.webp) 1x, url(media/hero/v3-4k.webp) 2x); filter: var(--v3-photo, none); }
 @media (min-width: 2000px) { .v3-pic::before { background-image: url(media/hero/v3-4k.webp); } }
@@ -281,9 +282,9 @@ h3 { font-size: clamp(36px, 5.5vw, 64px); letter-spacing: -0.03em; line-height: 
   #top.v3 .v3-pic::before { background-position: center top; }
   #top.v3 .v3-title { top: 2.33vw; }
   /* Smaller header and HANDS ON so more of the laptop shows. */
-  #top.v3 h1 { font-size: clamp(30px, 3.7vw, 60px); }
-  [data-theme="terminal"] #top.v3 h1, [data-theme="arcade"] #top.v3 h1 { font-size: clamp(24px, 2.9vw, 46px); }
-  [data-theme="hud"] #top.v3 h1, [data-theme="grid"] #top.v3 h1 { font-size: clamp(26px, 3.3vw, 52px); }
+  #top.v3 .slogan { font-size: clamp(30px, 3.7vw, 60px); }
+  [data-theme="terminal"] #top.v3 .slogan, [data-theme="arcade"] #top.v3 .slogan { font-size: clamp(24px, 2.9vw, 46px); }
+  [data-theme="hud"] #top.v3 .slogan, [data-theme="grid"] #top.v3 .slogan { font-size: clamp(26px, 3.3vw, 52px); }
   #top.v3 .v3-top .cta { margin-top: clamp(10px, 1.2vw, 20px); }
   #top.v3 .v3-hands { font-size: 11vw; }
   /* Subtitle under the white line, one line as wide as HANDS ON. */
