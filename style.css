@@ -175,7 +175,7 @@ h3 { font-size: clamp(36px, 5.5vw, 64px); letter-spacing: -0.03em; line-height: 
 .pillar p, .offer p { margin: 0; color: var(--muted); font-size: 16px; }
 .pillar .num { color: var(--accent); font-size: 36px; font-weight: 700; letter-spacing: -0.03em; line-height: 1.1; margin: 0 0 14px; }
 .pillar .num small { font-size: 15px; font-weight: 600; letter-spacing: 0; color: var(--muted); }
-.offer .eyebrow { font-size: 13px; text-transform: uppercase; letter-spacing: .06em; margin-bottom: 8px; }
+.offer .eyebrow, .card .eyebrow { font-size: 13px; text-transform: uppercase; letter-spacing: .06em; margin-bottom: 8px; }
 .offer.build { display: flex; flex-direction: column; }
 .offer .buy { display: flex; align-items: center; justify-content: space-between; gap: 8px 16px; flex-wrap: wrap; margin-top: auto; padding-top: 20px; }
 .intro { margin: 16px 0 40px; }
