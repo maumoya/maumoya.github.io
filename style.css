@@ -655,3 +655,128 @@ h3 { font-size: clamp(36px, 5.5vw, 64px); letter-spacing: -0.03em; line-height: 
 .set-music .set-opt { justify-content: center; text-align: center; }
 .set-music .set-opt:has(input:checked)::after, .set-panel .set-lang .set-opt:has(input:checked)::after { content: none; }
 .set-music .set-opt:has(input:disabled) { opacity: .45; cursor: default; }
+
+/* ---------- Company-inspired themes: colors and type mood only. No logos, no brand assets. ---------- */
+.set-panel .set-brands { grid-template-rows: repeat(4, auto); }
+.set-note { display: block; margin-top: 6px; font-size: 11px; line-height: 1.35; color: var(--muted); grid-column: 1 / -1; }
+
+[data-theme="apple"] { --bg: #000; --fg: #f5f5f7; --muted: #a1a1a6; --line: #333336; --accent: #2997ff; --card: #1d1d1f; --btn: #0071e3; --btn-fg: #fff; --font: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Inter, Arial, sans-serif; color-scheme: dark; }
+[data-theme="apple"] h1, [data-theme="apple"] h2, [data-theme="apple"] h3 { font-weight: 600; letter-spacing: -.03em; }
+[data-theme="apple"] .card, [data-theme="apple"] .area, [data-theme="apple"] .offer, [data-theme="apple"] .pillar { border-radius: 28px; border: 0; box-shadow: none; }
+[data-theme="apple"] .btn { border-radius: 980px; font-weight: 400; }
+[data-theme="apple"] .screen { border-radius: 18px; }
+[data-theme="apple"] #top.v3 { --v3-bg: #000; --v3-fg: #f5f5f7; --v3-muted: #a1a1a6; --v3-ghost: #2997ff; --v3-mark: #2997ff; --v3-rule: linear-gradient(90deg, #2997ff, #bf5af2); --v3-photo: grayscale(1) contrast(1.15) brightness(.85); --v3-h-weight: 600; --v3-h-track: -.04em; --v3-h-fill: linear-gradient(180deg, #fff 0%, #d2d2d7 55%, #6e6e73 100%); --v3-h-phone: 18.4vw; }
+
+[data-theme="google"] { --bg: #f0f4f9; --fg: #1f1f1f; --muted: #444746; --line: #c4c7c5; --accent: #0b57d0; --card: #fff; --btn: #0b57d0; --btn-fg: #fff; --font: "Google Sans", "Product Sans", Roboto, "Segoe UI", system-ui, sans-serif; color-scheme: light; }
+[data-theme="google"] h1, [data-theme="google"] h2, [data-theme="google"] h3 { font-weight: 500; letter-spacing: -.015em; }
+[data-theme="google"] .card, [data-theme="google"] .area, [data-theme="google"] .offer, [data-theme="google"] .pillar { border-radius: 28px; border: 0; box-shadow: none; }
+[data-theme="google"] .btn { border-radius: 999px; font-weight: 500; }
+[data-theme="google"] .screen { border-radius: 28px; }
+[data-theme="google"] #top.v3 { --v3-bg: #0e1117; --v3-fg: #fff; --v3-muted: #c4c7c5; --v3-ghost: #a8c7fa; --v3-mark: #a8c7fa; --v3-rule: linear-gradient(90deg, #4285f4 0 25%, #ea4335 25% 50%, #fbbc04 50% 75%, #34a853 75%); --v3-photo: saturate(1.15) contrast(1.05); --v3-h-weight: 500; --v3-h-track: -.02em; --v3-h-fill: linear-gradient(90deg, #a8c7fa, #fff 55%, #d3e3fd); --v3-h-phone: 18.2vw; }
+
+[data-theme="microsoft"] { --bg: #faf9f8; --fg: #242424; --muted: #616161; --line: #e0e0e0; --accent: #0f6cbd; --card: #fff; --btn: #0f6cbd; --btn-fg: #fff; --font: "Segoe UI Variable Display", "Segoe UI", system-ui, -apple-system, sans-serif; color-scheme: light; }
+[data-theme="microsoft"] h1, [data-theme="microsoft"] h2, [data-theme="microsoft"] h3 { font-weight: 600; letter-spacing: -.01em; }
+[data-theme="microsoft"] .card, [data-theme="microsoft"] .area, [data-theme="microsoft"] .offer, [data-theme="microsoft"] .pillar { border-radius: 4px; border: 1px solid var(--line); box-shadow: 0 1.6px 3.6px rgba(0, 0, 0, .13), 0 .3px .9px rgba(0, 0, 0, .11); }
+[data-theme="microsoft"] .btn { border-radius: 2px; font-weight: 600; }
+[data-theme="microsoft"] .screen { border-radius: 4px; }
+[data-theme="microsoft"] #top.v3 { --v3-bg: #0b1220; --v3-fg: #fff; --v3-muted: #c8c8c8; --v3-ghost: #50e6ff; --v3-mark: #50e6ff; --v3-rule: linear-gradient(90deg, #f25022 0 25%, #7fba00 25% 50%, #00a4ef 50% 75%, #ffb900 75%); --v3-photo: sepia(1) hue-rotate(170deg) saturate(2) brightness(.9); --v3-h-weight: 600; --v3-h-track: -.02em; --v3-h-fill: linear-gradient(180deg, #fff 0%, #d0ecff 55%, #50e6ff 100%); --v3-h-phone: 18vw; }
+
+[data-theme="meta"] { --bg: #fff; --fg: #1c2b33; --muted: #465a69; --line: #dee3e9; --accent: #0866ff; --card: #f1f4f7; --btn: #0866ff; --btn-fg: #fff; --font: "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif; color-scheme: light; }
+[data-theme="meta"] h1, [data-theme="meta"] h2, [data-theme="meta"] h3 { font-weight: 500; letter-spacing: -.02em; }
+[data-theme="meta"] .card, [data-theme="meta"] .area, [data-theme="meta"] .offer, [data-theme="meta"] .pillar { border-radius: 24px; border: 0; box-shadow: none; }
+[data-theme="meta"] .btn { border-radius: 999px; font-weight: 500; background-image: linear-gradient(90deg, #0866ff, #7f3ff6); }
+[data-theme="meta"] .screen { border-radius: 24px; }
+[data-theme="meta"] #top.v3 { --v3-bg: #060b1f; --v3-fg: #fff; --v3-muted: #c8d2e0; --v3-ghost: #7fb2ff; --v3-mark: #7fb2ff; --v3-rule: linear-gradient(90deg, #0866ff, #7f3ff6, #ff4fd8); --v3-photo: sepia(1) hue-rotate(195deg) saturate(2.6) brightness(.85); --v3-h-weight: 500; --v3-h-track: -.03em; --v3-h-fill: linear-gradient(90deg, #7fb2ff, #fff 45%, #d6b8ff); --v3-h-phone: 17.8vw; }
+
+[data-theme="amazon"] { --bg: #131921; --fg: #fff; --muted: #c7cbd1; --line: #37475a; --accent: #ff9900; --card: #232f3e; --btn: #ffd814; --btn-fg: #0f1111; --font: "Amazon Ember", Arial, "Helvetica Neue", sans-serif; color-scheme: dark; }
+[data-theme="amazon"] h1, [data-theme="amazon"] h2, [data-theme="amazon"] h3 { font-weight: 700; letter-spacing: -.01em; }
+[data-theme="amazon"] .card, [data-theme="amazon"] .area, [data-theme="amazon"] .offer, [data-theme="amazon"] .pillar { border-radius: 8px; border: 1px solid var(--line); box-shadow: none; }
+[data-theme="amazon"] .btn { border-radius: 999px; font-weight: 500; }
+[data-theme="amazon"] .screen { border-radius: 8px; }
+[data-theme="amazon"] #top.v3 { --v3-bg: #0b1016; --v3-fg: #fff; --v3-muted: #c7cbd1; --v3-ghost: #ff9900; --v3-mark: #ff9900; --v3-rule: #ff9900; --v3-photo: sepia(.7) hue-rotate(-12deg) saturate(1.6) brightness(.85); --v3-h-weight: 700; --v3-h-track: -.02em; --v3-h-fill: linear-gradient(180deg, #fff 0%, #ffe3b3 55%, #ff9900 100%); --v3-h-phone: 17.2vw; }
+
+[data-theme="nvidia"] { --bg: #000; --fg: #fff; --muted: #b3b3b3; --line: #2b2b2b; --accent: #76b900; --card: #111; --btn: #76b900; --btn-fg: #000; --font: "DIN Alternate", "DIN Next", "Trebuchet MS", Arial, sans-serif; color-scheme: dark; }
+[data-theme="nvidia"] h1, [data-theme="nvidia"] h2, [data-theme="nvidia"] h3 { font-weight: 700; letter-spacing: 0; }
+[data-theme="nvidia"] .eyebrow { text-transform: uppercase; letter-spacing: .12em; font-size: 13px; color: var(--accent); }
+[data-theme="nvidia"] .card, [data-theme="nvidia"] .area, [data-theme="nvidia"] .offer, [data-theme="nvidia"] .pillar { border-radius: 0; border: 1px solid var(--line); border-top: 3px solid var(--accent); box-shadow: none; }
+[data-theme="nvidia"] .btn { border-radius: 2px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; font-size: 14px; }
+[data-theme="nvidia"] .screen { border-radius: 0; }
+[data-theme="nvidia"] #top.v3 { --v3-bg: #000; --v3-fg: #fff; --v3-muted: #b3b3b3; --v3-ghost: #76b900; --v3-mark: #76b900; --v3-rule: #76b900; --v3-photo: grayscale(1) sepia(1) hue-rotate(40deg) saturate(2.4) brightness(.8) contrast(1.2); --v3-h-weight: 700; --v3-h-case: uppercase; --v3-h-track: .01em; --v3-h-fill: linear-gradient(180deg, #fff 0%, #dff5b0 50%, #76b900 100%); --v3-h-phone: 18.7vw; }
+
+[data-theme="netflix"] { --bg: #141414; --fg: #fff; --muted: #b3b3b3; --line: #333; --accent: #ff3d47; --card: #1f1f1f; --btn: #e50914; --btn-fg: #fff; --font: "Helvetica Neue", Helvetica, Arial, sans-serif; color-scheme: dark; }
+[data-theme="netflix"] h1, [data-theme="netflix"] h2, [data-theme="netflix"] h3 { font-weight: 800; letter-spacing: -.02em; }
+[data-theme="netflix"] .card, [data-theme="netflix"] .area, [data-theme="netflix"] .offer, [data-theme="netflix"] .pillar { border-radius: 6px; border: 0; box-shadow: none; transition: transform .35s var(--ease), box-shadow .35s; }
+[data-theme="netflix"] .btn { border-radius: 4px; font-weight: 700; }
+[data-theme="netflix"] .screen { border-radius: 6px; }
+[data-theme="netflix"] #top.v3 { --v3-bg: #000; --v3-fg: #fff; --v3-muted: #b3b3b3; --v3-ghost: #fff; --v3-mark: #e50914; --v3-rule: #e50914; --v3-photo: grayscale(.4) sepia(.5) hue-rotate(-30deg) saturate(2) brightness(.7) contrast(1.2); --v3-h-weight: 800; --v3-h-case: uppercase; --v3-h-track: -.01em; --v3-h-fill: linear-gradient(180deg, #ff4b55 0%, #e50914 60%, #8a0610 100%); --v3-h-glow: drop-shadow(0 6px 24px rgba(229, 9, 20, .45)); --v3-h-phone: 16.9vw; }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  [data-theme="netflix"] .card:hover, [data-theme="netflix"] .area:hover { transform: scale(1.03); box-shadow: 0 18px 40px rgba(0, 0, 0, .6); }
+}
+
+[data-theme="tesla"] { --bg: #fff; --fg: #171a20; --muted: #5c5e62; --line: #e2e3e3; --accent: #3e6ae1; --card: #f4f4f4; --btn: #3e6ae1; --btn-fg: #fff; --font: "Gotham SSm", "Universal Sans Display", "Helvetica Neue", Arial, sans-serif; color-scheme: light; }
+[data-theme="tesla"] h1, [data-theme="tesla"] h2, [data-theme="tesla"] h3 { font-weight: 500; letter-spacing: 0; }
+[data-theme="tesla"] .card, [data-theme="tesla"] .area, [data-theme="tesla"] .offer, [data-theme="tesla"] .pillar { border-radius: 4px; border: 0; box-shadow: none; }
+[data-theme="tesla"] .btn { border-radius: 4px; font-weight: 500; font-size: 14px; }
+[data-theme="tesla"] .screen { border-radius: 4px; }
+[data-theme="tesla"] #top.v3 { --v3-bg: #0b0c0f; --v3-fg: #fff; --v3-muted: #c9cacc; --v3-ghost: #fff; --v3-mark: #e82127; --v3-rule: #fff; --v3-photo: grayscale(1) contrast(1.1) brightness(.8); --v3-h-weight: 500; --v3-h-case: uppercase; --v3-h-track: .14em; --v3-h-fill: linear-gradient(#fff, #fff); --v3-h-phone: 14vw; }
+
+[data-theme="anthropic"] { --bg: #f0eee6; --fg: #141413; --muted: #5e5d59; --line: #d8d5ca; --accent: #a8492a; --card: #faf9f5; --btn: #141413; --btn-fg: #faf9f5; --font: "Styrene B", "Avenir Next", "Helvetica Neue", system-ui, sans-serif; color-scheme: light; }
+[data-theme="anthropic"] h1, [data-theme="anthropic"] h2, [data-theme="anthropic"] h3 { font-family: "Tiempos Headline", "Iowan Old Style", "Palatino Linotype", Georgia, serif; font-weight: 500; letter-spacing: -.015em; }
+[data-theme="anthropic"] .card, [data-theme="anthropic"] .area, [data-theme="anthropic"] .offer, [data-theme="anthropic"] .pillar { border-radius: 16px; border: 1px solid var(--line); box-shadow: none; }
+[data-theme="anthropic"] .btn { border-radius: 12px; font-weight: 500; }
+[data-theme="anthropic"] .screen { border-radius: 16px; }
+[data-theme="anthropic"] #top.v3 { --v3-bg: #1a1915; --v3-fg: #faf9f5; --v3-muted: #c2c0b6; --v3-ghost: #d97757; --v3-mark: #d97757; --v3-rule: #d97757; --v3-photo: sepia(.7) saturate(1.2) brightness(.85); --v3-h-weight: 500; --v3-h-track: -.02em; --v3-h-fill: linear-gradient(180deg, #faf9f5 0%, #f0d5c6 55%, #d97757 100%); --v3-h-phone: 16.5vw; }
+[data-theme="anthropic"] .v3-hands { --v3-h-font: "Tiempos Headline", "Iowan Old Style", "Palatino Linotype", Georgia, serif; }
+
+[data-theme="openai"] { --bg: #fff; --fg: #0d0d0d; --muted: #5d5d5d; --line: #e5e5e5; --accent: #0d0d0d; --card: #f4f4f4; --btn: #0d0d0d; --btn-fg: #fff; --font: "Söhne", "Inter", -apple-system, "Helvetica Neue", Arial, sans-serif; color-scheme: light; }
+[data-theme="openai"] h1, [data-theme="openai"] h2, [data-theme="openai"] h3 { font-weight: 500; letter-spacing: -.025em; }
+[data-theme="openai"] .card, [data-theme="openai"] .area, [data-theme="openai"] .offer, [data-theme="openai"] .pillar { border-radius: 20px; border: 0; box-shadow: none; }
+[data-theme="openai"] .btn { border-radius: 999px; font-weight: 500; }
+[data-theme="openai"] .screen { border-radius: 20px; }
+[data-theme="openai"] #top.v3 { --v3-bg: #000; --v3-fg: #fff; --v3-muted: #b4b4b4; --v3-ghost: #fff; --v3-mark: #10a37f; --v3-rule: linear-gradient(90deg, #ff6b4a, #ffc94a, #10a37f, #4a8cff); --v3-photo: grayscale(1) contrast(1.05) brightness(.8); --v3-h-weight: 500; --v3-h-track: -.035em; --v3-h-fill: linear-gradient(180deg, #fff 0%, #e8e8e8 55%, #8f8f8f 100%); --v3-h-phone: 18vw; }
+
+[data-theme="adobe"] { --bg: #fff; --fg: #2c2c2c; --muted: #505050; --line: #e1e1e1; --accent: #d31510; --card: #f8f8f8; --btn: #eb1000; --btn-fg: #fff; --font: "Adobe Clean", "Source Sans 3", "Source Sans Pro", -apple-system, "Segoe UI", Arial, sans-serif; color-scheme: light; }
+[data-theme="adobe"] h1, [data-theme="adobe"] h2, [data-theme="adobe"] h3 { font-weight: 800; letter-spacing: -.02em; }
+[data-theme="adobe"] .card, [data-theme="adobe"] .area, [data-theme="adobe"] .offer, [data-theme="adobe"] .pillar { border-radius: 16px; border: 1px solid var(--line); box-shadow: 0 1px 4px rgba(0, 0, 0, .08); }
+[data-theme="adobe"] .btn { border-radius: 999px; font-weight: 700; }
+[data-theme="adobe"] .screen { border-radius: 16px; }
+[data-theme="adobe"] #top.v3 { --v3-bg: #120404; --v3-fg: #fff; --v3-muted: #d6c9c9; --v3-ghost: #ff6a5c; --v3-mark: #ff6a5c; --v3-rule: linear-gradient(90deg, #eb1000, #ff7a00, #ff2bd1); --v3-photo: sepia(.9) hue-rotate(-35deg) saturate(2.2) brightness(.75) contrast(1.15); --v3-h-weight: 800; --v3-h-track: -.03em; --v3-h-fill: linear-gradient(120deg, #ffffff 0%, #ffd2cc 45%, #eb1000 100%); --v3-h-phone: 17.4vw; }
+
+[data-theme="ibm"] { --bg: #161616; --fg: #f4f4f4; --muted: #c6c6c6; --line: #393939; --accent: #78a9ff; --card: #262626; --btn: #0f62fe; --btn-fg: #fff; --font: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; color-scheme: dark; }
+[data-theme="ibm"] h1, [data-theme="ibm"] h2, [data-theme="ibm"] h3 { font-weight: 300; letter-spacing: 0; }
+[data-theme="ibm"] .eyebrow { font-family: "IBM Plex Mono", ui-monospace, Menlo, monospace; letter-spacing: .08em; }
+[data-theme="ibm"] .card, [data-theme="ibm"] .area, [data-theme="ibm"] .offer, [data-theme="ibm"] .pillar { border-radius: 0; border: 0; border-bottom: 1px solid var(--line); box-shadow: none; }
+[data-theme="ibm"] .btn { border-radius: 0; font-weight: 400; }
+[data-theme="ibm"] .screen { border-radius: 0; }
+[data-theme="ibm"] .set-panel, [data-theme="ibm"] .srch-panel, [data-theme="ibm"] .set-opt, [data-theme="ibm"] .set-btn { border-radius: 0; }
+[data-theme="ibm"] #top.v3 { --v3-bg: #000; --v3-fg: #f4f4f4; --v3-muted: #c6c6c6; --v3-ghost: #78a9ff; --v3-mark: #78a9ff; --v3-rule: #0f62fe; --v3-photo: grayscale(1) sepia(1) hue-rotate(185deg) saturate(2.4) brightness(.7) contrast(1.15); --v3-h-weight: 300; --v3-h-track: 0; --v3-h-fill: linear-gradient(180deg, #fff 0%, #d0e2ff 55%, #78a9ff 100%); --v3-h-phone: 18.1vw; }
+
+/* ---------- Motion layer: every theme; still for reduced motion ----------
+   Headings ink in from dim to full as they scroll into view (CSS scroll timeline, no JS).
+   Each top-level section gets an index number and a hairline that draws in.
+   A thin line under the menu bar tracks reading progress.
+   Cards carry a soft spotlight that follows a mouse pointer (app.js sets --mx / --my). */
+main { counter-reset: sec; }
+main > section.scene:not(.hero) { counter-increment: sec; }
+main > section.scene:not(.hero) > .wrap::before { content: counter(sec, decimal-leading-zero); display: block; width: max-content; margin-bottom: 18px; padding-inline-end: 80px; font: 600 12px/1 ui-monospace, "SF Mono", Menlo, Consolas, monospace; letter-spacing: .24em; color: var(--s-muted); background: linear-gradient(var(--s-accent), var(--s-accent)) no-repeat right center / 56px 1px; }
+[dir="rtl"] main > section.scene:not(.hero) > .wrap::before { background-position: left center; }
+@property --ink { syntax: "<percentage>"; inherits: false; initial-value: 115%; }
+@keyframes ink { from { --ink: -15%; } to { --ink: 115%; } }
+@keyframes draw { from { background-size: 0 1px; } to { background-size: 56px 1px; } }
+@keyframes page-progress { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+.nav::after { content: ""; position: absolute; inset: auto 0 -1px 0; height: 2px; transform: scaleX(0); transform-origin: 0 50%; background: var(--s-accent, #2997ff); pointer-events: none; }
+[dir="rtl"] .nav::after { transform-origin: 100% 50%; }
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    :root:not([data-theme="hud"]):not([data-theme="arcade"]):not([data-theme="grid"]):not([data-theme="vision"]) main .scene:not(.hero) h2:not(.sr-only) {
+      background-image: linear-gradient(180deg, currentColor calc(var(--ink) - 15%), color-mix(in srgb, currentColor 40%, transparent) var(--ink));
+      -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+      animation: ink linear both; animation-timeline: view(); animation-range: entry 20% cover 42%;
+    }
+    main > section.scene:not(.hero) > .wrap::before { animation: draw linear both; animation-timeline: view(); animation-range: entry 10% cover 30%; }
+    .nav::after { animation: page-progress linear both; animation-timeline: scroll(root); }
+  }
+}
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  :root:not([data-theme="hud"]) .spot:is(.card, .area, .offer, .pillar) { background-image: radial-gradient(360px circle at var(--mx, -400px) var(--my, -400px), color-mix(in srgb, var(--accent, #2997ff) 14%, transparent), transparent 70%); }
+}

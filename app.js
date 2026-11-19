@@ -118,3 +118,28 @@
     window.addEventListener('load', fromHash);
   });
 })();
+
+/* Card spotlight: a soft glow follows a mouse pointer across cards. Mouse only; off for reduced motion. */
+(function () {
+  if (!window.matchMedia || !matchMedia('(hover: hover) and (pointer: fine)').matches || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var sel = '.card, .area, .offer, .pillar';
+  document.querySelectorAll(sel).forEach(function (el) { el.classList.add('spot'); });
+  var still = matchMedia('(prefers-reduced-motion: reduce)'), last = null, queued = false;
+  document.addEventListener('pointermove', function (e) {
+    last = e;
+    if (queued || still.matches) return;
+    queued = true;
+    requestAnimationFrame(function () {
+      queued = false;
+      var el = last.target.closest && last.target.closest(sel);
+      if (!el) return;
+      var r = el.getBoundingClientRect();
+      el.style.setProperty('--mx', (last.clientX - r.left) + 'px');
+      el.style.setProperty('--my', (last.clientY - r.top) + 'px');
+    });
+  }, { passive: true });
+  document.addEventListener('pointerout', function (e) {
+    var el = e.target.closest && e.target.closest(sel);
+    if (el && !el.contains(e.relatedTarget)) { el.style.removeProperty('--mx'); el.style.removeProperty('--my'); }
+  }, { passive: true });
+})();
