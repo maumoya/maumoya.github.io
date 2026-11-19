@@ -551,5 +551,11 @@
   "Quantitative trading research run by a supervised agent team. Private until launch; for sale.": "監督付きのエージェントチームが行う定量トレーディング研究。公開までは非公開。販売可。",
   "Cash and receivables reset": "資金と売掛金のリセット",
   "I map your invoicing and reimbursement cycle, find where cash waits, and set the cadence that took one nonprofit from 90 to 30 days.": "請求と精算のサイクルを可視化し、資金が滞る箇所を見つけ、ある非営利団体で90日から30日へ短縮した運用リズムを整えます。",
-  "See technology {0}": "テクノロジーを見る {0}"
+  "See technology {0}": "テクノロジーを見る {0}",
+  "Inspired by": "インスピレーション",
+  "Colors only. Not affiliated with these companies.": "配色のみ。これらの企業とは無関係です。",
+  "Mode": "モード",
+  "System": "システム",
+  "Light": "ライト",
+  "Dark": "ダーク"
 }

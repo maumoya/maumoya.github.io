@@ -1,6 +1,6 @@
 // Site settings behind the gear button (top right): sound + volume, theme, language.
-// Choices stay in localStorage. Sound is synthesized with Web Audio (no files) and starts on the
-// first click or key press, because browsers block audio before a user gesture.
+// Choices stay in localStorage. Sound is synthesized with Web Audio (no files). It starts muted on a
+// first visit; once the visitor turns it on, it plays from their next click or key press on every visit.
 (function () {
   var root = document.documentElement;
   var me = document.currentScript;
@@ -27,6 +27,23 @@
     { id: 'terminal', name: 'Terminal', sw: ['#000000', '#33ff66'] },
     { id: 'arcade', name: 'Arcade', sw: ['#16002e', '#ff3df0'] }
   ];
+  // Inspired by well-known tech companies: colors and type mood only. No logos, no brand assets,
+  // and no affiliation (the menu says so).
+  var BRANDS = [
+    { id: 'apple', name: 'Apple', sw: ['#000000', '#2997ff'] },
+    { id: 'google', name: 'Google', sw: ['#f0f4f9', '#0b57d0'] },
+    { id: 'microsoft', name: 'Microsoft', sw: ['#faf9f8', '#0078d4'] },
+    { id: 'meta', name: 'Meta', sw: ['#ffffff', '#0866ff'] },
+    { id: 'amazon', name: 'Amazon', sw: ['#131921', '#ff9900'] },
+    { id: 'nvidia', name: 'NVIDIA', sw: ['#000000', '#76b900'] },
+    { id: 'netflix', name: 'Netflix', sw: ['#141414', '#e50914'] },
+    { id: 'tesla', name: 'Tesla', sw: ['#ffffff', '#3e6ae1'] },
+    { id: 'anthropic', name: 'Anthropic', sw: ['#f0eee6', '#d97757'] },
+    { id: 'openai', name: 'OpenAI', sw: ['#ffffff', '#0d0d0d'] },
+    { id: 'adobe', name: 'Acrobat', sw: ['#252525', '#eb1000'] },
+    { id: 'ibm', name: 'IBM', sw: ['#161616', '#0f62fe'] }
+  ];
+  var ALL_THEMES = THEMES.concat(BRANDS);
   // Shown without searching, in the owner's order. Every other language appears through the search box.
   var LANGS = [
     { id: 'en', tag: 'en', name: 'English', flag: 'us', en: 'English', pin: 1 },
@@ -286,8 +303,16 @@
   }
 
   // ---------- Theme ----------
+  // Light / Dark / System for the Minimal theme; named themes keep their own fixed palette.
+  var MODES = [{ id: 'system', name: 'System' }, { id: 'light', name: 'Light' }, { id: 'dark', name: 'Dark' }];
+  function setMode(id, fromUser) {
+    if (id !== 'light' && id !== 'dark') id = 'system';
+    if (id === 'system') root.removeAttribute('data-mode'); else root.dataset.mode = id;
+    if (fromUser) { save('mm-mode', id); if (root.dataset.theme) setTheme('clean', true); }
+    sync();
+  }
   function setTheme(id, fromUser) {
-    if (!THEMES.some(function (x) { return x.id === id; })) id = 'clean';
+    if (!ALL_THEMES.some(function (x) { return x.id === id; })) id = 'clean';
     if (id === 'clean') root.removeAttribute('data-theme'); else root.dataset.theme = id;
     if (fromUser) save('mm-theme', id);
     sync();
@@ -341,6 +366,11 @@
     grid: { style: 'Synthwave', root: 9, bpm: 100, prog: EPIC, padWave: 'sawtooth', pad: .02, arpWave: 'sawtooth', arp: [0, 1, 2, 1, 3, 1, 2, 1], arpOct: 12,
       kick: [1, 0, 0, 0, 1, 0, 0, 0], clap: [0, 0, 1, 0, 0, 0, 1, 0], hat: [0, 1, 0, 1, 0, 1, 0, 1], bass: [1, 1, 1, 1, 1, 1, 1, 1], wave: 'triangle', mel: .45, cut: 2000, blip: ['square', 880, 880, .04] }
   };
+  // Company themes reuse the song whose mood fits them best.
+  var BRAND_SONG = { apple: 'fluent', google: 'material', microsoft: 'traditional', meta: 'variety', amazon: 'news',
+    nvidia: 'grid', netflix: 'holo', tesla: 'vision', anthropic: 'soft', openai: 'night',
+    adobe: 'luxury', ibm: 'terminal' };
+  Object.keys(BRAND_SONG).forEach(function (k) { PROFILES[k] = PROFILES[BRAND_SONG[k]]; });
   // Music styles the visitor can pick; 'auto' plays the theme's own song, 'clicks' keeps only the blips.
   var MUSIC = [{ id: 'auto', name: 'Auto' }, { id: 'calm', name: 'Calm' }, { id: 'bright', name: 'Bright' },
     { id: 'deep', name: 'Deep' }, { id: 'clicks', name: 'Clicks' }];
@@ -349,7 +379,8 @@
   var PENTA = [0, 2, 4, 7, 9, 12, 14, 16, 19, 21];                     // major pentatonic, 2 octaves
   var sound = (function () {
     // 'mm-vol' replaces the old 'mm-volume' key so every visitor starts again at 15%.
-    var ctx, master, pad, on = load('mm-sound', 'on') !== 'off', vol = +load('mm-vol', '15');
+    // 'mm-sound2' replaces 'mm-sound' so every visitor starts muted; only 'on' (their own choice) plays.
+    var ctx, master, pad, on = load('mm-sound2', 'off') === 'on', vol = +load('mm-vol', '15');
     var profile = PROFILES.clean, themeId = 'clean', music = load('mm-music', 'auto');
     if (!MUSIC.some(function (m) { return m.id === music; })) music = 'auto';
     if (!(vol >= 0 && vol <= 100)) vol = 15;
@@ -481,7 +512,7 @@
       setMusic: function (id) { music = id; save('mm-music', id); pick(); },
       set: function (o, v) {
         on = o; vol = v;
-        save('mm-sound', on ? 'on' : 'off'); save('mm-vol', String(vol));
+        save('mm-sound2', on ? 'on' : 'off'); save('mm-vol', String(vol));
         if (on) start();
         if (ctx) {
           master.gain.setTargetAtTime(level(), ctx.currentTime, .05);
@@ -513,6 +544,9 @@
       // A searched-for choice stays in view next to the pinned ones.
       if (!q && r.checked) r.closest('label').hidden = false;
     });
+    panel.querySelectorAll('input[name="mm-mode"]').forEach(function (r) { r.checked = r.value === (root.dataset.mode || 'system'); });
+    // A named theme keeps its own palette, so the mode row dims until Minimal is back.
+    panel.querySelector('.set-mode').classList.toggle('idle', !!root.dataset.theme);
     panel.querySelectorAll('input[name="mm-music"]').forEach(function (r) { r.checked = r.value === sound.music; r.disabled = !sound.on; });
     var sb = panel.querySelector('.set-sound button'), sv = panel.querySelector('.set-sound input');
     sb.setAttribute('aria-pressed', String(sound.on));
@@ -540,7 +574,8 @@
     '<path class="w" d="M16 9.5a3.5 3.5 0 0 1 0 5M18.5 7a7 7 0 0 1 0 10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>' +
     '<path class="x" d="M16.5 9.5l5 5m0-5l-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>' +
     '<input type="range" min="0" max="100" step="5" data-t="Volume"><span class="set-vol" aria-hidden="true"></span></div></fieldset>' +
-    radios('music', MUSIC, 'Music') + radios('theme', THEMES, 'Theme') + radios('lang', LANGS, 'Language').replace('<div class="set-lang">', '<input type="search" class="set-find" data-t="Find a language" placeholder="' + t('Find a language') + '" aria-label="' + t('Find a language') + '" autocomplete="off" spellcheck="false"><div class="set-lang">');
+    radios('music', MUSIC, 'Music') + radios('mode', MODES, 'Mode') + radios('theme', THEMES, 'Theme') +
+    radios('theme', BRANDS, 'Inspired by').replace('</fieldset>', '<small class="set-note" data-t="Colors only. Not affiliated with these companies." data-t-text="1">' + t('Colors only. Not affiliated with these companies.') + '</small></fieldset>').replace('class="set-theme"', 'class="set-theme set-brands"') + radios('lang', LANGS, 'Language').replace('<div class="set-lang">', '<input type="search" class="set-find" data-t="Find a language" placeholder="' + t('Find a language') + '" aria-label="' + t('Find a language') + '" autocomplete="off" spellcheck="false"><div class="set-lang">');
 
   var navIn = document.querySelector('.nav-in');
   (navIn || document.body).appendChild(btn);
@@ -582,6 +617,7 @@
     var r = e.target;
     if (r.name === 'mm-theme') setTheme(r.value, true);
     else if (r.name === 'mm-lang') setLang(r.value, true);
+    else if (r.name === 'mm-mode') setMode(r.value, true);
     else if (r.name === 'mm-music') { sound.setMusic(r.value); sync(); }
     sound.blip();
   });
@@ -599,6 +635,7 @@
     if (a && !panel.contains(a)) sound.blip();
   }, true);
 
+  setMode(load('mm-mode', 'system'), false);
   setTheme(load('mm-theme', 'clean'), false);
   // The menu bar matches the HANDS ON headline width (CSS reads --hands-w on desktop).
   var hands = document.querySelector('.v3-hands');

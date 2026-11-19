@@ -551,5 +551,11 @@
   "Quantitative trading research run by a supervised agent team. Private until launch; for sale.": "Recherche en trading quantitatif menée par une équipe d'agents supervisée. Privé jusqu'au lancement ; à vendre.",
   "Cash and receivables reset": "Remise à plat de la trésorerie et des créances",
   "I map your invoicing and reimbursement cycle, find where cash waits, and set the cadence that took one nonprofit from 90 to 30 days.": "Je cartographie votre cycle de facturation et de remboursement, je trouve où la trésorerie attend et je mets en place le rythme qui a fait passer une association de 90 à 30 jours.",
-  "See technology {0}": "Voir la technologie {0}"
+  "See technology {0}": "Voir la technologie {0}",
+  "Inspired by": "Inspiré de",
+  "Colors only. Not affiliated with these companies.": "Couleurs seulement. Aucune affiliation avec ces entreprises.",
+  "Mode": "Mode",
+  "System": "Système",
+  "Light": "Clair",
+  "Dark": "Sombre"
 }
