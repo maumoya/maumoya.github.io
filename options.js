@@ -301,9 +301,14 @@
   }
   function pageOf(id) { return id !== 'en' && ready(id) ? id : 'en'; }
 
+  // Text the page already shows is left alone: re-inserting the same nodes resets the browser's
+  // largest-paint timing (LCP) and costs work for nothing.
+  var shown = PAGE_LANG;
   function render() {
     if (!units) collect();
-    if (PAGE_LANG === 'en') units.forEach(function (u) {
+    var same = lang === shown;
+    shown = lang;
+    if (PAGE_LANG === 'en' && !same) units.forEach(function (u) {
       var tr = lang !== 'en' && dict[u.key];
       if (!tr) { u.el.replaceChildren.apply(u.el, u.orig); return; }
       var out = [], last = 0, m;
