@@ -2,6 +2,9 @@
 // screen, content animates in once, and videos play only while visible.
 (function () {
   var root = document.documentElement;
+  // Scroll snap waits until the page has loaded and painted (see html.snap in style.css).
+  function snap() { requestAnimationFrame(function () { requestAnimationFrame(function () { root.classList.add('snap'); }); }); }
+  if (document.readyState === 'complete') snap(); else window.addEventListener('load', snap, { once: true });
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var scenes = document.querySelectorAll('.scene');
   var rail = document.querySelector('.rail');

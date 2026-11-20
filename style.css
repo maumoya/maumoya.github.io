@@ -64,7 +64,9 @@
 [data-scene="edu"]    { --s-bg: #2a1606; --s-fg: #fff9f2; --s-muted: #e6c9a8; --s-accent: #fbbf24; --s-btn: #fbbf24; --s-btn-fg: #2a1606; --s-line: #5a3613; }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 44px; scroll-snap-type: y mandatory; }
+html { scroll-behavior: smooth; scroll-padding-top: 44px; }
+/* Snap turns on after load (app.js): a snap at first paint counts as a scroll and Chrome then records no LCP. */
+html.snap { scroll-snap-type: y mandatory; }
 /* Each section is one full screen and the page always settles on a whole one, never halfway. */
 main > .scene, #work > .scene { scroll-snap-align: start; scroll-snap-stop: always; min-height: calc(100svh - 44px); display: flex; flex-direction: column; justify-content: center; }
 main > .scene > .wrap, #work > .scene > .wrap { width: 100%; }
