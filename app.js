@@ -7,7 +7,14 @@
   var rail = document.querySelector('.rail');
   var railLinks = rail ? rail.querySelectorAll('a') : [];
 
-  if (!('IntersectionObserver' in window)) return;
+  // Video posters: fetched only when a video comes near the screen.
+  var posters = [].slice.call(document.querySelectorAll('video[data-poster]'));
+  function poster(v) { v.poster = v.getAttribute('data-poster'); v.removeAttribute('data-poster'); }
+  if (!('IntersectionObserver' in window)) { posters.forEach(poster); return; }
+  var posterIO = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { if (e.isIntersecting) { poster(e.target); posterIO.unobserve(e.target); } });
+  }, { rootMargin: '800px 0px' });
+  posters.forEach(function (v) { posterIO.observe(v); });
   root.classList.add('js');
 
   scenes.forEach(function (s) {

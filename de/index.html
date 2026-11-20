@@ -88,8 +88,9 @@
 <link rel="alternate" hreflang="x-default" href="https://maumoya.github.io/">
 <!-- /i18n-alt -->
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
-<link rel="preload" as="image" href="/media/hero/v3.webp" imagesrcset="/media/hero/v3.webp 1x, /media/hero/v3-4k.webp 2x" fetchpriority="high">
-<link rel="stylesheet" href="../style.css?v=f21114c2">
+<link rel="preload" as="image" href="/media/hero/v3-m.webp" media="(max-width: 700px)" fetchpriority="high">
+<link rel="preload" as="image" href="/media/hero/v3.webp" imagesrcset="/media/hero/v3.webp 1x, /media/hero/v3-4k.webp 2x" media="(min-width: 701px)" fetchpriority="high">
+<link rel="stylesheet" href="../style.css?v=64353a03">
 <script>(function(d){if("IntersectionObserver" in window)d.classList.add("js");try{var t=localStorage.getItem("mm-theme")||"apple",l=null;if(t&&t!=="clean")d.dataset.theme=t;var m=localStorage.getItem("mm-mode");if(m==="light"||m==="dark")d.dataset.mode=m;if(l&&l!=="en"){d.classList.add("i18n-wait");if(l==="ar"||l==="he")d.dir="rtl";}}catch(e){}})(document.documentElement);</script>
 </head>
 <body data-scene="base">
@@ -201,7 +202,7 @@
         </div>
         <figure class="media fx-media">
           <div class="screen wide">
-            <video muted loop playsinline preload="none" width="800" height="560" poster="../media/skill-adhd.jpg" aria-label="Demo: Eine lange Agent-Sitzung, der Nutzer tippt STATUS, und der Agent antwortet mit einer Tabelle mit vier Zeilen. Die Migration liegt beim Nutzer, das Rate-Limit wurde vergessen, das Anmeldeformular ist in den Tests und der README-Fix ist gemergt, darunter ein Button: npm run migrate.">
+            <video muted loop playsinline preload="none" width="800" height="560" data-poster="/media/skill-adhd.jpg" aria-label="Demo: Eine lange Agent-Sitzung, der Nutzer tippt STATUS, und der Agent antwortet mit einer Tabelle mit vier Zeilen. Die Migration liegt beim Nutzer, das Rate-Limit wurde vergessen, das Anmeldeformular ist in den Tests und der README-Fix ist gemergt, darunter ein Button: npm run migrate.">
               <source src="../media/skill-adhd.mp4" type="video/mp4">
               <source src="../media/skill-adhd.webm" type="video/webm">
             </video>
@@ -247,7 +248,7 @@
         </div>
         <figure class="media fx-media">
           <div class="screen wide">
-            <video muted loop playsinline preload="none" width="800" height="560" poster="../media/skill-forger.jpg" aria-label="Demo: readiness.sh läuft im Repository skill-forger-e2e, besteht alle 21 Prüfungen und gibt SCORE 100/100 mit einem Readiness-Badge aus.">
+            <video muted loop playsinline preload="none" width="800" height="560" data-poster="/media/skill-forger.jpg" aria-label="Demo: readiness.sh läuft im Repository skill-forger-e2e, besteht alle 21 Prüfungen und gibt SCORE 100/100 mit einem Readiness-Badge aus.">
               <source src="../media/skill-forger.mp4" type="video/mp4">
               <source src="../media/skill-forger.webm" type="video/webm">
             </video>
@@ -396,7 +397,7 @@
         </div>
         <figure class="media fx-media">
           <div class="screen wide">
-            <video muted loop playsinline preload="none" width="800" height="560" poster="../media/ghost-text.jpg" aria-label="Animation: Eine Nachricht tippen, auf die Bombe klicken, 20 Sekunden wählen; die Nachricht geht mit einer Selbstzerstörungszeile und einem Countdown-Ring raus und wird bei null zu 💬💣💨 (Bearbeitet).">
+            <video muted loop playsinline preload="none" width="800" height="560" data-poster="/media/ghost-text.jpg" aria-label="Animation: Eine Nachricht tippen, auf die Bombe klicken, 20 Sekunden wählen; die Nachricht geht mit einer Selbstzerstörungszeile und einem Countdown-Ring raus und wird bei null zu 💬💣💨 (Bearbeitet).">
               <source src="../media/ghost-text.mp4" type="video/mp4">
               <source src="../media/ghost-text.webm" type="video/webm">
             </video>
@@ -423,7 +424,7 @@
           </div>
           <figure class="media fx-media">
             <div class="screen">
-              <video muted loop playsinline preload="none" width="480" height="640" poster="../media/blaster-v2.jpg" aria-label="Gameplay von Boredom Blaster v2: ein vollständig aufgerüstetes Schiff, das sich in alle Richtungen bewegt, dann ein neuer Rekord und die Top-10-Tabelle.">
+              <video muted loop playsinline preload="none" width="480" height="640" data-poster="/media/blaster-v2.jpg" aria-label="Gameplay von Boredom Blaster v2: ein vollständig aufgerüstetes Schiff, das sich in alle Richtungen bewegt, dann ein neuer Rekord und die Top-10-Tabelle.">
                 <source src="../media/blaster-v2.mp4" type="video/mp4">
                 <source src="../media/blaster-v2.webm" type="video/webm">
               </video>
@@ -446,7 +447,7 @@
           </div>
           <figure class="media fx-media">
             <div class="screen">
-              <video muted loop playsinline preload="none" width="480" height="640" poster="../media/blaster-v1.jpg" aria-label="Gameplay von Boredom Blaster v1 durch die ersten drei Wellen.">
+              <video muted loop playsinline preload="none" width="480" height="640" data-poster="/media/blaster-v1.jpg" aria-label="Gameplay von Boredom Blaster v1 durch die ersten drei Wellen.">
                 <source src="../media/blaster-v1.mp4" type="video/mp4">
                 <source src="../media/blaster-v1.webm" type="video/webm">
               </video>
@@ -475,7 +476,7 @@
           </div>
           <figure class="media fx-media">
             <div class="screen wide">
-              <video muted loop playsinline preload="none" width="800" height="506" poster="../media/christian-trivia-v2.jpg" aria-label="Christian Trivia v2 im Spiel: Das Kind läuft zu einem leuchtenden Licht, sagt, was Gott am Tag 1 gemacht hat, bekommt eine Zeitleistenkarte und geht durch das offene Tor in Tag 2.">
+              <video muted loop playsinline preload="none" width="800" height="506" data-poster="/media/christian-trivia-v2.jpg" aria-label="Christian Trivia v2 im Spiel: Das Kind läuft zu einem leuchtenden Licht, sagt, was Gott am Tag 1 gemacht hat, bekommt eine Zeitleistenkarte und geht durch das offene Tor in Tag 2.">
                 <source src="../media/christian-trivia-v2.mp4" type="video/mp4">
                 <source src="../media/christian-trivia-v2.webm" type="video/webm">
               </video>
@@ -499,7 +500,7 @@
           </div>
           <figure class="media fx-media">
             <div class="screen wide">
-              <video muted loop playsinline preload="none" width="800" height="560" poster="../media/christian-trivia.jpg" aria-label="Gameplay von Christian Trivia: Licht erscheint über dem Wasser, dann Himmel und Meer, dann trockenes Land mit Bäumen; jede Szene stellt eine Frage mit drei Bildantworten.">
+              <video muted loop playsinline preload="none" width="800" height="560" data-poster="/media/christian-trivia.jpg" aria-label="Gameplay von Christian Trivia: Licht erscheint über dem Wasser, dann Himmel und Meer, dann trockenes Land mit Bäumen; jede Szene stellt eine Frage mit drei Bildantworten.">
                 <source src="../media/christian-trivia.mp4" type="video/mp4">
                 <source src="../media/christian-trivia.webm" type="video/webm">
               </video>
@@ -715,6 +716,6 @@
 </footer>
 <script src="../options.js?v=9b036bef" defer></script>
 <script src="../search.js?v=2f870088" defer></script>
-<script src="../app.js?v=c22c14e6" defer></script>
+<script src="../app.js?v=f257ae80" defer></script>
 </body>
 </html>

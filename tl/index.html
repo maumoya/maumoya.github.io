@@ -88,8 +88,9 @@
 <link rel="alternate" hreflang="x-default" href="https://maumoya.github.io/">
 <!-- /i18n-alt -->
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
-<link rel="preload" as="image" href="/media/hero/v3.webp" imagesrcset="/media/hero/v3.webp 1x, /media/hero/v3-4k.webp 2x" fetchpriority="high">
-<link rel="stylesheet" href="../style.css?v=f21114c2">
+<link rel="preload" as="image" href="/media/hero/v3-m.webp" media="(max-width: 700px)" fetchpriority="high">
+<link rel="preload" as="image" href="/media/hero/v3.webp" imagesrcset="/media/hero/v3.webp 1x, /media/hero/v3-4k.webp 2x" media="(min-width: 701px)" fetchpriority="high">
+<link rel="stylesheet" href="../style.css?v=64353a03">
 <script>(function(d){if("IntersectionObserver" in window)d.classList.add("js");try{var t=localStorage.getItem("mm-theme")||"apple",l=null;if(t&&t!=="clean")d.dataset.theme=t;var m=localStorage.getItem("mm-mode");if(m==="light"||m==="dark")d.dataset.mode=m;if(l&&l!=="en"){d.classList.add("i18n-wait");if(l==="ar"||l==="he")d.dir="rtl";}}catch(e){}})(document.documentElement);</script>
 </head>
 <body data-scene="base">
@@ -201,7 +202,7 @@
         </div>
         <figure class="media fx-media">
           <div class="screen wide">
-            <video muted loop playsinline preload="none" width="800" height="560" poster="../media/skill-adhd.jpg" aria-label="Demo: isang mahabang agent session, tina-type ng user ang STATUS, at sumasagot ang agent ng table na may apat na hilera. Ang migration ay turn ng user, nakalimutan ang rate limit, nasa tests ang signup form at naka-merge na ang ayos sa README, kasunod ang isang button: npm run migrate.">
+            <video muted loop playsinline preload="none" width="800" height="560" data-poster="/media/skill-adhd.jpg" aria-label="Demo: isang mahabang agent session, tina-type ng user ang STATUS, at sumasagot ang agent ng table na may apat na hilera. Ang migration ay turn ng user, nakalimutan ang rate limit, nasa tests ang signup form at naka-merge na ang ayos sa README, kasunod ang isang button: npm run migrate.">
               <source src="../media/skill-adhd.mp4" type="video/mp4">
               <source src="../media/skill-adhd.webm" type="video/webm">
             </video>
@@ -247,7 +248,7 @@
         </div>
         <figure class="media fx-media">
           <div class="screen wide">
-            <video muted loop playsinline preload="none" width="800" height="560" poster="../media/skill-forger.jpg" aria-label="Demo: tumatakbo ang readiness.sh sa repo ng skill-forger-e2e, pumapasa sa lahat ng 21 check at nagpi-print ng SCORE 100/100 kasama ang readiness badge.">
+            <video muted loop playsinline preload="none" width="800" height="560" data-poster="/media/skill-forger.jpg" aria-label="Demo: tumatakbo ang readiness.sh sa repo ng skill-forger-e2e, pumapasa sa lahat ng 21 check at nagpi-print ng SCORE 100/100 kasama ang readiness badge.">
               <source src="../media/skill-forger.mp4" type="video/mp4">
               <source src="../media/skill-forger.webm" type="video/webm">
             </video>
@@ -396,7 +397,7 @@
         </div>
         <figure class="media fx-media">
           <div class="screen wide">
-            <video muted loop playsinline preload="none" width="800" height="560" poster="../media/ghost-text.jpg" aria-label="Animation: mag-type ng mensahe, i-click ang bomba, pumili ng 20 segundo; ipinapadala ang mensahe na may self-destruct na linya at countdown ring, at pagdating sa zero ay nagiging 💬💣💨 (Edited).">
+            <video muted loop playsinline preload="none" width="800" height="560" data-poster="/media/ghost-text.jpg" aria-label="Animation: mag-type ng mensahe, i-click ang bomba, pumili ng 20 segundo; ipinapadala ang mensahe na may self-destruct na linya at countdown ring, at pagdating sa zero ay nagiging 💬💣💨 (Edited).">
               <source src="../media/ghost-text.mp4" type="video/mp4">
               <source src="../media/ghost-text.webm" type="video/webm">
             </video>
@@ -423,7 +424,7 @@
           </div>
           <figure class="media fx-media">
             <div class="screen">
-              <video muted loop playsinline preload="none" width="480" height="640" poster="../media/blaster-v2.jpg" aria-label="Gameplay ng Boredom Blaster v2: isang barkong fully upgraded na gumagalaw sa lahat ng direksyon, sunod ang bagong record at ang top-10 na table.">
+              <video muted loop playsinline preload="none" width="480" height="640" data-poster="/media/blaster-v2.jpg" aria-label="Gameplay ng Boredom Blaster v2: isang barkong fully upgraded na gumagalaw sa lahat ng direksyon, sunod ang bagong record at ang top-10 na table.">
                 <source src="../media/blaster-v2.mp4" type="video/mp4">
                 <source src="../media/blaster-v2.webm" type="video/webm">
               </video>
@@ -446,7 +447,7 @@
           </div>
           <figure class="media fx-media">
             <div class="screen">
-              <video muted loop playsinline preload="none" width="480" height="640" poster="../media/blaster-v1.jpg" aria-label="Gameplay ng Boredom Blaster v1 sa unang tatlong wave.">
+              <video muted loop playsinline preload="none" width="480" height="640" data-poster="/media/blaster-v1.jpg" aria-label="Gameplay ng Boredom Blaster v1 sa unang tatlong wave.">
                 <source src="../media/blaster-v1.mp4" type="video/mp4">
                 <source src="../media/blaster-v1.webm" type="video/webm">
               </video>
@@ -475,7 +476,7 @@
           </div>
           <figure class="media fx-media">
             <div class="screen wide">
-              <video muted loop playsinline preload="none" width="800" height="506" poster="../media/christian-trivia-v2.jpg" aria-label="Gameplay ng Christian Trivia v2: naglalakad ang bata papunta sa kumikinang na liwanag, sinasagot kung ano ang nilikha ng Diyos sa araw 1, nakakakuha ng timeline card at dumadaan sa bukas na tarangkahan papasok sa araw 2.">
+              <video muted loop playsinline preload="none" width="800" height="506" data-poster="/media/christian-trivia-v2.jpg" aria-label="Gameplay ng Christian Trivia v2: naglalakad ang bata papunta sa kumikinang na liwanag, sinasagot kung ano ang nilikha ng Diyos sa araw 1, nakakakuha ng timeline card at dumadaan sa bukas na tarangkahan papasok sa araw 2.">
                 <source src="../media/christian-trivia-v2.mp4" type="video/mp4">
                 <source src="../media/christian-trivia-v2.webm" type="video/webm">
               </video>
@@ -499,7 +500,7 @@
           </div>
           <figure class="media fx-media">
             <div class="screen wide">
-              <video muted loop playsinline preload="none" width="800" height="560" poster="../media/christian-trivia.jpg" aria-label="Gameplay ng Christian Trivia: lumilitaw ang liwanag sa ibabaw ng tubig, sunod ang langit at dagat, sunod ang tuyong lupa na may mga puno; bawat eksena ay may tanong na may tatlong sagot na larawan.">
+              <video muted loop playsinline preload="none" width="800" height="560" data-poster="/media/christian-trivia.jpg" aria-label="Gameplay ng Christian Trivia: lumilitaw ang liwanag sa ibabaw ng tubig, sunod ang langit at dagat, sunod ang tuyong lupa na may mga puno; bawat eksena ay may tanong na may tatlong sagot na larawan.">
                 <source src="../media/christian-trivia.mp4" type="video/mp4">
                 <source src="../media/christian-trivia.webm" type="video/webm">
               </video>
@@ -715,6 +716,6 @@
 </footer>
 <script src="../options.js?v=9b036bef" defer></script>
 <script src="../search.js?v=2f870088" defer></script>
-<script src="../app.js?v=c22c14e6" defer></script>
+<script src="../app.js?v=f257ae80" defer></script>
 </body>
 </html>
