@@ -257,7 +257,7 @@ h3 { font-size: clamp(36px, 5.5vw, 64px); letter-spacing: -0.03em; line-height: 
   #top.v3 { min-height: 0; padding-bottom: 56px; }
   /* Phones: crop in on the laptop so HANDS ON fills the screen instead of a thin strip. */
   #top.v3 .v3-pic { aspect-ratio: 5 / 4; }
-  #top.v3 .v3-pic::before { background-size: auto 100%; }
+  #top.v3 .v3-pic::before { background-image: url(media/hero/v3-m.webp); background-size: cover; }
   #top.v3 .v3-title { top: 9%; }
   #top.v3 .v3-label { font-size: 4.3vw; }
   /* Sized per theme so HANDS ON spans about 92% of the phone width in every font. */
