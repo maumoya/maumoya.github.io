@@ -816,3 +816,60 @@ main > section.scene:not(.hero) > .wrap::before { content: counter(sec, decimal-
 /* Career timeline */
 .career { list-style: none; padding: 0; margin: 0; }
 .career .offer { border-left: 4px solid var(--accent); }
+
+/* Career road: oldest stop first, ends at the goal. The center line lights up as you scroll. */
+.road-sub { color: var(--muted); font-size: 19px; margin: 8px 0 0; }
+.road { --rw: 44px; --gap: 18px; counter-reset: stop; list-style: none; margin: 40px 0 0; padding: 0; position: relative; display: grid; gap: 22px; view-timeline: --road block; }
+.road::before, .road::after { content: ""; position: absolute; top: -12px; bottom: -12px; left: 0; width: var(--rw); border-radius: var(--rw); pointer-events: none; }
+.road::before { background:
+    repeating-linear-gradient(to bottom, #f2c94c 0 16px, transparent 16px 32px) center / 4px 100% no-repeat,
+    linear-gradient(to right, rgba(255,255,255,.5) 0 2px, transparent 2px calc(100% - 2px), rgba(255,255,255,.5) 0),
+    #2c2e33; }
+.road::after { background: linear-gradient(var(--accent), var(--accent)) center / 6px 100% no-repeat; transform-origin: top; opacity: .9; }
+.stop { position: relative; background: var(--card); border-radius: 20px; padding: 24px 26px; margin: 0 0 0 calc(var(--rw) + var(--gap)); }
+.stop h3 { font-size: 21px; letter-spacing: -0.015em; line-height: 1.2; margin: 0 0 8px; }
+.stop p { margin: 0; color: var(--muted); font-size: 16px; }
+.stop .eyebrow { font-size: 13px; text-transform: uppercase; letter-spacing: .06em; margin-bottom: 8px; color: var(--accent); }
+.stop::before { content: ""; position: absolute; top: 37px; left: calc(-1 * var(--gap)); width: var(--gap); height: 2px; background: var(--line); }
+.stop::after { counter-increment: stop; content: counter(stop); position: absolute; top: 22px; left: calc(-1 * var(--gap) - var(--rw) / 2 - 16px); width: 32px; height: 32px; box-sizing: border-box; border-radius: 50%; display: grid; place-items: center; font: 700 14px/1 inherit; background: var(--bg); color: var(--accent); border: 3px solid var(--accent); z-index: 1; }
+.stop.goal { box-shadow: inset 0 0 0 2px var(--accent); }
+.stop.goal::after { content: ""; border-color: var(--fg); background: repeating-conic-gradient(var(--fg) 0 25%, var(--bg) 0 50%) 0 0 / 10px 10px; }
+@media (min-width: 860px) {
+  .road { --gap: 26px; grid-template-columns: 1fr var(--rw) 1fr; column-gap: var(--gap); row-gap: 0; }
+  .road::before, .road::after { left: calc(50% - var(--rw) / 2); }
+  .stop { margin: 0 0 -56px; }
+  .stop:nth-child(odd) { grid-column: 1; }
+  .stop:nth-child(even) { grid-column: 3; }
+  .stop:nth-child(1) { grid-row: 1; }
+  .stop:nth-child(2) { grid-row: 2; }
+  .stop:nth-child(3) { grid-row: 3; }
+  .stop:nth-child(4) { grid-row: 4; }
+  .stop:nth-child(5) { grid-row: 5; }
+  .stop:nth-child(6) { grid-row: 6; }
+  .stop:nth-child(7) { grid-row: 7; }
+  .stop:nth-child(8) { grid-row: 8; }
+  .stop:nth-child(9) { grid-row: 9; }
+  .stop:nth-child(10) { grid-row: 10; }
+  .stop:nth-child(11) { grid-row: 11; }
+  .stop:nth-child(12) { grid-row: 12; }
+  .stop:last-child { margin-bottom: 0; }
+  .stop:nth-child(odd)::before { left: auto; right: calc(-1 * var(--gap)); }
+  .stop:nth-child(odd)::after { left: auto; right: calc(-1 * var(--gap) - var(--rw) / 2 - 16px); }
+}
+.road::before { border: 1px solid rgba(255,255,255,.16); box-shadow: inset 5px 0 rgba(255,255,255,.07), inset -5px 0 rgba(255,255,255,.07), 0 14px 30px rgba(0,0,0,.25); background:
+    repeating-linear-gradient(to bottom, #f2c94c 0 16px, transparent 16px 32px) center / 4px 100% no-repeat,
+    radial-gradient(circle, rgba(255,255,255,.08) 0 1px, transparent 1.5px) 0 0 / 9px 9px,
+    linear-gradient(90deg, #25282d, #35383e 48%, #25282d); }
+.road::after { filter: drop-shadow(0 0 5px color-mix(in srgb, var(--accent) 70%, transparent)); }
+.stop { border: 1px solid color-mix(in srgb, var(--fg) 7%, transparent); box-shadow: 0 18px 36px rgba(0,0,0,.14); }
+.stop::before { height: 3px; background: linear-gradient(90deg, var(--accent), color-mix(in srgb, var(--accent) 12%, transparent)); }
+.stop::after { border-radius: 10px 10px 14px 14px; border-width: 2px; font-variant-numeric: tabular-nums; box-shadow: 0 0 0 3px var(--bg), 0 4px 12px rgba(0,0,0,.35); }
+.stop.goal { box-shadow: inset 0 0 0 2px var(--accent), 0 20px 42px rgba(0,0,0,.2); }
+.stop.goal h3::after { content: ""; display: block; width: 72px; height: 6px; margin-top: 12px; opacity: .75; background: repeating-conic-gradient(var(--fg) 0 25%, transparent 0 50%) 0 0 / 6px 6px; }
+.stop.goal::after { border-radius: 50%; }
+@media (min-width: 860px) { .stop:nth-child(odd)::before { background: linear-gradient(90deg, color-mix(in srgb, var(--accent) 12%, transparent), var(--accent)); } }
+@supports (animation-timeline: view()) {
+  .road::after { animation: road-drive linear both; animation-timeline: --road; animation-range: entry 40% exit 60%; }
+  @keyframes road-drive { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+}
+@media (prefers-reduced-motion: reduce) { .road::after { animation: none; transform: none; } }
