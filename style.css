@@ -368,9 +368,10 @@ h3 { font-size: clamp(36px, 5.5vw, 64px); letter-spacing: -0.03em; line-height: 
 .js .fx { opacity: 0; transform: translateY(28px); transition: opacity .9s var(--ease), transform .9s var(--ease); transition-delay: calc(var(--i, 0) * 80ms); }
 .js .fx-media { opacity: 0; transform: scale(.88) translateY(40px); transition: opacity 1.2s var(--ease), transform 1.2s var(--ease); transition-delay: .15s; }
 .js .in .fx, .js .in .fx-media { opacity: 1; transform: none; }
-.js .hero .fx { opacity: 1; transform: none; transition: none; animation: rise 1s var(--ease) both; animation-delay: calc(var(--i, 0) * 90ms); }
+.js .hero .fx { opacity: 1; transform: none; transition: none; animation: rise-hero .8s var(--ease) both; animation-delay: calc(var(--i, 0) * 60ms); }
 
 @keyframes rise { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+@keyframes rise-hero { from { transform: translateY(12px); } to { transform: none; } }
 /* Game families: one carousel per game, newest version first; each slide keeps its own palette. */
 .fam { flex-direction: column; align-items: stretch; justify-content: center; }
 .fam-nav { display: flex; gap: 10px; align-items: center; justify-content: center; margin-bottom: 32px; }
