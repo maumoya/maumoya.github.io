@@ -27,7 +27,7 @@ Contact: email mmoyatapia@student.hult.edu, or LinkedIn https://www.linkedin.com
 - Branch manager and founding partner, New Voltage X Fit (2017 to 2018). Breakeven in year one.
 - Facility manager, JLL (2008 to 2014), then university professor, UPC (2015 to 2016).
 
-Resume (PDF): https://maumoya.github.io/resume.pdf
+Resume: https://maumoya.github.io/resume/ (HTML) and https://maumoya.github.io/resume.pdf (PDF)
 
 Full history: https://maumoya.github.io/#career and https://www.linkedin.com/in/mba-mmoyat/
 
