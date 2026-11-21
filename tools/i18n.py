@@ -119,7 +119,8 @@ def walk(el, keys):
 def pages():
     # brand/ holds internal logo review pages, not site pages, so they are not translated
     # <lang>/ folders are the static translations tools/seo.py writes from these pages
-    skip = {".claude", "brand"} | set(LANGS)
+    # resume/ is English-only by design: recruiters and ATS parsers read it in English
+    skip = {".claude", "brand", "resume"} | set(LANGS)
     return [p for p in sorted(ROOT.glob("**/index.html")) if not skip & set(p.relative_to(ROOT).parts)]
 
 

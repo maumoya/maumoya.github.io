@@ -30,6 +30,8 @@ ROOT = i18n.ROOT
 SITE = "https://maumoya.github.io/"
 # (path, sitemap priority). Site pages only: tour/ and brand/ are noindex side pages.
 PAGES = (("", "1.0"), ("finance/", "0.8"), ("development/", "0.8"), ("compliance/", "0.8"), ("education/", "0.8"))
+# English-only pages: one sitemap entry each, no language copies (the resume is read in English).
+ENGLISH_ONLY = (("resume/", "0.7"),)
 # id: (html lang / hreflang tag, og:locale, right-to-left, native name, English name). Same ids as i18n.LANGS.
 LANG = {
     "en": ("en", "en_US", False, "English", "English"),
@@ -393,6 +395,11 @@ def sitemap():
         for lang in ORDER:
             lines += ["  <url>", f"    <loc>{url(lang, page)}</loc>", f"    <lastmod>{date}</lastmod>",
                       f"    <priority>{prio}</priority>"] + alts + ["  </url>"]
+    for page, prio in ENGLISH_ONLY:
+        src = (ROOT / page / "index.html").read_text()
+        date = re.search(r'"dateModified":"([0-9-]+)"', src).group(1)
+        lines += ["  <url>", f"    <loc>{SITE}{page}</loc>", f"    <lastmod>{date}</lastmod>",
+                  f"    <priority>{prio}</priority>", "  </url>"]
     return "\n".join(lines + ["</urlset>", ""])
 
 
