@@ -424,7 +424,7 @@ def llms_lang(lang, meta_of, d):
     for page, _ in PAGES:
         t, ds = meta_of[(lang, page)]
         lines.append(f"- [{t}]({url(lang, page)}): {ds}")
-    lines += ["", "## Links", "", "- Email: mmoyatapia@student.hult.edu", "- LinkedIn: https://www.linkedin.com/in/mba-mmoyat/", "- GitHub: https://github.com/maumoya",
+    lines += ["", "## Links", "", "- Email: mmoyat@gmail.com", "- LinkedIn: https://www.linkedin.com/in/mba-mmoyat/", "- GitHub: https://github.com/maumoya",
               "- X: https://x.com/mau_amt", "- YouTube: https://www.youtube.com/@maumoya85", ""]
     return "\n".join(lines)
 
