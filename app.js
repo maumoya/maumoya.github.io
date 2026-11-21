@@ -153,3 +153,10 @@
     if (el && !el.contains(e.relatedTarget)) { el.style.removeProperty('--mx'); el.style.removeProperty('--my'); }
   }, { passive: true });
 })();
+
+// Compliance demo: open -> verify (evidence saved) -> closed (owner confirms) -> start over.
+document.addEventListener('click', (e) => {
+  const b = e.target.closest('.cdemo .abtn'); if (!b) return;
+  const li = b.closest('.act'), next = { open: 'verify', verify: 'closed', closed: 'open' };
+  li.dataset.state = next[li.dataset.state] || 'open';
+});
